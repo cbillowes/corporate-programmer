@@ -16,3 +16,10 @@
 
 * [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
+
+## live-server
+
+* Open console and change current working directory (`cwd`) to `_site` in root of project
+* `live-server`
+* Website will open in your default browser and will automatically reload when the site is built
+* Run `grunt default` to build and serve the Jekyll website
