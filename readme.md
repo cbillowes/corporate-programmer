@@ -15,3 +15,4 @@
 ### Build automation
 
 * [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
+* [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
