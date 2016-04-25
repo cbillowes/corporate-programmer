@@ -10,6 +10,7 @@
 * [Ruby](https://www.ruby-lang.org/)
 * [Jekyll](https://jekyllrb.com/) v3.1.3
 * [Grunt](http://gruntjs.com/getting-started)
+* [live-server](https://github.com/tapio/live-server) - Automatically reloads `_site` directory in your browser
 
 ### Build automation
 
