@@ -2,6 +2,7 @@
   "name": "corporate-programmer",
   "version": "1.0.0",
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "load-grunt-tasks": "^3.5.0"
   }
 }

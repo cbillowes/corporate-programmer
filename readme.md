@@ -10,3 +10,7 @@
 * [Ruby](https://www.ruby-lang.org/)
 * [Jekyll](https://jekyllrb.com/) v3.1.3
 * [Grunt](http://gruntjs.com/getting-started)
+
+### Build automation
+
+* [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
