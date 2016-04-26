@@ -43,6 +43,13 @@ module.exports = function(grunt) {
           files: [
             { expand: true, cwd: '_build/css/', src: ['*.css', '*.map'], dest: '_site/css/' }
           ]
+        },
+        favicon: {
+          files: [
+            // expand: true to fix abortion: Warning: Unable to read "favicon.ico" file (Error code: ENOENT). Use --force to continue.
+            // https://github.com/gruntjs/grunt-contrib-copy/issues/64
+            { expand : true, cwd: '_assets/favicons/', src: ['*.ico', '*.png'], dest: '_site/' }
+          ]
         }
       },
 
@@ -57,7 +64,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass:bootstrap']);
 
-    grunt.registerTask('copy-files', ['copy:css']);
+    grunt.registerTask('copy-files', ['copy:css', 'copy:favicon']);
 
     grunt.registerTask('build', ['concurrent:build', 'copy-files', 'watch:site']);
 

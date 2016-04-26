@@ -50,3 +50,9 @@ You need to run this server on the generated website folder.
 
 `cd _site`
 `live-server`
+
+### Contributions
+
+* [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
+  by [vaadin](http://www.flaticon.com/authors/vaadin) at [flaticon](http://www.flaticon.com)
+  saved as 24x24px in #3E8FB0 - Contribution to author required
