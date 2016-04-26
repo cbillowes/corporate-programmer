@@ -28,11 +28,21 @@ module.exports = function(grunt) {
           }
         }
       },
+
+      concurrent: {
+        build: {
+          tasks: ['shell:build', 'compile-sass'],
+          options: {
+            logConcurrentOutput: true
+          }
+        }
       }
+
     });
 
-    grunt.registerTask('build', ['shell:build']);
     grunt.registerTask('compile-sass', ['sass:bootstrap']);
+
+    grunt.registerTask('build', ['concurrent:build']);
 
     grunt.registerTask('serve', ['shell:serve']);
 

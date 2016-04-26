@@ -17,6 +17,7 @@
 * [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) - Compile Sass to CSS
+* [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently
 
 ### live-server
 
