@@ -14,6 +14,8 @@ module.exports = function(grunt) {
       sass: {
         bootstrap: {
           options: {
+            style: 'compressed',
+            sourcemap: 'none',
             noCache: true,
             loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
           },
@@ -21,6 +23,15 @@ module.exports = function(grunt) {
               // Source file fails to generate output when starting with _.
               // destination : source
               'css/bootstrap.min.css': '_sass/bootstrap/imports.scss'
+          }
+        },
+        site: {
+          options: {
+            style: 'compressed',
+            sourcemap: 'none'
+          },
+          files: {
+            'css/main.min.css' : '_sass/main.scss'
           }
         }
       },
@@ -63,7 +74,7 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('compile-sass', ['sass:bootstrap']);
+    grunt.registerTask('compile-sass', ['sass:bootstrap', 'sass:site']);
 
     grunt.registerTask('copy-files', ['copy:favicon']);
 
