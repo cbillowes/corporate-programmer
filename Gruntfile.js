@@ -44,6 +44,13 @@ module.exports = function(grunt) {
             { expand: true, cwd: '_build/css/', src: ['*.css', '*.map'], dest: '_site/css/' }
           ]
         }
+      },
+
+      watch: {
+        site: {
+          files: ['_site/*'],
+          tasks: ['copy-files']
+        }
       }
 
     });
@@ -52,7 +59,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copy-files', ['copy:css']);
 
-    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
+    grunt.registerTask('build', ['concurrent:build', 'copy-files', 'watch:site']);
 
     grunt.registerTask('serve', ['shell:serve']);
 

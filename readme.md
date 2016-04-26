@@ -19,6 +19,7 @@
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) - Compile Sass to CSS
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run predefined tasks whenever watched file patterns are added, changed or deleted
 
 ### live-server
 
