@@ -17,7 +17,7 @@ url: "http://www.corporateprogrammer.com" # the base hostname & protocol for you
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:title/
 exclude:
   - node_modules
   - _sass #grunt will take care of this.
