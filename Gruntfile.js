@@ -72,5 +72,4 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['build', 'serve']);
 
-    //execute `grunt %_TASK_% -v` for verbose messaging
 };

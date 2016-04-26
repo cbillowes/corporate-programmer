@@ -27,6 +27,9 @@ To develop with ease, it's suggested to have 3 separate console windows open.
 A great Windows app is [ComEmu](https://conemu.github.io/). Make sure they
 are all open to the current working directory (cwd) of this project.
 
+If you are running a grunt task and are experiencing strange issues, opt in for
+verbose messaging by appending `-v` to the command. eg. `grunt default -v`
+
 #### Build
 
 This will build the site using Jekyll and watch for any `_site` changes so
