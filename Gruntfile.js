@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           files: {
               // Source file fails to generate output when starting with _.
               // destination : source
-              'css/bootstrap.css': '_sass/bootstrap/imports.scss'
+              'css/bootstrap.min.css': '_sass/bootstrap/imports.scss'
           }
         }
       },
