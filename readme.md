@@ -23,27 +23,35 @@
 
 ### Consoles
 
-To develop with ease, it's suggested to have 3 separate console windows open.
+To develop with ease, it's suggested to have separate console windows open.
 A great Windows app is [ComEmu](https://conemu.github.io/). Make sure they
 are all open to the current working directory (cwd) of this project.
 
 If you are running a grunt task and are experiencing strange issues, opt in for
 verbose messaging by appending `-v` to the command. eg. `grunt default -v`
 
-#### Build
+#### Grunt tasks
 
-This will build the site using Jekyll and watch for any `_site` changes so
-that additional files can be copied on the fly.
+Use this console to run any grunt tasks that you would like.
 
 `grunt build`
 
 #### Jekyll Server
 
-This will serve the Jekyll website which also watches Jekyll files for changes
-overwriting the `_site` directory each time. This is why the previous console
-is so important.
+This will serve the Jekyll website which overwrites the `_site`
+directory each time.
 
-`grunt serve`
+**Note:** When you make changes to the `_config.yml`, you need to restart the
+this task.
+
+`grunt default` (builds and serves) or `grunt server` (no build)
+
+#### Watch
+
+This will watch the `_site` changes made by the Jekyll server so that other
+files are copied to the output directory on the fly.
+
+`grunt watch-files`
 
 #### Live Server
 

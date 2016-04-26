@@ -66,7 +66,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copy-files', ['copy:css', 'copy:favicon']);
 
-    grunt.registerTask('build', ['concurrent:build', 'copy-files', 'watch:site']);
+    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
+
+    grunt.registerTask('watch-files', ['watch:site']);
 
     grunt.registerTask('serve', ['shell:serve']);
 
