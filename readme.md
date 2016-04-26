@@ -21,9 +21,32 @@
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run predefined tasks whenever watched file patterns are added, changed or deleted
 
-### live-server
+### Consoles
 
-* Open console and change current working directory (`cwd`) to `_site` in root of project
-* `live-server`
-* Website will open in your default browser and will automatically reload when the site is built
-* Run `grunt default` to build and serve the Jekyll website
+To develop with ease, it's suggested to have 3 separate console windows open.
+A great Windows app is [ComEmu](https://conemu.github.io/). Make sure they
+are all open to the current working directory (cwd) of this project.
+
+#### Build
+
+This will build the site using Jekyll and watch for any `_site` changes so
+that additional files can be copied on the fly.
+
+`grunt build`
+
+#### Jekyll Server
+
+This will serve the Jekyll website which also watches Jekyll files for changes
+overwriting the `_site` directory each time. This is why the previous console
+is so important.
+
+`grunt serve`
+
+#### Live Server
+
+This will serve the site with JavaScript that will automatically refresh
+your browser every time a change is detected. No more pesky F5 buttons each time.
+You need to run this server on the generated website folder.
+
+`cd _site`
+`live-server`
