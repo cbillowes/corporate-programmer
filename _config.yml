@@ -14,8 +14,6 @@ description: >
   from small to medium businesses.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.corporateprogrammer.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
