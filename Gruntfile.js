@@ -11,6 +11,8 @@ module.exports = function(grunt) {
         }
       },
 
+      clean: ['css', '_site'],
+
       sass: {
         bootstrap: {
           options: {
@@ -78,7 +80,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copy-files', ['copy:favicon']);
 
-    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
+    grunt.registerTask('build', ['clean', 'concurrent:build', 'copy-files']);
 
     grunt.registerTask('default', ['watch']);
 
