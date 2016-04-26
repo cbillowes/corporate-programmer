@@ -4,6 +4,7 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+# This will however be taken care of via grunt watch file
 
 # Site settings
 title: Corporate Programmer
@@ -21,3 +22,4 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 exclude:
   - node_modules
+  - _sass #grunt will take care of this.

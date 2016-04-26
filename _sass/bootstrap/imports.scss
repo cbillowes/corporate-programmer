@@ -1,7 +1,7 @@
 // Variable overrides come first (without !default). Bootstrap default variables
 // come second because they use !default (they won't get set if set already) and
 // some of them depend on our overrides.
-@import "bootstrap-variables-override";
+@import "overridden-variables";
 
 // Core variables and mixins
 @import "bootstrap/variables";

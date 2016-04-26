@@ -8,23 +8,19 @@ module.exports = function(grunt) {
       shell: {
         build: {
           command: 'jekyll build'
-        },
-        serve: {
-          command: 'jekyll serve --skip-initial-build'
         }
       },
 
       sass: {
         bootstrap: {
           options: {
-            style: 'compressed',
             noCache: true,
             loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
           },
           files: {
               // Source file fails to generate output when starting with _.
               // destination : source
-              '_build/css/bootstrap.min.css': '_sass/bootstrap-override.scss'
+              'css/bootstrap.css': '_sass/bootstrap/imports.scss'
           }
         }
       },
@@ -39,11 +35,6 @@ module.exports = function(grunt) {
       },
 
       copy: {
-        css: {
-          files: [
-            { expand: true, cwd: '_build/css/', src: ['*.css', '*.map'], dest: '_site/css/' }
-          ]
-        },
         favicon: {
           files: [
             // expand: true to fix abortion: Warning: Unable to read "favicon.ico" file (Error code: ENOENT). Use --force to continue.
@@ -54,9 +45,19 @@ module.exports = function(grunt) {
       },
 
       watch: {
+        config: {
+          files: ['_config.yml'],
+          tasks: ['build']
+        },
+        gruntfile: {
+          files: ['Gruntfile.js'],
+          options: {
+            reload: true
+          }
+        },
         site: {
-          files: ['_site/*'],
-          tasks: ['copy-files']
+          files: ['_assets/**', '_includes/**', '_layouts/**', '_posts/**', '_sass/**', '*.html', '!readme.md', '*.xml'],
+          tasks: ['build']
         }
       }
 
@@ -64,14 +65,10 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass:bootstrap']);
 
-    grunt.registerTask('copy-files', ['copy:css', 'copy:favicon']);
+    grunt.registerTask('copy-files', ['copy:favicon']);
 
     grunt.registerTask('build', ['concurrent:build', 'copy-files']);
 
-    grunt.registerTask('watch-files', ['watch:site']);
-
-    grunt.registerTask('serve', ['shell:serve']);
-
-    grunt.registerTask('default', ['build', 'serve']);
+    grunt.registerTask('default', ['watch']);
 
 };

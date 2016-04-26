@@ -30,28 +30,18 @@ are all open to the current working directory (cwd) of this project.
 If you are running a grunt task and are experiencing strange issues, opt in for
 verbose messaging by appending `-v` to the command. eg. `grunt default -v`
 
-#### Grunt tasks
+#### Grunt tasks and other commands
 
 Use this console to run any grunt tasks that you would like.
 
 `grunt build`
 
-#### Jekyll Server
-
-This will serve the Jekyll website which overwrites the `_site`
-directory each time.
-
-**Note:** When you make changes to the `_config.yml`, you need to restart the
-this task.
-
-`grunt default` (builds and serves) or `grunt server` (no build)
-
 #### Watch
 
-This will watch the `_site` changes made by the Jekyll server so that other
-files are copied to the output directory on the fly.
+This will watch site for changes made and depending on what was changed
+automatically execute a Jekyll build task.
 
-`grunt watch-files`
+`grunt watch` or `grunt default`
 
 #### Live Server
 
