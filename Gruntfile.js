@@ -36,13 +36,23 @@ module.exports = function(grunt) {
             logConcurrentOutput: true
           }
         }
+      },
+
+      copy: {
+        css: {
+          files: [
+            { expand: true, cwd: '_build/css/', src: ['*.css', '*.map'], dest: '_site/css/' }
+          ]
+        }
       }
 
     });
 
     grunt.registerTask('compile-sass', ['sass:bootstrap']);
 
-    grunt.registerTask('build', ['concurrent:build']);
+    grunt.registerTask('copy-files', ['copy:css']);
+
+    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
 
     grunt.registerTask('serve', ['shell:serve']);
 
