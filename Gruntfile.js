@@ -69,8 +69,12 @@ module.exports = function(grunt) {
           }
         },
         site: {
-          files: ['_assets/**', '_includes/**', '_layouts/**', '_plugins/**', '_posts/**', '_sass/**', '*.html', '!readme.md', '*.xml'],
+          files: ['_assets/**', '_includes/**', '_layouts/**', '_plugins/**', '_posts/**', '*.html', '!readme.md', '*.xml'],
           tasks: ['build']
+        },
+        sass: {
+          files: ['_sass/**'],
+          tasks: ['compile-sass']
         }
       }
 
