@@ -1,4 +1,18 @@
+@import
+  'bootstrap/_variables',
+  '../_variables'
+;
+
 // overrides here (do not use !default here)
+$body-bg:               $dark;
+$text-color:            $light;
+$accent-color:          $accent;
+$link-color:            $accent;
+$link-hover-color:      $accent-compliment;
+
+$code-color:            $accent !default;
+$code-bg:               $gray-darker;
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
 $font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif;
 
