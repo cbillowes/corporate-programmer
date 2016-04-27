@@ -54,6 +54,11 @@ module.exports = function(grunt) {
             // https://github.com/gruntjs/grunt-contrib-copy/issues/64
             { expand : true, cwd: '_assets/favicons/', src: ['*.ico', '*.png'], dest: '_site/' }
           ]
+        },
+        css: {
+          files: [
+            { expand : true, cwd: 'css/', src: ['**'], dest: '_site/css/' }
+          ]
         }
       },
 
@@ -74,7 +79,7 @@ module.exports = function(grunt) {
         },
         sass: {
           files: ['_sass/**'],
-          tasks: ['compile-sass']
+          tasks: ['compile-sass', 'copy:css']
         }
       }
 
