@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         }
       },
 
-      clean: ['css', '_site'],
+      clean: ['css/*.css'],
 
       sass: {
         bootstrap: {
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
       concurrent: {
         build: {
-          tasks: ['shell:build', 'compile-sass'],
+          tasks: ['clean', 'shell:build', 'compile-sass'],
           options: {
             logConcurrentOutput: true
           }
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copy-files', ['copy:favicon']);
 
-    grunt.registerTask('build', ['clean', 'concurrent:build', 'copy-files']);
+    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
 
     grunt.registerTask('default', ['watch']);
 
