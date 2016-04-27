@@ -3,3 +3,11 @@ body {
   background-color: $dark;
   text-color: $accent;
 }
+
+header {
+  &.top {
+    background-color: $darkest;
+    padding: $spacer 0;
+    margin-bottom: $spacer;
+  }
+}
