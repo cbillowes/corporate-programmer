@@ -33,7 +33,7 @@ module.exports = function(grunt) {
             sourcemap: 'none'
           },
           files: {
-            'css/main.min.css' : '_sass/main.scss'
+            'css/essentials.min.css' : '_sass/essentials.scss'
           }
         }
       },
