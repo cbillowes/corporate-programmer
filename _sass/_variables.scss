@@ -8,3 +8,9 @@ $spacer:                  25px;
 $font-size-base:          20px;
 $font-size-large:         ceil(($font-size-base * 1.25));
 $font-size-small:         ceil(($font-size-base * 0.85));
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+$font-family-serif:       "Arvo", Helvetica, Arial, sans-serif;
