@@ -9,5 +9,24 @@ header {
     background-color: $darkest;
     padding: $spacer 0;
     margin-bottom: $spacer;
+
+    a:hover {
+      text-decoration: none;
+    }
+
   }
+}
+
+h1 {
+  font-family: $font-family-serif;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+
 }
