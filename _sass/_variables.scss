@@ -1,9 +1,9 @@
-$darkest:               #101010;
-$dark:                  #151515;
-$light:                 lighten($dark, 60%);
-$accent:                #3E8FB0;
-$accent-compliment:     #CC334F;
-$spacer:                25px;
+$darkest:                 #101010;
+$dark:                    #151515;
+$light:                   lighten($dark, 60%);
+$accent:                  #3E8FB0;
+$accent-compliment:       #CC334F;
+$spacer:                  25px;
 
 $font-size-base:          20px;
 $font-size-large:         ceil(($font-size-base * 1.25));
