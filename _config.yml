@@ -21,3 +21,8 @@ permalink: /blog/:title/
 exclude:
   - node_modules
   - _sass #grunt will take care of this.
+
+#Pagination
+gems: [jekyll-paginate]
+paginate: 3
+paginate_path: "/blog/page/:num/"
