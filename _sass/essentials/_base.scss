@@ -4,6 +4,10 @@ body {
   text-color: $accent;
 }
 
+p {
+  line-height: $font-size-base * 1.75;
+}
+
 header {
   &.top {
     background-color: $darkest;
