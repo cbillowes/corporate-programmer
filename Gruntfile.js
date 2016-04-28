@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass:bootstrap', 'sass:site']);
 
-    grunt.registerTask('copy-files', ['copy:favicon']);
+    grunt.registerTask('copy-files', ['copy:favicon', 'copy:css']);
 
     grunt.registerTask('build', ['concurrent:build', 'copy-files']);
 
