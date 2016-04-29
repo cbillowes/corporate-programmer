@@ -101,4 +101,4 @@ There are a few possibilities to implement [Search in Jekyll]
 
 #### Photos
 
-* (StockSnap.io)[https://stocksnap.io] - Beautiful free stock photos
+* [StockSnap.io](https://stocksnap.io) - Beautiful free stock photos
