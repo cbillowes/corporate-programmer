@@ -8,7 +8,7 @@
 
 * [npm](https://www.npmjs.com/) (Node Package Manager)
 * [Ruby](https://www.ruby-lang.org/)
-* [Jekyll](https://jekyllrb.com/) v3.1.3
+* [Jekyll](https://jekyllrb.com/) v3.1.3 - [Tips](http://jekyll.tips/)
 * [Grunt](http://gruntjs.com/getting-started)
 * [live-server](https://github.com/tapio/live-server) - Automatically reloads `_site` directory in your browser
 * [lingua](https://github.com/dbalatero/lingua) - `gem install 'lingua'`
