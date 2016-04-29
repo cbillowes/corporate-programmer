@@ -12,6 +12,7 @@
 * [Grunt](http://gruntjs.com/getting-started)
 * [live-server](https://github.com/tapio/live-server) - Automatically reloads `_site` directory in your browser
 * [lingua](https://github.com/dbalatero/lingua) - `gem install 'lingua'`
+* [ImageMagick](http://www.imagemagick.org/script/binary-releases.php) - Install binary and make sure its in system path. Not sure if [node wrapper](https://www.npmjs.com/package/imagemagick) is needed: `npm install imagemagick`.
 
 ### Build automation
 
@@ -22,6 +23,7 @@
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run predefined tasks whenever watched file patterns are added, changed or deleted
+* [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites
 
 ### Consoles
 
@@ -72,3 +74,7 @@ To be implemented into the build, automation and possibly the UI.
 
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh]
 (https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
+
+#### Photos
+
+* (StockSnap.io)[https://stocksnap.io] - Beautiful free stock photos

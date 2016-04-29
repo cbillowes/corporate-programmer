@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         }
       },
 
-      clean: ['css/*.css'],
+      clean: ['img/*', 'css/*.css'],
 
       sass: {
         bootstrap: {
@@ -59,6 +59,32 @@ module.exports = function(grunt) {
           files: [
             { expand : true, cwd: 'css/', src: ['**'], dest: '_site/css/' }
           ]
+        },
+        img: {
+          files: [
+            { expand : true, cwd: 'img/', src: ['**'], dest: '_site/img/' }
+          ]
+        }
+      },
+
+      responsive_images: {
+        posts: {
+          options: {
+            engine: 'im', // uses ImageMagick
+            sizes: [
+              { name: 'small', width: 320, quality: 80 },
+              { name: 'medium', width: 640, quality: 80 },
+              { name: 'large', width: 700, quality: 80 }
+            ]
+          },
+          files: [
+            {
+              expand: true,
+              src: [ '**/*.jpg' ],
+              cwd: '_assets/posts/',
+              custom_dest: 'img/{%= name %}-{%= width %}px/'
+            }
+          ]
         }
       },
 
@@ -87,9 +113,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass:bootstrap', 'sass:site']);
 
-    grunt.registerTask('copy-files', ['copy:favicon', 'copy:css']);
+    grunt.registerTask('copy-files', ['copy:favicon', 'copy:css', 'copy:img']);
 
-    grunt.registerTask('build', ['concurrent:build', 'copy-files']);
+    grunt.registerTask('build', ['concurrent:build', 'responsive_images:posts', 'copy-files']);
 
     grunt.registerTask('default', ['watch']);
 
