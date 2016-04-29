@@ -11,6 +11,7 @@
 * [Jekyll](https://jekyllrb.com/) v3.1.3
 * [Grunt](http://gruntjs.com/getting-started)
 * [live-server](https://github.com/tapio/live-server) - Automatically reloads `_site` directory in your browser
+* [lingua](https://github.com/dbalatero/lingua) - `gem install 'lingua'`
 
 ### Build automation
 
@@ -53,6 +54,13 @@ You need to run this server on the generated website folder.
 `cd _site`
 `live-server`
 
+#### Flesch-Kincaid calculation
+
+To be implemented into the build, automation and possibly the UI.
+
+`cd lib`
+`rake readability`
+
 ### Contributions
 
 * [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
@@ -61,3 +69,6 @@ You need to run this server on the generated website folder.
 
 * Estimated read time calculation courtesy of [Carlos Alexandro Becker]
 [http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
+
+* Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh]
+(https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
