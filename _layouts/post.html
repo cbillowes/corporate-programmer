@@ -13,6 +13,16 @@ layout: default
     </p>
   </header>
 
+  {% assign path = "/img" %}
+  {% assign file_name = page.date | date: "%F" | append: "-" | append: {{page.title | remove: " -" | remove: "'" | replace: " ", "-" | downcase }} %}
+  <picture>
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source srcset="{{path}}/large-700px/{{file_name}}.jpg" media="(min-width: 820px)" />
+      <source srcset="{{path}}/medium-640px/{{file_name}}.jpg" media="(min-width: 640px)" />
+      <source srcset="{{path}}/small-320px/{{file_name}}.jpg" />
+      <!--[if IE 9]></video><![endif]-->
+      <img src="{{path}}/large-700px/{{file_name}}.jpg" alt="{{page.title}}" />
+  </picture>
   <div class="content" itemprop="articleBody">
     {{ content }}
   </div>
