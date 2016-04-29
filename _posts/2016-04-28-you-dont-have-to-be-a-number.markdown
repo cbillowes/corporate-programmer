@@ -40,7 +40,7 @@ I tried blogging in my career. I had five separate blogs with a mixture of
 content that never gain traction. I probably posted under 10 posts in total. I
 wasn't consistent or focused. I failed dismally but have learned from my mistakes.
 
-At the time of writing, John Sonmez at [simpleprogrammer](http://simpleprogrammer.com/)
+>At the time of writing, John Sonmez at [simpleprogrammer.com](http://simpleprogrammer.com/)
 is giving a free 3 week e-mail course to [boost](http://devcareerboost.com/blog-course/)
 your software development career. The insights and tips provided here are a sure
 way to create your own identity.
