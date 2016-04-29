@@ -61,10 +61,22 @@ You need to run this server on the generated website folder.
 
 #### Flesch-Kincaid calculation
 
-To be implemented into the build, automation and possibly the UI.
+This is part of the build automation. The score (0 - 100) and level
+(PhD Academic, College Level Student, Average Adult, High Schooler,
+Middle Schooler and Elementary Schooler) is added to each post on build.
+
+The writing should aim to be [easy to read]
+(https://contently.com/strategist/2015/01/28/this-surprising-reading-level-analysis-will-change-the-way-you-write/)
+but interesting to follow. Optimize for a score between [60 - 70](http://www.vervesearch.com/blog/how-to-optimise-your-content-for-success-with-the-flesch-kincaid-scale-readability-statistics/).
+
+Run readability score manually using rake:
 
 `cd lib`
 `rake readability`
+
+Run readability score manually using grunt:
+
+`grunt shell:readability`
 
 ### Contributions
 

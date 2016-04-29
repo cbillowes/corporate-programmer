@@ -1,2 +1,29 @@
 {% assign words = post.content | number_of_words %}
-{{ words | divided_by:180 }} minute read
+{{ words | divided_by:180 }} minute
+
+{% assign score = post.flesch-score | divided_by: 100 | times: 10 | floor %}
+
+{% if score == 0 or score == 1 or score == 2 %}
+  complicated
+
+{% elsif score == 3 or score == 4 %}
+  difficult
+
+{% elsif score == 5 %}
+  fairly difficult
+
+{% elsif score == 6 %}
+  standard
+
+{% elsif score == 7 %}
+  fairly easy
+
+{% elsif score == 8 %}
+  easy
+
+{% elsif score == 9 or score == 10 %}
+  very easy
+
+{% endif %}
+
+read

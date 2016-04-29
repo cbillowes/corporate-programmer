@@ -8,6 +8,14 @@ module.exports = function(grunt) {
       shell: {
         build: {
           command: 'jekyll build'
+        },
+        readability: {
+          command: 'rake readability',
+          options: {
+            execOptions: {
+              cwd: '_lib'
+            }
+          }
         }
       },
 
@@ -40,7 +48,7 @@ module.exports = function(grunt) {
 
       concurrent: {
         build: {
-          tasks: ['clean', 'shell:build', 'compile-sass'],
+          tasks: ['clean', 'shell:readability', 'shell:build', 'compile-sass'],
           options: {
             logConcurrentOutput: true
           }
