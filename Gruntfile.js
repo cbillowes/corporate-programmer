@@ -95,6 +95,7 @@ module.exports = function(grunt) {
         },
         gruntfile: {
           files: ['Gruntfile.js'],
+          tasks: ['build'],
           options: {
             reload: true
           }
