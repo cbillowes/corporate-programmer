@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+# Drats!
+
+I searched. I promise. I just couldn't find what you are looking for.
