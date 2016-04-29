@@ -65,8 +65,7 @@ This is part of the build automation. The score (0 - 100) and level
 (PhD Academic, College Level Student, Average Adult, High Schooler,
 Middle Schooler and Elementary Schooler) is added to each post on build.
 
-The writing should aim to be [easy to read]
-(https://contently.com/strategist/2015/01/28/this-surprising-reading-level-analysis-will-change-the-way-you-write/)
+The writing should aim to be [easy to read](https://contently.com/strategist/2015/01/28/this-surprising-reading-level-analysis-will-change-the-way-you-write/)
 but interesting to follow. Optimize for a score between [60 - 70](http://www.vervesearch.com/blog/how-to-optimise-your-content-for-success-with-the-flesch-kincaid-scale-readability-statistics/).
 
 Run readability score manually using rake:
@@ -80,8 +79,8 @@ Run readability score manually using grunt:
 
 ### Search possibilities
 
-There are a few possibilities to implement [Search in Jekyll]
-(http://jekyll.tips/tutorials/search/). They currently include:
+There are a few possibilities to implement [Search in Jekyll](http://jekyll.tips/tutorials/search/). 
+They currently include:
 
 * Client Side Search
 * TapirGo
