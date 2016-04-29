@@ -78,6 +78,15 @@ Run readability score manually using grunt:
 
 `grunt shell:readability`
 
+### Search possibilities
+
+There are a few possibilities to implement [Search in Jekyll]
+(http://jekyll.tips/tutorials/search/). They currently include:
+
+* Client Side Search
+* TapirGo
+* Google Search
+
 ### Contributions
 
 * [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
