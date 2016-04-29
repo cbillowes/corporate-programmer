@@ -92,7 +92,7 @@ They currently include:
   by [vaadin](http://www.flaticon.com/authors/vaadin) at [flaticon](http://www.flaticon.com)
   saved as 24x24px in #3E8FB0 - Contribution to author required
 
-* Estimated read time calculation courtesy of [Carlos Alexandro Becker][http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
+* Estimated read time calculation courtesy of [Carlos Alexandro Becker](http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
 
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh](https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
 
