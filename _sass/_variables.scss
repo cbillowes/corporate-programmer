@@ -1,5 +1,5 @@
-$darkest:                 #101010;
-$dark:                    #151515;
+$dark:                    #1E2832;
+$darkest:                 darken($dark, 2%);
 $light:                   lighten($dark, 60%);
 $accent:                  #3E8FB0;
 $accent-compliment:       #CC334F;
