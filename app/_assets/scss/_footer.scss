@@ -1,0 +1,11 @@
+footer {
+
+  &.site {
+    margin-top: $spacer * 2;
+    border-bottom: solid $border-width $accent-color;
+    background-color: $bg-color-darker;
+    font-size: $font-size-small;
+    line-height: $font-size-small;
+  }
+
+}

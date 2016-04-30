@@ -1,1 +1,8 @@
-@import 'variables';
+@charset "utf-8";
+@import
+  '_variables',
+  '_type',
+  '_header',
+  '_posts',
+  '_footer'
+;

@@ -1,0 +1,11 @@
+header {
+  &.top {
+    background-color: $bg-color-darker;
+    padding: $spacer 0;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+  }
+}

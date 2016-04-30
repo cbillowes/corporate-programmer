@@ -1,0 +1,114 @@
+$thumbnail-size:        150px;
+$border-radius-top:     10%;
+$border-radius-left:    40%;
+$border-color:          darken($accent-color, 20%);
+$double-spacer:         $spacer * 2;
+$heading-bg-color:      rgba($bg-color-darker, 0.7);
+
+.post-preview {
+  margin-top: $double-spacer;
+
+  .thumbnail {
+    width: $thumbnail-size;
+    float: left;
+    margin-right: $spacer;
+
+    img {
+      width: 100%;
+      border-radius: $border-radius-top $border-radius-left;
+      border: solid $border-width $border-color;
+    }
+  }
+
+  h1 {
+    font-size: $font-size-h1 - 20;
+  }
+
+}
+
+.post {
+
+  .hero {
+    position: relative;
+    margin-bottom: $double-spacer;
+    border-bottom: solid $border-width $bg-color-darker;
+
+    .heading {
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        text-shadow: 2px 2px 5px $bg-color-base;
+        background-color: $heading-bg-color;
+        padding: 10px 25px;
+        display: inline-block;
+      }
+
+      .meta {
+        text-shadow: 2px 2px 5px $bg-color-base;
+        background-color: $heading-bg-color;
+        padding: 10px 25px;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: $font-size-base;
+      }
+
+    }
+
+    #image {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      font: 0/0 serif;
+      text-shadow: none;
+      color: transparent;
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      .inner {
+        display: block;
+        height: 0;
+      }
+
+    }
+
+    .photo-contribution {
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      font-style: italic;
+      position: absolute;
+      right: 0px;
+      padding: 0 15px;
+    }
+
+  }
+
+  h1 {
+    margin: 0px;
+  }
+
+  .meta {
+    font-size: $font-size-small;
+    margin-top: 0px;
+  }
+
+  .content {
+    margin-bottom: $spacer * 3;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+  .hero .heading {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  header.show-on-smaller {
+    display: none;
+  }
+}
