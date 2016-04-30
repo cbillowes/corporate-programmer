@@ -327,11 +327,11 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
-      'jekyll:server',
       'copy:favicon',
       'sass:bootstrap',
       'sass:server',
       'shell:fleschscore',
+      'jekyll:server',
       'autoprefixer',
       'uglify',
       'connect:livereload',
