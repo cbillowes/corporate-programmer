@@ -34,7 +34,7 @@ folder.
 * [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) - Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer.
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean) - Clear files and folders.
 * [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) - Start a connect web server.
-* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders
+* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders.
 * [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) - Minify CSS.
 * [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) - Minify HTML.
 * [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) - Minify images.
@@ -45,7 +45,7 @@ folder.
 * [grunt-critical](https://github.com/bezoerb/grunt-critical) - Grunt task to extract & inline critical-path CSS from HTML.
 * [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) - Straightforward grunt.js Jekyll plugin.
 * [grunt-uncss](https://github.com/addyosmani/grunt-uncss) - A grunt task for removing unused CSS from your projects.
-* [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
+* [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands.
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites. Using the picture element with [grunt responsive images](http://www.andismith.com/grunt-responsive-images/).
 * [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.

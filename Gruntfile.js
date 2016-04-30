@@ -43,9 +43,7 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       },
       jekyll: {
-        files: [
-          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown}', 'Gruntfile.js'
-        ],
+        files: ['<%= app.app %>/**/*.{html,yml,md,mkd,markdown}','Gruntfile.js'],
         tasks: ['jekyll:server']
       },
       livereload: {
