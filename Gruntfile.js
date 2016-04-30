@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
     watch: {
       favicon: {
-        files: [ '<%= app.app %>/_assets/favicons/**/**'],
+        files: [ '<%= app.app %>/_assets/favicons/**/*.{png,ico}'],
         tasks: ['copy:favicon']
       },
       bootstrap: {
