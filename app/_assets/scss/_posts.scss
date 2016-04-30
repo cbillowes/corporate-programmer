@@ -1,16 +1,27 @@
+$thumbnail-size:        150px;
+$border-radius-top:     10%;
+$border-radius-left:    40%;
+$border-color:          darken($accent-color, 20%);
+$double-spacer:         $spacer * 2;
+$heading-bg-color:      rgba($bg-color-darker, 0.7);
+
 .post-preview {
-  margin-top: $spacer * 2;
+  margin-top: $double-spacer;
 
   .thumbnail {
-    width: 150px;
+    width: $thumbnail-size;
     float: left;
     margin-right: $spacer;
 
     img {
       width: 100%;
-      border-radius: 10% 40%;
-      border: solid $border-width darken($accent, 20%);
+      border-radius: $border-radius-top $border-radius-left;
+      border: solid $border-width $border-color;
     }
+  }
+
+  h1 {
+    font-size: $font-size-h1 - 20;
   }
 
 }
@@ -19,8 +30,8 @@
 
   .hero {
     position: relative;
-    margin-bottom: $spacer * 2;
-    border-bottom: solid $border-width $darkest;
+    margin-bottom: $double-spacer;
+    border-bottom: solid $border-width $bg-color-darker;
 
     .heading {
       position: absolute;
@@ -29,16 +40,15 @@
       text-align: center;
 
       h1 {
-        text-shadow: 2px 2px 5px $dark;
-        background-color: rgba($darkest, 0.7);
+        text-shadow: 2px 2px 5px $bg-color-base;
+        background-color: $heading-bg-color;
         padding: 10px 25px;
         display: inline-block;
-        font-size: $font-size-largest;
       }
 
       .meta {
-        text-shadow: 2px 2px 5px $dark;
-        background-color: rgba($darkest, 0.7);
+        text-shadow: 2px 2px 5px $bg-color-base;
+        background-color: $heading-bg-color;
         padding: 10px 25px;
         display: inline-block;
         margin-top: 10px;
@@ -66,8 +76,8 @@
     }
 
     .photo-contribution {
-      font-size: $font-size-smallest;
-      line-height: $font-size-smallest * 1.5;
+      font-size: $font-size-small;
+      line-height: $line-height-small;
       font-style: italic;
       position: absolute;
       right: 0px;

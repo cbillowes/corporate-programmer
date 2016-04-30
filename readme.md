@@ -10,56 +10,71 @@
 * [Ruby](https://www.ruby-lang.org/)
 * [Jekyll](https://jekyllrb.com/) v3.1.3 - [Tips](http://jekyll.tips/)
 * [Grunt](http://gruntjs.com/getting-started)
-* [live-server](https://github.com/tapio/live-server) - Automatically reloads `_site` directory in your browser
+* [live-server](https://github.com/tapio/live-server)
 * [lingua](https://github.com/dbalatero/lingua) - `gem install 'lingua'`
 * [ImageMagick](http://www.imagemagick.org/script/binary-releases.php) - Install binary and make sure its in system path. Not sure if [node wrapper](https://www.npmjs.com/package/imagemagick) is needed: `npm install imagemagick`.
 
 You know what would be great? Having this configured in a
 [Docker](https://www.docker.com/) image! o_O
 
-### Build automation
+### Grunt build automation
 
-* [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks
-* [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
-* [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
-* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean) - Clear files and folders
-* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) - Compile Sass to CSS
-* [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently
-* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders
-* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run predefined tasks whenever watched file patterns are added, changed or deleted
+Update dependencies with `npm-check-updates`. Install
+`npm install -g npm-check-updates` and run it with `npm-check-updates -u`.
+This command will update all dependencies to the latest versions.
+
+Remove unused packages from `node_modules` by executing `npm prune` in the root
+folder.
+
+#### Dependencies
+
+* [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks.
+* [jit-grunt](https://github.com/shootaroo/jit-grunt) - JIT(Just In Time) plugin loader for Grunt.
+* [grunt-build-control](https://github.com/robwierzbowski/grunt-build-control) - Version control your built code.
+* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) - Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer.
+* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean) - Clear files and folders.
+* [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) - Start a connect web server.
+* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy) - Copy files and folders.
+* [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) - Minify CSS.
+* [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) - Minify HTML.
+* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) - Minify images.
+* [grunt-svgmin](https://github.com/sindresorhus/grunt-svgmin) - Minify SVG.
+* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) - Compile Sass to CSS.
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify) - Minify files with UglifyJS.
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run tasks whenever watched files change.
+* [grunt-critical](https://github.com/bezoerb/grunt-critical) - Grunt task to extract & inline critical-path CSS from HTML.
+* [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) - Straightforward grunt.js Jekyll plugin.
+* [grunt-uncss](https://github.com/addyosmani/grunt-uncss) - A grunt task for removing unused CSS from your projects.
+* [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands.
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites. Using the picture element with [grunt responsive images](http://www.andismith.com/grunt-responsive-images/).
-* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) - Minify images
+* [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
+* [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
-### Consoles
+#### Development
 
-To develop with ease, it's suggested to have separate console windows open.
-A great Windows app is [ComEmu](https://conemu.github.io/). Make sure they
-are all open to the current working directory (cwd) of this project.
+Run `grunt serve` or `grunt`
 
-If you are running a grunt task and are experiencing strange issues, opt in for
-verbose messaging by appending `-v` to the command. eg. `grunt default -v`
+* generate Bootstrap into css;
+* calculate and save Flesch-Kincaid score and level to all posts;
+* copy favicons;
+* make Jekyll magic and compile your site to `.jekyll` folder;
+* create different versions of responsive images for post `.jpg` files;
+* compile `.scss` files and autoprefix them;
+* compile `.js` files;
+* start a web server for you;
+* watch your files and run Grunt tasks when they are needed.
 
-#### Grunt tasks and other commands
+#### Deploy
 
-Use this console to run any grunt tasks that you would like.
+Run `grunt deploy`
 
-`grunt build`
-
-#### Watch
-
-This will watch site for changes made and depending on what was changed
-automatically execute a Jekyll build task.
-
-`grunt watch` or `grunt default`
-
-#### Live Server
-
-This will serve the site with JavaScript that will automatically refresh
-your browser every time a change is detected. No more pesky F5 buttons each time.
-You need to run this server on the generated website folder.
-
-`cd _site`
-`live-server`
+* make Jekyll magic and compile your site to `.jekyll` folder;
+* compress all images in `img` folder;
+* compile `.sass` files, delete unnecessary css styles, autoprefix and compress them;
+* compile and compress `.js` files;
+* generate and insert critical css into pages;
+* compress `.html` pages;
+* bump version and tag branch with latest version. TODO
 
 #### Flesch-Kincaid calculation
 
@@ -97,6 +112,9 @@ They currently include:
 * Estimated read time calculation courtesy of [Carlos Alexandro Becker](http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
 
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh](https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
+
+* Optimized Jekyll site with grunt thanks to
+[Oleh Zasadnyy](http://o.zasadnyy.com/blog/optimized-jekyll-site-with-grunt/)
 
 #### Photos
 
