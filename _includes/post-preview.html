@@ -13,6 +13,7 @@
       <img src="/img/thumb/{{post.image.filename}}.jpg" alt="{{ post.image.alt }}" />
     </div>
 
-    {{ post.content | truncate: 256 }}
+    {{ post.content | truncatewords: 37 }}
+    <a href="{{ post.url }}">read more</a>
   </div>
 </div>
