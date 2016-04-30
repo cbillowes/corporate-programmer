@@ -4,6 +4,7 @@ title:  You don't have to be a number
 date:   2016-04-28 20:22:52 +0200
 flesch-score: 69.12
 flesch-level: High Schooler
+image:  man-with-numbers
 ---
 When you join the corporate world, you become a number. At least, that is what
 I heard - and believed. The game involves a lot of players and you need to play

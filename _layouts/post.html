@@ -38,9 +38,7 @@ layout: default
 </article>
 
 <style type="text/css">
-  {% assign identifier = {{page.title | remove: " -" | remove: "'" | replace: " ", "-" | downcase }} %}
-  {% assign file_name = page.date | date: "%F" | append: "-" | append: identifier %}
-  {% assign img = "/img/" | append: file_name %}
+  {% assign img = "/img/" | append: post.image %}
 
   .hero #image .inner {
     padding-top: {{ site.data.images.aspectRatio }}%;
