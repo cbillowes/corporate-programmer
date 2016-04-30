@@ -4,13 +4,23 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="hero">
+    <div class="heading">
+      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <br/>
+      <p class="meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} •
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} •
+        {% assign post = page %}
+        <span class="est-read-time">{% include estimated-reading-time.html %}</span>
+      </p>
+    </div>
     <span id="image" role="img" aria-label="{{ page.title }}">
       <span class="inner">
       </span>
     </span>
   </div>
 
-  <header>
+  <header class="show-on-smaller">
     <h1 itemprop="name headline">{{ page.title }}</h1>
     <p class="meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} •
