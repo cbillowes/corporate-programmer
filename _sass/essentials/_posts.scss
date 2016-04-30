@@ -1,5 +1,28 @@
 .post {
 
+  .hero {
+    position: relative;
+
+    #image {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      font: 0/0 serif;
+      text-shadow: none;
+      color: transparent;
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      .inner {
+        display: block;
+        height: 0;
+      }
+
+    }
+
+  }
+
   h1 {
     margin: 0px;
   }

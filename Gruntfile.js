@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         }
       },
 
-      clean: ['img/*', 'css/*.css'],
+      clean: ['_build/img/*', 'img/*', 'css/*.css'],
 
       sass: {
         bootstrap: {
@@ -80,9 +80,15 @@ module.exports = function(grunt) {
           options: {
             engine: 'im', // uses ImageMagick
             sizes: [
-              { name: 'small', width: 320, quality: 80 },
-              { name: 'medium', width: 640, quality: 80 },
-              { name: 'large', width: 700, quality: 80 }
+              { name: '320', width: 320, height: getResponsiveHeight(320), quality: 80, aspectRatio: false },
+              { name: '480', width: 480, height: getResponsiveHeight(480), quality: 80, aspectRatio: false },
+              { name: '640', width: 640, height: getResponsiveHeight(640), quality: 80, aspectRatio: false },
+              { name: '960', width: 960, height: getResponsiveHeight(960), quality: 60, aspectRatio: false },
+              { name: '1024', width: 1024, height: getResponsiveHeight(1024), quality: 60, aspectRatio: false },
+              { name: '1280', width: 1280, height: getResponsiveHeight(1280), quality: 50, aspectRatio: false },
+              { name: '1440', width: 1600, height: getResponsiveHeight(1600), quality: 50, aspectRatio: false },
+              { name: '1600', width: 1600, height: getResponsiveHeight(1600), quality: 50, aspectRatio: false },
+              { name: '1920', width: 1920, height: getResponsiveHeight(1920), quality: 50, aspectRatio: false }
             ]
           },
           files: [
@@ -90,7 +96,7 @@ module.exports = function(grunt) {
               expand: true,
               src: [ '**/*.jpg' ],
               cwd: '_assets/posts/',
-              custom_dest: '_build/img/{%= name %}/'
+              dest: '_build/img/'
             }
           ]
         }
@@ -124,7 +130,7 @@ module.exports = function(grunt) {
           }
         },
         site: {
-          files: ['_assets/**', '_includes/**', '_layouts/**', '_plugins/**', '_posts/**', '*.html', '!readme.md', '*.xml'],
+          files: ['_assets/**', '_data/**', '_includes/**', '_layouts/**', '_plugins/**', '_posts/**', '*.html', '!readme.md', '*.xml'],
           tasks: ['build']
         },
         sass: {
@@ -145,4 +151,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['watch']);
 
+    function getResponsiveHeight(width) {
+      // Online aspect ratio calculator (http://andrew.hedges.name/experiments/aspect_ratio/)
+      // height / width
+      // Post stylesheet needs to be updated to include new aspect ratio
+      var aspectRatio = 600 / 1920;
+      return width * aspectRatio;
+    }
 };

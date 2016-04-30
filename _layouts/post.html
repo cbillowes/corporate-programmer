@@ -3,6 +3,13 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <div class="hero">
+    <span id="image" role="img" aria-label="{{ page.title }}">
+      <span class="inner">
+      </span>
+    </span>
+  </div>
+
   <header>
     <h1 itemprop="name headline">{{ page.title }}</h1>
     <p class="meta">
@@ -16,9 +23,59 @@ layout: default
     {{ content }}
   </div>
 </article>
-
-
 <div id="disqus_thread"></div>
+
+<style type="text/css">
+  {% assign identifier = {{page.title | remove: " -" | remove: "'" | replace: " ", "-" | downcase }} %}
+  {% assign file_name = page.date | date: "%F" | append: "-" | append: identifier %}
+  {% assign img = "/img/" | append: file_name %}
+
+  .hero #image .inner {
+    padding-top: {{ site.data.images.aspectRatio }}%;
+  }
+
+  {% assign width = 0 %}
+  {% for resolution in site.data.images.resolutions %}
+
+    {% if forloop.last != true %}
+
+      @media only screen and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+        .hero #image { background-image: url("{{ img }}-{{ resolution.width }}.jpg"); }
+      }
+
+      {% if resolution.2dppx %}
+        @media only screen and (min-resolution: 2dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 2 }}.jpg"); }
+        }
+      {% endif %}
+
+      {% if resolution.3dppx %}
+        @media only screen and (min-resolution: 3dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 3 }}.jpg"); }
+        }
+      {% endif %}
+
+      {% if resolution.4dppx %}
+        @media only screen and (min-resolution: 4dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 4 }}.jpg"); }
+        }
+      {% endif %}
+
+      {% assign width = resolution.width + 1 %}
+
+    {% else %}
+
+      @media only screen and (min-width: {{ width }}px) {
+        .hero #image { background-image: url("{{ img }}-{{ resolution.width }}.jpg"); }
+      }
+
+      .hero #image { max-width: {{resolution.width}}px; }
+
+    {% endif %}
+
+  {% endfor %}
+</style>
+
 <script>
   var disqus_config = function () {
     this.page.url = '{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}';

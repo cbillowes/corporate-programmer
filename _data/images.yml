@@ -1,0 +1,26 @@
+aspectRatio: 31.25
+resolutions:
+  - width: 320
+    2dppx: true
+    3dppx: true
+    4dppx: true
+
+  - width: 480
+    2dppx: true
+    3dppx: true
+    4dppx: true
+
+  - width: 640
+    2dppx: true
+    3dppx: true
+
+  - width: 960
+    2dppx: true
+
+  - width: 1024
+
+  - width: 1440
+
+  - width: 1600
+
+  - width: 1920
