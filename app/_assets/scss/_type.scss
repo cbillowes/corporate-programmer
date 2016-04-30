@@ -7,6 +7,10 @@ body {
   font-size: $font-size-base;
 }
 
+a:hover {
+  color: $accent-color-compliment;
+}
+
 p {
   line-height: $line-height-base;
   font-weight: $font-weight;
