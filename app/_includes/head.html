@@ -17,7 +17,7 @@
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
   {% endif %}
 
-  <link rel="stylesheet" href="{{ "/css/essentials.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/blog.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -34,5 +34,5 @@
     ga('send', 'pageview');
 
   </script>
-  
+
 </head>

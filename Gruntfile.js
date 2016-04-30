@@ -191,13 +191,9 @@ module.exports = function(grunt) {
         options: {
           sourcemap: 'file'
         },
-        files: [{
-          expand: true,
-          cwd: '<%= app.app %>/_assets/scss',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/<%= app.baseurl %>/css',
-          ext: '.css'
-        }]
+        files: {
+          '.tmp/<%= app.baseurl %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss'
+        }
       },
       dist: {
         options: {
