@@ -38,8 +38,6 @@ layout: default
 </article>
 
 <style type="text/css">
-  {% assign img = "/img/" | append: post.image %}
-
   .hero #image .inner {
     padding-top: {{ site.data.images.aspectRatio }}%;
   }
@@ -50,24 +48,24 @@ layout: default
     {% if forloop.last != true %}
 
       @media only screen and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-        .hero #image { background-image: url("{{ img }}-{{ resolution.width }}.jpg"); }
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ post.image }}.jpg"); }
       }
 
       {% if resolution.2dppx %}
         @media only screen and (min-resolution: 2dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 2 }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 2 }}/{{ post.image }}.jpg"); }
         }
       {% endif %}
 
       {% if resolution.3dppx %}
         @media only screen and (min-resolution: 3dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 3 }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 3 }}/{{ post.image }}.jpg"); }
         }
       {% endif %}
 
       {% if resolution.4dppx %}
         @media only screen and (min-resolution: 4dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("{{ img }}-{{ resolution.width | times: 4 }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 4 }}/{{ post.image }}.jpg"); }
         }
       {% endif %}
 
@@ -76,7 +74,7 @@ layout: default
     {% else %}
 
       @media only screen and (min-width: {{ width }}px) {
-        .hero #image { background-image: url("{{ img }}-{{ resolution.width }}.jpg"); }
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ post.image }}.jpg"); }
       }
 
       .hero #image { max-width: {{resolution.width}}px; }

@@ -80,7 +80,7 @@ module.exports = function(grunt) {
           options: {
             engine: 'im', // uses ImageMagick
             sizes: [
-              { name: 'thumbnail', width: 150, height: 150, quality: 50, aspectRatio: false },
+              { name: 'thumb', width: 150, height: 150, quality: 50, aspectRatio: false },
               { name: '320', width: 320, height: getResponsiveHeight(320), quality: 80, aspectRatio: false },
               { name: '480', width: 480, height: getResponsiveHeight(480), quality: 80, aspectRatio: false },
               { name: '640', width: 640, height: getResponsiveHeight(640), quality: 80, aspectRatio: false },
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
               expand: true,
               src: [ '**/*.jpg' ],
               cwd: '_assets/posts/',
-              dest: '_build/img/'
+              custom_dest: '_build/img/{%= name %}/'
             }
           ]
         }
