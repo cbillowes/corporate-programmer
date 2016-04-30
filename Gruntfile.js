@@ -90,9 +90,24 @@ module.exports = function(grunt) {
               expand: true,
               src: [ '**/*.jpg' ],
               cwd: '_assets/posts/',
-              custom_dest: 'img/{%= name %}-{%= width %}px/'
+              custom_dest: '_build/img/{%= name %}/'
             }
           ]
+        }
+      },
+
+      imagemin: {
+        posts: {
+          options: {
+            optimizationLevel: 4,
+            progressive: true
+          },
+          files: [{
+            expand: true,
+            cwd: '_build/img/',
+            src: '**/*.jpg',
+            dest: 'img/'
+          }]
         }
       },
 
@@ -124,7 +139,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copy-files', ['copy:favicon', 'copy:css', 'copy:img']);
 
-    grunt.registerTask('build', ['concurrent:build', 'responsive_images:posts', 'copy-files']);
+    grunt.registerTask('process-images', ['responsive_images:posts', 'imagemin:posts']);
+
+    grunt.registerTask('build', ['concurrent:build', 'process-images', 'copy-files']);
 
     grunt.registerTask('default', ['watch']);
 
