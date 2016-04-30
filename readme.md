@@ -19,6 +19,7 @@ You know what would be great? Having this configured in a
 
 ### Build automation
 
+* [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks
 * [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean) - Clear files and folders

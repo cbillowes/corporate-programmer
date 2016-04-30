@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
     require('load-grunt-tasks')(grunt);
+    require('time-grunt')(grunt);
 
     grunt.initConfig({
       shell: {
