@@ -1,12 +1,18 @@
-<div class="post">
+<div class="post post-preview">
+
   <h1>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h1>
   <p class="meta">
-    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span> • 
+    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span> •
     <span class="est-read-time">{% include estimated-reading-time.html %}</span>
   </p>
   <div class="content">
+
+    <div class="thumbnail">
+      <img src="/img/{{post.image}}-thumbnail.jpg" />
+    </div>
+    
     {{ post.content | truncate: 256 }}
   </div>
 </div>
