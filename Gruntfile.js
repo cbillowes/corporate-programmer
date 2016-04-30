@@ -257,10 +257,10 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      options: {
-        progressive: true
-      },
       dist: {
+        options: {
+          progressive: true
+        },
         files: [{
           expand: true,
           cwd: '<%= app.dist %>/<%= app.baseurl %>/img',
