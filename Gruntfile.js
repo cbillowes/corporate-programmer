@@ -274,7 +274,7 @@ module.exports = function(grunt) {
         options: {
           engine: 'im', //ImageMagic - requires installation see readme.md
           sizes: [
-            { name: 'thumb', width: 150, height: getHeight(150), quality: 50, aspectRatio: false },
+            { name: 'thumb', width: 150, height: 150, quality: 50, aspectRatio: false },
             { name: '320', width: 320, height: getHeight(320), quality: 80, aspectRatio: false },
             { name: '480', width: 480, height: getHeight(480), quality: 80, aspectRatio: false },
             { name: '640', width: 640, height: getHeight(640), quality: 80, aspectRatio: false },
