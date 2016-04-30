@@ -10,7 +10,7 @@
   <div class="content">
 
     <div class="thumbnail">
-      <img src="/img/thumb/{{post.image}}.jpg" />
+      <img src="/img/thumb/{{post.image.filename}}.jpg" alt="{{ post.image.alt }}" />
     </div>
 
     {{ post.content | truncate: 256 }}

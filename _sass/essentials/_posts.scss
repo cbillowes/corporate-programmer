@@ -16,11 +16,10 @@
 }
 
 .post {
-  margin-bottom: $spacer;
 
   .hero {
     position: relative;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer * 2;
     border-bottom: solid $border-width $darkest;
 
     .heading {
@@ -64,6 +63,15 @@
         height: 0;
       }
 
+    }
+
+    .photo-contribution {
+      font-size: $font-size-smallest;
+      line-height: $font-size-smallest * 1.5;
+      font-style: italic;
+      position: absolute;
+      right: 0px;
+      padding: 0 15px;
     }
 
   }

@@ -4,7 +4,14 @@ flesch-level: High Schooler
 layout: post
 title:  You don't have to be a number
 date:   2016-04-28 20:22:52 +0200
-image:  man-with-numbers
+image:
+  filename: man-standing-in-front-of-numbers
+  alt: Man standing in front of numbers
+  website: StockSnap.io
+  url: https://stocksnap.io/photo/E13520154A
+photographer:
+  name: Israel Sundseth
+  url: https://stocksnap.io/author/449
 ---
 When you join the corporate world, you become a number. At least, that is what
 I heard - and believed. The game involves a lot of players and you need to play

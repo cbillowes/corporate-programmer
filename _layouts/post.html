@@ -2,31 +2,32 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+  {% assign post = page %}
   <div class="hero">
     <div class="heading">
-      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <h1 itemprop="name headline">{{ post.title }}</h1>
       <br/>
       <p class="meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} •
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} •
-        {% assign post = page %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} •
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} •
         <span class="est-read-time">{% include estimated-reading-time.html %}</span>
       </p>
     </div>
-    <span id="image" role="img" aria-label="{{ page.title }}">
+    <span id="image" role="img" aria-label="{{ post.image.alt }}">
       <span class="inner">
       </span>
     </span>
+    <p class="photo-contribution">
+      Photo courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a> taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>.
+    </p>
   </div>
 
   <div class="container">
     <header class="show-on-smaller">
-      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <h1 itemprop="name headline">{{ post.title }}</h1>
       <p class="meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} •
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} •
-        {% assign post = page %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} •
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} •
         <span class="est-read-time">{% include estimated-reading-time.html %}</span>
       </p>
     </header>
@@ -43,29 +44,30 @@ layout: default
   }
 
   {% assign width = 0 %}
+  {% assign image = post.image.filename %}
   {% for resolution in site.data.images.resolutions %}
 
     {% if forloop.last != true %}
 
       @media only screen and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ post.image }}.jpg"); }
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ image }}.jpg"); }
       }
 
       {% if resolution.2dppx %}
         @media only screen and (min-resolution: 2dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("/img/{{ resolution.width | times: 2 }}/{{ post.image }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 2 }}/{{ image }}.jpg"); }
         }
       {% endif %}
 
       {% if resolution.3dppx %}
         @media only screen and (min-resolution: 3dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("/img/{{ resolution.width | times: 3 }}/{{ post.image }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 3 }}/{{ image }}.jpg"); }
         }
       {% endif %}
 
       {% if resolution.4dppx %}
         @media only screen and (min-resolution: 4dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
-          .hero #image { background-image: url("/img/{{ resolution.width | times: 4 }}/{{ post.image }}.jpg"); }
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 4 }}/{{ image }}.jpg"); }
         }
       {% endif %}
 
@@ -74,7 +76,7 @@ layout: default
     {% else %}
 
       @media only screen and (min-width: {{ width }}px) {
-        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ post.image }}.jpg"); }
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ image }}.jpg"); }
       }
 
     {% endif %}
@@ -84,7 +86,7 @@ layout: default
 
 <script>
   var disqus_config = function () {
-    this.page.url = '{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}';
+    this.page.url = '{{ post.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}';
     this.page.identifier = '{{ identifier }}';
   };
   (function() {
