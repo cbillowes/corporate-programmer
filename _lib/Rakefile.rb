@@ -30,7 +30,7 @@ task :readability do
   require 'stringio'
   def add_flesch_score_to_post(post, score, level)
     content_stream = StringIO.open
-    line_target = 4
+    line_target = 1
     line_counter = 0
 
     File.readlines(post).each do |line|
