@@ -26,6 +26,10 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      favicon: {
+        files: [ '<%= app.app %>/_assets/favicons/**/**'],
+        tasks: ['copy:favicon']
+      },
       sass: {
         files: ['<%= app.app %>/_assets/scss/**/*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer']
@@ -265,6 +269,14 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      favicon: {
+        files: [{
+          expand: true,
+          cwd: '<%= app.app %>/_assets/favicons',
+          src: ['**/*.{ico,png}'],
+          dest: '.tmp/<%= app.baseurl %>'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -303,6 +315,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'clean:server',
       'jekyll:server',
+      'copy:favicon',
       'sass:server',
       'shell:fleschscore',
       'autoprefixer',
