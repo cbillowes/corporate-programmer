@@ -2,26 +2,30 @@
 
   .hero {
     position: relative;
+    margin-bottom: $spacer;
+    border-bottom: solid 5px $darkest;
 
     .heading {
       position: absolute;
-      bottom: 10%;
+      bottom: 5%;
       width: 100%;
       text-align: center;
 
       h1 {
         text-shadow: 2px 2px 5px $dark;
-        background-color: rgba($darkest, 0.5);
+        background-color: rgba($darkest, 0.7);
         padding: 10px 25px;
         display: inline-block;
+        font-size: $font-size-largest;
       }
 
       .meta {
         text-shadow: 2px 2px 5px $dark;
-        background-color: rgba($darkest, 0.5);
+        background-color: rgba($darkest, 0.7);
         padding: 10px 25px;
         display: inline-block;
         margin-top: 10px;
+        font-size: $font-size-base;
       }
 
     }

@@ -6,6 +6,7 @@ $accent-compliment:       #CC334F;
 $spacer:                  25px;
 
 $font-size-base:          20px;
+$font-size-largest:       ceil(($font-size-base * 2.5));
 $font-size-large:         ceil(($font-size-base * 1.25));
 $font-size-small:         ceil(($font-size-base * 0.85));
 
