@@ -1,163 +1,331 @@
 'use strict';
 
 module.exports = function(grunt) {
-    // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
-    require('load-grunt-tasks')(grunt);
-    require('time-grunt')(grunt);
+  // Show elapsed time after tasks run
+  require('time-grunt')(grunt);
+  // Load all Grunt tasks
+  require('jit-grunt')(grunt);
 
-    grunt.initConfig({
-      shell: {
-        build: {
-          command: 'jekyll build'
-        },
-        readability: {
-          command: 'rake readability',
-          options: {
-            execOptions: {
-              cwd: '_lib'
-            }
-          }
-        }
-      },
+  grunt.initConfig({
 
-      clean: ['_build/img/*', 'img/*', 'css/*.css'],
+    app: {
+      app: 'app',
+      dist: 'dist',
+      baseurl: ''
+    },
 
+    watch: {
       sass: {
-        bootstrap: {
-          options: {
-            style: 'compressed',
-            sourcemap: 'none',
-            noCache: true,
-            loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
-          },
-          files: {
-              // Source file fails to generate output when starting with _.
-              // destination : source
-              'css/bootstrap.min.css': '_sass/bootstrap/imports.scss'
-          }
-        },
-        site: {
-          options: {
-            style: 'compressed',
-            sourcemap: 'none'
-          },
-          files: {
-            'css/essentials.min.css' : '_sass/essentials/imports.scss'
-          }
-        }
+        files: ['<%= app.app %>/_assets/scss/**/*.{scss,sass}'],
+        tasks: ['sass:server', 'autoprefixer']
       },
-
-      concurrent: {
-        build: {
-          tasks: ['clean', 'shell:readability', 'shell:build', 'compile-sass'],
-          options: {
-            logConcurrentOutput: true
-          }
-        }
+      scripts: {
+        files: ['<%= app.app %>/_assets/js/**/*.{js}'],
+        tasks: ['uglify']
       },
+      jekyll: {
+        files: [
+          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown}', 'Gruntfile.js'
+        ],
+        tasks: ['jekyll:server']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '.jekyll/**/*.{html,yml,md,mkd,markdown}',
+          '.tmp/<%= app.baseurl %>/css/*.css',
+          '.tmp/<%= app.baseurl %>/js/*.js',
+          '<%= app.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+        ]
+      }
+    },
 
-      copy: {
-        favicon: {
-          files: [
-            // expand: true to fix abortion: Warning: Unable to read "favicon.ico" file (Error code: ENOENT). Use --force to continue.
-            // https://github.com/gruntjs/grunt-contrib-copy/issues/64
-            { expand : true, cwd: '_assets/favicons/', src: ['*.ico', '*.png'], dest: '_site/' }
-          ]
-        },
-        css: {
-          files: [
-            { expand : true, cwd: 'css/', src: ['**'], dest: '_site/css/' }
-          ]
-        },
-        img: {
-          files: [
-            { expand : true, cwd: 'img/', src: ['**'], dest: '_site/img/' }
+    connect: {
+      options: {
+        port: 9000,
+        livereload: 35729,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          open: {
+            target: 'http://localhost:9000/<%= app.baseurl %>'
+          },
+          base: [
+            '.jekyll',
+            '.tmp',
+            '<%= app.app %>'
           ]
         }
       },
-
-      responsive_images: {
-        posts: {
-          options: {
-            engine: 'im', // uses ImageMagick
-            sizes: [
-              { name: 'thumb', width: 150, height: 150, quality: 50, aspectRatio: false },
-              { name: '320', width: 320, height: getResponsiveHeight(320), quality: 80, aspectRatio: false },
-              { name: '480', width: 480, height: getResponsiveHeight(480), quality: 80, aspectRatio: false },
-              { name: '640', width: 640, height: getResponsiveHeight(640), quality: 80, aspectRatio: false },
-              { name: '960', width: 960, height: getResponsiveHeight(960), quality: 60, aspectRatio: false },
-              { name: '1024', width: 1024, height: getResponsiveHeight(1024), quality: 60, aspectRatio: false },
-              { name: '1280', width: 1280, height: getResponsiveHeight(1280), quality: 50, aspectRatio: false },
-              { name: '1440', width: 1600, height: getResponsiveHeight(1600), quality: 50, aspectRatio: false },
-              { name: '1600', width: 1600, height: getResponsiveHeight(1600), quality: 50, aspectRatio: false },
-              { name: '1920', width: 1920, height: getResponsiveHeight(1920), quality: 50, aspectRatio: false }
-            ]
+      dist: {
+        options: {
+          open: {
+            target: 'http://localhost:9000/<%= app.baseurl %>'
           },
-          files: [
-            {
-              expand: true,
-              src: [ '**/*.jpg' ],
-              cwd: '_assets/posts/',
-              custom_dest: '_build/img/{%= name %}/'
-            }
+          base: [
+            '<%= app.dist %>',
+            '.tmp'
           ]
-        }
-      },
-
-      imagemin: {
-        posts: {
-          options: {
-            optimizationLevel: 4,
-            progressive: true
-          },
-          files: [{
-            expand: true,
-            cwd: '_build/img/',
-            src: '**/*.jpg',
-            dest: 'img/'
-          }]
-        }
-      },
-
-      watch: {
-        config: {
-          files: ['_config.yml'],
-          tasks: ['build']
-        },
-        gruntfile: {
-          files: ['Gruntfile.js'],
-          tasks: ['build'],
-          options: {
-            reload: true
-          }
-        },
-        site: {
-          files: ['_assets/**', '_data/**', '_includes/**', '_layouts/**', '_plugins/**', '_posts/**', '*.html', '!readme.md', '*.xml'],
-          tasks: ['build']
-        },
-        sass: {
-          files: ['_sass/**'],
-          tasks: ['compile-sass', 'copy:css']
         }
       }
+    },
 
-    });
+    clean: {
+      server: [
+        '.jekyll',
+        '.tmp'
+      ],
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= app.dist %>/*',
+            '!<%= app.dist %>/.git*'
+          ]
+        }]
+      }
+    },
 
-    grunt.registerTask('compile-sass', ['sass:bootstrap', 'sass:site']);
+    jekyll: {
+      options: {
+        config: '_config.yml,_config.build.yml',
+        src: '<%= app.app %>'
+      },
+      dist: {
+        options: {
+          dest: '<%= app.dist %>/<%= app.baseurl %>',
+        }
+      },
+      server: {
+        options: {
+          config: '_config.yml',
+          dest: '.jekyll/<%= app.baseurl %>'
+        }
+      }
+    },
 
-    grunt.registerTask('copy-files', ['copy:favicon', 'copy:css', 'copy:img']);
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true,
+          collapseBooleanAttributes: true,
+          removeAttributeQuotes: true,
+          removeRedundantAttributes: true,
+          removeEmptyAttributes: true,
+          minifyJS: true,
+          minifyCSS: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= app.dist %>/<%= app.baseurl %>',
+          src: '**/*.html',
+          dest: '<%= app.dist %>/<%= app.baseurl %>'
+        }]
+      }
+    },
 
-    grunt.registerTask('process-images', ['responsive_images:posts', 'imagemin:posts']);
+    uglify: {
+      options: {
+        preserveComments: false
+      },
+      dist: {
+        files: {
+          '.tmp/<%= app.baseurl %>/js/scripts.js': ['<%= app.app %>/_assets/js/**/*.js']
+        }
+      }
+    },
 
-    grunt.registerTask('build', ['concurrent:build', 'process-images', 'copy-files']);
+    sass: {
+      server: {
+        options: {
+          sourcemap: 'file'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= app.app %>/_assets/scss',
+          src: '**/*.{scss,sass}',
+          dest: '.tmp/<%= app.baseurl %>/css',
+          ext: '.css'
+        }]
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= app.app %>/_assets/scss',
+          src: '**/*.{scss,sass}',
+          dest: '<%= app.dist %>/<%= app.baseurl %>/css',
+          ext: '.css'
+        }]
+      }
+    },
 
-    grunt.registerTask('default', ['watch']);
+    uncss: {
+      options: {
+        htmlroot: '<%= app.dist %>/<%= app.baseurl %>',
+        report: 'gzip'
+      },
+      dist: {
+        src: '<%= app.dist %>/<%= app.baseurl %>/**/*.html',
+        dest: '.tmp/<%= app.baseurl %>/css/blog.css'
+      }
+    },
 
-    function getResponsiveHeight(width) {
-      // Online aspect ratio calculator (http://andrew.hedges.name/experiments/aspect_ratio/)
-      // height / width
-      // Post stylesheet needs to be updated to include new aspect ratio
-      var aspectRatio = 600 / 1920;
-      return width * aspectRatio;
+    autoprefixer: {
+      options: {
+        browsers: ['last 3 versions']
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/<%= app.baseurl %>/css',
+          src: '**/*.css',
+          dest: '.tmp/<%= app.baseurl %>/css'
+        }]
+      }
+    },
+
+    critical: {
+      dist: {
+        options: {
+          base: './',
+          css: [
+            '.tmp/<%= app.baseurl %>/css/blog.css'
+          ],
+          minify: true,
+          width: 320,
+          height: 480
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= app.dist %>/<%= app.baseurl %>',
+          src: ['**/*.html'],
+          dest: '<%= app.dist %>/<%= app.baseurl %>'
+        }]
+      }
+    },
+
+    cssmin: {
+      dist: {
+        options: {
+          keepSpecialComments: 0,
+          check: 'gzip'
+        },
+        files: [{
+          expand: true,
+          cwd: '.tmp/<%= app.baseurl %>/css',
+          src: ['*.css'],
+          dest: '.tmp/<%= app.baseurl %>/css'
+        }]
+      }
+    },
+
+    imagemin: {
+      options: {
+        progressive: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= app.dist %>/<%= app.baseurl %>/img',
+          src: '**/*.{jpg,jpeg,png,gif}',
+          dest: '<%= app.dist %>/<%= app.baseurl %>/img'
+        }]
+      }
+    },
+
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= app.dist %>/<%= app.baseurl %>/img',
+          src: '**/*.svg',
+          dest: '<%= app.dist %>/<%= app.baseurl %>/img'
+        }]
+      }
+    },
+
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.tmp/<%= app.baseurl %>',
+          src: [
+            'css/**/*',
+            'js/**/*'
+          ],
+          dest: '<%= app.dist %>/<%= app.baseurl %>'
+        }]
+      }
+    },
+
+    buildcontrol: {
+      dist: {
+        options: {
+          dir: '<%= app.dist %>/<%= app.baseurl %>',
+          remote: 'git@github.com:user/repo.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true,
+          connectCommits: false
+        }
+      }
     }
+
+  });
+
+  // Define Tasks
+  grunt.registerTask('serve', function(target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
+
+    grunt.task.run([
+      'clean:server',
+      'jekyll:server',
+      'sass:server',
+      'autoprefixer',
+      'uglify',
+      'connect:livereload',
+      'watch'
+    ]);
+  });
+
+  grunt.registerTask('server', function() {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
+
+  grunt.registerTask('build', [
+    'clean:dist',
+    'jekyll:dist',
+    'imagemin',
+    'svgmin',
+    'sass:dist',
+    'uncss',
+    'autoprefixer',
+    'cssmin',
+    'uglify',
+    'critical',
+    'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'copy',
+    'buildcontrol'
+  ]);
+
+  grunt.registerTask('default', [
+    'serve'
+  ]);
 };
