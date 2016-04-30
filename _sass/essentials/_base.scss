@@ -1,5 +1,5 @@
 body {
-  border-top: solid 5px $accent;
+  border-top: solid $border-width $accent;
   background-color: $dark;
   text-color: $accent;
   font-family: $font-family-sans-serif;

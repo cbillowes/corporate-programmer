@@ -2,7 +2,7 @@ footer {
 
   &.site {
     margin-top: 50px;
-    border-bottom: solid 5px $accent;
+    border-bottom: solid $border-width $accent;
     background-color: $darkest;
     font-size: $font-size-small - 0.5;
     line-height: $font-size-small;

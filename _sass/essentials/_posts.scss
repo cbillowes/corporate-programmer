@@ -21,7 +21,7 @@
   .hero {
     position: relative;
     margin-bottom: $spacer;
-    border-bottom: solid 5px $darkest;
+    border-bottom: solid $border-width $darkest;
 
     .heading {
       position: absolute;
