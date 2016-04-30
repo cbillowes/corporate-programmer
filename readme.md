@@ -80,7 +80,7 @@ Run readability score manually using grunt:
 
 ### Search possibilities
 
-There are a few possibilities to implement [Search in Jekyll](http://jekyll.tips/tutorials/search/). 
+There are a few possibilities to implement [Search in Jekyll](http://jekyll.tips/tutorials/search/).
 They currently include:
 
 * Client Side Search
