@@ -2,6 +2,7 @@ require 'lingua'
 require 'find'
 
 task :readability do
+  path = '../app/_posts'
 
   # Create a simple function to do this
   def calculate_score(text)
@@ -48,7 +49,7 @@ task :readability do
   end
 
   # Get all posts in ./_posts
-  Find.find("../_posts/") do |post|
+  Find.find(path) do |post|
     if File.file?(post)
       score, article, level = calculate_score(File.read(post))
       puts "#{post} has a score of #{score}, which is suitable for #{article} #{level}"

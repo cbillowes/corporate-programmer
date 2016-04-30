@@ -53,7 +53,7 @@ folder.
 
 Run `grunt serve` or `grunt`
 
-* calculate and save Flesch-Kincaid score and level to all posts; TODO
+* calculate and save Flesch-Kincaid score and level to all posts;
 * make Jekyll magic and compile your site to `.jekyll` folder;
 * create different versions of responsive images for post `.jpg` files;
 * compile `.scss` files and autoprefix them;

@@ -14,6 +14,17 @@ module.exports = function(grunt) {
       baseurl: ''
     },
 
+    shell: {
+      fleschscore: {
+        command: 'rake readability',
+        options: {
+          execOptions: {
+            cwd: 'rake'
+          }
+        }
+      }
+    },
+
     watch: {
       sass: {
         files: ['<%= app.app %>/_assets/scss/**/*.{scss,sass}'],
@@ -293,6 +304,7 @@ module.exports = function(grunt) {
       'clean:server',
       'jekyll:server',
       'sass:server',
+      'shell:fleschscore',
       'autoprefixer',
       'uglify',
       'connect:livereload',
