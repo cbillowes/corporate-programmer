@@ -46,6 +46,10 @@ module.exports = function(grunt) {
         files: ['<%= app.app %>/**/*.{html,yml,md,mkd,markdown}','Gruntfile.js'],
         tasks: ['jekyll:server']
       },
+      gruntfile: {
+        files: ['Gruntfile.js'],
+        tasks: ['concurrent:watchapp', 'responsive_images']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -63,7 +67,7 @@ module.exports = function(grunt) {
       options: {
         logConcurrentOutput: true
       },
-      app: {
+      watchapp: {
         tasks: [
           'watch:favicon',
           'watch:bootstrap',
@@ -379,7 +383,7 @@ module.exports = function(grunt) {
     ]);
   });
 
-  grunt.registerTask('watch-app', ['concurrent:app']);
+  grunt.registerTask('watch-app', ['concurrent:watchapp']);
 
   grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
