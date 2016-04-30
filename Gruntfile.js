@@ -292,7 +292,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '.tmp/<%= app.baseurl %>/img/{%= width %}'
+          custom_dest: '.tmp/<%= app.baseurl %>/img/{%= name %}'
         }]
       }
     },
