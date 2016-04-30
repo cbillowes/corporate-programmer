@@ -53,6 +53,7 @@ folder.
 
 Run `grunt serve` or `grunt`
 
+* generate Bootstrap into css;
 * calculate and save Flesch-Kincaid score and level to all posts;
 * copy favicons;
 * make Jekyll magic and compile your site to `.jekyll` folder;

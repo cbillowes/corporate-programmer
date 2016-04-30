@@ -30,6 +30,10 @@ module.exports = function(grunt) {
         files: [ '<%= app.app %>/_assets/favicons/**/**'],
         tasks: ['copy:favicon']
       },
+      bootstrap: {
+        files: ['<%= app.app %>/_assets/bootstrap/**/*.{scss,sass}'],
+        tasks: ['sass:bootstrap', 'autoprefixer']
+      },
       sass: {
         files: ['<%= app.app %>/_assets/scss/**/*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer']
@@ -157,6 +161,15 @@ module.exports = function(grunt) {
     },
 
     sass: {
+      bootstrap: {
+        options: {
+          sourcemap: 'none',
+          loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+        },
+        files: {
+          '.tmp/<%= app.baseurl %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss'
+        }
+      },
       server: {
         options: {
           sourcemap: 'file'
@@ -316,6 +329,7 @@ module.exports = function(grunt) {
       'clean:server',
       'jekyll:server',
       'copy:favicon',
+      'sass:bootstrap',
       'sass:server',
       'shell:fleschscore',
       'autoprefixer',
