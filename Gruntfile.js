@@ -61,6 +61,21 @@ module.exports = function(grunt) {
       }
     },
 
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      app: {
+        tasks: [
+          'watch:favicon',
+          'watch:bootstrap',
+          'watch:sass',
+          'watch:scripts',
+          'watch:jekyll'
+        ]
+      }
+    },
+
     connect: {
       options: {
         port: 9000,
@@ -362,9 +377,11 @@ module.exports = function(grunt) {
       'autoprefixer',
       'uglify',
       'connect:livereload',
-      'watch'
+      'watch:livereload'
     ]);
   });
+
+  grunt.registerTask('watch-app', ['concurrent:app']);
 
   grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');

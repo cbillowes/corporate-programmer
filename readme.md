@@ -47,6 +47,7 @@ folder.
 * [grunt-uncss](https://github.com/addyosmani/grunt-uncss) - A grunt task for removing unused CSS from your projects.
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites. Using the picture element with [grunt responsive images](http://www.andismith.com/grunt-responsive-images/).
+* [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
 #### Development
