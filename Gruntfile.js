@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     app: {
       app: 'app',
-      release: '_release',
+      release: '.release',
       baseurl: ''
     },
 
