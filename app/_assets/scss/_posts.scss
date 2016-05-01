@@ -3,7 +3,7 @@ $border-radius-top:     10%;
 $border-radius-left:    40%;
 $border-color:          darken($accent-color, 20%);
 $double-spacer:         $spacer * 2;
-$heading-bg-color:      rgba($bg-color-darker, 0.7);
+$heading-bg-color:      rgba($bg-color-compliment, 0.7);
 
 .post-preview {
   margin-top: $double-spacer;
@@ -31,7 +31,7 @@ $heading-bg-color:      rgba($bg-color-darker, 0.7);
   .hero {
     position: relative;
     margin-bottom: $double-spacer;
-    border-bottom: solid $border-width $bg-color-darker;
+    border-bottom: solid $border-width $bg-color-compliment;
 
     .heading {
       position: absolute;
@@ -40,14 +40,14 @@ $heading-bg-color:      rgba($bg-color-darker, 0.7);
       text-align: center;
 
       h1 {
-        text-shadow: 2px 2px 5px $bg-color-base;
+        text-shadow: 2px 2px 5px $body-bg;
         background-color: $heading-bg-color;
         padding: 10px 25px;
         display: inline-block;
       }
 
       .meta {
-        text-shadow: 2px 2px 5px $bg-color-base;
+        text-shadow: 2px 2px 5px $body-bg;
         background-color: $heading-bg-color;
         padding: 10px 25px;
         display: inline-block;

@@ -38,17 +38,24 @@ folder.
 * [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) - Minify CSS.
 * [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) - Minify HTML.
 * [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) - Minify images.
-* [grunt-svgmin](https://github.com/sindresorhus/grunt-svgmin) - Minify SVG.
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) - Compile Sass to CSS.
-* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify) - Minify files with UglifyJS.
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) - Run tasks whenever watched files change.
 * [grunt-critical](https://github.com/bezoerb/grunt-critical) - Grunt task to extract & inline critical-path CSS from HTML.
 * [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) - Straightforward grunt.js Jekyll plugin.
-* [grunt-uncss](https://github.com/addyosmani/grunt-uncss) - A grunt task for removing unused CSS from your projects.
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands.
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites. Using the picture element with [grunt responsive images](http://www.andismith.com/grunt-responsive-images/).
 * [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
+
+##### Watchlist
+
+* [grunt-uncss](https://github.com/addyosmani/grunt-uncss) - A grunt task for removing unused CSS from your projects.
+* [grunt-newer](https://github.com/tschaub/grunt-newer) - Configure Grunt tasks to run with newer files only.
+* [grunt-processhtml](https://github.com/dciccale/grunt-processhtml) - Process html files at build time to modify them depending on the release environment.
+* [grunt-contrib-csslint](https://github.com/gruntjs/grunt-contrib-csslint) - Lint CSS files.
+* [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) - Validate files with JSHint.
+* [grunt-svgmin](https://github.com/sindresorhus/grunt-svgmin) - Minify SVG.
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify) - Minify files with UglifyJS.
 
 #### Development
 

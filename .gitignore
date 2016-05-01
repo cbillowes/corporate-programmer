@@ -5,3 +5,4 @@ node_modules/
 .jekyll/
 .tmp/
 .release/
+.build/
