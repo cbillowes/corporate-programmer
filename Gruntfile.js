@@ -164,6 +164,7 @@ module.exports = function(grunt) {
       debug: {
         options: {
           loadPath: 'node_modules/bootstrap-sass/assets/stylesheets',
+          noCache: true,
         },
         files: {
           '<%= app.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
