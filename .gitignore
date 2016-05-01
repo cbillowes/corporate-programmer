@@ -2,9 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules/
-_build/
-css/
-img/
 .jekyll/
 .tmp/
 .release/
