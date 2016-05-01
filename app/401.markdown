@@ -1,0 +1,11 @@
+---
+layout: page
+title:  Halt!
+permalink: 401.shtml
+---
+
+Sorry but you don’t have access to this section.
+
+---
+
+HTTP Status: 401 Authorization Required

@@ -1,0 +1,11 @@
+---
+layout: page
+title:  Oh Schucks!
+permalink: 400.shtml
+---
+
+The client sent some stuff that the server couldn’t understand.
+
+---
+
+HTTP Status: 400 Bad Request

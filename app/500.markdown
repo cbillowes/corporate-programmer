@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+# What now?!
+
+Something broke. The server is probably misconfigured. I should probably check the server logs to fix the problem.
+Drop me a mail [{{site.email}}](mailto:{{site.email}}) so I can do so.
+
+---
+
+HTTP Status: 500 Server Error
+
+<!--#exec cgi="/500.php" -->

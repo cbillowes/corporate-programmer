@@ -1,7 +1,13 @@
 ---
-layout: default
+layout: page
+title:  Drats!
+permalink: 404.shtml
 ---
 
-# Drats!
-
 I searched. I promise. I just couldn't find what you are looking for.
+
+---
+
+HTTP Status: 404 Not Found
+
+<!--#exec cgi="/cgi-sys/fourohfour.cgi" -->
