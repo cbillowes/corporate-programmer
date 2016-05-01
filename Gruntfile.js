@@ -19,28 +19,28 @@ module.exports = function(grunt) {
       debug: {
         folder: '<%= app.build %>/debug',
         jekyll: '<%= app.debug.folder %>/jekyll/<%= app.baseurl %>',
-        temp: '<%= app.debug.folder %>/tmp/<%= app.baseurl %>'
+        temp: '<%= app.debug.folder %>/tmp/<%= app.baseurl %>',
       },
       release: {
         folder: '<%= app.build %>/release/<%= app.baseurl %>',
-        temp: '<%= app.build %>/.tmp/<%= app.baseurl %>'
+        temp: '<%= app.build %>/.tmp/<%= app.baseurl %>',
       },
-      baseurl: ''
+      baseurl: '',
     },
 
     clean: {
       debug: [
         '<%= app.debug.jekyll %>/*',
-        '<%= app.debug.temp %>/*'
+        '<%= app.debug.temp %>/*',
       ],
       release: [
         '<%= app.release.folder %>/*',
         '!<%= app.release.folder %>/.git',
-        '<%= app.release.temp %>/*'
+        '<%= app.release.temp %>/*',
       ],
-      releaseCleanup: [
-        '<%= app.release.temp %>'
-      ]
+      release_cleanup: [
+        '<%= app.release.temp %>',
+      ],
     },
 
     shell: {
@@ -48,38 +48,38 @@ module.exports = function(grunt) {
         command: 'rake readability',
         options: {
           execOptions: {
-            cwd: 'rake'
-          }
-        }
-      }
+            cwd: 'rake',
+          },
+        },
+      },
     },
 
     jekyll: {
       options: {
         src: '<%= app.app %>',
-        safe: true
+        safe: true,
       },
       debug: {
         options: {
           config: '_config.yml',
-          dest: '<%= app.debug.jekyll %>'
-        }
+          dest: '<%= app.debug.jekyll %>',
+        },
       },
       release: {
         options: {
           config: '_config.yml,_config.build.yml',
           dest: '<%= app.release.folder %>',
-        }
-      }
+        },
+      },
     },
 
     concurrent: {
       debug: {
-        tasks: ['jekyll:debug', 'sass:debug']
+        tasks: ['jekyll:debug', 'sass:debug'],
       },
       release: {
-        tasks: ['jekyll:release', 'sass:release']
-      }
+        tasks: ['jekyll:release', 'sass:release'],
+      },
     },
 
     copy: {
@@ -89,14 +89,14 @@ module.exports = function(grunt) {
           dot: true,
           cwd: '<%= app.release.temp %>',
           src: '**/*',
-          dest: '<%= app.release.folder %>'
+          dest: '<%= app.release.folder %>',
         }, {
           expand: true,
           cwd: '<%= app.app %>/_assets/favicons',
           src: ['**/*.{ico,png}'],
           dest: '<%= app.release.folder %>'
-        }]
-      }
+        },
+      ]},
     },
 
     responsive_images: {
@@ -112,16 +112,16 @@ module.exports = function(grunt) {
           { name: '1280', width: 1280, height: getHeight(1280), quality: 50, aspectRatio: false },
           { name: '1440', width: 1440, height: getHeight(1440), quality: 50, aspectRatio: false },
           { name: '1600', width: 1600, height: getHeight(1600), quality: 50, aspectRatio: false },
-          { name: '1920', width: 1920, height: getHeight(1920), quality: 50, aspectRatio: false }
-        ]
+          { name: '1920', width: 1920, height: getHeight(1920), quality: 50, aspectRatio: false },
+        ],
       },
       debug: {
         files: [{
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '<%= app.debug.temp %>/img/{%= name %}'
-        }]
+          custom_dest: '<%= app.debug.temp %>/img/{%= name %}',
+        }],
       },
       release: {
         files: [{
@@ -129,74 +129,74 @@ module.exports = function(grunt) {
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
           custom_dest: '<%= app.release.temp %>/img/{%= name %}'
-        }]
+        }],
       }
     },
 
     imagemin: {
       release: {
         options: {
-          progressive: true
+          progressive: true,
         },
         files: [{
           expand: true,
           cwd: '<%= app.release.folder %>/img',
           src: '**/*.{jpg,jpeg,png,gif}',
-          dest: '<%= app.release.folder %>/img'
-        }]
-      }
+          dest: '<%= app.release.folder %>/img',
+        }],
+      },
     },
 
     sass: {
       debug: {
         options: {
-          loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+          loadPath: 'node_modules/bootstrap-sass/assets/stylesheets',
         },
         files: {
           '<%= app.debug.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
-          '<%= app.debug.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss'
-        }
+          '<%= app.debug.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
+        },
       },
       release: {
         options: {
           loadPath: 'node_modules/bootstrap-sass/assets/stylesheets',
           style: 'compressed',
-          noCache: true
+          noCache: true,
         },
         files: {
           '<%= app.release.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
-          '<%= app.release.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss'
-        }
+          '<%= app.release.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
+        },
       },
     },
 
     autoprefixer: {
       options: {
-        browsers: ['last 3 versions']
+        browsers: ['last 3 versions'],
       },
       release: {
         files: [{
           expand: true,
           cwd: '<%= app.release.folder %>/css',
           src: '**/*.css',
-          dest: '<%= app.release.folder %>/css'
-        }]
-      }
+          dest: '<%= app.release.folder %>/css',
+        }],
+      },
     },
 
     cssmin: {
       release: {
         options: {
           keepSpecialComments: 0,
-          check: 'gzip'
+          check: 'gzip',
         },
         files: [{
           expand: true,
           cwd: '<%= app.release.folder %>/css',
           src: ['*.css'],
-          dest: '<%= app.release.folder %>/css'
-        }]
-      }
+          dest: '<%= app.release.folder %>/css',
+        }],
+      },
     },
 
     htmlmin: {
@@ -209,15 +209,15 @@ module.exports = function(grunt) {
           removeRedundantAttributes: true,
           removeEmptyAttributes: true,
           minifyJS: true,
-          minifyCSS: true
+          minifyCSS: true,
         },
         files: [{
           expand: true,
           cwd: '<%= app.release.folder %>',
           src: '**/*.html',
-          dest: '<%= app.release.folder %>'
-        }]
-      }
+          dest: '<%= app.release.folder %>',
+        }],
+      },
     },
 
     critical: {
@@ -229,15 +229,15 @@ module.exports = function(grunt) {
           ],
           minify: true,
           width: 320,
-          height: 480
+          height: 480,
         },
         files: [{
           expand: true,
           cwd: '<%= app.release.folder %>',
           src: ['**/*.html'],
-          dest: '<%= app.release.folder %>'
-        }]
-      }
+          dest: '<%= app.release.folder %>',
+        }],
+      },
     },
 
     buildcontrol: {
@@ -327,7 +327,8 @@ module.exports = function(grunt) {
     'autoprefixer:release',
     'cssmin:release',
     'htmlmin:release',
-    //'clean:releaseCleanup'
+    'critical:release',
+    'clean:release_cleanup',
   ]);
 
   grunt.registerTask('serve', function(target) {
