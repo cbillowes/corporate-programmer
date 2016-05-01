@@ -279,6 +279,9 @@ module.exports = function(grunt) {
         tasks: [
           'concurrent:debug',
         ],
+        options: {
+          reload: true
+        },
       },
       fleschscore: {
         files: [
