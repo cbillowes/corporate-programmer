@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     app: {
       app: 'app',
-      dist: 'dist',
+      release: '_release',
       baseurl: ''
     },
 
@@ -97,13 +97,13 @@ module.exports = function(grunt) {
           ]
         }
       },
-      dist: {
+      release: {
         options: {
           open: {
             target: 'http://localhost:9000/<%= app.baseurl %>'
           },
           base: [
-            '<%= app.dist %>',
+            '<%= app.release %>',
             '.tmp'
           ]
         }
@@ -115,13 +115,13 @@ module.exports = function(grunt) {
         '.jekyll',
         '.tmp'
       ],
-      dist: {
+      release: {
         files: [{
           dot: true,
           src: [
             '.tmp',
-            '<%= app.dist %>/*',
-            '!<%= app.dist %>/.git*'
+            '<%= app.release %>/*',
+            '!<%= app.release %>/.git*'
           ]
         }]
       }
@@ -132,9 +132,9 @@ module.exports = function(grunt) {
         config: '_config.yml,_config.build.yml',
         src: '<%= app.app %>'
       },
-      dist: {
+      release: {
         options: {
-          dest: '<%= app.dist %>/<%= app.baseurl %>',
+          dest: '<%= app.release %>/<%= app.baseurl %>',
         }
       },
       server: {
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
     },
 
     htmlmin: {
-      dist: {
+      release: {
         options: {
           removeComments: true,
           collapseWhitespace: true,
@@ -159,9 +159,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.dist %>/<%= app.baseurl %>',
+          cwd: '<%= app.release %>/<%= app.baseurl %>',
           src: '**/*.html',
-          dest: '<%= app.dist %>/<%= app.baseurl %>'
+          dest: '<%= app.release %>/<%= app.baseurl %>'
         }]
       }
     },
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
       options: {
         preserveComments: false
       },
-      dist: {
+      release: {
         files: {
           '.tmp/<%= app.baseurl %>/js/scripts.js': ['<%= app.app %>/_assets/js/**/*.js']
         }
@@ -195,7 +195,7 @@ module.exports = function(grunt) {
           '.tmp/<%= app.baseurl %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss'
         }
       },
-      dist: {
+      release: {
         options: {
           style: 'compressed'
         },
@@ -203,7 +203,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= app.app %>/_assets/scss',
           src: '**/*.{scss,sass}',
-          dest: '<%= app.dist %>/<%= app.baseurl %>/css',
+          dest: '<%= app.release %>/<%= app.baseurl %>/css',
           ext: '.css'
         }]
       }
@@ -211,11 +211,11 @@ module.exports = function(grunt) {
 
     uncss: {
       options: {
-        htmlroot: '<%= app.dist %>/<%= app.baseurl %>',
+        htmlroot: '<%= app.release %>/<%= app.baseurl %>',
         report: 'gzip'
       },
-      dist: {
-        src: '<%= app.dist %>/<%= app.baseurl %>/**/*.html',
+      release: {
+        src: '<%= app.release %>/<%= app.baseurl %>/**/*.html',
         dest: '.tmp/<%= app.baseurl %>/css/blog.css'
       }
     },
@@ -224,7 +224,7 @@ module.exports = function(grunt) {
       options: {
         browsers: ['last 3 versions']
       },
-      dist: {
+      release: {
         files: [{
           expand: true,
           cwd: '.tmp/<%= app.baseurl %>/css',
@@ -235,7 +235,7 @@ module.exports = function(grunt) {
     },
 
     critical: {
-      dist: {
+      release: {
         options: {
           base: './',
           css: [
@@ -247,15 +247,15 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.dist %>/<%= app.baseurl %>',
+          cwd: '<%= app.release %>/<%= app.baseurl %>',
           src: ['**/*.html'],
-          dest: '<%= app.dist %>/<%= app.baseurl %>'
+          dest: '<%= app.release %>/<%= app.baseurl %>'
         }]
       }
     },
 
     cssmin: {
-      dist: {
+      release: {
         options: {
           keepSpecialComments: 0,
           check: 'gzip'
@@ -296,26 +296,26 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      dist: {
+      release: {
         options: {
           progressive: true
         },
         files: [{
           expand: true,
-          cwd: '<%= app.dist %>/<%= app.baseurl %>/img',
+          cwd: '<%= app.release %>/<%= app.baseurl %>/img',
           src: '**/*.{jpg,jpeg,png,gif}',
-          dest: '<%= app.dist %>/<%= app.baseurl %>/img'
+          dest: '<%= app.release %>/<%= app.baseurl %>/img'
         }]
       }
     },
 
     svgmin: {
-      dist: {
+      release: {
         files: [{
           expand: true,
-          cwd: '<%= app.dist %>/<%= app.baseurl %>/img',
+          cwd: '<%= app.release %>/<%= app.baseurl %>/img',
           src: '**/*.svg',
-          dest: '<%= app.dist %>/<%= app.baseurl %>/img'
+          dest: '<%= app.release %>/<%= app.baseurl %>/img'
         }]
       }
     },
@@ -329,7 +329,7 @@ module.exports = function(grunt) {
           dest: '.tmp/<%= app.baseurl %>'
         }]
       },
-      dist: {
+      release: {
         files: [{
           expand: true,
           dot: true,
@@ -338,15 +338,15 @@ module.exports = function(grunt) {
             'css/**/*',
             'js/**/*'
           ],
-          dest: '<%= app.dist %>/<%= app.baseurl %>'
+          dest: '<%= app.release %>/<%= app.baseurl %>'
         }]
       }
     },
 
     buildcontrol: {
-      dist: {
+      release: {
         options: {
-          dir: '<%= app.dist %>/<%= app.baseurl %>',
+          dir: '<%= app.release %>/<%= app.baseurl %>',
           remote: 'git@github.com:user/repo.git',
           branch: 'gh-pages',
           commit: true,
@@ -360,8 +360,8 @@ module.exports = function(grunt) {
 
   // Define Tasks
   grunt.registerTask('serve', function(target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    if (target === 'release') {
+      return grunt.task.run(['build', 'connect:release:keepalive']);
     }
 
     grunt.task.run([
@@ -387,11 +387,11 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', [
-    'clean:dist',
-    'jekyll:dist',
+    'clean:release',
+    'jekyll:release',
     'imagemin',
     'svgmin',
-    'sass:dist',
+    'sass:release',
     'uncss',
     'autoprefixer',
     'cssmin',
