@@ -4,5 +4,4 @@ _site
 node_modules/
 .jekyll/
 .tmp/
-.release/
-.build/
+_release/
