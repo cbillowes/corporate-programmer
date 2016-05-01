@@ -237,6 +237,17 @@ module.exports = function(grunt) {
       ]},
     },
 
+    xmlmin: {
+      release: {
+        files: [{
+          expand: true,
+          cwd: '<%= app.release %>',
+          src: '**/*.xml',
+          dest: '<%= app.release %>',
+        },
+      ]},
+    },
+
     critical: {
       release: {
         options: {
@@ -381,6 +392,7 @@ module.exports = function(grunt) {
     'autoprefixer:release',
     'cssmin:release',
     'htmlmin:release',
+    'xmlmin:release',
     'critical:release',
     'clean:release_cleanup',
   ]);
