@@ -15,32 +15,24 @@ module.exports = function(grunt) {
 
     app: {
       app: 'app',
-      build: '.build',
-      debug: {
-        folder_bare: '<%= app.build %>/debug',
-        folder: '<%= app.debug.folder_bare %>/<%= app.baseurl %>',
-        jekyll: '<%= app.debug.folder_bare %>/jekyll/<%= app.baseurl %>',
-        temp: '<%= app.debug.folder_bare %>/tmp/<%= app.baseurl %>',
-      },
-      release: {
-        folder: '<%= app.build %>/release/<%= app.baseurl %>',
-        temp: '<%= app.build %>/.tmp/<%= app.baseurl %>',
-      },
+      jekyll: '.jekyll/<%= app.baseurl %>',
+      temp: '.tmp/<%= app.baseurl %>',
+      release: '_release/<%= app.baseurl %>',
       baseurl: '',
     },
 
     clean: {
       debug: [
-        '<%= app.debug.jekyll %>/*',
-        '<%= app.debug.temp %>/*',
+        '<%= app.jekyll %>/*',
+        '<%= app.temp %>/*',
       ],
       release: [
-        '<%= app.release.folder %>/*',
-        '!<%= app.release.folder %>/.git',
-        '<%= app.release.temp %>/*',
+        '<%= app.release %>/*',
+        '!<%= app.release %>/.git',
+        '<%= app.temp %>/*',
       ],
       release_cleanup: [
-        '<%= app.release.temp %>',
+        '<%= app.temp %>',
       ],
     },
 
@@ -62,13 +54,13 @@ module.exports = function(grunt) {
       debug: {
         options: {
           config: '_config.yml',
-          dest: '<%= app.debug.jekyll %>',
+          dest: '<%= app.jekyll %>',
         },
       },
       release: {
         options: {
           config: '_config.yml,_config.build.yml',
-          dest: '<%= app.release.folder %>',
+          dest: '<%= app.release %>',
         },
       },
     },
@@ -90,14 +82,14 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%= app.release.temp %>',
+          cwd: '<%= app.temp %>',
           src: '**/*',
-          dest: '<%= app.release.folder %>',
+          dest: '<%= app.release %>',
         }, {
           expand: true,
           cwd: '<%= app.app %>/_assets/favicons',
           src: ['**/*.{ico,png}'],
-          dest: '<%= app.release.folder %>'
+          dest: '<%= app.release %>'
         },
       ]},
     },
@@ -123,7 +115,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '<%= app.debug.temp %>/img/{%= name %}',
+          custom_dest: '<%= app.temp %>/img/{%= name %}',
         }],
       },
       release: {
@@ -131,7 +123,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '<%= app.release.temp %>/img/{%= name %}'
+          custom_dest: '<%= app.temp %>/img/{%= name %}'
         }],
       }
     },
@@ -143,9 +135,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.release.folder %>/img',
+          cwd: '<%= app.release %>/img',
           src: '**/*.{jpg,jpeg,png,gif}',
-          dest: '<%= app.release.folder %>/img',
+          dest: '<%= app.release %>/img',
         }],
       },
     },
@@ -156,8 +148,8 @@ module.exports = function(grunt) {
           loadPath: 'node_modules/bootstrap-sass/assets/stylesheets',
         },
         files: {
-          '<%= app.debug.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
-          '<%= app.debug.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
+          '<%= app.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
+          '<%= app.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
         },
       },
       release: {
@@ -167,8 +159,8 @@ module.exports = function(grunt) {
           noCache: true,
         },
         files: {
-          '<%= app.release.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
-          '<%= app.release.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
+          '<%= app.temp %>/css/blog.css' : '<%= app.app %>/_assets/scss/blog.scss',
+          '<%= app.temp %>/css/bootstrap.css' : '<%= app.app %>/_assets/bootstrap/imports.scss',
         },
       },
     },
@@ -180,9 +172,9 @@ module.exports = function(grunt) {
       release: {
         files: [{
           expand: true,
-          cwd: '<%= app.release.folder %>/css',
+          cwd: '<%= app.release %>/css',
           src: '**/*.css',
-          dest: '<%= app.release.folder %>/css',
+          dest: '<%= app.release %>/css',
         }],
       },
     },
@@ -195,9 +187,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.release.folder %>/css',
+          cwd: '<%= app.release %>/css',
           src: ['*.css'],
-          dest: '<%= app.release.folder %>/css',
+          dest: '<%= app.release %>/css',
         }],
       },
     },
@@ -216,9 +208,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.release.folder %>',
+          cwd: '<%= app.release %>',
           src: '**/*.html',
-          dest: '<%= app.release.folder %>',
+          dest: '<%= app.release %>',
         }],
       },
     },
@@ -228,7 +220,7 @@ module.exports = function(grunt) {
         options: {
           base: './',
           css: [
-            '<%= app.release.folder %>/css/blog.css',
+            '<%= app.release %>/css/blog.css',
           ],
           minify: true,
           width: 320,
@@ -236,16 +228,16 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= app.release.folder %>',
+          cwd: '<%= app.release %>',
           src: ['**/*.html'],
-          dest: '<%= app.release.folder %>',
+          dest: '<%= app.release %>',
         }],
       },
     },
 
     buildcontrol: {
       options: {
-        dir: '<%= app.release.folder %>',
+        dir: '<%= app.release %>',
         commit: true,
         connectCommits: false,
         //push: true,
@@ -261,14 +253,39 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      app: {
+      sass: {
         files: [
-          '<%= app.app %>/**/*',
+          '<%= app.app %>/_assets/scss/**/*.{scss,sass}',
+          '<%= app.app %>/_assets/bootstrap/**/*.{scss,sass}',
+        ],
+        tasks: [
+          'sass:debug',
+          'autoprefixer',
+        ],
+      },
+      jekyll: {
+        files: [
+          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown,xml}',
+          '!<%= app.app %>/_posts/*.{md,markdown}',
+        ],
+        tasks: [
+          'jekyll:debug'
+        ],
+      },
+      gruntfile: {
+        files: [
           'Gruntfile.js',
         ],
         tasks: [
-          'shell:fleschscore',
           'concurrent:debug',
+        ],
+      },
+      fleschscore: {
+        files: [
+          '<%= app.app %>/_posts/*.{md,markdown}',
+        ],
+        tasks: [
+          'shell:fleschscore',
         ],
       },
       livereload: {
@@ -276,9 +293,9 @@ module.exports = function(grunt) {
           livereload: '<%= connect.options.livereload %>',
         },
         files: [
-          '<%= app.debug.jekyll %>/**/*.{html,yml,md,mkd,markdown}',
-          '<%= app.debug.temp %>/css/*.css',
-          '<%= app.debug.temp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+          '<%= app.jekyll %>/**/*.{html,yml,md,mkd,markdown}',
+          '<%= app.temp %>/css/*.css',
+          '<%= app.temp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
           '<%= app.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
         ],
       },
@@ -297,8 +314,8 @@ module.exports = function(grunt) {
             target: 'http://localhost:9000/<%= app.baseurl %>',
           },
           base: [
-            '<%= app.debug.jekyll %>',
-            '<%= app.debug.temp %>',
+            '<%= app.jekyll %>',
+            '<%= app.temp %>',
             '<%= app.app %>',
           ],
         },
@@ -309,7 +326,7 @@ module.exports = function(grunt) {
             target: 'http://localhost:9000/<%= app.baseurl %>',
           },
           base: [
-            '<%= app.release.folder %>',
+            '<%= app.release %>',
           ],
         }
       },
