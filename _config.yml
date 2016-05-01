@@ -12,6 +12,7 @@ email: hello@corporateprogrammer.com
 description: >
   A survival guide for software developers entering the corporate world
   from small to medium businesses.
+keywords: corporate, programmer, software developer, survival guide, entering, world, medium business, small business
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.corporateprogrammer.com" # the base hostname & protocol for your site
 author:
