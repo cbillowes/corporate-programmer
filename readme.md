@@ -26,6 +26,13 @@ This command will update all dependencies to the latest versions.
 Remove unused packages from `node_modules` by executing `npm prune` in the root
 folder.
 
+#### Commands
+
+* `grunt` or `grunt serve` - Debug build, creates livereload server and opens website
+* `grunt serve:release` - Release build, creates server and opens website
+* `grunt deploy` - Release build and commits to release git
+
+
 #### Dependencies
 
 * [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks.
@@ -43,7 +50,7 @@ folder.
 * [grunt-critical](https://github.com/bezoerb/grunt-critical) - Grunt task to extract & inline critical-path CSS from HTML.
 * [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) - Straightforward grunt.js Jekyll plugin.
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands.
-* [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites. Using the picture element with [grunt responsive images](http://www.andismith.com/grunt-responsive-images/).
+* [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites.
 * [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
@@ -56,32 +63,6 @@ folder.
 * [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) - Validate files with JSHint.
 * [grunt-svgmin](https://github.com/sindresorhus/grunt-svgmin) - Minify SVG.
 * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify) - Minify files with UglifyJS.
-
-#### Development
-
-Run `grunt serve` or `grunt`
-
-* generate Bootstrap into css;
-* calculate and save Flesch-Kincaid score and level to all posts;
-* copy favicons;
-* make Jekyll magic and compile your site to `.jekyll` folder;
-* create different versions of responsive images for post `.jpg` files;
-* compile `.scss` files and autoprefix them;
-* compile `.js` files;
-* start a web server for you;
-* watch your files and run Grunt tasks when they are needed.
-
-#### Deploy
-
-Run `grunt deploy`
-
-* make Jekyll magic and compile your site to `.jekyll` folder;
-* compress all images in `img` folder;
-* compile `.sass` files, delete unnecessary css styles, autoprefix and compress them;
-* compile and compress `.js` files;
-* generate and insert critical css into pages;
-* compress `.html` pages;
-* bump version and tag branch with latest version. TODO
 
 #### Flesch-Kincaid calculation
 
@@ -109,6 +90,7 @@ They currently include:
 * Client Side Search
 * TapirGo
 * Google Search
+* MySQL database and PHP page?
 
 ### Contributions
 
