@@ -287,6 +287,9 @@ module.exports = function(grunt) {
         tasks: [
           'shell:fleschscore',
         ],
+        options: {
+          debounceDelay: 3000,
+        },
       },
       livereload: {
         options: {
