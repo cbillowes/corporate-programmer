@@ -266,7 +266,10 @@ module.exports = function(grunt) {
           //'<%= app.app %>/**/*.{html}',
           'Gruntfile.js',
         ],
-        tasks: ['build:debug']
+        tasks: [
+          'shell:fleschscore',
+          'concurrent:debug',
+        ],
       },
       livereload: {
         options: {
