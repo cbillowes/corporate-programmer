@@ -255,7 +255,55 @@ module.exports = function(grunt) {
       release: {
         remote: 'git@bitbucket.org:digital-dreamers/corporate-programmer-static.git',
       }
-    }
+    },
+
+    watch: {
+      app: {
+        files: ['<%= app.app %>/**/*', 'Gruntfile.js'],
+        tasks: ['build:debug'],
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>',
+        },
+        files: [
+          '<%= app.debug.jekyll %>/**/*',
+          '<%= app.debug.temp %>/**/*',
+        ],
+      },
+    },
+
+    connect: {
+      options: {
+        port: 4242,
+        livereload: 35729,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost',
+        target: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/<%= app.baseurl %>',
+      },
+      livereload: {
+        options: {
+          open: {
+            target: '<%= connect.options.target %>',
+          },
+        },
+        base: [
+          '<%= app.debug.jekyll %>',
+          '<%= app.debug.temp %>',
+          '<%= app.app %>',
+        ],
+      },
+      release: {
+        options: {
+          open: {
+            target: '<%= connect.options.target %>',
+          },
+        },
+        base: [
+          '<%= app.release.folder %>',
+        ],
+      },
+    },
 
   });
 
@@ -263,7 +311,9 @@ module.exports = function(grunt) {
     'clean:debug',
     'shell:fleschscore',
     'responsive_images:debug',
-    'concurrent:debug'
+    'concurrent:debug',
+    'connect:livereload',
+    'watch',
   ]);
 
   grunt.registerTask('build:release', [
