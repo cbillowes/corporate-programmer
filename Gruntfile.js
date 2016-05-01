@@ -69,10 +69,20 @@ module.exports = function(grunt) {
       options: {
         logConcurrentOutput: true
       },
-      debug: {
+      sass: {
+        tasks: [
+          'sass:debug',
+        ],
+      },
+      jekyll: {
         tasks: [
           'jekyll:debug',
-          'sass:debug',
+        ],
+      },
+      debug: {
+        tasks: [
+          'concurrent:jekyll',
+          'concurrent:sass',
           'responsive_images:debug',
         ],
       },
@@ -273,8 +283,7 @@ module.exports = function(grunt) {
           '<%= app.app %>/_assets/bootstrap/**/*.{scss,sass}',
         ],
         tasks: [
-          'sass:debug',
-          'autoprefixer',
+          'concurrent:sass',
         ],
       },
       jekyll: {
@@ -283,7 +292,7 @@ module.exports = function(grunt) {
           '!<%= app.app %>/_posts/*.{md,markdown}',
         ],
         tasks: [
-          'jekyll:debug'
+          'concurrent:jekyll'
         ],
       },
       gruntfile: {
