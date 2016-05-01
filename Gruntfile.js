@@ -317,12 +317,13 @@ module.exports = function(grunt) {
           reload: true
         },
       },
-      fleschscore: {
+      posts: {
         files: [
           '<%= app.app %>/_posts/*.{md,markdown}',
         ],
         tasks: [
           'shell:fleschscore',
+          'concurrent:jekyll',
         ],
         options: {
           debounceDelay: 3000,
