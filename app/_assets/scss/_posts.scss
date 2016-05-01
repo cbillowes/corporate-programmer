@@ -40,6 +40,7 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
       text-align: center;
 
       h1 {
+        font-size: $font-size-h1;
         text-shadow: 2px 2px 5px $body-bg;
         background-color: $heading-bg-color;
         padding: 10px 25px;
