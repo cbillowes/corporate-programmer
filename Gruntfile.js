@@ -263,7 +263,7 @@ module.exports = function(grunt) {
     watch: {
       app: {
         files: [
-          //'<%= app.app %>/**/*.{html}',
+          '<%= app.app %>/**/*',
           'Gruntfile.js',
         ],
         tasks: [
