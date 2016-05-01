@@ -70,10 +70,18 @@ module.exports = function(grunt) {
         logConcurrentOutput: true
       },
       debug: {
-        tasks: ['jekyll:debug', 'sass:debug', 'responsive_images:debug'],
+        tasks: [
+          'jekyll:debug',
+          'sass:debug',
+          'responsive_images:debug',
+        ],
       },
       release: {
-        tasks: ['jekyll:release', 'sass:release', 'responsive_images:release'],
+        tasks: [
+          'jekyll:release',
+          'sass:release',
+          'responsive_images:release',
+        ],
       },
     },
 
@@ -116,16 +124,16 @@ module.exports = function(grunt) {
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
           custom_dest: '<%= app.temp %>/img/{%= name %}',
-        }],
-      },
+        },
+      ]},
       release: {
         files: [{
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
           custom_dest: '<%= app.temp %>/img/{%= name %}'
-        }],
-      }
+        },
+      ]},
     },
 
     imagemin: {
@@ -167,7 +175,9 @@ module.exports = function(grunt) {
 
     autoprefixer: {
       options: {
-        browsers: ['last 3 versions'],
+        browsers: [
+          'last 3 versions',
+        ],
       },
       release: {
         files: [{
@@ -175,8 +185,8 @@ module.exports = function(grunt) {
           cwd: '<%= app.release %>/css',
           src: '**/*.css',
           dest: '<%= app.release %>/css',
-        }],
-      },
+        },
+      ]},
     },
 
     cssmin: {
@@ -188,7 +198,9 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= app.release %>/css',
-          src: ['*.css'],
+          src: [
+            '*.css',
+          ],
           dest: '<%= app.release %>/css',
         }],
       },
@@ -211,8 +223,8 @@ module.exports = function(grunt) {
           cwd: '<%= app.release %>',
           src: '**/*.html',
           dest: '<%= app.release %>',
-        }],
-      },
+        },
+      ]},
     },
 
     critical: {
@@ -229,7 +241,9 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= app.release %>',
-          src: ['**/*.html'],
+          src: [
+            '**/*.html',
+          ],
           dest: '<%= app.release %>',
         }],
       },
