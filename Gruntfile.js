@@ -254,6 +254,7 @@ module.exports = function(grunt) {
           base: './',
           css: [
             '<%= app.release %>/css/blog.css',
+            '<%= app.release %>/css/bootstrap.css',
           ],
           minify: true,
           width: 320,
