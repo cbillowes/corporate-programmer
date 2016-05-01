@@ -17,9 +17,10 @@ module.exports = function(grunt) {
       app: 'app',
       build: '.build',
       debug: {
-        folder: '<%= app.build %>/debug',
-        jekyll: '<%= app.debug.folder %>/jekyll/<%= app.baseurl %>',
-        temp: '<%= app.debug.folder %>/tmp/<%= app.baseurl %>',
+        folder_bare: '<%= app.build %>/debug',
+        folder: '<%= app.debug.folder_bare %>/<%= app.baseurl %>',
+        jekyll: '<%= app.debug.folder_bare %>/jekyll/<%= app.baseurl %>',
+        temp: '<%= app.debug.folder_bare %>/tmp/<%= app.baseurl %>',
       },
       release: {
         folder: '<%= app.build %>/release/<%= app.baseurl %>',
@@ -57,7 +58,6 @@ module.exports = function(grunt) {
     jekyll: {
       options: {
         src: '<%= app.app %>',
-        safe: true,
       },
       debug: {
         options: {
@@ -74,11 +74,14 @@ module.exports = function(grunt) {
     },
 
     concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
       debug: {
-        tasks: ['jekyll:debug', 'sass:debug'],
+        tasks: ['jekyll:debug', 'sass:debug', 'responsive_images:debug'],
       },
       release: {
-        tasks: ['jekyll:release', 'sass:release'],
+        tasks: ['jekyll:release', 'sass:release', 'responsive_images:release'],
       },
     },
 
@@ -259,49 +262,53 @@ module.exports = function(grunt) {
 
     watch: {
       app: {
-        files: ['<%= app.app %>/**/*', 'Gruntfile.js'],
-        tasks: ['build:debug'],
+        files: [
+          //'<%= app.app %>/**/*.{html}',
+          'Gruntfile.js',
+        ],
+        tasks: ['build:debug']
       },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>',
         },
         files: [
-          '<%= app.debug.jekyll %>/**/*',
-          '<%= app.debug.temp %>/**/*',
+          '<%= app.debug.jekyll %>/**/*.{html,yml,md,mkd,markdown}',
+          '<%= app.debug.temp %>/css/*.css',
+          '<%= app.debug.temp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+          '<%= app.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
         ],
       },
     },
 
     connect: {
       options: {
-        port: 4242,
+        port: 9000,
         livereload: 35729,
         // change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost',
-        target: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/<%= app.baseurl %>',
       },
       livereload: {
         options: {
           open: {
-            target: '<%= connect.options.target %>',
+            target: 'http://localhost:9000/<%= app.baseurl %>',
           },
+          base: [
+            '<%= app.debug.jekyll %>',
+            '<%= app.debug.temp %>',
+            '<%= app.app %>',
+          ],
         },
-        base: [
-          '<%= app.debug.jekyll %>',
-          '<%= app.debug.temp %>',
-          '<%= app.app %>',
-        ],
       },
       release: {
         options: {
           open: {
-            target: '<%= connect.options.target %>',
+            target: 'http://localhost:9000/<%= app.baseurl %>',
           },
-        },
-        base: [
-          '<%= app.release.folder %>',
-        ],
+          base: [
+            '<%= app.release.folder %>',
+          ],
+        }
       },
     },
 
@@ -310,15 +317,13 @@ module.exports = function(grunt) {
   grunt.registerTask('build:debug', [
     'clean:debug',
     'shell:fleschscore',
-    'responsive_images:debug',
     'concurrent:debug',
     'connect:livereload',
-    'watch',
+    'watch'
   ]);
 
   grunt.registerTask('build:release', [
     'clean:release',
-    'responsive_images:release',
     // some cmd tasks need to run concurrently to prevent hanging
     'concurrent:release',
     // copies .tmp files only after Jekyll is complete
@@ -338,8 +343,6 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'build:debug',
-      'connect:livereload',
-      'watch'
     ]);
   });
 
