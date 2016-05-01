@@ -29,7 +29,9 @@ folder.
 #### Commands
 
 * `grunt` or `grunt serve` - Debug build, creates livereload server and opens website
+
 * `grunt serve:release` - Release build, creates server and opens website
+
 * `grunt deploy` - Release build and commits to release git
 
 
@@ -51,7 +53,7 @@ folder.
 * [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) - Straightforward grunt.js Jekyll plugin.
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell) - Run shell commands.
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images/) - Produce images at different sizes for responsive websites.
-* [https://github.com/sindresorhus/grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
+* [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
 ##### Watchlist
