@@ -26,8 +26,6 @@ exclude:
   - node_modules
   - _assets #grunt will take care of this.
 
-build: debug
-
 #Pagination
 gems: [jekyll-paginate]
 paginate: 3
