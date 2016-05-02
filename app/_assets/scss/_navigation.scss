@@ -2,12 +2,12 @@
 
   .container-fluid,
   .navbar-collapse {
-    padding-right: 0px !important;
+    padding-right: 0px;
   }
 
   .navbar-brand {
-    padding-left: 0px !important;
-    font-size: $font-size-base !important;
+    padding-left: 0px;
+    font-size: $font-size-base;
 
     &:hover,
     &:focus {
@@ -20,7 +20,7 @@
     font-weight: bold;
 
     &:hover {
-      color: $accent-color !important;
+      color: $accent-color;
       background-color: $body-bg !important;
     }
 
