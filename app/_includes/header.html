@@ -18,9 +18,19 @@
           <ul class="nav navbar-nav">
             {% assign active = "class='active'" %}
             {% assign current = "<span class='sr-only'>(current)</span>" %}
-            <li {% if page.permalink == "/" %}{{active}}{% endif %}><a href="/">Home{% if page.permalink == "/" %}{{current}}{% endif %}</a></li>
-            <li {% if page.permalink == "/about/" %}{{active}}{% endif %}><a href="/about/">About{% if page.permalink == "/about/" %}{{current}}{% endif %}</a></li>
-            <li {% if page.permalink == "/credits/" %}{{active}}{% endif %}><a href="/credits/">Credits{% if page.permalink == "/credits/" %}{{current}}{% endif %}</a></li>
+
+            {% assign sections = page.url | split: '/' %}
+            {% assign url = sections[1] %}
+
+            {% if page.permalink == "/" or url == "blog" %}
+
+              {% assign url = "/" %}
+
+            {% endif %}
+
+            <li {% if url == "/" %}{{active}}{% endif %}><a href="/">Blog{% if url == "/" %}{{current}}{% endif %}</a></li>
+            <li {% if url == "about" %}{{active}}{% endif %}><a href="/about/">About{% if url == "about" %}{{current}}{% endif %}</a></li>
+            <li {% if url == "credits" %}{{active}}{% endif %}><a href="/credits/">Credits{% if url == "credits" %}{{current}}{% endif %}</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
