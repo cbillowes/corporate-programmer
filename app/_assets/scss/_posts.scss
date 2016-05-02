@@ -1,4 +1,5 @@
-$thumbnail-size:        150px;
+$thumbnail-width:       100%;
+$thumbnail-height:      180px;
 $border-radius-left:    50%;
 $border-radius-right:   50%;
 $border-color:          darken($accent-color, 20%);
@@ -9,19 +10,17 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
   margin-top: $spacer;
 
   .thumbnail {
-    width: $thumbnail-size;
-    height: $thumbnail-size;
-    float: left;
-    margin-right: $spacer;
+    max-width: 700px;
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+    overflow: hidden;
+    border: solid $border-width $border-color;
+    margin-bottom: $spacer;
 
-    img {
-      width: 100%;
-      border-radius:
-        $border-radius-left
-        $border-radius-right
-        $border-radius-right
-        $border-radius-left;
-      border: solid $border-width $border-color;
+    @media only screen and (max-width:480px) {
+      img {
+        margin-left: -50%;
+      }
     }
 
   }
