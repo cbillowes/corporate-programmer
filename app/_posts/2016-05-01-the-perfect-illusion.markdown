@@ -2,7 +2,7 @@
 flesch-score: 63.15
 flesch-level: High Schooler
 layout: post
-title:  The “Perfect” Illusion
+title:  The “perfect” illusion
 date:   2016-05-01 19:18:00 +0200
 image:
   filename: paradise
