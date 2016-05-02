@@ -55,6 +55,7 @@ module.exports = function(grunt) {
         options: {
           config: '_config.yml',
           dest: '<%= app.jekyll %>',
+          verbose: true,
         },
       },
       release: {
@@ -301,7 +302,7 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown,xml}',
+          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown,xml,rb}',
           '!<%= app.app %>/_posts/*.{md,markdown}',
         ],
         tasks: [
