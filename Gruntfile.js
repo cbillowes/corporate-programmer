@@ -308,6 +308,14 @@ module.exports = function(grunt) {
           'concurrent:jekyll'
         ],
       },
+      img: {
+        files: [
+          '<%= app.app %>/**/*.{jpg}',
+        ],
+        tasks: [
+          'concurrent:responsive_images'
+        ],
+      },
       gruntfile: {
         files: [
           'Gruntfile.js',
