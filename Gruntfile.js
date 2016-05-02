@@ -45,6 +45,14 @@ module.exports = function(grunt) {
           },
         },
       },
+      credits: {
+        command: 'rake credits',
+        options: {
+          execOptions: {
+            cwd: 'rake',
+          },
+        },
+      },
     },
 
     jekyll: {
@@ -97,6 +105,11 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      credits: {
+        files: {
+          'credits.md': '<%= app.app %>/credits.md',
+        },
+      },
       release: {
         files: [{
           expand: true,
@@ -388,6 +401,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build:debug', [
     'clean:debug',
+    'copy:credits',
+    'shell:credits',
     'shell:fleschscore',
     'concurrent:debug',
     'connect:livereload',
@@ -396,6 +411,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build:release', [
     'clean:release',
+    'copy:credits',
+    'shell:credits',
     // some cmd tasks need to run concurrently to prevent hanging
     'concurrent:release',
     // copies .tmp files only after Jekyll is complete

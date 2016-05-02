@@ -57,3 +57,36 @@ task :readability do
     end
   end
 end
+
+task :credits do
+  path = '../credits.md'
+
+  require 'stringio'
+  def remove_liquid(file)
+    content_stream = StringIO.open
+    yaml_inicator_index = 0
+
+    File.readlines(file).each do |line|
+      if line[0] == "-"
+        yaml_inicator_index += 1
+      end
+
+      if yaml_inicator_index > 1
+
+        if yaml_inicator_index == 2
+          content_stream << "# Credits\n"
+          yaml_inicator_index += 1
+        else
+          content_stream << line
+        end
+
+      end
+
+    end
+
+    content_stream.seek 0
+    File.open(file, "wb").write content_stream.read
+  end
+
+  remove_liquid(path)
+end
