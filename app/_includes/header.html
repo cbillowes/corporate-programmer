@@ -1,4 +1,19 @@
 <header class="top">
+  {% if site.build == "debug" %}
+    <div id="debug" style="position:absolute; bottom: 0px; left: 0px; padding: 5px; border-radius: 3px; opacity: 0.5; width: 88px; height: 50px; white-space: nowrap; overflow: hidden;">
+      <p style="margin-left: -190px; display: inline-block; margin-top: 6px;">{% last_built %}</p>
+    </div>
+    <script>
+      window.onload = function() {
+        var red = Math.floor(Math.random(15)*10);
+        var green = Math.floor(Math.random(15)*10);
+        var blue = Math.floor(Math.random(15)*10);
+        var color = "#" + red + red + green + green + blue + blue;
+        document.getElementById("debug").style.backgroundColor = color;
+        console.log("Reload: {% last_built %}.");
+      };
+    </script>
+  {% endif %}
   <div class="container">
     <a href="/">{ corporate <strong>programmer</strong> }</a>
   </div>
