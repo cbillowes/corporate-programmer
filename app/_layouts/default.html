@@ -7,11 +7,11 @@
 
     {% include header.html %}
 
-    {{ content }}
+    {{ content | smartify }}
 
     {% include footer.html %}
     {% include scripts.html %}
-    
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
   </body>
