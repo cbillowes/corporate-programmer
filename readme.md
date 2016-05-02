@@ -6,7 +6,7 @@
 
 ### Getting started
 
-Check out the [credits](/credits) for more information.
+Check out the [credits](/credits.md) for more information.
 
 You know what would be great? Having the entire development environment configured
 in a [Docker](https://www.docker.com/) image! o_O
