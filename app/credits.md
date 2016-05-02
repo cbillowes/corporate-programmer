@@ -26,7 +26,8 @@ Times New Roman. Say what?! o_O
   <a href="#development">Development</a> |
   <a href="#build-automation">Build automation</a> |
   <a href="#favicon">Favicon</a> |
-  <a href="#knowledge-sharing">Knowledge sharing</a>
+  <a href="#knowledge-sharing">Knowledge sharing</a> |
+  <a href="#hosting">Hosting</a>
 </p>
 
 ## Development
@@ -77,3 +78,9 @@ There are gems on the website that wouldn’t be there if it weren’t for you:
 * Estimated read time calculation courtesy of [Carlos Alexandro Becker](http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh](https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
 * [Jekyll Tips](http://jekyll.tips/)
+
+## Hosting
+
+Thanks to [bluehost](http://bluehost.com) I now have my very first `.com` domain and
+the ability to host my website. The support from the technical live chat team
+has also been very responsive and helpful.
