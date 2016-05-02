@@ -1,5 +1,5 @@
 ---
-flesch-score: 63.15
+flesch-score: 62.49
 flesch-level: High Schooler
 layout: post
 title:  The "perfect" illusion
