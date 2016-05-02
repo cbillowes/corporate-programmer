@@ -1,5 +1,5 @@
 $body-bg:                         #1E2832;
-$bg-color-compliment:             darken($body-bg, 2%);
+$body-bg-compliment:             darken($body-bg, 2%);
 $text-color:                      lighten($body-bg, 60%);
 $accent-color:                    #3E8FB0;
 $accent-color-compliment:         #CC334F;
@@ -31,5 +31,16 @@ $headings-font-family:            $font-family-serif;
 $headings-font-weight:            700;
 $headings-line-height:            1.05;
 
-$spacer:                         25px;
-$border-width:                   5px;
+$spacer:                          25px;
+$border-width:                    5px;
+
+$navbar-margin-bottom:            0px;
+$navbar-default-bg:               $body-bg-compliment;
+$navbar-default-border:           $body-bg-compliment;
+
+$navbar-default-link-hover-color:     $accent-color;
+$navbar-default-link-active-color:    $accent-color-compliment;
+$navbar-default-link-active-bg:       $body-bg-compliment;
+$navbar-default-link-hover-bg:        $body-bg;
+$navbar-default-toggle-border-color:  $navbar-default-link-hover-bg;
+$navbar-default-toggle-hover-bg:      $navbar-default-link-hover-bg

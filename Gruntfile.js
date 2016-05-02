@@ -93,6 +93,7 @@ module.exports = function(grunt) {
           'concurrent:jekyll',
           'concurrent:sass',
           'responsive_images:debug',
+          'copy:scripts',
         ],
       },
       release: {
@@ -110,6 +111,15 @@ module.exports = function(grunt) {
           'credits.md': '<%= app.app %>/credits.md',
         },
       },
+      scripts: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'node_modules/bootstrap-sass/assets/javascripts',
+          src: '**/*',
+          dest: '<%= app.temp %>/js',
+        },
+      ]},
       release: {
         files: [{
           expand: true,
@@ -122,6 +132,8 @@ module.exports = function(grunt) {
           cwd: '<%= app.app %>/_assets/favicons',
           src: ['**/*.{ico,png}'],
           dest: '<%= app.release %>'
+        }, {
+          '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
         },
       ]},
     },

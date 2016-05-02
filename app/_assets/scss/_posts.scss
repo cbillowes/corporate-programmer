@@ -4,7 +4,7 @@ $border-radius-left:    50%;
 $border-radius-right:   50%;
 $border-color:          darken($accent-color, 20%);
 $double-spacer:         $spacer * 2;
-$heading-bg-color:      rgba($bg-color-compliment, 0.7);
+$heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
 .post-preview {
   margin-top: $spacer;
@@ -48,7 +48,7 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
   .hero {
     position: relative;
     margin-bottom: $double-spacer;
-    border-bottom: solid $border-width $bg-color-compliment;
+    border-bottom: solid $border-width $body-bg-compliment;
 
     .heading {
       position: absolute;

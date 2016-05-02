@@ -1,0 +1,29 @@
+.navbar-nav, .navbar-default {
+
+  .container-fluid,
+  .navbar-collapse {
+    padding-right: 0px !important;
+  }
+
+  .navbar-brand {
+    padding-left: 0px !important;
+    font-size: $font-size-base !important;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-compliment !important;
+    }
+
+  }
+
+  > .active > a {
+    font-weight: bold;
+
+    &:hover {
+      color: $accent-color !important;
+      background-color: $body-bg !important;
+    }
+
+  }
+
+}
