@@ -70,10 +70,10 @@ by [vaadin](http://www.flaticon.com/authors/vaadin), I have a customized favicon
 ## Knowledge sharing
 
 I spent a lot of hours getting the grunt tasks working. Then I came across
-[Oleh Zasadnyy’s](http://o.zasadnyy.com/blog/optimized-jekyll-site-with-grunt/)
+[Oleh Zasadnyy's](http://o.zasadnyy.com/blog/optimized-jekyll-site-with-grunt/)
 post to optimize Jekyll site with grunt tasks. Awesome!!!
 
-There are gems on the website that wouldn’t be there if it weren’t for you:
+There are gems on the website that wouldn't be there if it weren't for you:
 
 * Estimated read time calculation courtesy of [Carlos Alexandro Becker](http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh](https://www.mikemackintosh.com/flesch-readability-in-jekyll/)

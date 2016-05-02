@@ -1,17 +1,17 @@
 ---
 layout: post
-title: “Hello Clarice”
+title: "Hello Clarice"
 permalink: /about/
 date:   2016-05-02 02:04:00 +0200
 image:
   filename: clarice-scuba-diving
-  alt: Me scuba diving and saying I’m okay
+  alt: Me scuba diving and saying I'm okay
 photographer:
   name: Shirley Gilmore
   url: http://shirleygilmorephotography.blogspot.co.za/
 ---
 
-Now that I beat you to it with the Hannibal reference, I’d like to officially
+Now that I beat you to it with the Hannibal reference, I'd like to officially
 introduce myself.
 
 My name is Clarice and I have been a software developer for... many years now. I
@@ -27,7 +27,7 @@ true for any job opportunity. No company, place or person is perfect.
 The transition into the corporate was a culture shock for me. I went through a
 lot of unnecessary frustrations. I came to many fascinating realizations.
 
-I’d like to share what I have learned - and still learning - about how to
+I'd like to share what I have learned - and still learning - about how to
 survive the transition from small to big. A survival guide of sorts.
 
 Feel free to get in touch with me. I am most active on

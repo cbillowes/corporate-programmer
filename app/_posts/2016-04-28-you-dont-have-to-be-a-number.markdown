@@ -1,8 +1,8 @@
 ---
-flesch-score: 69.33
+flesch-score: 69.16
 flesch-level: High Schooler
 layout: post
-title:  You don’t have to be a number
+title:  You don't have to be a number
 date:   2016-04-28 20:22:52 +0200
 image:
   filename: man-standing-in-front-of-numbers
@@ -17,13 +17,13 @@ When you join the corporate world, you become a number. At least, that is what
 I heard - and believed. The game involves a lot of players and you need to play
 or quit while you are ahead.
 
-What does it mean to be a number anyway? Is it someone who’s opinions go
+What does it mean to be a number anyway? Is it someone who's opinions go
 unheard? Is it someone who just completes boring tasks to get a paycheck at the
-end of the month? I don’t know the answer to this.
+end of the month? I don't know the answer to this.
 
 I have opinions and ideas that I like sharing with others and skills that I
 can contribute to different areas in the software development lifecycle. I
-don’t want to settle. I want to contribute.
+don't want to settle. I want to contribute.
 
 When I joined a corporate I was overwhelmed. This world has so many people,
 a vast set of technologies, integration points, business rules, data and
@@ -48,7 +48,7 @@ already be well known in the community so your identity would be rock solid.
 
 I tried blogging in my career. I had five separate blogs with a mixture of
 content that never gain traction. I probably posted under 10 posts in total. I
-wasn’t consistent or focused. I failed dismally but have learned from my mistakes.
+wasn't consistent or focused. I failed dismally but have learned from my mistakes.
 
 >At the time of writing, John Sonmez at [simpleprogrammer.com](http://simpleprogrammer.com/)
 is giving a free 3 week e-mail course to [boost](http://devcareerboost.com/blog-course/)
@@ -82,6 +82,6 @@ more I learn about the company and its people who make it a success.
 ## My final thoughts
 If you consider joining a corporate and are worried about being a number,
 just remember that you have control. If you want to be a number, you will
-be. If you don’t, get out of your comfort zone and start talking.
+be. If you don't, get out of your comfort zone and start talking.
 Build your identity and relationships. You learn so much just by talking to
 other people and corporates tend to have a lot of people.

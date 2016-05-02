@@ -4,7 +4,7 @@ title:  Oh Schucks!
 permalink: 400.shtml
 ---
 
-The client sent some stuff that the server couldn’t understand.
+The client sent some stuff that the server couldn't understand.
 
 ---
 
