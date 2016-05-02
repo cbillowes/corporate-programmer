@@ -1,6 +1,6 @@
 $thumbnail-size:        150px;
-$border-radius-top:     10%;
-$border-radius-left:    40%;
+$border-radius-left:    50%;
+$border-radius-right:   50%;
 $border-color:          darken($accent-color, 20%);
 $double-spacer:         $spacer * 2;
 $heading-bg-color:      rgba($bg-color-compliment, 0.7);
@@ -10,12 +10,17 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
 
   .thumbnail {
     width: $thumbnail-size;
+    height: $thumbnail-size;
     float: left;
     margin-right: $spacer;
 
     img {
       width: 100%;
-      border-radius: $border-radius-top $border-radius-left;
+      border-radius:
+        $border-radius-left
+        $border-radius-right
+        $border-radius-right
+        $border-radius-left;
       border: solid $border-width $border-color;
     }
 
@@ -23,6 +28,13 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
 
   h1 {
     margin: 0px;
+
+    @media only screen and (max-width:480px) {
+      h1 {
+        margin-top: $spacer !important;
+      }
+    }
+
   }
 
   .meta {
@@ -95,6 +107,13 @@ $heading-bg-color:      rgba($bg-color-compliment, 0.7);
 
   h1 {
     margin: 0px;
+
+    @media only screen and (max-width:480px) {
+      & {
+        margin-top: $spacer !important;
+      }
+    }
+
   }
 
   .meta {
