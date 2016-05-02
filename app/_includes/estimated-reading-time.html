@@ -1,7 +1,6 @@
 {% if post.flesch-score %}
-  • 
-
-  {% assign words = page.content | number_of_words %}
+  •
+  {% assign words = post.content | number_of_words %}
   {{ words | divided_by:180 }} minute
 
   {% assign score = post.flesch-score | divided_by: 100 | times: 10 | floor %}
