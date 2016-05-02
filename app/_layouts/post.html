@@ -9,7 +9,7 @@ layout: default
       <br/>
       <p class="meta">
         <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} •
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} •
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}
         <span class="est-read-time">{% include estimated-reading-time.html %}</span>
       </p>
     </div>
@@ -18,7 +18,13 @@ layout: default
       </span>
     </span>
     <p class="photo-contribution">
-      Photo courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a> taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>.
+      Photo
+      {% if post.image.website %}
+        courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
+      {% endif %}
+      {% if post.photographer %}
+        taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
+      {% endif %}
     </p>
   </div>
 
