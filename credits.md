@@ -65,6 +65,8 @@ There are gems on the website that wouldn't be there if it weren't for you:
 * Estimated read time calculation courtesy of [Carlos Alexandro Becker](http://carlosbecker.com/posts/jekyll-reading-time-without-plugins)
 * Testing Flesch-Kincaid Readability in Jekyll courtesy of [Mike Mackintosh](https://www.mikemackintosh.com/flesch-readability-in-jekyll/)
 * [Jekyll Tips](http://jekyll.tips/)
+* Blockquote styling from [CSS-Tricks](https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/)
+shared by [Chris Coyier](https://css-tricks.com/author/chriscoyier/).
 
 ## Hosting
 

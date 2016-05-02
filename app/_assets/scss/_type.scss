@@ -16,6 +16,25 @@ p {
   font-weight: $font-weight;
 }
 
+blockquote {
+  background-color: $bg-color-compliment;
+  border-left: $border-width * 2 solid $accent-color-compliment;
+  margin: 1.5em 0;
+  padding: $spacer $spacer;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
 h1 {
   font-family: $font-family-serif;
   font-size: $font-size-h1 !important;
