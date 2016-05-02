@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
+title:  What now?!
+permalink: 500.shtml
 ---
-
-# What now?!
 
 Something broke. The server is probably misconfigured. I should probably check the server logs to fix the problem.
 Drop me a mail [{{site.email}}](mailto:{{site.email}}) so I can do so.
