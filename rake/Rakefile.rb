@@ -1,18 +1,24 @@
 require 'lingua'
 require 'find'
+require 'stringio'
 
-task :readability do
-  path = '../app/_posts'
+task :process do
+  path = '../app/_process'
 
   # Create a simple function to do this
-  def calculate_score(text)
+  def calculate_flesch_score(content)
     # Remove the frontmatter, and codeblocks, because this will impact the score
     frontmatter = /(---)((?:(?:\r?\n)+(?:\w|\s).*)+\r?\n)(?=---\r?\n)(.*?)/x
     fenced_code = /`{3}(?:(.*$)\n)?([\s\S]*)`{3}/mx
     nested_code = /((?:^(?:[ ]{4}|\t).*$(?:\r?\n|\z))+)/x
 
-    parsed = text.gsub(frontmatter, "#{$3}").gsub(fenced_code, "").gsub(nested_code, "")
+    parsed = content.gsub(frontmatter, "#{$3}").gsub(fenced_code, "").gsub(nested_code, "")
     score = Lingua::EN::Readability.new( parsed ).flesch
+    if score.nan?
+      return "<undetermined>", "", "<undetermind>"
+    end
+
+    score = score.round(2)
     if score > 100
       return score, "an", "Elementary Schooler"
     elsif score.between?(80,100)
@@ -26,36 +32,53 @@ task :readability do
     else
       return score, "a", "PhD Academic"
     end
+
   end
 
-  require 'stringio'
-  def add_flesch_score_to_post(post, score, level)
+  $timestamp = Time.now
+  def process_post(file_name)
+    content = File.read(file_name)
     content_stream = StringIO.open
-    line_target = 1
     line_counter = 0
+    line_target = 4
 
-    File.readlines(post).each do |line|
+    File.readlines(file_name).each do |line|
+
       if line_counter == line_target
-        content_stream << "flesch-score: #{score.round(2)}\n"
+        date = "date:   #{$timestamp}\n"
+        content_stream << date
+        puts "#{file_name} date set to #{date}."
+
+        score, article, level = calculate_flesch_score(content)
+        content_stream << "flesch-score: #{score}\n"
         content_stream << "flesch-level: #{level}\n"
+        puts "#{file_name} has a score of #{score}, which is suitable for #{article} #{level}."
       end
-      if !line.include? "flesch"
+
+      if (!line.include? "flesch-") && (!line.include? "date:")
         content_stream << line
       end
+
       line_counter += 1
+
     end
     content_stream.seek 0
-    File.open(post, "wb").write content_stream.read
-  end
-
-  # Get all posts in ./_posts
-  Find.find(path) do |post|
-    if File.file?(post)
-      score, article, level = calculate_score(File.read(post))
-      puts "#{post} has a score of #{score}, which is suitable for #{article} #{level}"
-      add_flesch_score_to_post(post, score, level)
+    File.open(file_name, 'wb') do |f|
+      f.write content_stream.read
     end
   end
+
+  Find.find(path) do |file|
+    if File.file?(file)
+      process_post(file)
+
+      filename = File.basename(file, File.extname(file)).gsub(/\d{4}-\d{2}-\d{2}-/, "")
+      new_filename = "#{path}/#{$timestamp.strftime("%Y-%m-%d")}-#{filename}#{File.extname(file)}"
+      File.rename(file, new_filename)
+      puts "Rename to #{new_filename}"
+    end
+  end
+
 end
 
 task :credits do

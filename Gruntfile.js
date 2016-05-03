@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 
     app: {
       app: 'app',
+      process_posts: '<%= app.app %>/_process',
       jekyll: '.jekyll/<%= app.baseurl %>',
       temp: '.tmp/<%= app.baseurl %>',
       release: '_release/<%= app.baseurl %>',
@@ -37,8 +38,8 @@ module.exports = function(grunt) {
     },
 
     shell: {
-      fleschscore: {
-        command: 'rake readability',
+      process_posts: {
+        command: 'rake process',
         options: {
           execOptions: {
             cwd: 'rake',
@@ -85,6 +86,8 @@ module.exports = function(grunt) {
       },
       jekyll: {
         tasks: [
+          'shell:process_posts',
+          'copy:process_posts',
           'jekyll:debug',
         ],
       },
@@ -118,6 +121,15 @@ module.exports = function(grunt) {
           cwd: 'node_modules/bootstrap-sass/assets/javascripts',
           src: '**/*',
           dest: '<%= app.temp %>/js',
+        },
+      ]},
+      process_posts: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= app.process_posts %>',
+          src: '**/*',
+          dest: '<%= app.app %>/_posts',
         },
       ]},
       release: {
@@ -258,7 +270,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= app.release %>',
-          src: '**/*.html',
+          src: '**/*.{html,shtml}',
           dest: '<%= app.release %>',
         },
       ]},
@@ -327,12 +339,17 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          '<%= app.app %>/**/*.{html,yml,md,mkd,markdown,xml,rb}',
+          '<%= app.app %>/**/*.{html,md,mkd,markdown,xml,rb}',
           '!<%= app.app %>/_posts/*.{md,markdown}',
+          '<%= app.app %>/_process/*.{md,markdown}',
+          '_config.yml',
         ],
         tasks: [
           'concurrent:jekyll'
         ],
+        options: {
+          debounceDelay: 3000,
+        },
       },
       img: {
         files: [
@@ -351,18 +368,6 @@ module.exports = function(grunt) {
         ],
         options: {
           reload: true
-        },
-      },
-      posts: {
-        files: [
-          '<%= app.app %>/_posts/*.{md,markdown}',
-        ],
-        tasks: [
-          'shell:fleschscore',
-          'concurrent:jekyll',
-        ],
-        options: {
-          debounceDelay: 3000,
         },
       },
       livereload: {
@@ -415,7 +420,6 @@ module.exports = function(grunt) {
     'clean:debug',
     'copy:credits',
     'shell:credits',
-    'shell:fleschscore',
     'concurrent:debug',
     'connect:livereload',
     'watch'
