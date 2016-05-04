@@ -154,16 +154,16 @@ module.exports = function(grunt) {
       options: {
         engine: 'im', //ImageMagic - requires installation see readme.md
         sizes: [
-          { name: 'thumb', width: 700, height: 180, quality: 50, aspectRatio: false },
+          { name: 'thumb', width: 700, height: 180, quality: 80, aspectRatio: false },
           { name: '320', width: 320, height: getHeight(320), quality: 80, aspectRatio: false },
           { name: '480', width: 480, height: getHeight(480), quality: 80, aspectRatio: false },
           { name: '640', width: 640, height: getHeight(640), quality: 80, aspectRatio: false },
-          { name: '960', width: 960, height: getHeight(960), quality: 60, aspectRatio: false },
-          { name: '1024', width: 1024, height: getHeight(1024), quality: 60, aspectRatio: false },
-          { name: '1280', width: 1280, height: getHeight(1280), quality: 50, aspectRatio: false },
-          { name: '1440', width: 1440, height: getHeight(1440), quality: 50, aspectRatio: false },
-          { name: '1600', width: 1600, height: getHeight(1600), quality: 50, aspectRatio: false },
-          { name: '1920', width: 1920, height: getHeight(1920), quality: 50, aspectRatio: false },
+          { name: '960', width: 960, height: getHeight(960), quality: 80, aspectRatio: false },
+          { name: '1024', width: 1024, height: getHeight(1024), quality: 80, aspectRatio: false },
+          { name: '1280', width: 1280, height: getHeight(1280), quality: 80, aspectRatio: false },
+          { name: '1440', width: 1440, height: getHeight(1440), quality: 80, aspectRatio: false },
+          { name: '1600', width: 1600, height: getHeight(1600), quality: 80, aspectRatio: false },
+          { name: '1920', width: 1920, height: getHeight(1920), quality: 80, aspectRatio: false },
         ],
       },
       debug: {
