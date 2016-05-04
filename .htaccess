@@ -3,7 +3,7 @@ AddHandler application/x-httpd-php56 .php
 
 # 480 weeks
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|)$">
-Header set Cache-Control "max-age=290304000, public"
+Header set Cache-Control "max-age=290304000, public, must-revalidate"
 </FilesMatch>
 
 # 7 DAYS
