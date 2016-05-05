@@ -28,6 +28,5 @@ exclude:
 
 #Pagination
 gems: [jekyll-paginate]
-paginate: 10
-paginate_path: "/blog/page:num/"
-destination: test/blog
+paginate: 3
+paginate_path: /blog/page/:num/
