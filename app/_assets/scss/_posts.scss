@@ -14,12 +14,12 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
     width: $thumbnail-width;
     height: $thumbnail-height;
     overflow: hidden;
-    border: solid $border-width $border-color;
     margin-bottom: $spacer;
 
     @media only screen and (max-width:480px) {
       img {
         margin-left: -50%;
+        margin-left: -55%;
       }
     }
 
