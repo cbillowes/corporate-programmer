@@ -440,7 +440,7 @@ module.exports = function(grunt) {
     'cssmin:release',
     'htmlmin:release',
     'xmlmin:release',
-    //'critical:release',
+    'critical:release',
     'clean:release_cleanup',
   ]);
 
