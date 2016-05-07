@@ -116,6 +116,21 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
   }
 
+  p img {
+    @media only screen and (max-width:480px) {
+      & {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width:481px) {
+      & {
+        width: 80%;
+        margin: 0 10%;
+      }
+    }
+  }
+
   .meta {
     font-size: $font-size-small;
     margin-top: 0px;
