@@ -20,12 +20,13 @@ blockquote {
   background-color: $body-bg-compliment;
   border-left: $border-width * 2 solid $accent-color-compliment;
   margin: 1.5em 0;
-  padding: $spacer $spacer;
-  quotes: "\201C""\201D""\2018""\2019";
+  padding: $spacer;
 }
+
 blockquote:before {
+  font-family: $font-family-blockquote;
   color: #ccc;
-  content: open-quote;
+  content: "\201C";
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.15em;
