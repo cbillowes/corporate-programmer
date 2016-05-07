@@ -20,9 +20,14 @@ module Jekyll
 
     def capitalize(word)
       done = false
+      isHyphen = false
       word.gsub!(/[^"]/) { |w|
+        isHyphen = isHyphen || w == "-"
         if !done
           done = true
+          w.capitalize
+        elsif isHyphen
+          isHyphen = w == "-"
           w.capitalize
         else
           w
