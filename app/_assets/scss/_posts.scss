@@ -49,6 +49,7 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
     position: relative;
     margin-bottom: $double-spacer;
     border-bottom: solid $border-width $body-bg-compliment;
+    background-color: $accent-color;
 
     .heading {
       position: absolute;
