@@ -136,9 +136,10 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= app.app %>/_assets/favicons',
           src: ['**/*.{ico,png}'],
-          dest: '<%= app.release %>'
+          dest: '<%= app.release %>',
         }, {
-          '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+          '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+          '<%= app.release %>/js/jquery-1.12.3.min' : '<%= app.release %>/js/jquery-1.12.3.min',
         },
       ]},
     },
