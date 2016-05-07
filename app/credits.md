@@ -66,6 +66,13 @@ Thanks to [flaticon](http://www.flaticon.com) and the
 [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
 by [vaadin](http://www.flaticon.com/authors/vaadin), I have a customized favicon.
 
+## Tools
+
+* [Atom](https://atom.io/) - A hackable text editor for the 21st Century
+* [Git](https://git-scm.com/) - Distributed version control system
+* [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client for Windows or Mac.
+* [draw.io](https://www.draw.io/) - Flowchart maker & online diagram software
+
 ## Knowledge sharing
 
 I spent a lot of hours getting the grunt tasks working. Then I came across
