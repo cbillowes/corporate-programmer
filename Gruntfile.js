@@ -84,16 +84,9 @@ module.exports = function(grunt) {
           'sass:debug',
         ],
       },
-      jekyll: {
-        tasks: [
-          'shell:process_posts',
-          'copy:process_posts',
-          'jekyll:debug',
-        ],
-      },
       debug: {
         tasks: [
-          'concurrent:jekyll',
+          'build_jekyll',
           'concurrent:sass',
           'responsive_images:debug',
           'copy:scripts',
@@ -123,7 +116,7 @@ module.exports = function(grunt) {
           dest: '<%= app.temp %>/js',
         },
       ]},
-      process_posts: {
+      build_jekyll: {
         files: [{
           expand: true,
           dot: true,
@@ -345,7 +338,7 @@ module.exports = function(grunt) {
           '_config.yml',
         ],
         tasks: [
-          'concurrent:jekyll'
+          'build_jekyll'
         ],
         options: {
           debounceDelay: 3000,
@@ -416,10 +409,17 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask('build_jekyll', [
+    'shell:process_posts',
+    'copy:build_jekyll',
+    'jekyll:debug',
+  ]);
+
   grunt.registerTask('build:debug', [
     'clean:debug',
     'copy:credits',
     'shell:credits',
+    'build_jekyll',
     'concurrent:debug',
     'connect:livereload',
     'watch'

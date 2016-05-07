@@ -40,19 +40,19 @@ task :process do
     content = File.read(file_name)
     content_stream = StringIO.open
     line_counter = 0
-    line_target = 4
+    line_target = 3
 
     File.readlines(file_name).each do |line|
 
       if line_counter == line_target
         date = "date:   #{$timestamp}\n"
         content_stream << date
-        puts "#{file_name} date set to #{date}."
+        puts ">> Date: #{$timestamp}"
 
         score, article, level = calculate_flesch_score(content)
         content_stream << "flesch-score: #{score}\n"
         content_stream << "flesch-level: #{level}\n"
-        puts "#{file_name} has a score of #{score}, which is suitable for #{article} #{level}."
+        puts ">> Flesch score: #{score} - suitable for #{article} #{level}"
       end
 
       if (!line.include? "flesch-") && (!line.include? "date:")
@@ -65,17 +65,19 @@ task :process do
     content_stream.seek 0
     File.open(file_name, 'wb') do |f|
       f.write content_stream.read
+      puts ">> Update metadata"
     end
   end
 
   Find.find(path) do |file|
     if File.file?(file)
+      puts "> Processing #{File.basename(file)} in #{path}"
       process_post(file)
 
       filename = File.basename(file, File.extname(file)).gsub(/\d{4}-\d{2}-\d{2}-/, "")
       new_filename = "#{path}/#{$timestamp.strftime("%Y-%m-%d")}-#{filename}#{File.extname(file)}"
       File.rename(file, new_filename)
-      puts "Rename to #{new_filename}"
+      puts ">> Rename to #{File.basename(new_filename)}"
     end
   end
 
