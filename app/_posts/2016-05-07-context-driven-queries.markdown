@@ -88,7 +88,7 @@ Tell the person what your query is about. Try to be specific so that the person
 can decide if he/she can actually help you. If someone referred you to this
 person, mention this.
 
-This give people the opportunity to determine if they can help you. If they
+This gives people the opportunity to determine if they can help you. If they
 can't, they may refer you to someone they think has more expertise.
 
 Communicate to the person that they can stop you at any time to ask for more
@@ -103,7 +103,7 @@ This is the meat of your query. Get down to the specifics of what you
 need help with. You can also give points of what you have already tried,
 who you have spoken to and why you are coming to this person for guidance.
 
-> **Example:**<br/> I am configuring Jenkins for XYZ and would like to understand how I can
+> **Example:**<br/> I am configuring Jenkins and would like to understand how I can
 give developers outside of our team access to view our pipelines. IT is concurrently
 investigating internet problems I'm having so to save time, I came to you.
 Do you think you could help me?
