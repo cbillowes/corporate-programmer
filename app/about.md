@@ -2,7 +2,6 @@
 layout: post
 title: “Hello Clarice”
 permalink: /about/
-date:   2016-05-02 02:04:00 +0200
 image:
   filename: clarice-scuba-diving
   alt: Me scuba diving and saying I'm okay

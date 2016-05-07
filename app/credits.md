@@ -2,7 +2,6 @@
 layout: post
 title: A big shout out goes to...
 permalink: /credits/
-date:   2016-05-02 02:37:00 +0200
 image:
   filename: crowd-at-concert
   alt: Overlooking a crowd of people at a crowd-at-concert

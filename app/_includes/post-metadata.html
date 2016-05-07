@@ -1,7 +1,13 @@
-<p class="meta">
-  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-  {% include estimated-reading-time.html %}
-  {% if include.snippet %}
-    &bull; <a href="{{ post.url }}">Read now</a>
-  {% endif %}
-</p>
+{% if post.date %}
+  <p class="meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+    {% include estimated-reading-time.html %}
+    {% if include.snippet %}
+      &bull; <a href="{{ post.url }}">Read now</a>
+    {% endif %}
+  </p>
+{% else %}
+  <br/>
+  <br/>
+  <br/>
+{% endif %}
