@@ -3,39 +3,12 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   {% assign post = page %}
-  <div class="hero">
-    <div class="heading">
-      <h1 itemprop="name headline">{{ post.title | titlecase }}</h1>
-      <br/>
-      <p class="meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} •
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}
-        <span class="est-read-time">{% include estimated-reading-time.html %}</span>
-      </p>
-    </div>
-    <span id="image" role="img" aria-label="{{ post.image.alt }}">
-      <span class="inner">
-      </span>
-    </span>
-    <p class="photo-contribution">
-      Photo
-      {% if post.image.website %}
-        courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
-      {% endif %}
-      {% if post.photographer %}
-        taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
-      {% endif %}
-    </p>
-  </div>
+  {% include post-hero.html %}
 
   <div class="container">
     <header class="show-on-smaller">
-      <h1 itemprop="name headline">{{ post.title |titlecase }}</h1>
-      <p class="meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} •
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}
-        <span class="est-read-time">{% include estimated-reading-time.html %}</span>
-      </p>
+      <h1 itemprop="name headline">{{ post.title | titlecase }}</h1>
+      {% include post-metadata.html %}
     </header>
     <div class="content" itemprop="articleBody">
       {{ content }}

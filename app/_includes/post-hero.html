@@ -1,0 +1,21 @@
+
+<div class="hero">
+  <div class="heading">
+    <h1 itemprop="name headline">{{ post.title | titlecase }}</h1>
+    <br/>
+    {% include post-metadata.html %}
+  </div>
+  <span id="image" role="img" aria-label="{{ post.image.alt }}">
+    <span class="inner">
+    </span>
+  </span>
+  <p class="photo-contribution">
+    Photo
+    {% if post.image.website %}
+      courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
+    {% endif %}
+    {% if post.photographer %}
+      taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
+    {% endif %}
+  </p>
+</div>
