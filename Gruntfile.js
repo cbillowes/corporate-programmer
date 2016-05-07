@@ -291,8 +291,6 @@ module.exports = function(grunt) {
             '<%= app.release %>/css/bootstrap.css',
           ],
           minify: true,
-          width: 320,
-          height: 480,
         },
         files: [{
           expand: true,
