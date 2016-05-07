@@ -1,0 +1,47 @@
+{% assign post = include.post %}
+
+<style type="text/css">
+  .hero #image .inner {
+    padding-top: {{ site.data.images.aspectRatio }}%;
+  }
+
+  {% assign width = 0 %}
+  {% assign image = post.image.filename %}
+  {% for resolution in site.data.images.resolutions %}
+
+    {% if forloop.last != true %}
+
+      @media only screen and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ image }}.jpg"); }
+      }
+
+      {% if resolution.2dppx %}
+        @media only screen and (min-resolution: 2dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 2 }}/{{ image }}.jpg"); }
+        }
+      {% endif %}
+
+      {% if resolution.3dppx %}
+        @media only screen and (min-resolution: 3dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 3 }}/{{ image }}.jpg"); }
+        }
+      {% endif %}
+
+      {% if resolution.4dppx %}
+        @media only screen and (min-resolution: 4dppx) and (min-width: {{ width }}px) and (max-width: {{ resolution.width }}px) {
+          .hero #image { background-image: url("/img/{{ resolution.width | times: 4 }}/{{ image }}.jpg"); }
+        }
+      {% endif %}
+
+      {% assign width = resolution.width + 1 %}
+
+    {% else %}
+
+      @media only screen and (min-width: {{ width }}px) {
+        .hero #image { background-image: url("/img/{{ resolution.width }}/{{ image }}.jpg"); }
+      }
+
+    {% endif %}
+
+  {% endfor %}
+</style>

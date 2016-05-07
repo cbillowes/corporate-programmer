@@ -3,12 +3,22 @@ layout: default
 permalink: /
 ---
 
-<div class="container">
-
-  {% for post in paginator.posts %}
-    {% include post-preview.html %}
-  {% endfor %}
-
-  {% include pagination.html %}
-
+{% assign hero_post = paginator.posts | first %}
+<div class="post">
+  {% include post-hero.html post=hero_post snippet=true %}
+  <div class="container">
+    <p>
+      {{  hero_post.content | truncatewords: 50 | strip_html }}
+      <a href="{{ post.url }}">read more</a>
+    </p>
+  </div>
 </div>
+<div class="pager">
+  <div class="container">
+    {% for post in paginator.posts | offset: 1 | limit: paginator.per_page %}
+      {% include post-preview.html %}
+    {% endfor %}
+    {% include pagination.html %}
+  </div>
+</div>
+{% include post-heros.html post=hero_post %}

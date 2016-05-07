@@ -1,9 +1,10 @@
+{% assign post = include.post %}
 
 <div class="hero">
   <div class="heading">
-    <h1 itemprop="name headline">{{ post.title | titlecase }}</h1>
+    <h1 itemprop="name headline"><a href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     <br/>
-    {% include post-metadata.html %}
+    {% include post-metadata.html snippet=include.snippet %}
   </div>
   <span id="image" role="img" aria-label="{{ post.image.alt }}">
     <span class="inner">

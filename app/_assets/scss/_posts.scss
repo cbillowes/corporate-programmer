@@ -63,6 +63,11 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
         background-color: $heading-bg-color;
         padding: 10px 25px;
         display: inline-block;
+
+        a {
+          color: $text-color;
+        }
+        
       }
 
       .meta {

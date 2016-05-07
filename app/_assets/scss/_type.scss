@@ -11,6 +11,10 @@ a:hover {
   color: $accent-color-compliment;
 }
 
+a:visited {
+  color: $link-color-visited;
+}
+
 p {
   line-height: $line-height-base;
   font-weight: $font-weight;
@@ -42,8 +46,9 @@ h1 {
   font-weight: $headings-font-weight;
   margin: 0px;
 
+  a,
   a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 
 }

@@ -5,15 +5,12 @@
   </h1>
   {% include post-metadata.html %}
   <div class="content">
-
-    <div class="thumbnail">
+    <aside>
       <img src="/img/thumb/{{post.image.filename}}.jpg" alt="{{ post.image.alt }}" />
-    </div>
-
+    </aside>
     <p>
       {{ post.content | truncatewords: 37 | strip_html }}
       <a href="{{ post.url }}">read more</a>
     </p>
-
   </div>
 </div>
