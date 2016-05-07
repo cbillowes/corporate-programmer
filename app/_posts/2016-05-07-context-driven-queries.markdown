@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Context-driven queries
-date:   2016-05-07 15:17:02 +0200
+date:   2016-05-07 15:28:21 +0200
 flesch-score: 68.79
 flesch-level: High Schooler
 image:
