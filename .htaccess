@@ -10,22 +10,23 @@ RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
 RewriteRule .* ? [F,L]
 
 ServerSignature Off
-# 480 weeks
+
+# 2 DAYS
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|)$">
-Header set Cache-Control "max-age=290304000, public, must-revalidate"
+Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
 </FilesMatch>
 
-# 7 DAYS
+# 2 DAYS
 <FilesMatch "\.(js|css)$">
-Header set Cache-Control "max-age=604800, public, must-revalidate"
+Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
 </FilesMatch>
 
 # 2 DAYS
 <FilesMatch "\.(xml|txt)$">
-Header set Cache-Control "max-age=172800, public, must-revalidate"
+Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
 </FilesMatch>
 
 # 2 HOURS
 <FilesMatch "\.(html|htm)$">
-Header set Cache-Control "max-age=172800, must-revalidate"
+Header set Cache-Control "max-age=172800, must-revalidate, proxy-revalidate"
 </FilesMatch>
