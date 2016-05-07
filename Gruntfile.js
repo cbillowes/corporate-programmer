@@ -139,7 +139,7 @@ module.exports = function(grunt) {
           dest: '<%= app.release %>',
         }, {
           '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-          '<%= app.release %>/js/jquery-1.12.3.min' : '<%= app.release %>/js/jquery-1.12.3.min',
+          '<%= app.release %>/js/jquery-1.12.3.min.js' : '<%= app.app %>/js/jquery-1.12.3.min.js',
         },
       ]},
     },
