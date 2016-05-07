@@ -138,6 +138,20 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
   .content {
     margin-bottom: $spacer * 3;
+
+    hr {
+      border-top: solid 1px lighten($body-bg-compliment, 10%);
+      margin-bottom: 5px;
+    }
+
+    .navigator {
+
+      .next-page {
+        float:right;
+      }
+
+    }
+
   }
 
 }
