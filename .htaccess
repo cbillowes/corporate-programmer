@@ -11,14 +11,14 @@ AddHandler application/x-httpd-php56 .php
 
 ServerSignature Off
 
-# 2 DAYS
+# 7 DAYS
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|)$">
-Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
+Header set Cache-Control "max-age=604800, public, must-revalidate, proxy-revalidate"
 </FilesMatch>
 
-# 2 DAYS
+# 7 DAYS
 <FilesMatch "\.(js|css)$">
-Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
+Header set Cache-Control "max-age=604800, public, must-revalidate, proxy-revalidate"
 </FilesMatch>
 
 # 2 DAYS
