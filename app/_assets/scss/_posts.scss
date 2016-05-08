@@ -162,6 +162,10 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
 }
 
+.hang-heading .hero .heading {
+  bottom: 20%;
+}
+
 @media only screen and (max-width: 960px) {
   .hero .heading {
     display: none;

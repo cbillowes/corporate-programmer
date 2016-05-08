@@ -2,8 +2,11 @@
 layout: default
 ---
 <section id="mainContentOfPage" itemprop="mainContentOfPage">
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+  {% if page.url contains "/blog/" %}
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% else %}
+    <article class="post hang-heading" itemscope itemtype="http://schema.org/BlogPosting">
+  {% endif %}
     {% assign post = page %}
     {% include post-hero.html post=post %}
 
