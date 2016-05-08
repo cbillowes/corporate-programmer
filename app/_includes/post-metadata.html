@@ -5,5 +5,12 @@
     {% if include.snippet %}
       &bull; <a href="{{ post.url }}">Read now</a>
     {% endif %}
+    {% if page.url contains "/blog/" %}
+      &bull; By <a rel="author" href="{{ site.author.twitter }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">
+          {{ site.author.name }}
+        </span>
+      </a>
+    {% endif %}
   </p>
 {% endif %}

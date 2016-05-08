@@ -16,8 +16,9 @@ keywords: corporate, programmer, software developer, survival guide, entering, w
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.corporateprogrammer.com" # the base hostname & protocol for your site
 author:
-  - name: Clarice Bouwer
-  - email: hello@corporateprogrammer.com
+  name: Clarice Bouwer
+  email: hello@corporateprogrammer.com
+  twitter: https://www.twitter.com/cbillowes
 
 # Build settings
 markdown: kramdown
