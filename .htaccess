@@ -1,32 +1,24 @@
-
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^corporateprogrammer.com$
 RewriteRule ^/?$ "http\:\/\/www\.corporateprogrammer\.com\/" [R=301,L]
 
-SetEnvIfNoCase User-Agent "^libwww-perl*" block_bad_bots
-Deny from env=block_bad_bots
-
-# Use PHP5.6 as default
-AddHandler application/x-httpd-php56 .php
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} (^libwww-perl) [nc]
+RewriteRule !^403.shtml$ - [f,l]
 
 ServerSignature Off
 
-# 7 DAYS
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|)$">
-Header set Cache-Control "max-age=604800, public, must-revalidate, proxy-revalidate"
+Header unset ETag
+FileETag None
+
+ExpiresActive On
+ExpiresDefault "now plus 7 days"
+ExpiresByType text/html "now plus 1 day"
+Header set Cache-Control "must-revalidate, proxy-revalidate"
+
+<FilesMatch ".(js|css|html|htm|php|xml)$">
+SetOutputFilter DEFLATE
 </FilesMatch>
 
-# 7 DAYS
-<FilesMatch "\.(js|css)$">
-Header set Cache-Control "max-age=604800, public, must-revalidate, proxy-revalidate"
-</FilesMatch>
-
-# 2 DAYS
-<FilesMatch "\.(xml|txt)$">
-Header set Cache-Control "max-age=172800, public, must-revalidate, proxy-revalidate"
-</FilesMatch>
-
-# 2 HOURS
-<FilesMatch "\.(html|htm)$">
-Header set Cache-Control "max-age=172800, must-revalidate, proxy-revalidate"
-</FilesMatch>
+# Use PHP5.6 as default
+AddHandler application/x-httpd-php56 .php
