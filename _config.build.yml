@@ -1,4 +1,5 @@
 future: false
 show_drafts: false
+build: release
 
-exclude: ['css', 'js', 'fonts', 'style.md']
+exclude: ['style.md']

@@ -20,6 +20,8 @@ author:
   email: hello@corporateprogrammer.com
   twitter: https://www.twitter.com/cbillowes
 
+build: debug
+
 # Build settings
 markdown: kramdown
 permalink: /blog/:title/
