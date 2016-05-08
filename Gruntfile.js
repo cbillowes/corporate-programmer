@@ -35,6 +35,9 @@ module.exports = function(grunt) {
       release_cleanup: [
         '<%= app.temp %>',
       ],
+      post_images: [
+        '<%= app.app %>/_assets/post-images/*.jpg',
+      ],
     },
 
     shell: {
@@ -86,6 +89,7 @@ module.exports = function(grunt) {
       },
       debug: {
         tasks: [
+          'copy:post_images',
           'build_jekyll',
           'concurrent:sass',
           'responsive_images:debug',
@@ -96,7 +100,6 @@ module.exports = function(grunt) {
         tasks: [
           'jekyll:release',
           'sass:release',
-          'responsive_images:release',
         ],
       },
     },
@@ -116,6 +119,15 @@ module.exports = function(grunt) {
           dest: '<%= app.temp %>/js',
         },
       ]},
+      post_images: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= app.app %>/_assets/post-images',
+          src: '**/*',
+          dest: '.backup/post-images',
+        },
+      ]},
       build_jekyll: {
         files: [{
           expand: true,
@@ -123,6 +135,12 @@ module.exports = function(grunt) {
           cwd: '<%= app.process_posts %>',
           src: '**/*',
           dest: '<%= app.app %>/_posts',
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= app.app %>/.img/',
+          src: '**/*',
+          dest: '<%= app.temp %>/img',
         },
       ]},
       release: {
@@ -140,6 +158,12 @@ module.exports = function(grunt) {
         }, {
           '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
           '<%= app.release %>/js/jquery-1.12.3.min.js' : '<%= app.app %>/js/jquery-1.12.3.min.js',
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= app.app %>/.img/',
+          src: '**/*',
+          dest: '<%= app.release %>/img',
         },
       ]},
     },
@@ -159,21 +183,14 @@ module.exports = function(grunt) {
           { name: '1600', width: 1600, height: getHeight(1600), quality: 80, aspectRatio: false },
           { name: '1920', width: 1920, height: getHeight(1920), quality: 80, aspectRatio: false },
         ],
+        newFilesOnly: false,
       },
       debug: {
         files: [{
           expand: true,
           src: ['**/*.jpg'],
           cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '<%= app.temp %>/img/{%= name %}',
-        },
-      ]},
-      release: {
-        files: [{
-          expand: true,
-          src: ['**/*.jpg'],
-          cwd: '<%= app.app %>/_assets/post-images',
-          custom_dest: '<%= app.temp %>/img/{%= name %}'
+          custom_dest: '<%= app.app %>/.img/{%= name %}',
         },
       ]},
     },
@@ -345,7 +362,7 @@ module.exports = function(grunt) {
       },
       img: {
         files: [
-          '<%= app.app %>/**/*.{jpg}',
+          '<%= app.app %>/_assets/post-images/*.{jpg}',
         ],
         tasks: [
           'concurrent:responsive_images'
@@ -420,6 +437,7 @@ module.exports = function(grunt) {
     'shell:credits',
     'build_jekyll',
     'concurrent:debug',
+    'clean:post_images',
     'connect:livereload',
     'watch'
   ]);
