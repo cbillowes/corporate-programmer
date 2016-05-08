@@ -4,6 +4,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Microdata -->
+  <link href="{{ site.author.twitter }}" rel="publisher" />
+  <meta itemprop="name" content="{{ site.title | escape }}">
+  <meta itemprop="description" content="{{ site.description }}">
+  {% if page.image %}
+    <meta itemprop="image" content="{{ site.url }}/img/320/{{ page.image.filename }}.jpg">
+  {% endif %}
+  <!-- Microdata -->
+
   <title>
     {% if page.title %}
       {{ page.title | titlecase | escape | append: " - " | append: site.title }}
