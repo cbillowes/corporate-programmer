@@ -2,7 +2,7 @@
 
 <div class="hero">
   <div class="heading">
-    <h1 itemprop="name headline"><a href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
+    <h1 itemprop="name headline"><a itemprop="mainEntityOfPage" href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     <br/>
     {% include post-metadata.html snippet=include.snippet %}
   </div>
