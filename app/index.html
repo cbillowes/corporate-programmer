@@ -15,6 +15,7 @@ permalink: /
 </div>
 <div class="pager">
   <div class="container">
+    <h1 class="hidden">Other Posts</h1>
     {% for post in paginator.posts | offset: 1 | limit: paginator.per_page %}
       {% include post-preview.html %}
     {% endfor %}
