@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope itemtype="http://schema.org/Blog" lang="en">
 
   {% include head.html %}
 
-  <body>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    {% if page.image %}
+      <meta itemprop="primaryImageOfPage" content="{{ site.url }}/img/320/{{ page.image.filename }}.jpg">
+    {% endif %}
+    {% if page.keywords %}
+      <meta itemprop="specialty" content="{{ page.keywords }}">
+    {% endif %}
 
     {% include header.html %}
 
