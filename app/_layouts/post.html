@@ -1,33 +1,52 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  {% assign post = page %}
-  {% include post-hero.html post=post %}
+<section id="mainContentOfPage" itemprop="mainContentOfPage">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <img itemprop="image" url="{{ site.url }}/img/320/{{ page.image.filename }}.jpg">
 
-  <div class="container">
-    <div class="content" itemprop="articleBody">
-      <div class="addthis_sharing_toolbox"></div>
+    {% assign post = page %}
+    {% include post-hero.html post=post %}
 
-      {{ content }}
+    <div class="container">
+      <div class="content" itemprop="articleBody">
+        <div class="addthis_sharing_toolbox"></div>
 
-      <div class="navigator">
-        <hr />
-        {% if page.previous %}
-          <span class="previous-page">
-            <a href="{{page.previous.url}}" title="Previous post">&laquo; {{page.previous.title | titlecase}}</a>
-          </span>
-        {% endif %}
-        {% if page.next %}
-          <span class="next-page">
-            <a href="{{page.next.url}}" title="Next post">{{page.next.title | titlecase}} &raquo;</a>
-          </span>
-        {% endif %}
+        {{ content }}
+
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}/img/logo.jpg">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="200">
+          </div>
+          <meta itemprop="name" content="{{ site.title }}">
+        </div>
+
+        <div class="navigator">
+          <hr />
+          {% if page.previous %}
+            <span class="previous-page">
+              <a href="{{page.previous.url}}" title="Previous post">&laquo; {{page.previous.title | titlecase}}</a>
+            </span>
+          {% endif %}
+          {% if page.next %}
+            <span class="next-page">
+              <a href="{{page.next.url}}" title="Next post">{{page.next.title | titlecase}} &raquo;</a>
+            </span>
+          {% endif %}
+        </div>
       </div>
+      <div id="disqus_thread"></div>
     </div>
-    <div id="disqus_thread"></div>
-  </div>
-</article>
+    <meta itemprop="dateModified" content="{{ page.date }}">
+    <meta itemprop="wordCount" content="{{ content | strip_html | split: ' ' | size }}">
+    <meta itemprop="inLanguage" content="en-US">
+    <meta itemprop="isFamilyFriendly" content="true">
+    <meta itemprop="version" content="1.0">
+  </article>
+</section>
+
 {% include post-heros.html post=post %}
 <script>
   var disqus_config = function () {
