@@ -60,11 +60,18 @@ Times New Roman. Say what?! o_O
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
-## Favicon
+## Favicon and Photos
 
 Thanks to [flaticon](http://www.flaticon.com) and the
 [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
 by [vaadin](http://www.flaticon.com/authors/vaadin), I have a customized favicon.
+
+Most photos used are under the Creative Commons License (free from copyright
+restrictions & no attribution required). Regardless, people take the time to
+take these photos and attributions are displayed below the photos. Some of the
+photos are modified to suite the needs of the post.
+
+* [stocksnap.io](https://stocksnap.io/)
 
 ## Tools
 

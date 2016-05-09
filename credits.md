@@ -48,18 +48,26 @@ Times New Roman. Say what?! o_O
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
-## Favicon
+## Favicon and Photos
 
 Thanks to [flaticon](http://www.flaticon.com) and the
 [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
 by [vaadin](http://www.flaticon.com/authors/vaadin), I have a customized favicon.
 
+Most photos used are under the Creative Commons License (free from copyright
+restrictions & no attribution required). Regardless, people take the time to
+take these photos and attributions are displayed below the photos. Some of the
+photos are modified to suite the needs of the post.
+
+* [stocksnap.io](https://stocksnap.io/)
+
 ## Tools
 
 * [Atom](https://atom.io/) - A hackable text editor for the 21st Century
 * [Git](https://git-scm.com/) - Distributed version control system
-* [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client for Windows or Mac.
+* [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client for Windows or Mac
 * [draw.io](https://www.draw.io/) - Flowchart maker & online diagram software
+* [SEO Site Checkup](http://seositecheckup.com/) - Find comprehensive search engine optimization (SEO) tools for your site
 
 ## Knowledge sharing
 
@@ -74,6 +82,7 @@ There are gems on the website that wouldn't be there if it weren't for you:
 * [Jekyll Tips](http://jekyll.tips/)
 * Blockquote styling from [CSS-Tricks](https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/)
 shared by [Chris Coyier](https://css-tricks.com/author/chriscoyier/).
+* 3 Simple .htaccess Rules For Better Website Performance at [DeluxBlogTips](http://www.deluxeblogtips.com/2010/06/htaccess-rules-website-performace.html)
 
 ## Hosting
 
