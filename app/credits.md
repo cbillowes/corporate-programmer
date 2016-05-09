@@ -80,6 +80,9 @@ photos are modified to suite the needs of the post.
 * [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client for Windows or Mac
 * [draw.io](https://www.draw.io/) - Flowchart maker & online diagram software
 * [SEO Site Checkup](http://seositecheckup.com/) - Find comprehensive search engine optimization (SEO) tools for your site
+* [Trello](https://trello.com) - Collaboration tool that organizes your
+projects into boards. I'm using this to keep track of my topics, site enhancements
+and bugs I need to fix.
 
 ## Knowledge sharing
 
