@@ -77,7 +77,7 @@ restrictions & no attribution required). Regardless, people take the time to
 take these photos and attributions are displayed below the photos. Some of the
 photos are modified to suite the needs of the post.
 
-* [stocksnap.io](https://stocksnap.io/)
+* [StockSnap.io](https://stocksnap.io/)
 
 Back to [quick navigation](#quick-navigation)
 
