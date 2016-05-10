@@ -21,13 +21,15 @@ technologies I used in order to make this website.
 Without all of you, my site would probably consist of Comic Sans and
 Times New Roman. Say what?! o_O
 
-<p style="text-align:center">
-  <a href="#development">Development</a> |
-  <a href="#build-automation">Build automation</a> |
-  <a href="#favicon">Favicon</a> |
-  <a href="#knowledge-sharing">Knowledge sharing</a> |
-  <a href="#hosting">Hosting</a>
-</p>
+## Quick Navigation
+
+* [Development](#development)
+* [Build automation](#build-automation)
+* [Artwork](#artwork)
+* [Tools](#tools)
+* [Knowledge sharing](#knowledge-sharing)
+* [Hosting](#hosting)
+* [Bugs](#bugs)
 
 ## Development
 
@@ -60,7 +62,7 @@ Times New Roman. Say what?! o_O
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
-## Favicon and Photos
+## Artwork
 
 Thanks to [flaticon](http://www.flaticon.com) and the
 [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
