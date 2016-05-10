@@ -9,13 +9,15 @@ technologies I used in order to make this website.
 Without all of you, my site would probably consist of Comic Sans and
 Times New Roman. Say what?! o_O
 
-<p style="text-align:center">
-  <a href="#development">Development</a> |
-  <a href="#build-automation">Build automation</a> |
-  <a href="#favicon">Favicon</a> |
-  <a href="#knowledge-sharing">Knowledge sharing</a> |
-  <a href="#hosting">Hosting</a>
-</p>
+## Quick Navigation
+
+* [Development](#development)
+* [Build automation](#build-automation)
+* [Artwork](#artwork)
+* [Tools](#tools)
+* [Knowledge sharing](#knowledge-sharing)
+* [Hosting](#hosting)
+* [Bugs](#bugs)
 
 ## Development
 
@@ -26,6 +28,8 @@ Times New Roman. Say what?! o_O
 * [live-server](https://github.com/tapio/live-server)
 * [lingua](https://github.com/dbalatero/lingua)
 * [ImageMagick](http://www.imagemagick.org/script/binary-releases.php)
+
+Back to [quick navigation](#quick-navigation)
 
 ## Build automation
 
@@ -48,7 +52,9 @@ Times New Roman. Say what?! o_O
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
-## Favicon and Photos
+Back to [quick navigation](#quick-navigation)
+
+## Artwork
 
 Thanks to [flaticon](http://www.flaticon.com) and the
 [Curly Brackets free icon](http://www.flaticon.com/free-icon/curly-brackets_106842)
@@ -59,15 +65,24 @@ restrictions & no attribution required). Regardless, people take the time to
 take these photos and attributions are displayed below the photos. Some of the
 photos are modified to suite the needs of the post.
 
-* [stocksnap.io](https://stocksnap.io/)
+* [StockSnap.io](https://stocksnap.io/)
+
+Back to [quick navigation](#quick-navigation)
 
 ## Tools
 
-* [Atom](https://atom.io/) - A hackable text editor for the 21st Century
-* [Git](https://git-scm.com/) - Distributed version control system
-* [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client for Windows or Mac
-* [draw.io](https://www.draw.io/) - Flowchart maker & online diagram software
-* [SEO Site Checkup](http://seositecheckup.com/) - Find comprehensive search engine optimization (SEO) tools for your site
+* [Atom](https://atom.io/) - A hackable text editor for the 21st Century.
+* [Git](https://git-scm.com/) - Distributed version control system.
+* [Source Tree](https://www.sourcetreeapp.com/) - A free Git & Mercurial client
+for Windows or Mac.
+* [draw.io](https://www.draw.io/) - Flowchart maker & online diagram software.
+* [SEO Site Checkup](http://seositecheckup.com/) - Find comprehensive search
+engine optimization (SEO) tools for your site.
+* [Trello](https://trello.com) - Collaboration tool that organizes your
+projects into boards. I'm using this to keep track of my topics, site enhancements
+and bugs I need to fix.
+
+Back to [quick navigation](#quick-navigation)
 
 ## Knowledge sharing
 
@@ -84,8 +99,19 @@ There are gems on the website that wouldn't be there if it weren't for you:
 shared by [Chris Coyier](https://css-tricks.com/author/chriscoyier/).
 * 3 Simple .htaccess Rules For Better Website Performance at [DeluxBlogTips](http://www.deluxeblogtips.com/2010/06/htaccess-rules-website-performace.html)
 
+Back to [quick navigation](#quick-navigation)
+
 ## Hosting
 
 Thanks to [bluehost](http://bluehost.com) I now have my very first `.com` domain and
 the ability to host my website. The support from the technical live chat team
 has also been very responsive and helpful.
+
+Back to [quick navigation](#quick-navigation)
+
+## Bugs
+
+Please let [me know](mailto:{{site.email}}) if you find any bugs or anything that is making your experience
+sub-optimal.
+
+Back to [quick navigation](#quick-navigation)
