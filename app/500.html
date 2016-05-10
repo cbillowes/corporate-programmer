@@ -1,0 +1,17 @@
+---
+layout: error
+title:  Server error
+permalink: 500.shtml
+---
+
+<h1><code>500 Server Error</code></h1>
+<p>
+  This is serious. Things went pear-shaped on the server. Perhaps the administrator set
+  something that should not have been set. One can only hope it's versioned.
+  Sorry about this!
+</p>
+<p>
+  Sadly, the administrator will not know that you are seeing this.
+  You can send a notification to <a href="mailto:{{site.email}}">{{site.email}}</a>.
+</p>
+<p><!--#exec cgi="/500.php" --></p>
