@@ -121,3 +121,9 @@ has also been very responsive and helpful.
 
 Back to [quick navigation](#quick-navigation)
 
+## Bugs
+
+Please let [me know](mailto:{{site.email}}) if you find any bugs or anything that is making your experience
+sub-optimal.
+
+Back to [quick navigation](#quick-navigation)
