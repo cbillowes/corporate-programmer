@@ -41,6 +41,8 @@ Times New Roman. Say what?! o_O
 * [lingua](https://github.com/dbalatero/lingua)
 * [ImageMagick](http://www.imagemagick.org/script/binary-releases.php)
 
+Back to [quick navigation](#quick-navigation)
+
 ## Build automation
 
 * [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks.
@@ -62,6 +64,8 @@ Times New Roman. Say what?! o_O
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 
+Back to [quick navigation](#quick-navigation)
+
 ## Artwork
 
 Thanks to [flaticon](http://www.flaticon.com) and the
@@ -75,6 +79,8 @@ photos are modified to suite the needs of the post.
 
 * [stocksnap.io](https://stocksnap.io/)
 
+Back to [quick navigation](#quick-navigation)
+
 ## Tools
 
 * [Atom](https://atom.io/) - A hackable text editor for the 21st Century.
@@ -87,6 +93,8 @@ engine optimization (SEO) tools for your site.
 * [Trello](https://trello.com) - Collaboration tool that organizes your
 projects into boards. I'm using this to keep track of my topics, site enhancements
 and bugs I need to fix.
+
+Back to [quick navigation](#quick-navigation)
 
 ## Knowledge sharing
 
@@ -103,8 +111,13 @@ There are gems on the website that wouldn't be there if it weren't for you:
 shared by [Chris Coyier](https://css-tricks.com/author/chriscoyier/).
 * 3 Simple .htaccess Rules For Better Website Performance at [DeluxBlogTips](http://www.deluxeblogtips.com/2010/06/htaccess-rules-website-performace.html)
 
+Back to [quick navigation](#quick-navigation)
+
 ## Hosting
 
 Thanks to [bluehost](http://bluehost.com) I now have my very first `.com` domain and
 the ability to host my website. The support from the technical live chat team
 has also been very responsive and helpful.
+
+Back to [quick navigation](#quick-navigation)
+
