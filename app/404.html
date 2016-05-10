@@ -1,0 +1,24 @@
+---
+layout: default
+title:  Page not Found
+permalink: 404.shtml
+---
+
+<div class="container">
+  <h1><code>404 Page not Found</code></h1>
+  <p>
+    <img src="/svg/error.svg" style="width:100%" />
+  </p>
+  <p>
+    Oh snap! The page you are looking for could not be found.
+    Perhaps you would be interested in these posts instead?
+  </p>
+  <p><!--#exec cgi="/cgi-sys/fourohfour.cgi" --></p>
+</div>
+<div class="pager">
+  <div class="container">
+    {% for post in site.posts | limit: 3 %}
+      {% include post-preview.html %}
+    {% endfor %}
+  </div>
+</div>
