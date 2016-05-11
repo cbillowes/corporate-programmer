@@ -8,25 +8,6 @@ module Jekyll
     end
 
   end
-
-  class MultiSet
-    attr_accessor :set
-    def initialize(set)
-      @set = set
-    end
-    # intersection
-    def &(other)
-      @set & other.set
-    end
-    # difference
-    def -(other)
-      @set - other.set
-    end
-    # union
-    def |(other)
-      @set | other.set
-    end
-  end
 end
 
 Liquid::Template.register_filter(Jekyll::FullTextSearchFilter)
