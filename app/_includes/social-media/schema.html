@@ -1,0 +1,12 @@
+{% if page.url contains("/blog/") %}
+<meta itemscope="Article" />
+{% else %}
+<meta itemscope="Blog" />
+{% endif %}
+<meta itemprop="name" content="{{ title | truncate: 137 }}">
+<meta itemprop="description" content="{{ description | truncate: 182 }}">
+{% if image %}
+  <meta itemprop="image" content="{{ image }}">
+{% else %}
+  <meta itemprop="image" content="{{ site.url }}/img/logo.png">
+{% endif %}

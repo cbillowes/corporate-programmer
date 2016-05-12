@@ -1,33 +1,33 @@
+{% assign title = site.title | escape %}
+{% if page.title %}
+  {% assign title = page.title | titlecase | escape %}
+{% endif %}
+
+{% assign description = site.title | escape %}
+{% if page.description %}
+  {% assign description = page.description %}
+{% elsif page.social-teaser  %}
+  {% assign description = page.social-teaser %}
+{% elsif page.excerpt %}
+  {% assign description = {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }} %}
+{% else %}
+  {% assign description = page.description %}
+{% endif %}
+
+{% if page.image %}
+  {% assign image = {{ site.url }}/img/share/{{ page.image.filename }}.jpg %}
+  {% assign image-alt = {{ page.image.alt }} %}
+{% else %}
+  {% assign image = nil %}
+{% endif %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Microdata -->
-  <link href="{{ site.author.twitter }}" rel="publisher" />
-  <meta itemprop="name" content="{{ site.title | escape }}">
-  <meta itemprop="description" content="{{ site.description }}">
-  {% if page.image %}
-    <meta itemprop="image" content="{{ site.url }}/img/320/{{ page.image.filename }}.jpg">
-  {% endif %}
-  <!-- Microdata -->
-
-  <title>
-    {% if page.title %}
-      {{ page.title | titlecase | escape | append: " - " | append: site.title }}
-    {% else %}
-      {{ site.title | escape }}
-    {% endif %}
-  </title>
-
-  {% if page.description %}
-    <meta name="description" content="{{ page.description}}" />
-  {% elsif page.excerpt %}
-    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
-  {% else %}
-    <meta name="description" content="{{ site.description}}" />
-  {% endif %}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description}}" />
 
   {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords }}" />
@@ -35,6 +35,11 @@
     <meta name="keywords" content="{{ site.keywords }}" />
   {% endif %}
 
+  <link href="{{ site.google-plus }}" rel="author" />
+  {% include social-media/twitter.html title=title description=description image=image image-alt=image-alt %}
+  {% include social-media/facebook.html %}
+  {% include social-media/open-graph.html title=title description=description image=image %}
+  {% include social-media/schema.html title=title description=description image=image %}
 
   {% if page.url != "/" %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -59,3 +64,10 @@
   </script>
 {% endif %}
 </head>
+
+<!--
+  http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013
+  http://secretsaucehq.com/mega-tags/#reference
+  https://support.google.com/webmasters/answer/79812?hl=en
+  https://developers.google.com/structured-data/testing-tool/
+ -->

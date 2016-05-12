@@ -1,0 +1,14 @@
+<meta property="og:title" content="{{ title }}" />
+{% if page.url contains("/blog/") %}
+<meta property="og:type" content="article" />
+{% else %}
+<meta property="og:type" content="blog" />
+{% endif %}
+<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:description" content="{{ description }}" />
+{% if image %}
+<meta property="og:image" content="{{ image }}" />
+{% endif %}
+<!--
+http://ogp.me/
+-->
