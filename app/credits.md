@@ -93,6 +93,7 @@ engine optimization (SEO) tools for your site.
 * [Trello](https://trello.com) - Collaboration tool that organizes your
 projects into boards. I'm using this to keep track of my topics, site enhancements
 and bugs I need to fix.
+* [Meta Tag Generator](http://secretsaucehq.com/mega-tags/)
 
 Back to [quick navigation](#quick-navigation)
 
