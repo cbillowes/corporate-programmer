@@ -9,6 +9,8 @@ photographer:
   name: Erika Fourie
   url: https://www.linkedin.com/in/erika-fourie-a25b9a30
 ---
+> All views are that of my own and do not necessarily reflect the
+views of my employer.
 
 Now that I beat you to it with the Hannibal reference, I'd like to officially
 introduce myself.
