@@ -41,11 +41,11 @@ module Jekyll
         'a',
         'am',
         'be',
+        'but',
         'em',
         'my',
-        'to',
-        'but',
         'the',
+        'to',
         'yet',
       ]
       exclusions
