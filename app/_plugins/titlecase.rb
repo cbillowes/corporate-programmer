@@ -44,6 +44,8 @@ module Jekyll
         'but',
         'em',
         'my',
+        'is',
+        'that',
         'the',
         'to',
         'yet',
