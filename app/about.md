@@ -4,7 +4,7 @@ title: “Hello Clarice”
 permalink: /about/
 image:
   filename: clarice
-  alt: Me scuba diving and saying I'm okay
+  alt: Portrait shot of Clarice edited on a blue background
 photographer:
   name: Erika Fourie
   url: https://www.linkedin.com/in/erika-fourie-a25b9a30

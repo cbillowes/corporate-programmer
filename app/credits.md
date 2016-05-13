@@ -4,7 +4,7 @@ title: A big shout out goes to...
 permalink: /credits/
 image:
   filename: crowd-at-concert
-  alt: Overlooking a crowd of people at a crowd-at-concert
+  alt: Overlooking a crowd of people at a concert
   website: StockSnap.io
   url: https://stocksnap.io/photo/5FGWJW4Z5D
 photographer:
