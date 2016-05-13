@@ -119,20 +119,22 @@ decision can have. Perhaps that could be the driving factor to deciding?
 I am not opposed to microservices. What I am opposed to is struggling
 to get features tested due to unpredictable data and unstable environments.
 
-Often a tremendous pain is felt in the front-end consumer teams. Valuable time
+Often tremendous pain is felt in the front-end consumer teams. Valuable time
 is wasted trying to sift through a plethora of services and meaningless logs
 to try pin-point exactly where stuff broke.
 
 If the company and teams don't have the right mindset or environment,
-microservices aren't necessarily the answer. There are symptoms of many different
-problems within the organization that would have an impact on a microservices
-architecture:
+microservices aren't necessarily the answer. What I've discussed highlights
+symptoms of different problems within teams and organizations that would have
+an impact on a microservices architecture.
 
-* Efficient and reliable continuous delivery pipeline ([Docker](https://www.docker.com/))
-* Visibility to some form of [monitoring](https://www.paessler.com/prtg)
+If this approach is taken, I believe that teams need:
+
+* Efficient and reliable continuous delivery pipelines ([Docker](https://www.docker.com/))
+* Visibility to [monitoring](https://www.paessler.com/prtg) of services
 * Overview [diagrams](https://trace.risingstack.com) and/or documentation of
 the architecture
-* Integration tests
+* Useful integration tests
 * Stable and predictable environments
 * Visible, useful and chained logs
 
