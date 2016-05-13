@@ -1,5 +1,5 @@
 module Jekyll
-  module TilteCaseFilter
+  module TitleCaseFilter
 
     def titlecase(input)
       input.gsub(/\S+/) do |word|
@@ -56,4 +56,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::TilteCaseFilter)
+Liquid::Template.register_filter(Jekyll::TitleCaseFilter)
