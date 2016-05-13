@@ -14,13 +14,12 @@
   {% assign description = page.description %}
 {% endif %}
 
-{% if page.image %}
-  {% assign image = {{ site.url }}/img/share/{{ page.image.filename }}.jpg %}
+{% assign image = {{ site.url | append: '/img/logo.png' }} %}
+{% if page.image.filename %}
+  {% assign filename = page.image.filename | append: '.jpg' %}
+  {% assign image = site.url | append: '/img/share/' | append: filename %}
   {% assign image-alt = {{ page.image.alt }} %}
-{% else %}
-  {% assign image = nil %}
 {% endif %}
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
