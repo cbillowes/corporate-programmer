@@ -1,21 +1,17 @@
-{% if image %}
+{% if include.img_alt %}
 <meta name="twitter:card" content="summary_large_image">
 {% else %}
 <meta name="twitter:card" content="summary">
 {% endif %}
 <meta name="twitter:site" content="@{{ site.twitter }}">
 <meta name="twitter:creator" content="@{{ site.twitter }}">
-<meta name="twitter:title" content="{{ title }}">
-<meta name="twitter:description" content="{{ description }}">
-{% if image %}
-<meta name="twitter:image:src" content="{{ image }}">
-{% else %}
-<meta name="twitter:image:src" content="{{ site.url | append: '/img/logo.png' }}">
-{% endif %}
-{% if image-alt %}
-<meta name="twitter:image:alt" content="{{ image-alt }}">
+<meta name="twitter:title" content="{{ include.title }}">
+<meta name="twitter:description" content="{{ include.desc }}">
+<meta name="twitter:image:src" content="{{ include.img }}">
+{% if include.img_alt %}
+<meta name="twitter:image:alt" content="{{ include.img_alt }}">
 {% endif %}
 <!--
-  https://dev.twitter.com/cards/overview 
+  https://dev.twitter.com/cards/overview
   https://cards-dev.twitter.com/validator
 -->

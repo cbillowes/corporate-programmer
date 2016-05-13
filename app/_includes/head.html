@@ -3,30 +3,35 @@
   {% assign title = page.title | titlecase | escape %}
 {% endif %}
 
-{% assign description = site.title | escape %}
-{% if page.description %}
-  {% assign description = page.description %}
-{% elsif page.social-teaser  %}
-  {% assign description = page.social-teaser %}
-{% elsif page.excerpt %}
-  {% assign description = {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }} %}
-{% else %}
-  {% assign description = page.description %}
+{% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 %}
+{% if page.url == "/" %}
+  {% assign description = site.description %}
+{% endif %}
+{% if page.excerpt %}
+  {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
 {% endif %}
 
-{% assign image = {{ site.url | append: '/img/logo.png' }} %}
+{% assign teaser = description %}
+{% if page.social-teaser %}
+  {% assign teaser = page.social-teaser %}
+{% endif %}
+
+{% assign image_alt = page.image.alt %}
+{% assign image = site.url | append: '/img/logo.png' %}
 {% if page.image.filename %}
   {% assign filename = page.image.filename | append: '.jpg' %}
   {% assign image = site.url | append: '/img/share/' | append: filename %}
-  {% assign image-alt = {{ page.image.alt }} %}
 {% endif %}
+
+{% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }}</title>
-  <meta name="description" content="{{ description}}" />
+  <meta name="description" content="{{ description }}" />
 
   {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords }}" />
@@ -35,16 +40,16 @@
   {% endif %}
 
   <link href="{{ site.google-plus }}" rel="author" />
-  {% include social-media/twitter.html title=title description=description image=image image-alt=image-alt %}
+  {% include social-media/twitter.html title=title desc=teaser img=image img_alt=image_alt %}
   {% include social-media/facebook.html %}
-  {% include social-media/open-graph.html title=title description=description image=image %}
-  {% include social-media/schema.html title=title description=description image=image %}
+  {% include social-media/open-graph.html title=title desc=teaser img=image url=url %}
+  {% include social-media/schema.html title=title desc=teaser img=image %}
 
   {% if page.url != "/" %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ url }}">
   {% endif %}
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   {% include favicons.html %}
   <link rel="stylesheet" href="{{ "/css/blog.css" | prepend: site.baseurl }}">
