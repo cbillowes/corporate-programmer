@@ -48,6 +48,7 @@ module Jekyll
         'that',
         'the',
         'to',
+        'with',
         'yet',
       ]
       exclusions
