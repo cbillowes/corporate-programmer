@@ -2,6 +2,18 @@
   border-top: dashed 10px #1E2832;
   background-color: darken($body-bg, 3%);
   padding: $spacer 0 $spacer * 2 0;
+
+  h2 {
+    font-family: $font-family-serif;
+    font-size: $font-size-h2 - 2;
+    margin-top: $spacer * 2;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+  }
+
 }
 
 .pagination {
