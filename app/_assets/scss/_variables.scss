@@ -4,6 +4,9 @@ $text-color:                      lighten($body-bg, 60%);
 $accent-color:                    #3E8FB0;
 $accent-color-compliment:         #CC334F;
 
+$code-color:                      $text-color;
+$code-bg:                         $body-bg-compliment;
+
 $container-lg:                    700px;
 $container-md:                    $container-lg;
 
