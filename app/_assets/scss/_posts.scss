@@ -48,9 +48,26 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
   .hero {
     position: relative;
-    margin-bottom: $double-spacer;
     border-bottom: solid $border-width $body-bg-compliment;
     background-color: $accent-color;
+    overflow: hidden;
+
+    .teaser {
+      display: none;
+      position: absolute;
+      background-color: $accent-color-compliment;
+      border: dashed lighten($accent-color-compliment, 15%) 2px;
+      color: lighten($accent-color-compliment, 40%);
+      text-align: center;
+      transform: rotate(-45deg);
+      left: -120px;
+      top: 40px;
+      padding: 5px 150px;
+      text-shadow: $body-bg-compliment 1px 1px 1px;
+      letter-spacing: 1px;
+      font-size: $font-size-small;
+      font-weight: bold;
+    }
 
     .heading {
       position: absolute;
@@ -100,15 +117,15 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
     }
 
-    .photo-contribution {
-      font-size: $font-size-small;
-      line-height: $line-height-small;
-      font-style: italic;
-      position: absolute;
-      right: 0px;
-      padding: 0 15px;
-    }
+  }
 
+  .photo-contribution {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    font-style: italic;
+    margin-bottom: $spacer;
+    text-align: right;
+    padding-right: $spacer;
   }
 
   h1 {
@@ -160,6 +177,14 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
   }
 
+}
+
+.summary {
+  .hero {
+    .teaser {
+      display: block;
+    }
+  }
 }
 
 .hang-heading .hero .heading {

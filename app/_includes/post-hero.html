@@ -1,6 +1,7 @@
 {% assign post = include.post %}
 
 <div class="hero">
+  <div class="teaser">Teaser</div>
   <div class="heading">
     <h1 itemprop="name headline"><a itemprop="mainEntityOfPage" href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     <br/>
@@ -10,16 +11,16 @@
     <span class="inner">
     </span>
   </span>
-  <p class="photo-contribution">
-    Photo
-    {% if post.image.website %}
-      courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
-    {% endif %}
-    {% if post.photographer %}
-      taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
-    {% endif %}
-  </p>
 </div>
+<p class="photo-contribution">
+  Photo
+  {% if post.image.website %}
+    courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
+  {% endif %}
+  {% if post.photographer %}
+    taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
+  {% endif %}
+</p>
 <div class="container">
   <header class="show-on-smaller">
     <h1><a href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>

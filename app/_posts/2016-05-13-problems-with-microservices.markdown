@@ -12,6 +12,8 @@ image:
 photographer:
   name: OVAN
   url: https://www.pexels.com/u/knownasovan/
+social-teaser: >
+  Exploring some of the cons in microservices architecture.
 ---
 
 Trying to decipher a monolithic app is a real pain. Changing it is
