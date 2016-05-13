@@ -13,7 +13,7 @@ module Jekyll
     end
 
     def should_capitalize_word(word)
-      exclusions = ['a', 'am', 'be', 'em', 'my', 'to', 'but', 'the', 'yet']
+      exclusions = get_exclusions()
       any = exclusions.any?{ |s| s == word }
       !any
     end
@@ -34,6 +34,21 @@ module Jekyll
         end
       }
       word
+    end
+
+    def get_exclusions()
+      exclusions = [
+        'a',
+        'am',
+        'be',
+        'em',
+        'my',
+        'to',
+        'but',
+        'the',
+        'yet',
+      ]
+      exclusions
     end
 
   end
