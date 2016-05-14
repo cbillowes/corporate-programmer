@@ -20,6 +20,7 @@ social-teaser: >
   Do you form relationships with testers? Teaming up with testers from the
   beginning of a feature can positively impact the quality of the feature
   being developed.
+tags: relationships communication productivity
 ---
 
 At work we often get trapped in our roles. We develop the software so we should
