@@ -19,6 +19,7 @@ social-teaser: >
   Do people look confused when you talk to them? Only you can truly know what
   is going on inside your mind. Communicating with context and intent
   helps alleviate confusing discussions.
+tags: communication
 ---
 Our minds are beautiful. It processes, sorts and catalogs data from each
 experience and outputs a perspective. From this we create an understanding of
