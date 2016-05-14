@@ -18,6 +18,7 @@ photographer:
 social-teaser: >
   Do you feel like a number? Making a name for yourself in the software
   development community helps build street cred in the corporate world.
+tags: personal-brand relationships comfort-zone
 ---
 When you join the corporate world, you become a number. At least, that is what
 I heard - and believed. The game involves a lot of players and you need to play
