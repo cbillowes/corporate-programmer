@@ -13,7 +13,7 @@
 
 {% assign teaser = description %}
 {% if page.social-teaser %}
-  {% assign teaser = page.social-teaser %}
+  {% assign teaser = page.social-teaser | strip_newlines_with_spaces | replace: '   ', ' ' | strip %}
 {% endif %}
 
 {% assign image_alt = page.image.alt %}
