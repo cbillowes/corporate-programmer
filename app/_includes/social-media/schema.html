@@ -1,8 +1,3 @@
-{% if page.url contains("/blog/") %}
-<meta itemscope="Article" />
-{% else %}
-<meta itemscope="Blog" />
-{% endif %}
 <meta itemprop="name" content="{{ include.title | truncate: 137 }}">
 <meta itemprop="description" content="{{ include.desc | truncate: 182 }}">
 <meta itemprop="image" content="{{ include.img }}">

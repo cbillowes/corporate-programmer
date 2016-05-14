@@ -3,17 +3,17 @@
   {% assign title = page.title | titlecase | escape %}
 {% endif %}
 
-{% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 %}
+{% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 | escape %}
 {% if page.url == "/" %}
-  {% assign description = site.description %}
+  {% assign description = site.description | escape %}
 {% endif %}
 {% if page.excerpt %}
-  {% assign description = page.excerpt | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 %}
+  {% assign description = page.excerpt | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 | escape %}
 {% endif %}
 
 {% assign teaser = description %}
 {% if page.social-teaser %}
-  {% assign teaser = page.social-teaser | strip_newlines_with_spaces | replace: '   ', ' ' | strip %}
+  {% assign teaser = page.social-teaser | strip_newlines_with_spaces | replace: '   ', ' ' | strip | escape %}
 {% endif %}
 
 {% assign image_alt = page.image.alt %}
