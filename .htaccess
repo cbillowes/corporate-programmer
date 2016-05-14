@@ -14,6 +14,7 @@ FileETag None
 ExpiresActive On
 ExpiresDefault "now plus 7 days"
 ExpiresByType text/html "now plus 1 day"
+ExpiresByType text/plain "now plus 1 second"
 Header set Cache-Control "must-revalidate, proxy-revalidate"
 
 <FilesMatch ".(js|css|html|htm|php|xml)$">
