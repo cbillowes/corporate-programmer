@@ -81,6 +81,7 @@ take these photos and attributions are displayed below the photos. Some of the
 photos are modified to suite the needs of the post.
 
 * [StockSnap.io](https://stocksnap.io/)
+* [Pexels.com](https://www.pexels.com)
 
 Back to [quick navigation](#quick-navigation)
 
