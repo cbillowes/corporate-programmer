@@ -17,7 +17,7 @@ photographer:
   url: https://stocksnap.io/author/402
 social-teaser: >
   Are you chasing after unicorns - perfect things that may not exist? Perfection
-  is a subjective perspective. I dive into this "illusion" and how it has 
+  is a subjective perspective. I dive into this "illusion" and how it has
   affected me.
 tags: perception mindset
 ---
