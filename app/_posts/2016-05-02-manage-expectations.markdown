@@ -1,9 +1,9 @@
 ---
-flesch-score: 64.2
-flesch-level: High Schooler
 layout: post
 title:  Manage expectations
 date:   2016-05-02 19:20:00 +0200
+flesch-score: 64.2
+flesch-level: High Schooler
 image:
   filename: women-smiling-and-relaxing
   alt: Two women laying on the bonnet of a Ford truck laughing

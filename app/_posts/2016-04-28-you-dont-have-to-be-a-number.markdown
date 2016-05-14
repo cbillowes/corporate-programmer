@@ -1,9 +1,9 @@
 ---
-flesch-score: 69.16
-flesch-level: High Schooler
 layout: post
 title:  You don't have to be a number
 date:   2016-04-28 20:22:52 +0200
+flesch-score: 69.16
+flesch-level: High Schooler
 image:
   filename: man-standing-in-front-of-numbers
   alt: Man standing in front of numbers
