@@ -287,11 +287,18 @@ module Jekyll
     end
 
     def fix_destination_path_to_include_relative_path(dest)
-      relative_path = File.dirname self.relative_path
-      destination = File.dirname destination(dest)
-      output_file = File.basename destination(dest)
-      path = destination + relative_path + "/" + output_file
-      path
+      if self.relative_path.include? "/tag/"
+        path = destination(dest)
+        puts path
+        path
+      else
+        relative_path = File.dirname self.relative_path
+        destination = File.dirname destination(dest)
+        output_file = File.basename destination(dest)
+        path = destination + relative_path + "/" + output_file
+        puts path
+        path
+      end
     end
 
     # Accessor for data properties by Liquid.

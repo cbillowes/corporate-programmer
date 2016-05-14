@@ -1,0 +1,8 @@
+{% if post.tags %}
+<div>
+  <small>Tagged as: </small>
+  {% for tag in post.tags %}
+    <span class="label label-primary"><a href="/blog/tag/{{tag}}">{{ tag | titlecase }}</a></span>
+  {% endfor %}
+</div>
+{% endif %}

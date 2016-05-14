@@ -8,6 +8,7 @@
     <aside class="thumbnail">
       <img src="/img/thumb/{{post.image.filename}}.jpg" alt="{{ post.image.alt }}" />
     </aside>
+    {% include posts/tags.html %}
     <p>
       {{ post.content | truncatewords: 37 | strip_html }}
       <a href="{{ post.url }}">read more</a>
