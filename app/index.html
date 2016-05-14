@@ -5,7 +5,7 @@ permalink: /
 
 {% assign hero_post = paginator.posts | first %}
 <div class="post summary">
-  {% include post-hero.html post=hero_post snippet=true %}
+  {% include posts/post-hero.html post=hero_post snippet=true %}
   <div class="container">
     <p>
       {{ hero_post.content | truncatewords: 50 | strip_html }}
@@ -17,9 +17,9 @@ permalink: /
   <div class="container">
     <h1 class="hidden">Other Posts</h1>
     {% for post in paginator.posts | offset: 1 | limit: paginator.per_page %}
-      {% include post-preview.html %}
+      {% include posts/post-preview.html %}
     {% endfor %}
     {% include pagination.html %}
   </div>
 </div>
-{% include post-heros.html post=hero_post %}
+{% include posts/post-heros.html post=hero_post %}

@@ -3,7 +3,7 @@
   <h2>
     <a href="{{ post.url }}">{{ post.title | titlecase }}</a>
   </h2>
-  {% include post-metadata.html %}
+  {% include posts/post-metadata.html %}
   <div class="content">
     <aside class="thumbnail">
       <img src="/img/thumb/{{post.image.filename}}.jpg" alt="{{ post.image.alt }}" />

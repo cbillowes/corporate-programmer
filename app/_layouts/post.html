@@ -8,7 +8,7 @@ layout: default
     <article class="post hang-heading" itemscope itemtype="http://schema.org/BlogPosting">
   {% endif %}
     {% assign post = page %}
-    {% include post-hero.html post=post %}
+    {% include posts/post-hero.html post=post %}
 
     <div class="container">
       <div class="content" itemprop="articleBody">
@@ -50,7 +50,7 @@ layout: default
   </article>
 </section>
 
-{% include post-heros.html post=post %}
+{% include posts/post-heros.html post=post %}
 <script>
   var disqus_config = function () {
     this.page.url = '{{ post.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}';

@@ -5,7 +5,7 @@
   <div class="heading">
     <h1 itemprop="name headline"><a itemprop="mainEntityOfPage" href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     <br/>
-    {% include post-metadata.html snippet=include.snippet %}
+    {% include posts/post-metadata.html snippet=include.snippet %}
   </div>
   <span id="image" role="img" aria-label="{{ post.image.alt }}">
     <span class="inner">
@@ -27,7 +27,7 @@
 <div class="container">
   <header class="show-on-smaller">
     <h1><a href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
-    {% include post-metadata.html %}
+    {% include posts/post-metadata.html %}
   </header>
   {% include posts/tags.html %}
 </div>

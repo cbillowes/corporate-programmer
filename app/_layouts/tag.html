@@ -22,7 +22,7 @@ layout: page
   {% for post in site.posts %}
       {% for tag in post.tags %}
         {% if tag == page.tag %}
-          {% include post-preview.html %}
+          {% include posts/post-preview.html %}
         {% endif %}
       {% endfor %}
   {% endfor %}
