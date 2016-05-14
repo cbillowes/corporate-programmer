@@ -13,7 +13,8 @@ photographer:
   name: KaboomPics.com
   url: http://kaboompics.com/one_foto/1012/white-laptop-female-hand-note-pen-phone-desk
 social-teaser: >
-  Having a pet project has some powerful benefits.
+  Having a pet project has some powerful benefits. Do you have one? What
+  benefits have you observed?
 ---
 
 I started this blog as a [course](http://devcareerboost.com/blog-course/).
