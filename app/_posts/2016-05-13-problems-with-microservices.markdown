@@ -18,6 +18,7 @@ photographer:
 social-teaser: >
   After an interesting debate, I decided to explore some of the problems that
   teams may face with microservices architecture.
+tags: technical
 ---
 
 Trying to decipher a monolithic app is a real pain. Changing it is
