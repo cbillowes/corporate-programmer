@@ -8,7 +8,7 @@
   {% assign description = site.description %}
 {% endif %}
 {% if page.excerpt %}
-  {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+  {% assign description = page.excerpt | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 %}
 {% endif %}
 
 {% assign teaser = description %}
