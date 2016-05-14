@@ -13,7 +13,8 @@ photographer:
   name: OVAN
   url: https://www.pexels.com/u/knownasovan/
 social-teaser: >
-  Exploring some of the cons in microservices architecture.
+  After an interesting debate, I decided to explore some of the problems that
+  teams may face with microservices architecture.
 ---
 
 Trying to decipher a monolithic app is a real pain. Changing it is
