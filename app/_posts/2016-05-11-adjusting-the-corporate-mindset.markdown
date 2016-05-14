@@ -18,6 +18,7 @@ photographer:
   url: https://stocksnap.io/author/13720
 social-teaser: >
   Just because it's always been done that way, doesn't mean it can't be changed.
+tags: mindset
 ---
 
 Personally there is nothing I can do about the way corporates work. There are a
