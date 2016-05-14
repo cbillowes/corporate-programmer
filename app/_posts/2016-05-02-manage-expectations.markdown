@@ -19,6 +19,7 @@ social-teaser: >
   Do you keep business informed? Business won't know when things are not working
   out unless you tell them. It is surprising how much support we can get
   when we open honest channels of communication.
+tags: relationships communication
 ---
 
 Let's say you've settled into a corporate. You start working on a story but you horribly misjudged
