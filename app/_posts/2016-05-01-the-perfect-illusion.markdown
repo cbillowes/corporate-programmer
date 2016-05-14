@@ -19,6 +19,7 @@ social-teaser: >
   Are you chasing after unicorns - perfect things that may not exist? Perfection
   is a subjective perspective. I dive into this "illusion" and how it has 
   affected me.
+tags: perception mindset
 ---
 Media often creates a perception of everything being
 ["perfect"](http://elitedaily.com/life/perfect-just-illusion/1063793/). Billboards,
