@@ -9,6 +9,9 @@ image:
   alt: A collection of compartmentalized photography materials on a clean surface
   website: Pexels.com
   url: https://www.pexels.com/photo/fashion-art-camera-office-57750/
+licence:
+  name: CCO Licence
+  url: https://www.pexels.com/photo-license/
 photographer:
   name: OVAN
   url: https://www.pexels.com/u/knownasovan/

@@ -9,6 +9,9 @@ image:
   alt: Two women laying on the bonnet of a Ford truck laughing
   website: StockSnap.io
   url: https://stocksnap.io/photo/TFGZBZ1EEV
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Greg Raines
   url: https://stocksnap.io/author/18180

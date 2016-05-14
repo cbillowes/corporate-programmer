@@ -9,6 +9,9 @@ image:
   alt: Mac computer on a clean table displaying the time which is motion blurred
   website: StockSnap.io
   url: https://stocksnap.io/photo/K1GVTNT1GJ
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Ariana Escobar
   url: https://stocksnap.io/author/7368

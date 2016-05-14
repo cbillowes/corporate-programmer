@@ -9,6 +9,9 @@ image:
   alt: Woman's hand over a Mac laptop, smartphone and book on a desk
   website: Pexels.com
   url: https://www.pexels.com/photo/white-laptop-female-hand-note-pen-phone-desk-6471/
+licence:
+  name: CCO Licence
+  url: https://www.pexels.com/photo-license/
 photographer:
   name: KaboomPics.com
   url: http://kaboompics.com/one_foto/1012/white-laptop-female-hand-note-pen-phone-desk

@@ -9,6 +9,9 @@ image:
   alt: Long wooden walk way leading to the ocean
   website: StockSnap.io
   url: https://stocksnap.io/photo/864539D8BC
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Skitter Photo
   url: https://stocksnap.io/author/402

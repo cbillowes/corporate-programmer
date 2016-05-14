@@ -20,6 +20,9 @@
   {% if post.photographer %}
     taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
   {% endif %}
+  {% if post.licence %}
+    (<a href="{{ post.licence.url }}">{{ post.licence.name }}</a>)
+  {% endif %}
 </p>
 <div class="container">
   <header class="show-on-smaller">

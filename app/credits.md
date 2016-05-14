@@ -7,6 +7,9 @@ image:
   alt: Overlooking a crowd of people at a concert
   website: StockSnap.io
   url: https://stocksnap.io/photo/5FGWJW4Z5D
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Nainoa Shizuru
   url: https://stocksnap.io/author/20302

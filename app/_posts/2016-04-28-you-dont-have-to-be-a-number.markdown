@@ -9,6 +9,9 @@ image:
   alt: Man standing in front of numbers
   website: StockSnap.io
   url: https://stocksnap.io/photo/E13520154A
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Israel Sundseth
   url: https://stocksnap.io/author/449

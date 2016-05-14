@@ -9,6 +9,9 @@ image:
   alt: People walking through an urban underground tunnel
   website: StockSnap.io
   url: https://stocksnap.io/photo/UC7OPAGHLV
+licence:
+  name: CCO Licence
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Sergio Rola
   url: https://stocksnap.io/author/28076
