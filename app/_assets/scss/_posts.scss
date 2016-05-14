@@ -5,6 +5,7 @@ $border-radius-right:   50%;
 $border-color:          darken($accent-color, 20%);
 $double-spacer:         $spacer * 2;
 $heading-bg-color:      rgba($body-bg-compliment, 0.7);
+$thumbnail-border:      dashed 1px darken($text-color, 30%);
 
 .post-preview {
   margin-top: $spacer;
@@ -15,7 +16,7 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
     height: $thumbnail-height;
     overflow: hidden;
     margin-bottom: $spacer;
-    border: dashed 1px darken($text-color, 30%);
+    border: $thumbnail-border;
 
     @media only screen and (max-width:480px) {
       img {
@@ -161,6 +162,17 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
   .content {
     margin-bottom: $spacer * 3;
+
+    .image {
+      text-align: center;
+      font-size: $font-size-small;
+
+      img {
+        border: $thumbnail-border;
+        margin-bottom: $spacer / 2;
+      }
+
+    }
 
     hr {
       border-top: solid 1px lighten($body-bg-compliment, 10%);

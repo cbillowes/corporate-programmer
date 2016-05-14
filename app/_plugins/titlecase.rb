@@ -45,6 +45,7 @@ module Jekyll
         'em',
         'my',
         'is',
+        'of',
         'that',
         'this',
         'the',
