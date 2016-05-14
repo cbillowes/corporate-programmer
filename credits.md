@@ -61,11 +61,12 @@ Thanks to [flaticon](http://www.flaticon.com) and the
 by [vaadin](http://www.flaticon.com/authors/vaadin), I have a customized favicon.
 
 Most photos used are under the Creative Commons License (free from copyright
-restrictions & no attribution required). Regardless, people take the time to
-take these photos and attributions are displayed below the photos. Some of the
-photos are modified to suite the needs of the post.
+restrictions & no attribution required). I attribute regardless. People take
+the time to take these photos and they are beautiful.
+Some of the photos are lightly modified to suite the needs of the post.
 
 * [StockSnap.io](https://stocksnap.io/)
+* [Pexels.com](https://www.pexels.com)
 
 Back to [quick navigation](#quick-navigation)
 
