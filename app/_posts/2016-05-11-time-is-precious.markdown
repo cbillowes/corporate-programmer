@@ -19,6 +19,7 @@ photographer:
 social-teaser: >
   When last did you just stop to smell a flower? Or take a peaceful walk
   without having to rush for something?
+tags: productivity time-management
 ---
 
 Today I sat in standstill traffic. It took me an hour to get home. It's usually
