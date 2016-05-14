@@ -117,7 +117,13 @@ module.exports = function(grunt) {
           cwd: 'node_modules/bootstrap-sass/assets/javascripts',
           src: '**/*',
           dest: '<%= app.temp %>/js',
-        },
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= app.app %>/js',
+          src: '**/*',
+          dest: '<%= app.temp %>/js',
+        }
       ]},
       post_images: {
         files: [{
@@ -158,6 +164,7 @@ module.exports = function(grunt) {
         }, {
           '<%= app.release %>/js/bootstrap.min.js' : 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
           '<%= app.release %>/js/jquery-1.12.3.min.js' : '<%= app.app %>/js/jquery-1.12.3.min.js',
+          '<%= app.release %>/js/script.min.js' : '<%= app.app %>/js/script.js',
         }, {
           expand: true,
           dot: true,
@@ -367,6 +374,14 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'concurrent:responsive_images'
+        ],
+      },
+      js: {
+        files: [
+          '<%= app.app %>/js/**/*',
+        ],
+        tasks: [
+          'copy:scripts',
         ],
       },
       gruntfile: {

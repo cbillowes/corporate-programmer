@@ -1,0 +1,29 @@
+#tags {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: darken($body-bg-compliment, 5%);
+  padding: $spacer;
+  text-align: center;
+  position: fixed;
+  border-top: solid $border-width $accent-color;
+
+  .wrapper {
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: -50px;
+      right: $spacer - 10;
+      padding-top: 6px;
+      width: $spacer * 2;
+      height: $spacer * 2;
+      background-color: darken($body-bg-compliment, 10%);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+  }
+
+}

@@ -13,10 +13,18 @@ layout: page
 
 
 <div class="tags">
-  <small>Other tags </small>
-  {% for tag in tags %}
-    {% include posts/tag.html %}
-  {% endfor %}
+  <div id="more-tags">
+    Do you want to <a href="javascript:void(0);">discover other tags</a>?
+  </div>
+  <div id="tags" class="hidden">
+    <div class="wrapper">
+      <div class="close">x</div>
+      <small>Other tags </small>
+      {% for tag in tags %}
+        {% include posts/tag.html %}
+      {% endfor %}
+    </div>
+  </div>
 <div>
 <div class="post summary tag">
   {% for post in site.posts %}
