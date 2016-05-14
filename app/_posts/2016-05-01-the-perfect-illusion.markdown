@@ -12,6 +12,10 @@ image:
 photographer:
   name: Skitter Photo
   url: https://stocksnap.io/author/402
+social-teaser: >
+  Are you chasing after unicorns - perfect things that may not exist? Perfection
+  is a subjective perspective. I dive into this "illusion" and how it has 
+  affected me.
 ---
 Media often creates a perception of everything being
 ["perfect"](http://elitedaily.com/life/perfect-just-illusion/1063793/). Billboards,
