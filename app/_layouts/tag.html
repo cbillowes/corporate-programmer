@@ -1,8 +1,24 @@
 ---
 layout: page
 ---
+{% assign tags = "" | split: "|" %}
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% if tags contains tag %}
+    {% else %}
+      {% assign tags = tags | push: tag %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
 
-<div class="post summary">
+
+<div class="tags">
+  <small>Other tags </small>
+  {% for tag in tags %}
+    {% include posts/tag.html %}
+  {% endfor %}
+<div>
+<div class="post summary tag">
   {% for post in site.posts %}
       {% for tag in post.tags %}
         {% if tag == page.tag %}

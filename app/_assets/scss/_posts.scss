@@ -195,6 +195,23 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
   }
 }
 
+.tag {
+  .thumbnail {
+    width: 150px;
+    height: 150px;
+    margin-right: $spacer;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 50%;
+
+    img {
+      width: 500px;
+      height: 150px;
+      margin-left: -120%;
+    }
+  }
+}
+
 .hang-heading .hero .heading {
   bottom: 20%;
 }
