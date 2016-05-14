@@ -18,6 +18,7 @@ photographer:
 social-teaser: >
   Having a pet project has some powerful benefits. Do you have one? What
   benefits have you observed?
+tags: productivity
 ---
 
 I started this blog as a [course](http://devcareerboost.com/blog-course/).
