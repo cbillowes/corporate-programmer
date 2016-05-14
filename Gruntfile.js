@@ -119,7 +119,6 @@ module.exports = function(grunt) {
           dest: '<%= app.temp %>/js',
         }, {
           expand: true,
-          dot: true,
           cwd: '<%= app.app %>/js',
           src: '**/*',
           dest: '<%= app.temp %>/js',
@@ -404,6 +403,7 @@ module.exports = function(grunt) {
           '<%= app.temp %>/css/*.css',
           '<%= app.temp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
           '<%= app.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+          '<%= app.app %>/js/**/*.{js}',
         ],
       },
     },
