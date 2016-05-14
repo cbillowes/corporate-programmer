@@ -12,6 +12,10 @@ image:
 photographer:
   name: Sergio Rola
   url: https://stocksnap.io/author/28076
+social-teaser: >
+  Do people look confused when you talk to them? Only you can truly know what
+  is going on inside your mind. Communicating with context and intent
+  helps alleviate confusing discussions.
 ---
 Our minds are beautiful. It processes, sorts and catalogs data from each
 experience and outputs a perspective. From this we create an understanding of
