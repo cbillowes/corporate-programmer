@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Style guide
 ---
 
 # Heading 1
