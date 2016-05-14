@@ -1,5 +1,5 @@
 module Jekyll
-  class LastBuilt < Liquid::Tag
+  class LastModifiedFilter < Liquid::Tag
 
     def initialize(tag_name, text, tokens)
       super
@@ -7,9 +7,9 @@ module Jekyll
     end
 
     def render(context)
-      "#{@text} #{Time.now.strftime("%A %-d, %B %Y %H:%M:%S")} CAT"
+      "#{@text} #{Time.now.strftime("%A %-d, %B %Y %H:%M")} CAT"
     end
   end
 end
 
-Liquid::Template.register_tag('last_built', Jekyll::LastBuilt)
+Liquid::Template.register_tag('last_built', Jekyll::LastModifiedFilter)
