@@ -13,7 +13,7 @@ licence:
   name: CCO Licence
   url: https://creativecommons.org/publicdomain/zero/1.0/
 social-teaser: >
-
+  The art of making software for people with people.
 tags: mindset relationships
 ---
 Today the words "people oriented software" materialized in my mind. It's not
