@@ -124,6 +124,14 @@ module.exports = function(grunt) {
           dest: '<%= app.temp %>/js',
         }
       ]},
+      styles: {
+        files: [{
+          expand: true,
+          cwd: '<%= app.app %>/css',
+          src: '**/*',
+          dest: '<%= app.temp %>/css',
+        },
+      ]},
       post_images: {
         files: [{
           expand: true,
@@ -383,6 +391,14 @@ module.exports = function(grunt) {
           'copy:scripts',
         ],
       },
+      css: {
+        files: [
+          '<%= app.app %>/css/**/*',
+        ],
+        tasks: [
+          'copy:styles',
+        ],
+      },
       gruntfile: {
         files: [
           'Gruntfile.js',
@@ -400,7 +416,7 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= app.jekyll %>/**/*.{html,yml,md,mkd,markdown}',
-          '<%= app.temp %>/css/*.css',
+          '<%= app.temp %>/css/**',
           '<%= app.temp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
           '<%= app.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
           '<%= app.app %>/js/**/*.{js}',
