@@ -43,11 +43,13 @@ Times New Roman. Say what?! o_O
 * [live-server](https://github.com/tapio/live-server)
 * [lingua](https://github.com/dbalatero/lingua)
 * [ImageMagick](http://www.imagemagick.org/script/binary-releases.php)
+* [grunt-generate-configs](https://github.com/creynders/grunt-generate-configs) - Generate separate grunt configuration files automatically.
 
 Back to [quick navigation](#quick-navigation)
 
 ## Build automation
 
+* [load-grunt-configs](https://github.com/creynders/load-grunt-configs) - Allows splitting your grunt task configuration into separate files.
 * [time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks.
 * [jit-grunt](https://github.com/shootaroo/jit-grunt) - JIT(Just In Time) plugin loader for Grunt.
 * [grunt-build-control](https://github.com/robwierzbowski/grunt-build-control) - Version control your built code.
