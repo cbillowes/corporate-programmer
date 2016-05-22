@@ -5,7 +5,7 @@ module.exports =
     options:
       config: '_config.yml'
       dest: '<%= paths.build.jekyll %>'
-#   release:
-#     options:
-#       config: '_config.yml,_config.build.yml'
-#       dest: '<%= paths.release %>'
+  release:
+    options:
+      config: '_config.yml,_config.build.yml'
+      dest: '<%= paths.release %>'

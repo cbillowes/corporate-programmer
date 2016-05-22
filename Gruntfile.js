@@ -20,65 +20,40 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('optimize', [
-    'concurrent:images'
+    'concurrent:images',
+    'autoprefixer',
+    'concat',
+    'cssmin',
+    'csslint',
+    'htmlmin',
+    'xmlmin',
+    'critical',
   ]);
 
-  grunt.registerTask('release', []);
-  grunt.registerTask('deploy', []);
+  grunt.registerTask('release', [
+    'clean:release',
+    'concurrent:release',
+    'copy:release',
+    'optimize',
+    'connect:release',
+  ]);
+
+  grunt.registerTask('deploy', [
+    'release',
+    'buildcontrol',
+  ]);
 
   // Helpers
-  grunt.registerTask('build_jekyll', [
+  grunt.registerTask('build_jekyll', target, [
     'shell:posts',
     'copy:posts',
     'clean:images',
-    'jekyll:build',
+    'jekyll:' + target,
   ]);
 
   grunt.registerTask('init_images', [
     'responsive_images:init',
     'imagemin:init',
   ]);
-
-  //
-  // grunt.registerTask('build:release', [
-  //   'clean:release',
-  //   'copy:credits',
-  //   'shell:credits',
-  //   // some cmd tasks need to run concurrently to prevent hanging
-  //   'concurrent:release',
-  //   // copies .tmp files only after Jekyll is complete
-  //   'copy:release',
-  //   'imagemin:release',
-  //   'autoprefixer:release',
-  //   'cssmin:release',
-  //   'htmlmin:release',
-  //   'xmlmin:release',
-  //   'critical:release',
-  //   'clean:release_cleanup',
-  // ]);
-  //
-  // grunt.registerTask('serve', function(target) {
-  //   if (target === 'release') {
-  //     return grunt.task.run(['build:release', 'connect:release:keepalive']);
-  //   }
-  //
-  //   grunt.task.run([
-  //     'build:debug',
-  //   ]);
-  // });
-  //
-  // grunt.registerTask('server', function() {
-  //   grunt.log.warn('The `server` task has been deprecated. Use `grunt serve:debug` or `grunt serve:release` to start a server. Starting debug server now.');
-  //   grunt.task.run(['serve:debug']);
-  // });
-  //
-  // grunt.registerTask('deploy', [
-  //   'build:release',
-  //   'buildcontrol'
-  // ]);
-  //
-  // grunt.registerTask('default', [
-  //   'serve:debug'
-  // ]);
 
 };

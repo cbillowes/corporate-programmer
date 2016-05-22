@@ -1,19 +1,18 @@
-# module.exports =
-#   release:
-#     options:
-#       base: './'
-#       css: [
-#         '<%= paths.release %>/css/blog.css'
-#         '<%= paths.release %>/css/bootstrap.css'
-#       ]
-#       minify: true
-#     files: [
-#       {
-#         expand: true
-#         cwd: '<%= paths.release %>'
-#         src: [
-#           '**/*.html'
-#         ]
-#         dest: '<%= paths.release %>'
-#       }
-#     ]
+module.exports =
+  release:
+    options:
+      base: './'
+      css: [
+        '<%= paths.optimize.css %>/*.css'
+      ]
+      minify: true
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.release %>'
+        src: [
+          '**/*.html'
+        ]
+        dest: '<%= paths.release %>'
+      }
+    ]

@@ -10,14 +10,8 @@ module.exports =
     '<%= paths.img.backup_heroes.src %>/*.jpg'
     '<%= paths.img.backup_root.src %>/*'
   ]
-  # release: [
-  #   '<%= paths.release %>/*'
-  #   '!<%= paths.release %>/.git'
-  #   '<%= paths.build.tmp %>/*'
-  # ]
-  # release_cleanup: [
-  #   '<%= paths.build.tmp %>'
-  # ]
-  # post_images: [
-  #   '<%= paths.img.backup_heroes.src %>/*.jpg'
-  # ]
+  release: [
+    '<%= paths.release %>/*'
+    '!<%= paths.release %>/.git'
+    '<%= paths.build.tmp %>/*'
+  ]

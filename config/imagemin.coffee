@@ -18,10 +18,10 @@ module.exports =
         expand: true
         cwd: '<%= paths.build.tmp %>/img'
         src: '**/*.{jpg,jpeg,png,gif}'
-        dest: '<%= paths.optimize.src %>/img'
+        dest: '<%= paths.optimize.img %>'
       }
     ]
-  jekyll:
+  posts:
     options:
       progressive: true
     files: [
@@ -29,6 +29,6 @@ module.exports =
         expand: true
         cwd: '<%= paths.build.jekyll %>/img'
         src: '**/*.{jpg,jpeg,png,gif}'
-        dest: '<%= paths.optimize.src %>/img'
+        dest: '<%= paths.optimize.img %>'
       }
     ]

@@ -1,8 +1,10 @@
 module.exports =
+  options:
+    logConcurrentOutput: true
   build:
     tasks: [
       'copy:backup_images'
-      'build_jekyll'
+      'build_jekyll:build'
       'sass:build'
       'responsive_images:build'
       'copy:build'
@@ -11,16 +13,7 @@ module.exports =
   images:
     tasks: [
       'imagemin:build'
-      'imagemin:jekyll'
+      'imagemin:posts'
     ]
-#   options:
-#     logConcurrentOutput: true
-#   sass:
-#     tasks: [
-#       'sass:debug'
-#     ]
-#   release:
-#     tasks: [
-#       'jekyll:release'
-#       'sass:release'
-#     ]
+  release:
+    'build_jekyll:release'

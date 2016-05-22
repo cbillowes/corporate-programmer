@@ -3,7 +3,8 @@ module.exports =
     files: [
       'credits.md': '<%= paths.src.app %>/credits.md'
       '<%= paths.build.tmp %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
-      '<%= paths.build.tmp %>/js/jquery-1.12.3.js': '<%= paths.src.app %>/js/jquery-1.12.3.js'
+      '<%= paths.build.tmp %>/js/jquery-1.12.3.js': '<%= paths.src.js %>/jquery-1.12.3.js'
+      '<%= paths.build.tmp %>/js/script.js': '<%= paths.src.js %>/script.js'
       {
         expand: true
         cwd: '<%= paths.src.app %>/_assets/favicons'
@@ -43,33 +44,27 @@ module.exports =
         dest: '<%= paths.img.store %>/img'
       }
     ]
-#   release:
-#     files: [
-#       {
-#         expand: true
-#         dot: true
-#         cwd: '<%= paths.build.tmp %>'
-#         src: '**/*'
-#         dest: '<%= paths.release %>'
-#       }
-#       {
-#         expand: true
-#         cwd: '<%= paths.src.app %>/_assets/favicons'
-#         src: [
-#           '**/*.{ico,png}'
-#         ]
-#         dest: '<%= paths.release %>'
-#       }
-#       {
-#         '<%= paths.release %>/js/bootstrap.min.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
-#         '<%= paths.release %>/js/jquery-1.12.3.min.js': '<%= paths.src.app %>/js/jquery-1.12.3.min.js'
-#         '<%= paths.release %>/js/script.min.js': '<%= paths.src.app %>/js/script.js'
-#       }
-#       {
-#         expand: true
-#         dot: true
-#         cwd: '<%= paths.src.app %>/.img/'
-#         src: '**/*'
-#         dest: '<%= paths.release %>/img'
-#       }
-#     ]
+  release:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.build.jekyll %>'
+        src: '**/*'
+        dest: '<%= paths.release %>'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.optimize.img %>'
+        src: '**/*'
+        dest: '<%= paths.release %>'
+      }
+    ]
+  deploy:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.optimize.src %>'
+        src: '**/*'
+        dest: '<%= paths.deploy %>'
+      }
+    ]
