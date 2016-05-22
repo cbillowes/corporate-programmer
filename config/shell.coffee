@@ -1,11 +1,11 @@
 module.exports =
-  process_posts:
-    command: 'rake process'
+  unfrontmatter:
+    command: 'rake unfrontmatter'
     options:
       execOptions:
         cwd: 'rake'
-  credits:
-    command: 'rake credits'
+  posts:
+    command: 'rake process'
     options:
       execOptions:
         cwd: 'rake'

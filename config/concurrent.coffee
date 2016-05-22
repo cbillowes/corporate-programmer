@@ -1,20 +1,26 @@
 module.exports =
-  options:
-    logConcurrentOutput: true
-  sass:
+  build:
     tasks: [
-      'sass:debug'
-    ]
-  debug:
-    tasks: [
-      'copy:post_images'
+      'copy:backup_images'
       'build_jekyll'
-      'concurrent:sass'
-      'responsive_images:debug'
-      'copy:scripts'
+      'sass:build'
+      'responsive_images:build'
+      'copy:build'
+      'shell:unfrontmatter'
     ]
-  release:
+  images:
     tasks: [
-      'jekyll:release'
-      'sass:release'
+      'imagemin:build'
+      'imagemin:jekyll'
     ]
+#   options:
+#     logConcurrentOutput: true
+#   sass:
+#     tasks: [
+#       'sass:debug'
+#     ]
+#   release:
+#     tasks: [
+#       'jekyll:release'
+#       'sass:release'
+#     ]

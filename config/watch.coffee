@@ -5,10 +5,31 @@ module.exports =
       'config/**/*'
     ]
     tasks: [
-      'concurrent:debug'
+      'concurrent:build'
     ]
     options:
       reload: true
+  livereload:
+    options:
+      livereload: '<%= connect.options.livereload %>'
+    files: [
+      '<%= paths.build %>/**/*'
+    ]
+  img:
+    files: [
+      '<%= paths.img.backup_heroes.src %>/*'
+    ]
+    tasks: [
+      'responsive_images:build'
+    ]
+  store:
+    files: [
+      '<%= paths.img.backup_heroes.src %>/*'
+      '<%= paths.img.backup_root.src %>/*'
+    ]
+    tasks: [
+      'imagemin:store'
+    ]
   # sass:
   #   files: [
   #     '<%= paths.src.app %>/_assets/scss/**/*.{scss,sass}'
@@ -24,9 +45,6 @@ module.exports =
   #   ]
   #   tasks: [ 'build_jekyll' ]
   #   options: debounceDelay: 3000
-  # img:
-  #   files: [ '<%= paths.src.app %>/_assets/post-images/*.{jpg}' ]
-  #   tasks: [ 'concurrent:responsive_images' ]
   # js:
   #   files: [ '<%= paths.src.app %>/js/**/*' ]
   #   tasks: [ 'copy:scripts' ]
@@ -37,12 +55,3 @@ module.exports =
   #   files: [ 'Gruntfile.js', 'config/**/*' ]
   #   tasks: [ 'concurrent:debug' ]
   #   options: reload: true
-  # livereload:
-  #   options: livereload: '<%= connect.options.livereload %>'
-  #   files: [
-  #     '<%= paths.build.jekyll %>/**/*.{html,yml,md,mkd,markdown}'
-  #     '<%= paths.build.tmp %>/css/**'
-  #     '<%= paths.build.tmp %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-  #     '<%= paths.src.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-  #     '<%= paths.src.app %>/js/**/*.{js}'
-  #   ]

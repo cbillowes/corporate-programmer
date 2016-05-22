@@ -83,7 +83,7 @@ task :process do
 
 end
 
-task :credits do
+task :unfrontmatter do
   path = '../credits.md'
 
   require 'stringio'

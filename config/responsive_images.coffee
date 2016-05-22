@@ -84,15 +84,29 @@ module.exports =
         aspectRatio: false
       }
     ]
-    newFilesOnly: false
-  debug:
+  init:
+    options:
+      newFilesOnly: true
     files: [
       {
         expand: true
         src: [
           '**/*.jpg'
         ]
-        cwd: '<%= paths.src.app %>/_assets/post-images'
-        custom_dest: '<%= paths.src.app %>/.img/{%= name %}'
+        cwd: '<%= paths.img.backup %>'
+        custom_dest: '<%= paths.img.store %>/img/{%= name %}'
+      }
+    ]
+  build:
+    options:
+      newFilesOnly: false
+    files: [
+      {
+        expand: true
+        src: [
+          '**/*.jpg'
+        ]
+        cwd: '<%= paths.img.backup_heroes.src %>'
+        custom_dest: '<%= paths.build.tmp %>/img/{%= name %}'
       }
     ]

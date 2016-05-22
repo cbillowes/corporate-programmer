@@ -1,16 +1,23 @@
 module.exports =
-  debug: [
+  build: [
     '<%= paths.build.jekyll %>/*'
-    '<%= paths.build.tmp %>/*'
+    '<%= paths.build.tmp %>/js/*'
+    '<%= paths.build.tmp %>/css/*'
+    '<%= paths.build.tmp %>/img/*'
+    '<%= paths.build.tmp %>/*.{png,ico}'
   ]
-  release: [
-    '<%= paths.release %>/*'
-    '!<%= paths.release %>/.git'
-    '<%= paths.build.tmp %>/*'
+  images: [
+    '<%= paths.img.backup_heroes.src %>/*.jpg'
+    '<%= paths.img.backup_root.src %>/*'
   ]
-  release_cleanup: [
-    '<%= paths.build.tmp %>'
-  ]
-  post_images: [
-    '<%= paths.src.app %>/_assets/post-images/*.jpg'
-  ]
+  # release: [
+  #   '<%= paths.release %>/*'
+  #   '!<%= paths.release %>/.git'
+  #   '<%= paths.build.tmp %>/*'
+  # ]
+  # release_cleanup: [
+  #   '<%= paths.build.tmp %>'
+  # ]
+  # post_images: [
+  #   '<%= paths.img.backup_heroes.src %>/*.jpg'
+  # ]

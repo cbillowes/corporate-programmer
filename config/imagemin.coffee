@@ -1,12 +1,34 @@
 module.exports =
-  release:
+  init:
     options:
       progressive: true
     files: [
       {
         expand: true
-        cwd: '<%= paths.release %>/img'
+        cwd: '<%= paths.img.store %>/img'
         src: '**/*.{jpg,jpeg,png,gif}'
-        dest: '<%= paths.release %>/img'
+        dest: '<%= paths.img.store %>/img'
+      }
+    ]
+  build:
+    options:
+      progressive: true
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.build.tmp %>/img'
+        src: '**/*.{jpg,jpeg,png,gif}'
+        dest: '<%= paths.optimize.src %>/img'
+      }
+    ]
+  jekyll:
+    options:
+      progressive: true
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.build.jekyll %>/img'
+        src: '**/*.{jpg,jpeg,png,gif}'
+        dest: '<%= paths.optimize.src %>/img'
       }
     ]
