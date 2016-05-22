@@ -67,10 +67,3 @@ module.exports = function(grunt) {
   ]);
 
 };
-
-function getHeight(width) {
-  // Online aspect ratio calculator http://andrew.hedges.name/experiments/aspect_ratio
-  // _data/images.yml needs to contain the aspect ratio if it changes
-  var aspectRatio = 0.3125;
-  return width * aspectRatio;
-}

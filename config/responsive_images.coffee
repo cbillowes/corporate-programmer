@@ -1,3 +1,7 @@
+# Online aspect ratio calculator http://andrew.hedges.name/experiments/aspect_ratio
+# _data/images.yml needs to contain the aspect ratio if it changes
+# aspectRatio = 0.3125;
+
 module.exports =
   options:
     engine: 'im'
