@@ -8,5 +8,9 @@ module.exports =
     '!<%= paths.release %>/.git'
     '<%= paths.build.tmp %>/*'
   ]
-  release_cleanup: [ '<%= paths.build.tmp %>' ]
-  post_images: [ '<%= paths.src.app %>/_assets/post-images/*.jpg' ]
+  release_cleanup: [
+    '<%= paths.build.tmp %>'
+  ]
+  post_images: [
+    '<%= paths.src.app %>/_assets/post-images/*.jpg'
+  ]

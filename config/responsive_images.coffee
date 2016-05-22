@@ -81,9 +81,14 @@ module.exports =
       }
     ]
     newFilesOnly: false
-  debug: files: [ {
-    expand: true
-    src: [ '**/*.jpg' ]
-    cwd: '<%= paths.src.app %>/_assets/post-images'
-    custom_dest: '<%= paths.src.app %>/.img/{%= name %}'
-  } ]
+  debug:
+    files: [
+      {
+        expand: true
+        src: [
+          '**/*.jpg'
+        ]
+        cwd: '<%= paths.src.app %>/_assets/post-images'
+        custom_dest: '<%= paths.src.app %>/.img/{%= name %}'
+      }
+    ]

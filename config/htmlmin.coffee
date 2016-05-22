@@ -8,9 +8,11 @@ module.exports = release:
     removeEmptyAttributes: true
     minifyJS: true
     minifyCSS: true
-  files: [ {
-    expand: true
-    cwd: '<%= paths.release %>'
-    src: '**/*.{html,shtml}'
-    dest: '<%= paths.release %>'
-  } ]
+  files: [
+    {
+      expand: true
+      cwd: '<%= paths.release %>'
+      src: '**/*.{html,shtml}'
+      dest: '<%= paths.release %>'
+    }
+  ]
