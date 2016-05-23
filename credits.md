@@ -54,6 +54,7 @@ Back to [quick navigation](#quick-navigation)
 * [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) - Run grunt tasks concurrently.
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) - Official Sass port of Bootstrap 2 and 3.
 * [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat) - Concatenate files.
+* [grunt-contrib-csslint](https://github.com/gruntjs/grunt-contrib-csslint) - Lint CSS files.
 
 Back to [quick navigation](#quick-navigation)
 
