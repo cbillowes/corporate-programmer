@@ -23,6 +23,7 @@ module.exports = function(grunt) {
     'concurrent:images',
     'autoprefixer',
     'concat',
+    'uglify',
     'cssmin',
     'htmlmin',
     'xmlmin',
@@ -32,8 +33,8 @@ module.exports = function(grunt) {
   grunt.registerTask('release', [
     'clean:release',
     'concurrent:release',
-    'copy:release',
     'optimize',
+    'copy:release',
     'connect:release',
     'watch:release',
   ]);
