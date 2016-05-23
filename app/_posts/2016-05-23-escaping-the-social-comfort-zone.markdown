@@ -21,7 +21,7 @@ social-teaser: >
 tags: comfort-zone personal-brand mindset
 ---
 
-The comfort zone. What a wonderful place. It's so safe to be in. You're already
+The comfort zone. What a wonderful place. It's so safe to be in. You're
 familiar with the surroundings, it has few surprises and everything just makes
 sense.
 
@@ -41,9 +41,9 @@ When I experienced issues with whatever technology or process, I'd strike up a
 conversation with someone higher up than me. I'd ask questions and try
 brainstorm with them.
 
-In the beginning I was so freaked out by simply asking them that I'd instantly
-blush so hard that my face would burn. I ended up being so self-conscious that
-I couldn't listen to what they had to say. It was worse when I didn't know
+In the beginning I was so freaked out by simply talking to them that I'd instantly
+blush. So hard in fact that I'd feel my face burn. I ended up being so self-conscious that
+I couldn't hear what they had to say. It was worse when I didn't know
 the person at all.
 
 Blogging and tweeting was scary for me too but it also helps start conversations.
@@ -78,9 +78,11 @@ Smiling makes you approachable and immediately uplifts a person's spirits
 (not always, but most times).
 
 Giving a true compliment is a great conversation starter and also has a
-positive impact on the other person.
+positive impact on the other person. When in doubt, bring weather into the
+conversation.
 
-When in doubt, bring weather into the conversation.
+This helps build confidence when talking to people you don't know which helps 
+when you want to start networking at events or other social gatherings.
 
 ## My final thoughts
 I don't know how many software developers are self-conscious or lack
