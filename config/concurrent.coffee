@@ -16,4 +16,11 @@ module.exports =
       'imagemin:posts'
     ]
   release:
-    'release_jekyll'
+    tasks: [
+      'copy:backup_images'
+      'release_jekyll'
+      'sass:build'
+      'responsive_images:build'
+      'copy:build'
+      'shell:unfrontmatter'
+    ]

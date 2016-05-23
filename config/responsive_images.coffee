@@ -93,7 +93,7 @@ module.exports =
         src: [
           '**/*.jpg'
         ]
-        cwd: '<%= paths.img.backup %>'
+        cwd: '<%= paths.img.backup_heroes.dest%>'
         custom_dest: '<%= paths.img.store %>/img/{%= name %}'
       }
     ]

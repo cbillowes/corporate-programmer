@@ -3,7 +3,7 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= paths.build.jekyll %>'
+        cwd: '<%= paths.release %>'
         src: '**/*.xml'
         dest: '<%= paths.release %>'
       }

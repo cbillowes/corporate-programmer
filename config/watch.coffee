@@ -19,10 +19,10 @@ module.exports =
   img:
     files: [
       '<%= paths.img.backup_heroes.src %>/*'
+      '<%= paths.img.backup_root.src %>/*'
     ]
     tasks: [
       'responsive_images:build'
-      'clean:images'
       'imagemin:build'
       'imagemin:posts'
     ]
@@ -51,5 +51,13 @@ module.exports =
     options:
       debounceDelay: 3000
   js:
-    files: [ '<%= paths.src.js %>/**/*' ]
-    tasks: [ 'copy:scripts' ]
+    files: [
+      '<%= paths.src.js %>/**/*'
+    ]
+    tasks: [
+      'copy:scripts'
+    ]
+  release:
+    files: [
+      '<%= paths.release %>/**/*' 
+    ]

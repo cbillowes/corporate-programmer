@@ -18,4 +18,5 @@ module.exports =
         target: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/'
       base: [
         '<%= paths.release %>'
+        '<%= paths.img.store %>'
       ]

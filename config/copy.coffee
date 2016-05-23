@@ -37,6 +37,9 @@ module.exports =
         src: '**/*'
         dest: '<%= paths.img.backup_root.dest %>'
       }
+    ]
+  root_images:
+    files: [
       {
         expand: true
         cwd: '<%= paths.img.backup_root.dest %>'
@@ -48,13 +51,7 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= paths.build.jekyll %>'
-        src: '**/*'
-        dest: '<%= paths.release %>'
-      }
-      {
-        expand: true
-        cwd: '<%= paths.optimize.img %>'
+        cwd: '<%= paths.optimize.src %>'
         src: '**/*'
         dest: '<%= paths.release %>'
       }

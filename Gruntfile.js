@@ -24,7 +24,6 @@ module.exports = function(grunt) {
     'autoprefixer',
     'concat',
     'cssmin',
-    'csslint',
     'htmlmin',
     'xmlmin',
     'critical',
@@ -36,6 +35,12 @@ module.exports = function(grunt) {
     'copy:release',
     'optimize',
     'connect:release',
+    'watch:release',
+  ]);
+
+  grunt.registerTask('serve_release', [
+    'connect:release',
+    'watch:release',
   ]);
 
   grunt.registerTask('deploy', [
@@ -47,19 +52,20 @@ module.exports = function(grunt) {
   grunt.registerTask('build_jekyll', [
     'shell:posts',
     'copy:posts',
-    'clean:images',
+    //'clean:images',
     'jekyll:build',
   ]);
 
   grunt.registerTask('release_jekyll', [
     'shell:posts',
     'copy:posts',
-    'clean:images',
+    //'clean:images',
     'jekyll:release',
   ]);
 
   grunt.registerTask('init_images', [
     'responsive_images:init',
+    'copy:root_images',
     'imagemin:init',
   ]);
 

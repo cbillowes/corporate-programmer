@@ -6,10 +6,6 @@ module.exports =
     '<%= paths.build.tmp %>/img/*'
     '<%= paths.build.tmp %>/*.{png,ico}'
   ]
-  images: [
-    '<%= paths.img.backup_heroes.src %>/*.jpg'
-    '<%= paths.img.backup_root.src %>/*'
-  ]
   release: [
     '<%= paths.release %>/*'
     '!<%= paths.release %>/.git'

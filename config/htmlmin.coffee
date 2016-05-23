@@ -12,7 +12,7 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= paths.build.jekyll %>'
+        cwd: '<%= paths.release %>'
         src: '**/*.{html,shtml}'
         dest: '<%= paths.release %>'
       }
