@@ -13,7 +13,8 @@ module.exports =
     options:
       livereload: '<%= connect.options.livereload %>'
     files: [
-      '<%= paths.build %>/**/*'
+      '<%= paths.build.src %>/**/*'
+      '<%= paths.optimize.src %>/**/*'
     ]
   img:
     files: [
@@ -21,6 +22,9 @@ module.exports =
     ]
     tasks: [
       'responsive_images:build'
+      'clean:images'
+      'imagemin:build'
+      'imagemin:posts'
     ]
   store:
     files: [
@@ -28,7 +32,8 @@ module.exports =
       '<%= paths.img.backup_root.src %>/*'
     ]
     tasks: [
-      'imagemin:store'
+      'imagemin:build'
+      'imagemin:posts'
     ]
   sass:
     files: [

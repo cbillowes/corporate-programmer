@@ -4,7 +4,7 @@ module.exports =
   build:
     tasks: [
       'copy:backup_images'
-      'build_jekyll:build'
+      'build_jekyll'
       'sass:build'
       'responsive_images:build'
       'copy:build'
@@ -16,4 +16,4 @@ module.exports =
       'imagemin:posts'
     ]
   release:
-    'build_jekyll:release'
+    'release_jekyll'

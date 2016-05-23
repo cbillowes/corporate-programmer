@@ -44,11 +44,18 @@ module.exports = function(grunt) {
   ]);
 
   // Helpers
-  grunt.registerTask('build_jekyll', target, [
+  grunt.registerTask('build_jekyll', [
     'shell:posts',
     'copy:posts',
     'clean:images',
-    'jekyll:' + target,
+    'jekyll:build',
+  ]);
+
+  grunt.registerTask('release_jekyll', [
+    'shell:posts',
+    'copy:posts',
+    'clean:images',
+    'jekyll:release',
   ]);
 
   grunt.registerTask('init_images', [
