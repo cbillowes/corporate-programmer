@@ -192,10 +192,17 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
 }
 
 .summary {
+
   .hero {
+
     .teaser {
       display: block;
     }
+
+    h1 {
+      border-top: solid 10px $accent-color-compliment;
+    }
+
   }
 
   h2 {
