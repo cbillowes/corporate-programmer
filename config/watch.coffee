@@ -23,7 +23,6 @@ module.exports =
     ]
     tasks: [
       'process_images'
-      'imagemin:build'
     ]
   sass:
     files: [
