@@ -7,7 +7,7 @@ module.exports =
   build:
     src: '.tmp/build'
     jekyll: '<%= paths.build.src %>/jekyll'
-    tmp: '<%= paths.build.src %>/tmp'
+    tmp: '<%= paths.build.src %>/assets'
   optimize:
     src: '.tmp/optimize'
     img: '<%= paths.optimize.src %>/img'

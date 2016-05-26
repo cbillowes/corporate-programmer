@@ -16,11 +16,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean:build',
+    'process_images',
     'concurrent:build',
   ]);
 
   grunt.registerTask('optimize', [
-    'concurrent:images',
     'autoprefixer',
     'concat',
     'uglify',
@@ -53,21 +53,28 @@ module.exports = function(grunt) {
   grunt.registerTask('build_jekyll', [
     'shell:posts',
     'copy:posts',
-    //'clean:images',
     'jekyll:build',
   ]);
 
   grunt.registerTask('release_jekyll', [
     'shell:posts',
     'copy:posts',
-    //'clean:images',
     'jekyll:release',
   ]);
 
   grunt.registerTask('init_images', [
+    'imagemin:images_to_store',
     'responsive_images:init',
-    'copy:root_images',
+    'copy:images_to_store',
     'imagemin:init',
+  ]);
+
+  grunt.registerTask('process_images', [
+    'clean:optimized_images',
+    'responsive_images:build',
+    'copy:images_to_store',
+    'clean:images_to_store',
+    'imagemin:build',
   ]);
 
 };

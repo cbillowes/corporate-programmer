@@ -23,28 +23,19 @@ module.exports =
         dest: '<%= paths.src.app %>/_posts'
       }
     ]
-  backup_images:
+  images_to_store:
     files: [
       {
         expand: true
         cwd: '<%= paths.img.backup_heroes.src %>'
-        src: '**/*.{jpg}'
+        src: '**/*.jpg'
         dest: '<%= paths.img.backup_heroes.dest %>'
       }
       {
         expand: true
         cwd: '<%= paths.img.backup_root.src %>'
-        src: '**/*'
+        src: '**/*.{png,jpg,gif,jpeg}'
         dest: '<%= paths.img.backup_root.dest %>'
-      }
-    ]
-  root_images:
-    files: [
-      {
-        expand: true
-        cwd: '<%= paths.img.backup_root.dest %>'
-        src: '**/*'
-        dest: '<%= paths.img.store %>/img'
       }
     ]
   release:

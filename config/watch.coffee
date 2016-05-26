@@ -22,18 +22,8 @@ module.exports =
       '<%= paths.img.backup_root.src %>/*'
     ]
     tasks: [
-      'responsive_images:build'
+      'process_images'
       'imagemin:build'
-      'imagemin:posts'
-    ]
-  store:
-    files: [
-      '<%= paths.img.backup_heroes.src %>/*'
-      '<%= paths.img.backup_root.src %>/*'
-    ]
-    tasks: [
-      'imagemin:build'
-      'imagemin:posts'
     ]
   sass:
     files: [

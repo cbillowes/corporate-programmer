@@ -3,10 +3,8 @@ module.exports =
     logConcurrentOutput: true
   build:
     tasks: [
-      'copy:backup_images'
       'build_jekyll'
       'sass:build'
-      'responsive_images:build'
       'copy:build'
       'shell:unfrontmatter'
     ]
@@ -17,7 +15,6 @@ module.exports =
     ]
   release:
     tasks: [
-      'copy:backup_images'
       'release_jekyll'
       'sass:build'
       'responsive_images:build'
