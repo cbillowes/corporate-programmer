@@ -5,7 +5,7 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= paths.build.tmp %>/img'
+        cwd: '<%= paths.build.assets %>/img'
         src: '**/*.{jpg,jpeg,png,gif}'
         dest: '<%= paths.optimize.img %>'
       }

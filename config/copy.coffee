@@ -2,16 +2,16 @@ module.exports =
   build:
     files: [
       'credits.md': '<%= paths.src.app %>/credits.md'
-      '<%= paths.build.tmp %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
-      '<%= paths.build.tmp %>/js/jquery-1.12.3.js': '<%= paths.src.js %>/jquery-1.12.3.js'
-      '<%= paths.build.tmp %>/js/script.js': '<%= paths.src.js %>/script.js'
+      '<%= paths.build.assets %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
+      '<%= paths.build.assets %>/js/jquery-1.12.3.js': '<%= paths.src.js %>/jquery-1.12.3.js'
+      '<%= paths.build.assets %>/js/script.js': '<%= paths.src.js %>/script.js'
       {
         expand: true
         cwd: '<%= paths.src.app %>/_assets/favicons'
         src: [
           '**/*.{ico,png}'
         ]
-        dest: '<%= paths.build.tmp %>'
+        dest: '<%= paths.build.assets %>'
       }
     ]
   posts:

@@ -9,8 +9,8 @@ module.exports =
         target: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/'
       base: [
         '<%= paths.build.jekyll %>'
-        '<%= paths.build.tmp %>'
         '<%= paths.img.store %>'
+        '<%= paths.build.assets %>'
       ]
   release:
     options:

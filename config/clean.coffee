@@ -9,7 +9,7 @@ module.exports =
   release: [
     '<%= paths.release %>/*'
     '!<%= paths.release %>/.git'
-    '<%= paths.build.tmp %>/*'
+    '<%= paths.build.assets %>/*'
   ]
   optimized_images: [
     '<%= paths.optimize.img %>/*'
