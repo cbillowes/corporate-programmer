@@ -3,15 +3,10 @@ module.exports =
     logConcurrentOutput: true
   build:
     tasks: [
+      'shell:unfrontmatter'
       'build_jekyll'
       'sass:build'
       'copy:build'
-      'shell:unfrontmatter'
-    ]
-  images:
-    tasks: [
-      'imagemin:build'
-      'imagemin:posts'
     ]
   release:
     tasks: [

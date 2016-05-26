@@ -1,15 +1,4 @@
 module.exports =
-  init:
-    options:
-      progressive: true
-    files: [
-      {
-        expand: true
-        cwd: '<%= paths.img.store %>/img'
-        src: '**/*.{jpg,jpeg,png,gif}'
-        dest: '<%= paths.img.store %>/img'
-      }
-    ]
   build:
     options:
       progressive: true

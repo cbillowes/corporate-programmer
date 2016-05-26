@@ -63,10 +63,12 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('init_images', [
-    'imagemin:images_to_store',
-    'responsive_images:init',
     'copy:images_to_store',
-    'imagemin:init',
+    'responsive_images:init',
+    'responsive_images:build',
+    'imagemin:images_to_store',
+    'imagemin:build',
+    'clean:images_to_store',
   ]);
 
   grunt.registerTask('process_images', [
