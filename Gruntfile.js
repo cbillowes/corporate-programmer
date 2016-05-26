@@ -33,6 +33,7 @@ module.exports = function(grunt) {
   grunt.registerTask('release', [
     'clean:release',
     'concurrent:release',
+    'process_images',
     'optimize',
     'copy:release',
     'connect:release',

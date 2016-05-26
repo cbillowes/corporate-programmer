@@ -10,9 +10,8 @@ module.exports =
     ]
   release:
     tasks: [
+      'shell:unfrontmatter'
       'release_jekyll'
       'sass:build'
-      'responsive_images:build'
       'copy:build'
-      'shell:unfrontmatter'
     ]
