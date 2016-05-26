@@ -37,7 +37,9 @@ module.exports =
       '<%= paths.src.app %>/**/*.{html,md,mkd,markdown,xml,rb}'
       '_config.yml'
     ]
-    tasks: [ 'build_jekyll:build' ]
+    tasks: [
+      'build_jekyll:build'
+    ]
     options:
       debounceDelay: 3000
   js:
