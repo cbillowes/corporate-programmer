@@ -51,5 +51,5 @@ module.exports =
     ]
   release:
     files: [
-      '<%= paths.release %>/**/*' 
+      '<%= paths.release %>/**/*'
     ]
