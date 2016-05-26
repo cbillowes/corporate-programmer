@@ -5,7 +5,7 @@ module.exports =
       'config/**/*'
     ]
     tasks: [
-      'concurrent:build'
+      'build'
     ]
     options:
       reload: true
