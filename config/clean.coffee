@@ -2,6 +2,9 @@ module.exports =
   build: [
     '<%= paths.build.jekyll %>/*'
   ]
+  assets: [
+    '<%= paths.build.assets %>/'
+  ]
   release: [
     '<%= paths.release %>/*'
     '!<%= paths.release %>/.git'
