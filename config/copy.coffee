@@ -37,6 +37,12 @@ module.exports =
         src: '**/*.{png,jpg,gif,jpeg}'
         dest: '<%= paths.img.backup_root.dest %>'
       }
+      {
+        expand: true
+        cwd: '<%= paths.img.backup_root.dest %>'
+        src: '**/*'
+        dest: '<%= paths.img.store %>/img'
+      }
     ]
   release:
     files: [
