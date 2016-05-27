@@ -1,10 +1,10 @@
 module.exports =
   options:
-    src: '<%= paths.src.app %>'
+    src: '<%= paths.src %>'
   build:
     options:
       config: '_config.yml'
-      dest: '<%= paths.build.jekyll %>'
+      dest: '<%= paths.build.src %>/jekyll'
   release:
     options:
       config: '_config.yml,_config.build.yml'

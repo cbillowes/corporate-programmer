@@ -1,25 +1,19 @@
 module.exports =
-  src:
-    app: 'app'
-    posts: '<%= paths.src.app %>/_process'
-    assets: '<%= paths.src.app %>/_assets'
-    js: '<%= paths.src.assets %>/js'
+  src: 'app'
+
+  store:
+    tmp: '.store/.tmp'
+    heroes: '.store/heroes'
+    root: '.store/img'
+
   build:
-    src: '.tmp/build'
-    jekyll: '<%= paths.build.src %>/jekyll'
-    assets: '<%= paths.build.src %>/assets'
-  optimize:
-    src: '.tmp/optimize'
-    img: '<%= paths.optimize.src %>/img'
-    js: '<%= paths.optimize.src %>/js'
-    css: '<%= paths.optimize.src %>/css'
-  img:
-    backup_heroes:
-      src: '<%= paths.src.app %>/_assets/img/heroes'
-      dest: '.store/heroes'
-    backup_root:
-      src: '<%= paths.src.app %>/_assets/img/root'
-      dest: '.store/img'
-    store: '.store/.tmp'
-  release: '_release'
+    src: '.build'
+    img: '.build/img'
+
+  serve: '.serve'
+  
   deploy: '.deploy'
+
+  img:
+    heroes: '<%= paths.src %>/_assets/img/heroes'
+    root:   '<%= paths.src %>/_assets/img/root'

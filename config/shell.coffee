@@ -1,10 +1,12 @@
 module.exports =
+  
   unfrontmatter:
     command: 'rake unfrontmatter'
     options:
       execOptions:
         cwd: 'rake'
-  posts:
+
+  wip_posts:
     command: 'rake process'
     options:
       execOptions:

@@ -1,7 +1,8 @@
 module.exports =
   css:
     files: {
-      '<%= paths.optimize.css %>/styles.css': [
-        '<%= paths.build.assets %>/css/**/*.css'
+      '<%= paths.serve %>/css/styles.css': [
+        '<%= paths.build.src %>/css/blog.css'
+        '<%= paths.build.src %>/css/bootstrap.css'
       ]
     }

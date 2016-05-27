@@ -1,19 +1,14 @@
 module.exports =
   build: [
-    '<%= paths.build.jekyll %>/*'
-  ]
-  assets: [
-    '<%= paths.build.assets %>/'
+    '<%= paths.build.src %>/*'
   ]
   release: [
     '<%= paths.release %>/*'
     '!<%= paths.release %>/.git'
-    '<%= paths.build.assets %>/*'
   ]
-  optimized_images: [
-    '<%= paths.optimize.img %>/*'
+  root_images: [
+    '<%= paths.img.root %>/**/*'
   ]
-  images_to_store: [
-    '<%= paths.img.backup_heroes.src %>/*.jpg'
-    '<%= paths.img.backup_root.src %>/**/*'
+  hero_images: [
+    '<%= paths.img.heroes %>/*.jpg'
   ]

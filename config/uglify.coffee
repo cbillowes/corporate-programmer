@@ -1,9 +1,9 @@
 module.exports =
   js:
     files: {
-      '<%= paths.optimize.js %>/scripts.js': [
-        '<%= paths.src.js %>/jquery-*.js'
-        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
-        '<%= paths.src.js %>/script.js'
+      '<%= paths.serve %>/js/scripts.js': [
+        '<%= paths.build.src %>/js/jquery-*.js'
+        '<%= paths.build.src %>/js/bootstrap.js'
+        '<%= paths.build.src %>/js/script.js'
       ]
     }

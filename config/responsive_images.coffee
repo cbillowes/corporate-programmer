@@ -93,8 +93,8 @@ module.exports =
         src: [
           '**/*.jpg'
         ]
-        cwd: '<%= paths.img.backup_heroes.dest%>'
-        custom_dest: '<%= paths.img.store %>/img/{%= name %}'
+        cwd: '<%= paths.store.heroes %>'
+        custom_dest: '<%= paths.store.tmp %>/img/{%= name %}'
       }
     ]
   build:
@@ -106,7 +106,7 @@ module.exports =
         src: [
           '**/*.jpg'
         ]
-        cwd: '<%= paths.img.backup_heroes.src %>'
-        custom_dest: '<%= paths.build.assets %>/img/{%= name %}'
+        cwd: '<%= paths.img.heroes %>'
+        custom_dest: '<%= paths.build.img %>/{%= name %}'
       }
     ]

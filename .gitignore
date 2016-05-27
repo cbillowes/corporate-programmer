@@ -1,7 +1,7 @@
-_site
 .sass-cache
 .jekyll-metadata
 node_modules/
-.tmp/
+.build/
 .store/.tmp/
+.serve
 _release/

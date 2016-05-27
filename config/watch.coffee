@@ -9,46 +9,89 @@ module.exports =
     ]
     options:
       reload: true
+
+  jekyll:
+    files: [
+      '<%= paths.src %>/**/*.{html,md,mkd,markdown,xml,rb}'
+      '!<%= paths.src %>/_process/*'
+      '_config.yml'
+    ]
+    tasks: [
+      'process_jekyll'
+    ]
+    options:
+      debounceDelay: 15000
+
+  wip_posts:
+    files: [
+      '<%= paths.src %>/_process/**/*.markdown'
+    ]
+    tasks: [
+      'process_wip_posts'
+    ]
+
+  favicons:
+    files: [
+      '<%= paths.src %>/_assets/favicons'
+    ]
+    tasks: [
+      'process_favicons'
+    ]
+
+  credits:
+    files: [
+      '<%= paths.src %>/credits.md'
+    ]
+    tasks: [
+      'concurrent:credits'
+    ]
+
+  js:
+    files: [
+      '<%= paths.src %>/_assets/js/**/*.js'
+    ]
+    tasks: [
+      'process_js'
+    ]
+
+  sass:
+    files: [
+      '<%= paths.src %>/_assets/bootstrap/*.scss'
+      '<%= paths.src %>/_assets/scss/*.scss'
+    ]
+    tasks: [
+      'process_sass'
+    ]
+
+  heroes_images:
+    options:
+      event: [
+        'added'
+        'changed'
+      ]
+    files: [
+      '<%= paths.img.heroes %>/*'
+    ]
+    tasks: [
+      'images_heroes'
+    ]
+
+  root_images:
+    options:
+      event: [
+        'added'
+        'changed'
+      ]
+    files: [
+      '<%= paths.img.root %>/*'
+    ]
+    tasks: [
+      'images_root'
+    ]
+
   livereload:
     options:
       livereload: '<%= connect.options.livereload %>'
     files: [
-      '<%= paths.build.src %>/**/*'
-      '<%= paths.optimize.src %>/**/*'
-    ]
-  img:
-    files: [
-      '<%= paths.img.backup_heroes.src %>/*'
-      '<%= paths.img.backup_root.src %>/*'
-    ]
-    tasks: [
-      'process_images'
-    ]
-  sass:
-    files: [
-      '<%= paths.src.assets %>/**/*.{scss,sass}'
-    ]
-    tasks: [
-      'sass:build'
-    ]
-  jekyll:
-    files: [
-      '<%= paths.src.app %>/**/*.{html,md,mkd,markdown,xml,rb}'
-      '_config.yml'
-    ]
-    tasks: [
-      'build_jekyll:build'
-    ]
-    options:
-      debounceDelay: 3000
-  js:
-    files: [
-      '<%= paths.src.js %>/**/*'
-    ]
-    tasks: [
-      'copy:scripts'
-    ]
-  release:
-    files: [
-      '<%= paths.release %>/**/*'
+      '<%= paths.serve %>/**/*'
     ]

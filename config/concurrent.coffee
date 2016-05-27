@@ -1,17 +1,30 @@
 module.exports =
   options:
     logConcurrentOutput: true
+
   build:
     tasks: [
-      'shell:unfrontmatter'
-      'build_jekyll'
-      'sass:build'
-      'copy:build'
+      'process_sass'
+      'process_js'
+      'concurrent:credits'
+      'process_favicons'
+      'process_jekyll'
     ]
-  release:
+
+  credits:
     tasks: [
       'shell:unfrontmatter'
-      'release_jekyll'
-      'sass:build'
-      'copy:build'
+      'copy:credits'
     ]
+
+  sass:
+    tasks: [
+      'sass:build'
+    ]
+  # release:
+  #   tasks: [
+  #     'shell:unfrontmatter'
+  #     'release_jekyll'
+  #     'sass:build'
+  #     'copy:build'
+  #   ]

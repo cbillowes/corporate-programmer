@@ -1,64 +1,113 @@
 module.exports =
-  build:
-    files: [
-      'credits.md': '<%= paths.src.app %>/credits.md'
-      '<%= paths.build.assets %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
-      '<%= paths.build.assets %>/js/jquery-1.12.3.js': '<%= paths.src.js %>/jquery-1.12.3.js'
-      '<%= paths.build.assets %>/js/script.js': '<%= paths.src.js %>/script.js'
-      {
-        expand: true
-        cwd: '<%= paths.src.app %>/_assets/favicons'
-        src: [
-          '**/*.{ico,png}'
-        ]
-        dest: '<%= paths.build.assets %>'
-      }
-    ]
-  posts:
-    files: [
-      {
-        expand: true
-        cwd: '<%= paths.src.posts %>'
-        src: '**/*'
-        dest: '<%= paths.src.app %>/_posts'
-      }
-    ]
+
   images_to_store:
     files: [
       {
         expand: true
-        cwd: '<%= paths.img.backup_heroes.src %>'
+        cwd: '<%= paths.img.heroes %>'
         src: '**/*.jpg'
-        dest: '<%= paths.img.backup_heroes.dest %>'
+        dest: '<%= paths.store.heroes %>'
       }
       {
         expand: true
-        cwd: '<%= paths.img.backup_root.src %>'
+        cwd: '<%= paths.img.root %>'
         src: '**/*.{png,jpg,gif,jpeg}'
-        dest: '<%= paths.img.backup_root.dest %>'
+        dest: '<%= paths.store.root %>'
       }
       {
         expand: true
-        cwd: '<%= paths.img.backup_root.dest %>'
+        cwd: '<%= paths.store.root %>'
         src: '**/*'
-        dest: '<%= paths.img.store %>/img'
+        dest: '<%= paths.store.tmp %>/img'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.img.root %>'
+        src: '**/*'
+        dest: '<%= paths.build.img %>'
       }
     ]
-  release:
+
+  serve_assets:
     files: [
       {
         expand: true
-        cwd: '<%= paths.optimize.src %>'
+        cwd: '<%= paths.build.src %>/css'
         src: '**/*'
-        dest: '<%= paths.release %>'
+        dest: '<%= paths.serve %>/assets/css'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.build.src %>/js'
+        src: '**/*'
+        dest: '<%= paths.serve %>/assets/js'
       }
     ]
-  deploy:
+
+  js:
+    files: [
+      '<%= paths.build.src %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
+      '<%= paths.build.src %>/js/jquery-1.12.3.js': '<%= paths.src %>/_assets/js/jquery-1.12.3.js'
+      '<%= paths.build.src %>/js/script.js': '<%= paths.src %>/_assets/js/script.js'
+    ]
+
+  credits:
+    files: [
+      'credits.md': '<%= paths.src %>/credits.md'
+    ]
+
+  favicons:
     files: [
       {
         expand: true
-        cwd: '<%= paths.optimize.src %>'
-        src: '**/*'
-        dest: '<%= paths.deploy %>'
+        cwd: '<%= paths.src %>/_assets/favicons'
+        src: [
+          '**/*.{ico,png}'
+        ]
+        dest: '<%= paths.build.src %>/favicons'
       }
     ]
+
+  wip_posts:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.src %>/_process'
+        src: [
+          '**/*.markdown'
+        ]
+        dest: '<%= paths.src %>/_posts'
+      }
+    ]
+
+  jekyll:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.build.src %>/jekyll'
+        src: [
+          '**/*'
+        ]
+        dest: '<%= paths.serve %>/jekyll'
+      }
+    ]
+
+  # release:
+  #   files: [
+  #     {
+  #       expand: true
+  #       cwd: '<%= paths.optimize.src %>'
+  #       src: '**/*'
+  #       dest: '<%= paths.release %>'
+  #     }
+  #   ]
+
+  # deploy:
+  #   files: [
+  #     {
+  #       expand: true
+  #       cwd: '<%= paths.optimize.src %>'
+  #       src: '**/*'
+  #       dest: '<%= paths.deploy %>'
+  #     }
+  #   ]
