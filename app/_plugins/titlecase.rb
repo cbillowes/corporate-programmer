@@ -42,6 +42,7 @@ module Jekyll
         'am',
         'be',
         'but',
+        'do',
         'em',
         'my',
         'in',

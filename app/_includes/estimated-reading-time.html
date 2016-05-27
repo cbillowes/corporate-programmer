@@ -2,7 +2,11 @@
   •
   <span class="est-read-time">
     {% assign words = post.content | number_of_words %}
-    {{ words | divided_by:180 }} minute
+    {% assign minutes = words | divided_by:180 %}
+    {% if minutes == 0 %}
+      {% assign minutes = 1 %}
+    {% endif %}
+    {{ minutes }} minute
 
     {% assign score = post.flesch-score | divided_by: 100 | times: 10 | floor %}
 
