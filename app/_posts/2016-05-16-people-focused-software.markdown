@@ -81,7 +81,7 @@ issues that may arise while a user is interacting with your software.
 This is a good thing. For 8 years I didn't have a safety net. I know that I
 am human and make mistakes. And I did.
 
-I believe [communicating with testers](/blog/bonding-with-testers)
+I believe [communicating with testers](/blog/bonding-with-testers/)
 is essential to understanding how something is tested and what could cause a
 feature to fail in this verification step.
 
