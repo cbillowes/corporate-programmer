@@ -1,3 +1,16 @@
+.fixed-for-scroll {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  border-bottom: solid $border-width $accent-color;
+
+  &.top {
+    padding: 0px;
+  }
+}
+
 .navbar-nav, .navbar-default {
   margin-right: 0px !important;
 
