@@ -2,6 +2,9 @@
 {% if page.title %}
   {% assign title = page.title | titlecase | escape %}
 {% endif %}
+{% if page.subtitle %}
+  {% assign title = title | append: ': ' | append: page.subtitle %}
+{% endif %}
 
 {% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 | escape %}
 {% if page.url == "/" %}

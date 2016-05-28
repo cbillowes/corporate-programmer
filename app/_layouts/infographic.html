@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="container">
+  <article>
+
+    <header>
+      <h2>{{ page.title | titlecase | append: ': ' | append: page.subtitle }}</h2>
+    </header>
+
+    <a href="{{ page.post.permalink }}">
+      &#8656; Head back to "{{ page.post.title }}"
+    </a>
+
+    <div>
+      {{ content }}
+    </div>
+
+    <a href="{{ page.post.permalink }}">
+      &#8656; Head back to "{{ page.post.title }}"
+    </a>
+    
+  </article>
+</div>
