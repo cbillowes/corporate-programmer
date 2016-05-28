@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  People do stupid sh*t
-date:   2016-05-28 15:17:48 +0200
-flesch-score: 68.47
+date:   2016-05-28 16:11:10 +0200
+flesch-score: 68.41
 flesch-level: High Schooler
 image:
   filename: man-person-street-shoes
@@ -130,7 +130,13 @@ but actually has great benefits later. Who knows?!
 As we are all part of the problem I guess we just need to find better ways of
 dealing with it. It's also a good idea to use it to our advantage so that we
 can continuously improve. Be the change we want to see even if we make a
-blunder of it.
+blunder of it. Hopefully it's not as costly as what happened to these companies:
+
+<iframe class="youtube"
+  src="https://www.youtube.com/embed/w8qBzMl7_Q0"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
 
 > If you don’t fail it’s because you did not risk enough, and if you didn’t
   risk enough it’s because you didn’t put your whole self out there.

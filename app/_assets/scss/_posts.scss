@@ -245,3 +245,32 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
     display: none;
   }
 }
+
+$youtube-aspect-ratio: 1.9;
+.youtube {
+  width:100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .youtube {
+    height: floor(320px / $youtube-aspect-ratio);
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .youtube {
+    height: floor(480px / $youtube-aspect-ratio);
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+  .youtube {
+    height: floor(640px / $youtube-aspect-ratio);
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .youtube {
+    height: floor(700px / $youtube-aspect-ratio);
+  }
+}
