@@ -38,7 +38,6 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', [
     'release',
     'buildcontrol',
-    'copy:deploy',
   ]);
 
   //Helpers

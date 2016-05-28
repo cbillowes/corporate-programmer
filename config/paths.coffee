@@ -15,8 +15,6 @@ module.exports =
 
   release: '_release'
 
-  deploy: '.deploy'
-
   img:
     heroes: '<%= paths.src %>/_assets/img/heroes'
     root:   '<%= paths.src %>/_assets/img/root'
