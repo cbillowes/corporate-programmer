@@ -141,3 +141,8 @@ blunder of it. Hopefully it's not as costly as what happened to these companies:
 > If you don’t fail it’s because you did not risk enough, and if you didn’t
   risk enough it’s because you didn’t put your whole self out there.
   ~ Carlos Barrabes
+
+---
+A big thanks to [Thane Thomson](https://thanethomson.com/) for sharing his
+insights with me to help me cope better with my frustrations and bring me closer
+to reality.
