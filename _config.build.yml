@@ -2,4 +2,7 @@ future: false
 show_drafts: false
 build: release
 
-exclude: ['style.md', 'script.sql']
+exclude: [
+  '/style.md',
+  '/script.sql',
+]
