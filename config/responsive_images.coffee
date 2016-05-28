@@ -84,6 +84,7 @@ module.exports =
         aspectRatio: false
       }
     ]
+
   init:
     options:
       newFilesOnly: true
@@ -97,6 +98,7 @@ module.exports =
         custom_dest: '<%= paths.store.tmp %>/img/{%= name %}'
       }
     ]
+    
   build:
     options:
       newFilesOnly: false

@@ -1,8 +1,10 @@
 module.exports =
+  
   options:
     browsers: [
       'last 3 versions'
     ]
+
   css:
     files: [
       {

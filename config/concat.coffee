@@ -1,4 +1,5 @@
 module.exports =
+  
   css:
     files: {
       '<%= paths.serve %>/css/styles.css': [

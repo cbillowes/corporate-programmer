@@ -1,8 +1,10 @@
 module.exports =
+
   options:
     port: 9000
     livereload: 35729
     hostname: 'localhost'
+
   livereload:
     options:
       open:
@@ -13,6 +15,7 @@ module.exports =
         '<%= paths.serve %>'
         '<%= paths.store.tmp %>'
       ]
+      
   release:
     options:
       open:

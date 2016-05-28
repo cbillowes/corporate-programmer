@@ -1,4 +1,5 @@
 module.exports =
+  
   js:
     files: {
       '<%= paths.serve %>/js/scripts.js': [

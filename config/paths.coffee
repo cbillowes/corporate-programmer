@@ -1,4 +1,5 @@
 module.exports =
+  
   src: 'app'
 
   store:
@@ -11,7 +12,7 @@ module.exports =
     img: '.build/img'
 
   serve: '.serve'
-  
+
   deploy: '.deploy'
 
   img:

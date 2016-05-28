@@ -1,4 +1,5 @@
 module.exports =
+  
   gruntfile:
     files: [
       'Gruntfile.js'
