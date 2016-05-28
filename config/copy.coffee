@@ -92,15 +92,33 @@ module.exports =
       }
     ]
 
-  # release:
-  #   files: [
-  #     {
-  #       expand: true
-  #       cwd: '<%= paths.optimize.src %>'
-  #       src: '**/*'
-  #       dest: '<%= paths.release %>'
-  #     }
-  #   ]
+  release:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/css'
+        src: '**/*'
+        dest: '<%= paths.release %>/css'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/img'
+        src: '**/*'
+        dest: '<%= paths.release %>/img'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/js'
+        src: '**/*'
+        dest: '<%= paths.release %>/js'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/favicons'
+        src: '**/*'
+        dest: '<%= paths.release %>/'
+      }
+    ]
 
   # deploy:
   #   files: [

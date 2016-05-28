@@ -1,5 +1,5 @@
 module.exports =
-  
+
   options:
     logConcurrentOutput: true
 
@@ -9,7 +9,16 @@ module.exports =
       'process_js'
       'concurrent:credits'
       'process_favicons'
-      'process_jekyll'
+    ]
+
+  jekyll_build:
+    tasks: [
+      'process_jekyll:build'
+    ]
+
+  jekyll_release:
+    tasks: [
+      'process_jekyll:release'
     ]
 
   credits:
@@ -22,10 +31,10 @@ module.exports =
     tasks: [
       'sass:build'
     ]
-  # release:
-  #   tasks: [
-  #     'shell:unfrontmatter'
-  #     'release_jekyll'
-  #     'sass:build'
-  #     'copy:build'
-  #   ]
+
+  release: [
+    'cssmin'
+    'htmlmin'
+    'xmlmin'
+    'critical'
+  ]

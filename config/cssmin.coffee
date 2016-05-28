@@ -1,5 +1,5 @@
 module.exports =
-  
+
   release:
     options:
       keepSpecialComments: 0
@@ -7,10 +7,10 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= paths.optimize.css %>'
+        cwd: '<%= paths.release %>/css'
         src: [
           '*.css'
         ]
-        dest: '<%= paths.optimize.css %>'
+        dest: '<%= paths.release %>/css'
       }
     ]

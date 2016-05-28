@@ -1,10 +1,9 @@
 module.exports =
-  
+
   release:
     options:
-      base: './'
       css: [
-        '<%= paths.optimize.css %>/*.css'
+        '<%= paths.release %>/css/*.css'
       ]
       minify: true
     files: [

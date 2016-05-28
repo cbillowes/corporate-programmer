@@ -14,18 +14,42 @@ module.exports = function(grunt) {
     'watch',
   ]);
 
-  grunt.registerTask('build', [
-    'clean:build',
-    'process_images',
-    'process_wip_posts',
-    'concurrent:build',
+  grunt.registerTask('build', '', function(target) {
+    grunt.task.run('clean:build');
+    grunt.task.run('process_images');
+    grunt.task.run('process_wip_posts');
+    grunt.task.run('concurrent:build');
+
+    if (target === 'release') {
+      grunt.task.run('concurrent:jekyll_release');
+    } else {
+      grunt.task.run('concurrent:jekyll_build');
+    }
+  });
+
+  grunt.registerTask('release', [
+    'clean:release',
+    'build:release',
+    'copy:release',
+    'autoprefixer',
+    'concurrent:release',
+  ]);
+
+  grunt.registerTask('deploy', [
+    'release',
+    'buildcontrol',
+    'copy:deploy',
   ]);
 
   //Helpers
-  grunt.registerTask('process_jekyll', [
-    'jekyll:build',
-    'copy:jekyll',
-  ]);
+  grunt.registerTask('process_jekyll', '', function(target) {
+    if (target === 'release') {
+      grunt.task.run('jekyll:release');
+    } else {
+      grunt.task.run('jekyll:build');
+    }
+    grunt.task.run('copy:jekyll');
+  });
 
   grunt.registerTask('process_wip_posts', [
     'shell:wip_posts',
@@ -77,46 +101,5 @@ module.exports = function(grunt) {
     'clean:root_images',
     'clean:hero_images',
   ]);
-
-  // grunt.registerTask('optimize', [
-  //   'autoprefixer',
-  //   'concat',
-  //   'uglify',
-  //   'cssmin',
-  //   'htmlmin',
-  //   'xmlmin',
-  //   'critical',
-  // ]);
-  //
-  // grunt.registerTask('release', [
-  //   'clean:release',
-  //   'concurrent:release',
-  //   'images_root',
-  //   'optimize',
-  //   'copy:release',
-  //   'connect:release',
-  //   'watch:release',
-  // ]);
-  //
-  // grunt.registerTask('serve_release', [
-  //   'connect:release',
-  //   'watch:release',
-  // ]);
-  //
-  // grunt.registerTask('deploy', [
-  //   'release',
-  //   'buildcontrol',
-  // ]);
-  //
-  // // Helpers
-  // grunt.registerTask('build_jekyll', [
-  //   'jekyll:build',
-  // ]);
-  //
-  // grunt.registerTask('release_jekyll', [
-  //   'shell:posts',
-  //   'copy:posts',
-  //   'jekyll:release',
-  // ]);
 
 };
