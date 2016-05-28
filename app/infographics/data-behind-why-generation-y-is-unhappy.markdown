@@ -13,7 +13,7 @@ post:
 * "Shoot for the moon, even if you miss you will land among the stars!"
 * GYPSYs are delusional
 
-![Infographic: The data behind why Generation Y yuppies are unhappy](/img/people-do-stupid-sht/yuppies.jpg "Infographic"){:width="700px"}
+![Infographic: The data behind why Generation Y yuppies are unhappy](/img/posts/people-do-stupid-things/yuppies.jpg "Infographic"){:width="700px"}
 
 * Reference: [Visualistan.com](http://www.visualistan.com/2013/10/the-data-behind-why-generation-y.html)
 * Source: [bestpsychologydegrees.com](http://bestpsychologydegrees.com)
