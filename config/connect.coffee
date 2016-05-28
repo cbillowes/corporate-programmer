@@ -12,10 +12,11 @@ module.exports =
       base: [
         '<%= paths.serve %>/jekyll'
         '<%= paths.serve %>/assets'
+        '<%= paths.serve %>/favicons'
         '<%= paths.serve %>'
         '<%= paths.store.tmp %>'
       ]
-      
+
   release:
     options:
       open:

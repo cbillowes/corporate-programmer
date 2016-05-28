@@ -56,6 +56,6 @@ module.exports =
         expand: true
         cwd: '<%= paths.build.src %>/favicons'
         src: '**/*.{png,ico}'
-        dest: '<%= paths.serve %>'
+        dest: '<%= paths.serve %>/favicons'
       }
     ]
