@@ -15,11 +15,29 @@ layout: null
   </author>
   {% for post in site.posts %}
     <entry>
-      <title>{{ post.title }}</title>
+      <title>{{ post.title | titlecase }}</title>
       <link href="{{ site.url }}{{ post.url }}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ site.url }}{{ post.id }}</id>
-      <content type="html">{{ post.excerpt | xml_escape }}</content>
+      <content type="html">
+        <![CDATA[
+        <figure>
+          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+            <img
+              src="{{ site.url }}{{ site.baseurl }}/img/share/{{ post.image.filename }}.jpg"
+              width="458"
+              height="230"
+              alt="{{ post.image.alt }}"
+            />
+          </a>
+        </figure>
+        {% if post.social-teaser %}
+          <p>{{ post.social-teaser | xml_escape }}</p>
+        {% else %}
+          <p>{{ post.excerpt | strip_html | truncate_words: 160 | xml_escape }}</p>
+        {% endif %}
+        ]]>
+      </content>
     </entry>
   {% endfor %}
 </feed>
