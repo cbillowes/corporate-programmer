@@ -2,21 +2,44 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" >
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
+    <title>{{ site.title | titlecase | xml_escape }}</title>
+    <atom:link href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <description>{{ site.description | xml_escape }}</description>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    <sy:updateFrequency>3</sy:updateFrequency>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts limit:10 %}
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.excerpt | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <title>{{ post.title | titlecase | xml_escape }}</title>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <comments>{{ post.url | prepend: site.baseurl | prepend: site.url }}#disqus_thread</comments>
+        <description>
+          <![CDATA[
+          <figure>
+            <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+              <img
+                src="{{ site.url }}{{ site.baseurl }}/img/share/{{ post.image.filename }}.jpg"
+                width="458"
+                height="230"
+                alt="{{ post.image.alt }}"
+              />
+            </a>
+          </figure>
+          {% if post.social-teaser %}
+            <p>{{ post.social-teaser | xml_escape }}</p>
+          {% else %}
+            <p>{{ post.excerpt | strip_html | truncate_words: 160 | xml_escape }}</p>
+          {% endif %}
+          ]]>
+        </description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% for tag in post.tags %}
         <category>{{ tag | xml_escape }}</category>
