@@ -5,6 +5,9 @@
 {% if page.subtitle %}
   {% assign title = title | append: ': ' | append: page.subtitle %}
 {% endif %}
+{% if page.tag %}
+  {% assign title = title | prepend: ': ' | prepend: page.tag | titlecase %}
+{% endif %}
 
 {% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 | escape %}
 {% if page.url == "/" %}

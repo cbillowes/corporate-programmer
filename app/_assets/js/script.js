@@ -8,14 +8,16 @@ $(function() {
     });
   }
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > $('body > header.top').outerHeight() / 2) {
-      $('body > header.top').addClass('fixed-for-scroll');
-    } else {
-      $('body > header.top').removeClass('fixed-for-scroll');
-    }
-  });
-
+  if ($(document).height() - $(window).height() > 250) {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > $('body > header.top').outerHeight() / 2) {
+        $('body > header.top').addClass('fixed-for-scroll');
+      } else {
+        $('body > header.top').removeClass('fixed-for-scroll');
+      }
+    });
+  }
+  
   $('#more-tags').click(function() {
     $('#tags').removeClass('hidden');
     $('body > footer').css({ 'margin-bottom': $('#tags').outerHeight() - 10 });

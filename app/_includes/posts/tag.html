@@ -1,1 +1,9 @@
-<span class="label label-primary"><a href="/blog/tag/{{tag}}">{{ tag | titlecase }}</a></span>
+{% assign color = "label-primary" %}
+{% if include.highlight %}
+  {% assign color = "label-danger" %}
+{% endif %}
+{% if include.tag %}
+  {% assign tag = include.tag %}
+{% endif %}
+
+<span class="label {{ color }}"><a href="/blog/tag/{{tag}}">{{ tag | titlecase }}</a></span>

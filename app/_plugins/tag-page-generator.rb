@@ -9,7 +9,7 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-      self.data['title'] = 'Tagged as ' + tag
+      self.data['title'] = 'Discover content'
       self.data['tag'] = tag
     end
   end
