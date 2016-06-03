@@ -81,6 +81,8 @@ module.exports = function(grunt) {
     'imagemin:root',
     'copy:images_to_store',
     'clean:root_images',
+    'copy:serve_imgs',
+    'imagemin:imgs',
   ]);
 
   grunt.registerTask('images_heroes', [
@@ -89,6 +91,8 @@ module.exports = function(grunt) {
     'responsive_images:build',
     'imagemin:build',
     'clean:hero_images',
+    'copy:serve_imgs',
+    'imagemin:imgs',
   ]);
 
   grunt.registerTask('init_images', [

@@ -28,6 +28,22 @@ module.exports =
       }
     ]
 
+  serve_imgs:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.build.img %>'
+        src: '**/*'
+        dest: '<%= paths.serve %>/img'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.build.img %>'
+        src: '**/*'
+        dest: '<%= paths.store.tmp %>/img'
+      }
+    ]
+
   serve_assets:
     files: [
       {
@@ -119,13 +135,3 @@ module.exports =
         dest: '<%= paths.release %>/'
       }
     ]
-
-  # deploy:
-  #   files: [
-  #     {
-  #       expand: true
-  #       cwd: '<%= paths.optimize.src %>'
-  #       src: '**/*'
-  #       dest: '<%= paths.deploy %>'
-  #     }
-  #   ]

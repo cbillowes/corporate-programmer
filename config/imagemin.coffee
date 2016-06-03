@@ -32,7 +32,7 @@ module.exports =
         expand: true
         cwd: '<%= paths.img.heroes %>'
         src: '**/*.jpg'
-        dest: '<%= paths.serve %>/img'
+        dest: '<%= paths.img.heroes %>'
       }
     ]
 
@@ -43,6 +43,18 @@ module.exports =
       {
         expand: true
         cwd: '<%= paths.img.root %>'
+        src: '**/*.{png,jpg,gif,jpeg}'
+        dest: '<%= paths.img.root %>'
+      }
+    ]
+
+  imgs:
+    options:
+      progressive: true
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/img'
         src: '**/*.{png,jpg,gif,jpeg}'
         dest: '<%= paths.serve %>/img'
       }
