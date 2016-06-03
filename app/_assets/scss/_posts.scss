@@ -127,6 +127,19 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
     margin-bottom: $spacer;
     text-align: right;
     padding-right: $spacer;
+
+    @media only screen and (max-width:480px) {
+      & {
+        line-height: $line-height-small * 1.75;
+        margin-bottom: $spacer / 2;
+      }
+
+      & ~ .container > header > h1 {
+        margin-top: 0px !important;
+      }
+
+    }
+
   }
 
   h1 {
@@ -158,6 +171,13 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
   .meta {
     font-size: $font-size-small;
     margin-top: 0px;
+
+    @media only screen and (max-width:480px) {
+      & {
+        line-height: $line-height-small * 1.75;
+      }
+    }
+
   }
 
   .content {
