@@ -2,15 +2,13 @@
   <p class="meta">
     <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
     {% include estimated-reading-time.html %}
+    &bull; By <a rel="author" href="{{ site.author.twitter }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <span itemprop="name">
+        {{ site.author.name }}
+      </span>
+    </a>
     {% if include.snippet %}
       &bull; <a href="{{ post.url }}">Read now</a>
-    {% endif %}
-    {% if page.url contains "/blog/" %}
-      &bull; By <a rel="author" href="{{ site.author.twitter }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span itemprop="name">
-          {{ site.author.name }}
-        </span>
-      </a>
     {% endif %}
   </p>
 {% endif %}
