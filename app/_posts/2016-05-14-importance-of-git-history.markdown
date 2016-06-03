@@ -51,7 +51,7 @@ Keeping files in the correct format is important. Mixing formatting
 and code/content changes pollutes that commit. If you need to go back in time
 to find a specific change, it is going to be considerately harder to do so.
 
-## Be weary of what you commit
+## Be wary of what you commit
 Version control remembers everything you have done. If you commit a large
 file it stays in version control even after you delete it.
 It will take a while for your repo to be cloned if people are
@@ -108,7 +108,7 @@ completing the commit. If you forget this and there is a compilation or runtime
 error you can always fix it by doing a `git commit --amend` to
 [amend your last commit](https://www.atlassian.com/git/tutorials/rewriting-history/).
 
-If you are weary of losing important changes by discarding then
+If you are wary of losing important changes by discarding then
 [stash](https://git-scm.com/book/no-nb/v1/Git-Tools-Stashing) your
 changes. Apply them and discard your lines. You could always apply
 the stash again later. When you are done, delete your stash.
@@ -147,7 +147,7 @@ so that you don't accidently discard other
 changes. If possible sit with the other person who committed the change to
 resolve it.
 
-## Be weary of automatic pushing
+## Be wary of automatic pushing
 Some developers prefer to push
 [directly after a commit](http://stackoverflow.com/questions/7925850/how-to-automatically-push-after-committing-in-git).
 Some GUIs even have this feature built in. This must be used with caution. Once you
