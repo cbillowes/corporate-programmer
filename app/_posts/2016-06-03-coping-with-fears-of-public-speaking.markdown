@@ -43,8 +43,8 @@ At the end of April, I got a tweet asking if I'd be interested in giving an
 at [Jozi-JUG](http://www.meetup.com/Jozi-JUG/)&mdash;a local Java User Group.
 
 My initial response was "hell no" but I responded by saying I'll check it out
-and decided to submit a talk titled "Branding Your Identity."<br/>
-*(I'll post about it next week)*
+and decided to submit a talk titled
+"[Branding Your Identity](/blog/branding-your-identity)."
 
 <blockquote class="twitter-tweet" data-lang="en">
   <p lang="en" dir="ltr">

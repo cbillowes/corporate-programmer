@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Branding Your Identity</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/cp.css">
+  <link rel="stylesheet" href="css/fullscreen-img.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77127562-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Branding Your Identity</h2>
+      </section>
+      <section class="fullscreen" fullscreen-img="img/web-has-evolved.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/18-5-million-software-developers.jpg">
+      </section>
+      <section class="fullscreen inline" fullscreen-img="img/marketing.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/blogging.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/speaking-at-events.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/build-reputation-from-ground-up.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/community-presence.jpg">
+        <h3><code>(community presence > experience)</code></h3>
+      </section>
+      <section class="fullscreen" fullscreen-img="img/held-back-by-fear.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/journey.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/my-journey.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/easier-with-help.jpg">
+        <h1>Career Boost</h1><br/>
+        <h3>With John Sonmez</h3><br/><br/>
+        <h4>@jsonmez</h4>
+      </section>
+      <section class="fullscreen" fullscreen-img="img/exposure.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/challenge.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/documentation.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/confidence.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/not-an-expert.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/different-mediums.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/stand-out-in-the-market.jpg">
+      </section>
+      <section class="fullscreen" fullscreen-img="img/reaping-the-rewards.jpg">
+        <h2>Get out there and make a&nbsp; &nbsp;name for yourself</h2>
+        <br/>
+        <h3>Thanks!</h3>
+      </section>
+    </div>
+  </div>
+  <footer id="footer">
+    <p>
+      By Clarice Bouwer &bull; Software Developer at DStv Digital Media<br/>
+      <a href="https://twitter.com/cbillowes">@cbillowes</a> &bull;
+      <a href="http://www.corporateprogrammer.com">www.corporateprogrammer.com</a>
+    </p>
+  </footer>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    history: true,
+    autoSlide: 15000,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: 'lib/js/fullscreen-img.js' },
+    ]
+  });
+
+  Reveal.addEventListener( 'slidechanged', function( event ) {
+    var footer = document.getElementById('footer');
+    if (event.indexh === 0 || event.indexh === 19) {
+      footer.style.display = 'block';
+    } else {
+      footer.style.display = 'none';
+    }
+  });
+  </script>
+</body>
+</html>
