@@ -58,6 +58,12 @@ module.exports =
         src: '**/*'
         dest: '<%= paths.serve %>/assets/js'
       }
+      {
+        expand: true
+        cwd: '<%= paths.build.src %>/fonts'
+        src: '**/*'
+        dest: '<%= paths.serve %>/assets/fonts'
+      }
     ]
 
   js:
@@ -81,6 +87,18 @@ module.exports =
           '**/*.{ico,png}'
         ]
         dest: '<%= paths.build.src %>/favicons'
+      }
+    ]
+
+  fonts:
+    files: [
+      {
+        expand: true
+        cwd: '<%= paths.src %>/_assets/timeline/fonts'
+        src: [
+          '**/*.{eot,svg,ttf,woff}'
+        ]
+        dest: '<%= paths.build.src %>/fonts'
       }
     ]
 
@@ -133,5 +151,11 @@ module.exports =
         cwd: '<%= paths.serve %>/favicons'
         src: '**/*'
         dest: '<%= paths.release %>/'
+      }
+      {
+        expand: true
+        cwd: '<%= paths.serve %>/fonts'
+        src: '**/*'
+        dest: '<%= paths.release %>/fonts'
       }
     ]

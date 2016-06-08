@@ -1,5 +1,5 @@
 module.exports =
-  
+
   gruntfile:
     files: [
       'Gruntfile.js'
@@ -59,6 +59,7 @@ module.exports =
     files: [
       '<%= paths.src %>/_assets/bootstrap/*.scss'
       '<%= paths.src %>/_assets/scss/*.scss'
+      '<%= paths.src %>/_assets/timeline/*.scss'
     ]
     tasks: [
       'process_sass'
@@ -88,6 +89,15 @@ module.exports =
     ]
     tasks: [
       'images_root'
+    ]
+
+  fonts:
+    files: [
+      '<%= paths.src %>/_assets/fonts/*.{eot,svg,ttf,woff}'
+    ]
+    tasks: [
+      'copy:fonts'
+      'copy:serve_assets'
     ]
 
   livereload:

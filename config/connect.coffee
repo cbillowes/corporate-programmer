@@ -13,6 +13,7 @@ module.exports =
         '<%= paths.serve %>/jekyll'
         '<%= paths.serve %>/assets'
         '<%= paths.serve %>/favicons'
+        '<%= paths.serve %>/fonts'
         '<%= paths.serve %>'
         '<%= paths.store.tmp %>'
       ]
