@@ -39,6 +39,14 @@
       border-right-color: $bg-color;
     }
 
+    @media screen and (max-width: 640px) {
+      border-top: solid 5px $bg-color;
+
+      &:after {
+        border-bottom-color: $bg-color;
+      }
+    }
+
   }
 
   .icon {
