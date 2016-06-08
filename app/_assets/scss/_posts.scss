@@ -209,6 +209,23 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
 
   }
 
+  .no-image-resize {
+    p img {
+      width: auto;
+      margin: 0px;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 5px;
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+
 }
 
 .summary {
