@@ -1,4 +1,6 @@
 @charset "utf-8";
 @import
-  '_content'
+  "../scss/variables",
+  "_mixins",
+  "_timeline"
 ;

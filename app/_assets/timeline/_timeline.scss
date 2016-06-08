@@ -1,348 +1,285 @@
+$line-color: darken($body-bg-compliment, 2%);
+$bg-color: $body-bg-compliment;
+$border-radius: 10px;
+$timeline-position: 40%;
+
 @font-face {
-  font-family: 'fontawesome-selected';
-  src: url("font/fontawesome-selected.eot");
-  src:
-    url("font/fontawesome-selected.eot?#iefix") format('embedded-opentype'),
-    url("font/fontawesome-selected.woff") format('woff'),
-    url("font/fontawesome-selected.ttf") format('truetype'),
-    url("font/fontawesome-selected.svg#fontawesome-selected") format('svg');
+  font-family: 'timeline';
+  src:url('../fonts/timeline.eot');
+  src:url('../font/timeline.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/timeline.woff') format('woff'),
+  url('../fonts/timeline.ttf') format('truetype'),
+  url('../fonts/timeline.svg#timeline') format('svg');
   font-weight: normal;
   font-style: normal;
+} /* Made with http://icomoon.io/ */
+
+header {
+  h1, h2 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: $spacer;
+  }
+}
+
+.loading {
+  display: none;
+}
+
+footer.site {
+  position: relative !important;
 }
 
 .timeline {
+  display: block !important;
+  margin: 50px 0;
+  padding: 0;
+  list-style: none;
   position: relative;
-  list-style-type: none;
-  padding: 30px 0 50px 10;
-}
 
-.timeline:before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  top: 0;
-  left: 165px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/gYARWQwkAOLDBeECjEAAkkEWAKtEFwAJAgAZEBP+oM1IkwAAAABJRU5ErkJggg==);
-}
-
-.event {
-  position: relative;
-  margin-bottom: 80px;
-  padding-right: 40px;
-}
-
-.thumb {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  box-shadow:
-  0 0 0 8px rgba(65,131,142,1),
-  0 1px 1px rgba(255,255,255,0.5);
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  transform: scale(0.8) translateX(24px);
-}
-
-.thumb:before {
-  content: '';
-  position: absolute;
-  height: 8px;
-  z-index: -1;
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPElEQVQYV2NkQAP/gYARCNDFUQRgirAphitEl0TngxXisg5ZnBGXIpgbYfIYjkb3BNxGbBLYxIgyEaQRAA8KKAWYsZtjAAAAAElFTkSuQmCC);
-  width: 51px;
-  top: 42px;
-  left: 100%;
-  margin-left: 8px;
-}
-
-.thumb span {
-  color: #41838e;
-  width: 150%;
-  text-align: center;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: -30px;
-  margin-left: -25px;
-  top: 125px;
-}
-
-.britehouse {
-  background-image: url(../img/timeline/britehouse.png);
-}
-
-.remata {
-  background-image: url(../img/timeline/remata.png);
-}
-
-.item {
-  background-image: url(../img/timeline/item.png);
-}
-
-.globres {
-  background-image: url(../img/timeline/globres.png);
-}
-
-.cti {
-  background-image: url(../img/timeline/cti.png);
-}
-
-/* Transparent Checkbox/radio hack: leave the checkbox on top, hide it with opacity 0 */
-
-.event label,
-.event input[type="radio"] {
-  width: 24px;
-  height: 24px;
-  left: 158px;
-  top: 36px;
-  position: absolute;
-  display: block;
-}
-
-.event input[type="radio"] {
-  opacity: 0;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.event label:after {
-  font-family: 'fontawesome-selected';
-  content: '\e702';
-  background: #fff;
-  border-radius: 50%;
-  color: #41838E;
-  font-size: 26px;
-  height: 100%;
-  width: 100%;
-  left: -2px;
-  top: -3px;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-}
-
-.content-perspective {
-  margin-left: 230px;
-  position: relative;
-  perspective: 600px;
-}
-
-.content-perspective:before {
-  content: '';
-  width: 37px;
-  left: -51px;
-  top: 45px;
-  position: absolute;
-  height: 1px;
-  z-index: -1;
-  background: #fff;
-}
-
-.content {
-  transform: rotateY(10deg);
-  transform-origin: 0 0;
-  transform-style: preserve-3d;
-}
-
-.content-inner {
-  position: relative;
-  padding: 20px;
-  color: #333;
-  border: none;
-  border-left: 5px solid #41838e;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background: #fff;
-}
-
-.content-inner h3 {
-  font-size: 26px;
-  padding: 5px 0 5px 0;
-  color: #41838e;
-}
-
-.content-inner p {
-  font-size: 18px;
-  max-height: 0px;
-  overflow: hidden;
-  color: transparent;
-  color: rgba(0,0,0,0);
-  text-align: left;
-}
-
-.content-inner:before {
-  font-family: 'fontawesome-selected';
-  content: '\25c2';
-  font-weight: normal;
-  font-size: 54px;
-  line-height: 54px;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  color: #41838e;
-  left: -22px;
-  top: 19px;
-  z-index: -1;
-}
-
-/* Transitions */
-
-.thumb,
-.thumb span,
-.content-inner h3 {
-  transition: all 0.6s ease-in-out 0.2s;
-}
-
-.content-inner {
-  transition: box-shadow 0.8s linear 0.2s;
-}
-
-.content {
-  transition: transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
-}
-
-.content-inner p {
-  transition: max-height 0.5s linear, color 0.3s linear;
-}
-
-/* Checked */
-
-.event input[type="radio"]:checked + label:after {
-  content: '\2714';
-  color: #F26328;
-  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-.event input[type="radio"]:checked ~ .content-perspective:before {
-  background: #F26328;
-}
-
-.event input[type="radio"]:checked ~ .content-perspective .content-inner h3 {
-  color: #F26328;
-}
-
-.event input[type="radio"]:checked ~ .content-perspective .content {
-  transform: rotateY(-5deg);
-}
-
-.event input[type="radio"]:checked ~ .content-perspective .content-inner {
-  border-color: #F26328;
-  box-shadow: 10px 0px 10px -6px rgba(0, 0, 0, 0.1);
-}
-
-.event input[type="radio"]:checked ~ .content-perspective .content-inner p {
-  max-height: 260px; /* Add media queries */
-  color: rgba(0,0,0,0.6);
-  transition-delay: 0s, 0.6s;
-}
-
-.event input[type="radio"]:checked ~ .content-perspective .content-inner:before {
-  color: #F26328;
-}
-
-.event input[type="radio"]:checked ~ .thumb {
-  transform: scale(1);
-  box-shadow:
-  0 0 0 8px rgba(242,99,40,1),
-  0 1px 1px rgba(255,255,255,0.5);
-}
-
-.event input[type="radio"]:checked ~ .thumb span {
-  color: #F26328;
-}
-
-.event input[type="radio"]:checked ~ .thumb:before {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAOfUjX+882+wYgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQBbNyaHFmzEqgAAAABJRU5ErkJggg==);
-}
-
-.content-inner p,
-.thumb span,
-.event label {
-  -webkit-backface-visibility: hidden;
-}
-
-@media screen and (max-width: 850px) {
-  .content-inner h3 {
-    font-size: 20px;
+  /* The line */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: $line-color;
+    border-radius: 3px;
+    left: $timeline-position;
+    margin-left: -10px;
   }
 
-  .content-inner p {
-    font-size: 14px;
-    text-align: justify;
+  & > li {
+    position: relative;
+
+    /* Left content */
+    .meta {
+      display: block;
+      width: $timeline-position + 5;
+      padding-right: 165px;
+      position: absolute;
+
+      h2 {
+        font-size: 1.2em;
+        text-align: right;
+        line-height: 2em;
+        margin-top: 0em;
+      }
+
+      span {
+        display: block;
+        text-align: right;
+      }
+
+      span:first-child {
+        padding-top: 0.5em;
+      }
+
+    }
+
+    /* Right content */
+    .description {
+      margin: $spacer 20% $spacer $timeline-position + 3;
+      padding: 1.5em 2em;
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 1.4;
+      position: relative;
+      border-radius: $border-radius;
+      background-color: $bg-color;
+
+      ul {
+        margin: $spacer / 2 0 $spacer 0;
+      }
+
+      .label {
+        display: inline-block;
+        margin: 0 1% 1% 0;
+        padding: 6px 10px;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        line-height: 1.2em;
+      }
+
+      p {
+        margin: 10px 0 10px 0;
+      }
+
+      /* The triangle */
+      &:after {
+        right: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-width: 15px;
+        top: 0px;
+        border-right-color: $bg-color;
+      }
+
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      font-size: 1.4em;
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      border-radius: 50%;
+      text-align: center;
+      left: $timeline-position;
+      top: 0;
+      margin: 0 10px 0 -35px;
+      box-shadow: 0 0 0 8px $line-color;
+      background-color: $line-color;
+
+      span:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'timeline' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+    }
+
+    &.work {
+      @include timeline-type($body-bg-compliment, "\e903");
+    }
+
+    &.blog {
+      @include timeline-type(#FFBE37, "\e908");
+    }
+
+    &.certificate {
+      @include timeline-type(#46E863, "\e900");
+    }
+
+    &.podcast {
+      @include timeline-type(#8046E8, "\e91c");
+    }
+
+    &.talk {
+      @include timeline-type(#1F9ACC, "\e91e");
+    }
+
+    &.book {
+      @include timeline-type(#CC481F, "\e91f");
+    }
+
+    &.project {
+      @include timeline-type(#AEFF4F, "\e925");
+    }
+
+    &.award {
+      @include timeline-type(#B2241F, "\e99e");
+    }
+
+    &.community {
+      @include timeline-type(#CC4D2B, "\e972");
+    }
+
   }
 
-  .event input[type="radio"]:checked ~ .content-perspective .content-inner p {
-    max-height: 500px;
-  }
 }
 
-@media screen and (max-width: 540px) {
-  .timeline::before {
-    left: 50px;
-  }
-
-  .event {
-    padding-right: 0px;
-    margin-bottom: 100px;
-  }
-
-
-  .thumb {
-    transform: scale(0.8);
-  }
-
-  .event input[type="radio"] {
-    width: 100px;
-    height: 100px;
-    left: 0px;
-    top: 0px;
-  }
-
-  .thumb:before,
-  .event input[type="radio"]:checked ~ .thumb:before {
-    background: none;
-    width: 0;
-  }
-
-  .event label {
-    display: none;
-  }
-
-  .content-perspective {
-    margin-left: 0px;
-    top: 80px;
-  }
-
-  .content-perspective:before {
-    height: 0px;
-  }
-
-  .content {
-    transform: rotateX(-10deg);
-  }
-
-  .event input[type="radio"]:checked ~ .content-perspective .content {
-    transform: rotateX(0deg);
-  }
-
-  .content-inner {
-    border-left: none;
-    border-top: 5px solid #41838e;
-  }
-
-  .event input[type="radio"]:checked ~ .content-perspective .content-inner {
-    border-color: #F26328;
-    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
-  }
-
-  .content-inner:before {
-    content: '\25b4';
-    left: 33px;
-    top: -32px;
-  }
-
-  .event input[type="radio"]:checked ~ .content-perspective .content-inner p {
-    max-height: 300px;
-  }
-}
+//
+//     &:nth-child(odd) {
+//       .meta {
+//         color: $alt-fg-color;
+//       }
+//
+//       .description {
+//         background: $alt-bg-color;
+//         color: $alt-fg-color;
+//
+//         &:after {
+//           border-right-color: $alt-bg-color;
+//         }
+//
+//       }
+//
+//     }
+//
+//   }
+//
+// }
+//
+// /* Example Media Queries */
+// @media screen and (max-width: 65.375em) {
+//
+//   .timeline > li .meta span:last-child {
+//     font-size: 1.5em;
+//   }
+// }
+//
+// @media screen and (max-width: 47.2em) {
+//   .timeline:before {
+//     display: none;
+//   }
+//
+//   .timeline > li .meta {
+//     width: 100%;
+//     position: relative;
+//     padding: 0 0 20px 0;
+//   }
+//
+//   .timeline > li .meta span {
+//     text-align: left;
+//   }
+//
+//   .timeline > li .description {
+//     margin: 0 0 30px 0;
+//     padding: 1em;
+//     font-weight: 400;
+//     font-size: 95%;
+//   }
+//
+//   .timeline > li .description:after {
+//     right: auto;
+//     left: 20px;
+//     border-right-color: transparent;
+//     border-bottom-color: $default-bg-color;
+//     top: -20px;
+//   }
+//
+//   .timeline > li:nth-child(odd) .description:after {
+//     border-right-color: transparent;
+//     border-bottom-color: #6cbfee;
+//   }
+//
+//   .timeline > li .icon {
+//     position: relative;
+//     float: right;
+//     left: auto;
+//     margin: -55px 5px 0 0px;
+//   }
+// }

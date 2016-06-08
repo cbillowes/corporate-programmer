@@ -1,0 +1,77 @@
+@mixin timeline-type($color, $content) {
+  $bg-color: $color;
+  $fg-color: lighten($color, 40%);
+  @if (lightness($color) > 50) {
+    $fg-color: darken($color, 40%);
+  }
+  $heading-color: $bg-color;
+  @if ($bg-color == $body-bg-compliment) {
+    $heading-color: $text-color;
+  }
+
+  .meta {
+    color: $heading-color;
+
+    a {
+      color: $heading-color;
+      padding-bottom: 2px;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: solid 3px $heading-color;
+      }
+
+      &:visited {
+        color: $link-color-visited;
+      }
+
+    }
+  }
+
+  .description {
+    border-left: solid 5px $bg-color;
+
+    h3 {
+      color: $heading-color;
+    }
+
+    &:after {
+      border-right-color: $bg-color;
+    }
+
+  }
+
+  .icon {
+    background-color: $bg-color;
+
+    span:before {
+      content: $content;
+      color: $fg-color;
+    }
+
+  }
+
+  $hover-color: $color;
+  @if ($bg-color == $body-bg-compliment) {
+    $hover-color: $accent-color;
+  }
+  //
+  // &:hover {
+  //   .description {
+  //     h3 {
+  //       color: $hover-color;
+  //     }
+  //   }
+  //
+  //   .icon {
+  //     background-color: $body-bg-compliment;
+  //
+  //     span:before {
+  //       color: $hover-color;
+  //     }
+  //
+  //   }
+  //
+  // }
+
+}
