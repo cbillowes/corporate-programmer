@@ -1,5 +1,10 @@
 <div class="image">
   <img src="{{ include.url }}" alt="{{ include.description }}">
   <br/>
-  <caption>{{ include.description }}</caption>
+  <caption>
+    {% if include.image_source %}
+      <em>{{ include.image_source}}</em><br>
+    {% endif %}
+    {{ include.description }}
+  </caption>
 </div>
