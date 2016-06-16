@@ -68,6 +68,9 @@
     <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}?v={{ site.time | date: '%Y%m%d-%H%M' }}">
 
   {% endif %}
+  {% if page.syntax-highlighting %}
+    <link rel="stylesheet" href="{{ "/css/syntax-highlighter.css" | prepend: site.baseurl }}?v={{ site.time | date: '%Y%m%d-%H%M' }}">
+  {% endif %}
 
 {% if site.build != "debug" %}
   <script>

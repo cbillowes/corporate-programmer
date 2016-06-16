@@ -13,7 +13,11 @@
   </span>
 </div>
 <p class="photo-attribution">
-  Photo
+  {% if post.image.text %}
+    {{ post.image.text }}
+  {% else %}
+    Photo
+  {% endif %}
   {% if post.image.website %}
     courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
   {% endif %}

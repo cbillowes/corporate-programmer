@@ -66,11 +66,17 @@ module.exports =
       }
     ]
 
+  css:
+    files: [
+       '<%= paths.build.src %>/css/syntax-highlighter.css': '<%= paths.src %>/_assets/syntax-highlighter/prism.css'
+    ]
+
   js:
     files: [
       '<%= paths.build.src %>/js/bootstrap.js': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
       '<%= paths.build.src %>/js/jquery-1.12.3.js': '<%= paths.src %>/_assets/js/jquery-1.12.3.js'
       '<%= paths.build.src %>/js/script.js': '<%= paths.src %>/_assets/js/script.js'
+      '<%= paths.build.src %>/js/syntax-highlighter.js': '<%= paths.src %>/_assets/syntax-highlighter/prism.js'
     ]
 
   credits:

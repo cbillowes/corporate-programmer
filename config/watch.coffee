@@ -49,7 +49,7 @@ module.exports =
 
   js:
     files: [
-      '<%= paths.src %>/_assets/js/**/*.js'
+      '<%= paths.src %>/_assets/**/*.js'
     ]
     tasks: [
       'process_js'
@@ -63,6 +63,14 @@ module.exports =
     ]
     tasks: [
       'process_sass'
+    ]
+
+  css:
+    files: [
+      '<%= paths.src %>/_assets/**/*.css'
+    ]
+    tasks: [
+      'copy:css'
     ]
 
   heroes_images:

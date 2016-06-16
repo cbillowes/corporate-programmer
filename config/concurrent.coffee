@@ -10,6 +10,7 @@ module.exports =
       'concurrent:credits'
       'process_favicons'
       'copy:fonts'
+      'copy:css'      
     ]
 
   jekyll_build:
