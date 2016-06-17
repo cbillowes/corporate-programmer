@@ -9,4 +9,8 @@ module.exports =
       '<%= paths.serve %>/css/timeline.css': [
         '<%= paths.build.src %>/css/timeline.css'
       ]
+      '<%= paths.build.src %>/css/syntax-highlighter.css': [
+        '<%= paths.src %>/_assets/syntax-highlighter/prism.css',
+        '<%= paths.src %>/_assets/syntax-highlighter/overrides.css'
+      ]
     }

@@ -1,0 +1,10 @@
+div.prism-show-language > div.prism-show-language-label {
+  z-index: 0;
+  color: #b2c1d1;
+  background-color: #303942;
+}
+
+pre[class*="language-"] {
+  background: #1a232c;
+  border: 1px solid #303942;
+}

@@ -70,7 +70,7 @@ module.exports =
       '<%= paths.src %>/_assets/**/*.css'
     ]
     tasks: [
-      'copy:css'
+      'process_sass'
     ]
 
   heroes_images:
