@@ -5,8 +5,8 @@ date:   2016-06-16 10:00:00 +0200
 flesch-score: 51.52
 flesch-level: High Schooler
 image:
-  filename: html5-content-categories
-  alt: HTML5 logo on blue background
+  filename: html5-design-changes
+  alt: HTML5 logo on background depicting design blueprint
   text: Logo
   website: W3C
   url: https://www.w3.org/html/logo/index.html
