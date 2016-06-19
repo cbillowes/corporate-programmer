@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  HTML5 structural semantics
-date:   2016-06-18 12:02:38 +0200
+date:   2016-06-17 12:02:38 +0200
 flesch-score: 55.95
 flesch-level: High Schooler
 image:
