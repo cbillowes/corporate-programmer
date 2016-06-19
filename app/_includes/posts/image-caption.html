@@ -1,12 +1,12 @@
-<div class="image">
+<figure>
   {% if include.link %}<a href="{{ include.link }}">{% endif %}
   <img src="{{ include.url }}" alt="{{ include.description }}">
   {% if include.link %}</a>{% endif %}
   <br/>
-  <caption>
+  <figcaption>
     {% if include.image_source %}
       <em>{{ include.image_source}}</em><br>
     {% endif %}
     {{ include.description }}
-  </caption>
-</div>
+  </figcaption>
+</figure>
