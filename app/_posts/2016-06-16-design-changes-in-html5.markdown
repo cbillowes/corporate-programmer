@@ -176,8 +176,10 @@ APIs. Some include:
 
 ---
 
+## References
+
 * A Book Apart: [HTML5 for web designers](https://abookapart.com/products/html5-for-web-designers)
-  by Jeremy Keith & Rachel Andrew
+  by Jeremy Keith
 * [HTML Living Standard](https://html.spec.whatwg.org/multipage/index.html) by
   the WHATWG (Web Hypertext Application Technology Working Group)
 * [HTML5 Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
