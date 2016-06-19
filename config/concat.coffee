@@ -13,4 +13,8 @@ module.exports =
         '<%= paths.src %>/_assets/syntax-highlighter/prism.css',
         '<%= paths.src %>/_assets/syntax-highlighter/overrides.css'
       ]
+      '<%= paths.serve %>/css/syntax-highlighter.css': [
+        '<%= paths.src %>/_assets/syntax-highlighter/prism.css',
+        '<%= paths.src %>/_assets/syntax-highlighter/overrides.css'
+      ]
     }
