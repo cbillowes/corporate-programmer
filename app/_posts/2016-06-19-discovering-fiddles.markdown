@@ -11,7 +11,7 @@ image:
 licence:
   name: CC BY 3.0 ZA
   url: https://creativecommons.org/licenses/by/3.0/za/
-tags: technical, productivity
+tags: technical productivity
 syntax-highlighting: on
 ---
 
