@@ -1,13 +1,4 @@
 $(function() {
-  var hasNavbarForPosts = $('#navbar-post').size() > 0;
-
-  if ($(document).height() <= $(window).height()) {
-    $('body > footer').css({ 'position': 'fixed', 'left': '0px', 'bottom': '0px', 'right': '0px' });
-
-    $(window).scroll(function() {
-      $('body > footer').css({ 'position': 'relative' });
-    });
-  }
 
   $(window).scroll(function() {
     positionMenu();
@@ -18,39 +9,58 @@ $(function() {
     positionMenu();
     positionNavbarForPosts();
     resizeImages();
+    setFooterPosition();
   });
 
-  $('#more-tags').click(function() {
-    $('#tags').removeClass('hidden');
-    $('body > footer').css({ 'margin-bottom': $('#tags').outerHeight() - 10 });
-  });
-
-  $('#tags .close').click(function() {
-    $('#tags').addClass('hidden');
-    $('footer').css({ 'margin-bottom': '0px' });
-  });
-
-  $(window).load(function() {
-    $(window).scrollTop($(window).scrollTop() - $('h2').outerHeight() - 25);
-  });
-
+  addTagEvents();
   resizeImages();
+  setFooterPosition();
+  setNavigationBarForPosts();
 
-  if (hasNavbarForPosts) {
-    var list = '<ul class="nav"><li><a href="#top">Top</a></li>';
-    if ($('.post h2').size() > 0) {
-      $('.post h2').each(function() {
-        var text = $(this).text();
-        var link = text.toLowerCase().replace(/ /g, '-');
-        link = link.toLowerCase().replace(/[^0-9a-zA-Z-]+/g, '');
-        list += '<li><a href="#' + link + '">' + text + '</a></li>';
+  function addTagEvents() {
+    $('#more-tags').click(function() {
+      $('#tags').removeClass('hidden');
+      $('body > footer').css({ 'margin-bottom': $('#tags').outerHeight() - 10 });
+    });
+
+    $('#tags .close').click(function() {
+      $('#tags').addClass('hidden');
+      $('footer').css({ 'margin-bottom': '0px' });
+    });
+  }
+
+  function hasNavigationBarForPosts() {
+    return $('#navbar-post').size() > 0;
+  }
+
+  function setNavigationBarForPosts() {
+    var hasNavbarForPosts = hasNavigationBarForPosts();
+    if (hasNavbarForPosts) {
+      var list = '<ul class="nav"><li><a href="#top">Top</a></li>';
+      if ($('.post h2').size() > 0) {
+        $('.post h2').each(function() {
+          var text = $(this).text();
+          var link = text.toLowerCase().replace(/ /g, '-');
+          link = link.toLowerCase().replace(/[^0-9a-zA-Z-]+/g, '');
+          list += '<li><a href="#' + link + '">' + text + '</a></li>';
+        });
+        $('#navbar-post .nav').html(list);
+        $('#navbar-post .toggle').click(function() {
+          $('#navbar-post').toggleClass('closed');
+        });
+      } else {
+        $('#navbar-post').hide();
+      }
+    }
+  }
+
+  function setFooterPosition() {
+    if ($(document).height() <= $(window).height()) {
+      $('body > footer').css({ 'position': 'fixed', 'left': '0px', 'bottom': '0px', 'right': '0px' });
+
+      $(window).scroll(function() {
+        $('body > footer').css({ 'position': 'relative' });
       });
-      $('#navbar-post .nav').html(list);
-      $('#navbar-post .toggle').click(function() {
-        $('#navbar-post').toggleClass('closed');
-      });
-    } else {
-      $('#navbar-post').hide();
     }
   }
 
@@ -86,6 +96,7 @@ $(function() {
   }
 
   function positionNavbarForPosts() {
+    var hasNavbarForPosts = hasNavigationBarForPosts();
     var $navbarPost = $('#navbar-post');
     if (hasNavbarForPosts) {
       if ($(window).scrollTop() > $('.hero').outerHeight()) {
