@@ -158,21 +158,6 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
 
   }
 
-  p img {
-    @media only screen and (max-width:480px) {
-      & {
-        width: 100%;
-      }
-    }
-
-    @media only screen and (min-width:481px) {
-      & {
-        width: 80%;
-        margin: 0 10%;
-      }
-    }
-  }
-
   .meta {
     font-size: $font-size-small;
     margin-top: 0px;
@@ -212,23 +197,6 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
 
     }
 
-  }
-
-  .no-image-resize {
-    p img {
-      width: auto;
-      margin: 0px;
-    }
-
-    figure {
-      text-align: center;
-    }
-
-    figcaption {
-      margin-top: 5px;
-      font-size: 0.8em;
-      text-align: center;
-    }
   }
 
 }

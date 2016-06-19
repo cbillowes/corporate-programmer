@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: post
 title:  Simulating mobile devices in Chrome
 date:   2016-06-09 00:17:28 +0200
 flesch-score: 50.07
@@ -72,13 +72,10 @@ These controls give you the ability to test your web page across a variety of
 devices or directly interact with the responsive nature of it. You can change
 the device, width, height, zoom and orientation *(if height is present)*.
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/viewport-controls.jpg"
-    title="Viewport controls"
-    alt="Viewport controls">
-</figure>
-<figcaption>iPad device selected through the Viewport controls</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/viewport-controls.jpg"
+     description="iPad device selected through the Viewport controls"
+%}
 
 ### Pre-configured devices
 You can add pre-configured devices to the list by clicking on
@@ -86,16 +83,11 @@ You can add pre-configured devices to the list by clicking on
 to the list. Click on the device dropdown in the viewport controls to see your
 updated list.
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/emulated-devices.jpg"
-    title="Manage emulated devices"
-    alt="Manage emulated devices">
-</figure>
-<figcaption>
-  Selected Galaxy Note 3 and Galaxy Note II in emulated devices<br/>
-  to add them to the list of devices
-</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/emulated-devices.jpg"
+     description="Selected Galaxy Note 3 and Galaxy Note II in emulated devices<br/>
+       to add them to the list of devices"
+%}
 
 ### Custom devices
 You can add your own devices by following the same steps as above but instead of
@@ -107,16 +99,11 @@ web browsers and applications to identify themselves by web servers.
 You can get a comprehensive list from
 [User Agent String.com](http://www.useragentstring.com/).
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/add-custom-device.jpg"
-    title="Add custom device"
-    alt="Add custom device">
-</figure>
-<figcaption>
-  Add custom device using User Agent String for SeaMonkey on Linux<br/>
-  <code>Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20120501 Firefox/12.0 SeaMonkey/2.9.1 Lightning/1.4</code>
-</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/add-custom-device.jpg"
+     description="Add custom device using User Agent String for SeaMonkey on Linux<br/>
+       <code>Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20120501 Firefox/12.0 SeaMonkey/2.9.1 Lightning/1.4</code>"
+%}
 
 **Tip:** Increase the height of the Developer Tools window before adding the new device.
 The Settings modal overlays the Developer Tools window. If you increase
@@ -127,13 +114,10 @@ modal is open, the window height cannot be adjusted *(at least not on Windows)*.
 You can use the media query inspector by clicking on **Show media queries** in
 the vertical three dot menu at the top-right corner of the Viewport controls.
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/show-media-queries.jpg"
-    title="Show media queries"
-    alt="Show media queries">
-</figure>
-<figcaption>Media queries inspector on iPad display</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/show-media-queries.jpg"
+     description="Media queries inspector on iPad display"
+%}
 
 The media queries for the web page are detected and displayed as colored bars.
 When you **right-click** on a color, you can reveal the CSS in the source code.
@@ -168,13 +152,10 @@ will need to refresh the page to see the result. You may also want to monitor
 your network traffic and page load time using the **Network** tab in the
 Developer Tools window.
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/throttling.jpg"
-    title="Show throttling"
-    alt="Show throttling">
-</figure>
-<figcaption>GPRS selected in throttling options</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/throttling.jpg"
+     description="GPRS selected in throttling options"
+%}
 
 For out more about
 [optimizing performance under varying network conditions](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions).
@@ -189,22 +170,17 @@ override geolocation coordinates and device orientation accelerometer data.
 Click on the vertical three dot menu at the top-right corner of the Developer Tools
 window > **More tools > Sensors**.
 
-<figure>
-  <img
-    src="/img/posts/chrome-device-mode/sensors.jpg"
-    title="Sensors"
-    alt="Sensors">
-</figure>
-<figcaption>
-  Enabled emulate geolocation coordinates and device orientation<br/>
-  selected in sensors tab with default data
-</figcaption>
+{% include posts/image-caption.html
+     url="/img/posts/chrome-device-mode/sensors.jpg"
+     description="Enabled emulate geolocation coordinates and device orientation<br/>
+       selected in sensors tab with default data"
+%}
 
 Find out more about [emulating sensors](https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors).
 
 ---
 
-### Resources
+## Resources
 
 * [Chrome Keyboard and UI Shortcuts Reference](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts)
 * [Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/)
