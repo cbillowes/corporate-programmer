@@ -72,6 +72,17 @@ $navbar-padding: 10px;
     border-right: $navbar-close-width solid transparent;
     border-bottom: $navbar-close-width solid transparent;
     border-top: $navbar-close-width solid $accent-color-compliment;
+
+    &:before {
+      content: "";
+      border-left: $navbar-close-width solid transparent;
+      border-right: $navbar-close-width solid transparent;
+      border-bottom: $navbar-close-width solid transparent;
+      border-left: $navbar-close-width solid darken($accent-color-compliment, 10%);
+      position: absolute;
+      top: -$navbar-close-width;
+      left: 0px;
+    }
   }
 
   &.closed {
@@ -87,6 +98,13 @@ $navbar-padding: 10px;
       top: -10px;
       border-top: $navbar-close-width solid transparent;
       border-bottom: $navbar-close-width solid $accent-color-compliment;
+
+      &:before {
+        top: -$navbar-padding + 1;
+        left: -$navbar-padding + 1;
+        transform: rotate(-90deg);
+      }
+
     }
 
     .nav {
