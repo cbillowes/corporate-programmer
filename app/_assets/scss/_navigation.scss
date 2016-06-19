@@ -123,9 +123,11 @@ $navbar-padding: 10px;
         padding: 10px;
         display: inline-block;
         line-height: $font-size-small;
+        color: $text-color;
 
         &:active,
         &:hover,
+        &:visited,
         &:focus{
           background-color: lighten($body-bg-compliment, 5px);
           border-radius: 5px;
