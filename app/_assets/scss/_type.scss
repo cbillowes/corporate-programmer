@@ -62,6 +62,14 @@ h2, h3, h4, h5, h6 {
 h2 {
   font-size: $font-size-h2;
   line-height: $font-size-h2 * $headings-line-height;
+
+  &[id]:before {
+    content: "";
+    display: block;
+    height: 55px;
+    margin: -30px 0 0;
+    visibility: hidden;
+  }
 }
 
 h3 {

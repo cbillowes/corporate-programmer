@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body itemscope itemtype="http://schema.org/WebPage">
+  <body itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target="#navbar-post">
     {% if page.image %}
       <meta itemprop="primaryImageOfPage" content="{{ site.url }}/img/320/{{ page.image.filename }}.jpg">
     {% endif %}

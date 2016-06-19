@@ -41,3 +41,47 @@
   }
 
 }
+
+#navbar-post {
+  z-index: 1;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
+  background-color: $body-bg-compliment;
+  text-align: center;
+
+  ul.nav {
+    display: inline;
+
+    li {
+      display: inline-block;
+      font-size: $font-size-small;
+
+      a {
+        padding: 10px;
+        display: inline-block;
+        line-height: $font-size-small;
+
+        &:active,
+        &:hover,
+        &:focus{
+          background-color: lighten($body-bg-compliment, 5px);
+          border-radius: 5px;
+          color: $text-color;
+        }
+
+      }
+
+      &.active {
+        a {
+          background-color: $accent-color-compliment;
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}
