@@ -36,7 +36,7 @@ $(function() {
   resizeImages();
 
   if (hasNavbarForPosts) {
-    var list = '<ul class="nav">';
+    var list = '<ul class="nav"><li><a href="#top">Top</a></li>';
     $('.post h2').each(function() {
       var text = $(this).text();
       var link = encodeURIComponent(text.toLowerCase().replace(/ /g, '-'));
