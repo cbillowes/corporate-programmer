@@ -17,13 +17,13 @@ tags: technical
 syntax-highlighting: on
 ---
 
-The HTML5 specification has introduced more elements to make aid us with
+The HTML5 specification has introduced more elements to aid us with
 semantic markup. I've discussed some of the
 [design changes](/blog/design-changes-in-html5/)
 as well as the introduction of
 [structural elements](/blog/html5-structural-semantics/).
 
-**Note**: There are many books, articles, wikis and posts relating to the elements.
+**Note**: There are many books, articles, wikis and posts relating to these elements.
 I wanted to document my research by combining the semantics, usage and code
 samples to act as a cheatsheet to personally use. I also won't be covering rich
 media elements here.
@@ -78,8 +78,9 @@ provide additional information to a user.
 </code></pre>
 
 <details>
-  <summary><b>Live Demo</b>.<br>If you can expand this then your browser supports this feature.</summary>
+  <summary><b>Live Demo</b>. If you can expand this then your browser supports this feature.</summary>
   <p>
+    <b>World of Warcraft has a Wiki</b><br>
     Check out the community driven World of Warcraft wiki at
     <a href="http://wowwiki.wikia.com/wiki/">Wiki</a> to find out more
     about the Horde and the Alliance.
@@ -110,17 +111,21 @@ particular context like highlighting keywords from a search result.
 [MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/mark)
 
 ## Time
-You can use the `time` element to for dates and/or times in the
+You can use the `time` element for dates and/or times in the
 [Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) to
-represent it so that people can read it and encode it so that user agents
+present it so that people can read it and encode it so that user agents
 can provide additional functionality such as:
 
-* add reminders for birthdays and scheduled events to a user's calendar, or
-* produce smarter search results from search engines.
+* adding reminders for birthdays and scheduled events to a user's calendar, or
+* producing smarter search results from search engines.
 
 <pre class="line-numbers"><code class="language-markup">
-&lt;time&gt;08:30&lt;/time&gt;
-&lt;time datetime="2016-06-18T08:30"&gt;June 18&lt;/time&gt;
+&lt;p&gt;
+  I'll be watching "Warcraft: The Beginning" on
+  &lt;time datetime="2016-06-17T20:00"&gt;
+    17 June at 8h00 pm
+  &lt;/time&gt;.
+&lt;/p&gt;  
 </code></pre>
 
 [MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/time)
@@ -139,7 +144,7 @@ If you remove it, the flow shouldn't be affected.
 &lt;figure&gt;
   &lt;img
     src="medivh.jpg"
-    alt="Photo of Medivh" &gt;
+    alt="Photo of Medivh"&gt;
 &lt;/figure&gt;
 </code></pre>
 
