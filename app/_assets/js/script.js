@@ -17,6 +17,7 @@ $(function() {
   $(window).resize(function() {
     positionMenu();
     positionNavbarForPosts();
+    resizeImages();
   });
 
   $('#more-tags').click(function() {
@@ -54,9 +55,22 @@ $(function() {
   }
 
   function resizeImages() {
+    $('img').each(function() {
+      var width = $(this).width();
+      if (!$(this).data('width')) $(this).data('width', width);
+    });
+
     $('img').filter(function(){
-      return ($(this).width() > $(window).width())
+      var width = $(this).width();
+      var windowWidth = $(window).width();
+      return (width > windowWidth);
     }).css({ 'width': '100%'});
+
+    $('img').filter(function(){
+      var width = $(this).width();
+      var originalWidth = $(this).data('width');
+      return (width > originalWidth);
+    }).css({ 'width': 'auto'});
   }
 
   function positionMenu() {
