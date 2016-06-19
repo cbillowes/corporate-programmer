@@ -1,11 +1,11 @@
 footer {
-  z-index: 2;
 
   &.site {
     border-bottom: solid $border-width $accent-color;
     background-color: $body-bg-compliment;
     font-size: $font-size-small;
     line-height: $font-size-small;
+    z-index: 2;
   }
 
   .footnote {

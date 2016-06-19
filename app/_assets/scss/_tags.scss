@@ -1,5 +1,5 @@
 #tags {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -9,6 +9,9 @@
   text-align: center;
   position: fixed;
   border-top: solid $border-width $accent-color;
+
+  $close-bg-color: $accent-color-compliment;
+  $close-bg-color-hover: $accent-color;
 
   .wrapper {
     position: relative;
@@ -20,9 +23,46 @@
       padding-top: 6px;
       width: $spacer * 2;
       height: $spacer * 2;
-      background-color: darken($body-bg-compliment, 10%);
+      background-color: $close-bg-color;
       border-radius: 50%;
       cursor: pointer;
+
+      &:before {
+        top: 0px;
+        right: 0px;
+        content: "";
+        border-bottom: solid $spacer transparent;
+        border-top: solid $spacer transparent;
+        border-left: solid $spacer darken($close-bg-color, 25%);
+        border-right: solid $spacer transparent;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      &:after {
+        top: 0px;
+        right: 0px;
+        content: "";
+        border-bottom: solid $spacer darken($close-bg-color, 10%);
+        border-top: solid $spacer transparent;
+        border-left: solid $spacer darken($close-bg-color, 20%);
+        border-right: solid $spacer transparent;
+        position: absolute;
+        transform: rotate(270deg);
+        border-radius: 50%;
+      }
+
+      &:hover {
+        background-color: $close-bg-color-hover;
+        &:before {
+          border-left: solid $spacer darken($close-bg-color-hover, 25%);
+        }
+        &:after {
+          border-bottom: solid $spacer darken($close-bg-color-hover, 10%);
+          border-left: solid $spacer darken($close-bg-color-hover, 20%);
+        }
+      }
+
     }
 
   }
