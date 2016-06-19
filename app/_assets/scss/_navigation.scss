@@ -42,15 +42,57 @@
 
 }
 
+$navbar-close-width: 18px;
+$navbar-padding-left: $navbar-close-width + 10;
+$navbar-padding: 10px;
+
 #navbar-post {
   z-index: 1;
   position: fixed;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  padding: 10px;
+  padding: $navbar-padding;
+  padding-left: $navbar-padding-left;
   background-color: $body-bg-compliment;
   text-align: center;
+  height: auto;
+  border-bottom: solid 1px $body-bg-compliment;
+  border-radius: 0px;
+  margin-left: 0px;
+
+  .toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-left: $navbar-close-width solid transparent;
+    border-right: $navbar-close-width solid transparent;
+    border-bottom: $navbar-close-width solid transparent;
+    border-top: $navbar-close-width solid $accent-color-compliment;
+  }
+
+  &.closed {
+    & {
+      height: $navbar-close-width * 2;
+      padding: 0px;
+      width: $navbar-padding + $navbar-padding-left + $navbar-close-width;
+      border-radius: 10px 10px 0px 0px;
+      margin-left: 10px;
+    }
+
+    .toggle {
+      top: -10px;
+      border-top: $navbar-close-width solid transparent;
+      border-bottom: $navbar-close-width solid $accent-color-compliment;
+    }
+
+    .nav {
+      visibility: collapse;
+    }
+  }
 
   ul.nav {
     display: inline;

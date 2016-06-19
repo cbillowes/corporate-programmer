@@ -39,10 +39,14 @@ $(function() {
     var list = '<ul class="nav"><li><a href="#top">Top</a></li>';
     $('.post h2').each(function() {
       var text = $(this).text();
-      var link = encodeURIComponent(text.toLowerCase().replace(/ /g, '-'));
+      var link = text.toLowerCase().replace(/ /g, '-');
+      link = link.toLowerCase().replace(/[^0-9a-zA-Z-]+/g, '');
       list += '<li><a href="#' + link + '">' + text + '</a></li>';
     });
-    $('#navbar-post').html(list + '</ul>');
+    $('#navbar-post .nav').html(list);
+    $('#navbar-post .toggle').click(function() {
+      $('#navbar-post').toggleClass('closed');
+    });
   }
 
   function resizeImages() {
