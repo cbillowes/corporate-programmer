@@ -93,7 +93,7 @@ $(function() {
         if (offset > $('footer.site').offset().top) {
           $navbarPost.css({ 'bottom': -$navbarPost.outerHeight() });
         } else {
-          $navbarPost.css({ 'bottom': '0px' });
+          if ($navbarPost.css('bottom') !== 0) $navbarPost.css({ 'bottom': '0px' });
         }
       }
     }
