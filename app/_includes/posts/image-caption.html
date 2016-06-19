@@ -1,5 +1,7 @@
 <div class="image">
+  {% if include.link %}<a href="{{ include.link }}">{% endif %}
   <img src="{{ include.url }}" alt="{{ include.description }}">
+  {% if include.link %}</a>{% endif %}
   <br/>
   <caption>
     {% if include.image_source %}

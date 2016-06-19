@@ -40,6 +40,13 @@ blockquote p {
   display: inline;
 }
 
+mark {
+  background-color: #ffe400 !important;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
 h1 {
   font-family: $font-family-serif;
   font-size: $font-size-h1 !important;
