@@ -76,7 +76,7 @@ stylesheets.
 
 ### MathML & SVG
 These elements can now be used within an HTML document without having to specify
-a XML namespaces.
+their XML namespaces.
 
 ### Syntax
 XHTML 1.0 enforces HTML to follow the same syntax as XML: all tags in lowercase,
@@ -94,16 +94,16 @@ of HTML.
 These terms also caused confusion with CSS so HTML5 no longer uses them.
 Instead it categorized content based on how they can be nested.
 
-Not all elements are appear in these categories but those that do can overlap
+Not all elements appear in these categories but those that do can overlap
 other categories.
 
-* Metadata content e.g. `link` & `script`
-* Flow content e.g. `span` & `div`
-* Sectioning content e.g. `aside` & `section`
-* Heading content e.g. `h1` - `h6`
-* Phrasing content e.g. `span` & `img`
-* Embedded content e.g. `img`, `iframe` & `svg`
-* Interactive content e.g. `a`, `button` & `label`
+* **Metadata** content e.g. `link` & `script`
+* **Flow** content e.g. `span` & `div`
+* **Sectioning** content e.g. `aside` & `section`
+* **Heading** content e.g. `h1` - `h6`
+* **Phrasing** content e.g. `span` & `img`
+* **Embedded** content e.g. `img`, `iframe` & `svg`
+* **Interactive** content e.g. `a`, `button` & `label`
 
 ## Obsolete
 HTML5 no longer deprecates elements or attributes as it remains backwards
