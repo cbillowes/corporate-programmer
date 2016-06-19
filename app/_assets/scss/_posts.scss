@@ -17,11 +17,16 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
     overflow: hidden;
     margin-bottom: $spacer;
     border: $thumbnail-border;
+    position: relative;
+    overflow: hidden;
 
-    @media only screen and (max-width:480px) {
-      img {
-        margin-left: -55%;
-      }
+    img {
+      position: absolute;
+      top: -100%;
+      bottom: -100%;
+      left: -100%;
+      right: -100%;
+      margin: auto;
     }
 
   }
