@@ -119,6 +119,16 @@ $navbar-padding: 10px;
       display: inline-block;
       font-size: $font-size-small;
 
+      &:first-child {
+        font-weight: bold;
+
+        &:after {
+          content: "|";
+          padding-left: 10px;
+          font-weight: normal;
+        }
+      }
+
       a {
         padding: 10px;
         display: inline-block;
