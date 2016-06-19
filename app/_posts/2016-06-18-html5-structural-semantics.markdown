@@ -59,9 +59,7 @@ table of contents, site navigation, a search form or any relevant logos and so o
 &lt;/header&gt;
 </code></pre>
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/header">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/header)
 
 ## Footer
 You can use the `footer` element in a document or many sections to
@@ -84,9 +82,7 @@ contain:
 **Note**: It doesn’t affect the document outline as it isn’t considered
 as sectioning content.
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/footer">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/footer)
 
 ## Nav
 You can use the `nav` element in your document or many sections to contain:
@@ -109,9 +105,7 @@ You can use the `nav` element in your document or many sections to contain:
 &lt;/header&gt;
 </code></pre>
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/nav">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/nav)
 
 ## Article
 You can use the `article` element for sections of content that can be
@@ -140,9 +134,7 @@ independently distributed or reused such as:
 &lt;/article&gt;
 </code></pre>
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/article">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/article)
 
 ## Section
 You can use the `section` element for generic sections of content that need to
@@ -175,9 +167,7 @@ on a theme or context such as:
 &lt;/article&gt;
 </code></pre>
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/section">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/section)
 
 ## Aside
 You can use the `aside` element for sections of content that is seperate from
@@ -207,9 +197,7 @@ but relates to its surrounding content such as:
 &lt;/aside&gt;
 </code></pre>
 
-<aside>
-  <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/aside">MDN Reference</a>
-</aside>
+[MDN Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element/aside)
 
 ## Compatibility
 Browsers that don't support the new elements will render them as a `span`. If
@@ -264,9 +252,11 @@ help you get to grips with some of the new elements in HTML5."
 
 ---
 
-### References
+## References
 
 * [W3.org Wiki](https://www.w3.org/wiki/HTML_structural_elements)
+* A Book Apart: [HTML5 for web designers](https://abookapart.com/products/html5-for-web-designers)
+  by Jeremy Keith
 * [Let's Talk about Semantics](http://html5doctor.com/lets-talk-about-semantics/)
   by HTML5 Doctor
 * [HTML5 Semantics](https://www.smashingmagazine.com/2011/11/html5-semantics/)
