@@ -37,7 +37,7 @@ Although the `div` is still useful to enhance the layout of a document, the
 newly added structural elements in HTML5 will aid the semantic structuring
 of your page.
 
-**Note**: There are many books, articles, wikis and posts relating to the elements.
+**Note**: There are many books, articles, wikis and posts relating to these elements.
 I wanted to document my research by combining the semantics, usage and code
 samples to act as a cheatsheet to personally use.
 
@@ -201,7 +201,7 @@ but relates to its surrounding content such as:
 
 ## Compatibility
 Browsers that don't support the new elements will render them as a `span`. If
-you want to enforce compatibility with non-modern browsers you can style
+you want to enforce compatibility with legacy browsers you can style
 these elements in CSS to be block-level elements.
 
 <pre class="line-numbers"><code class="language-css">
@@ -228,16 +228,17 @@ incorrect meaning to the structure of my documents. It's amazing what a bit of
 research can teach you.
 
 You can test the structure of your documents using Document Outline tools.
-Unfortunately I cannot vouch for the correctness of these tools.
+Unfortunately I cannot vouch for the correctness of the tools provided below.
 
 * [Online tester](https://gsnedders.html5.org) by gsnedders
-* [Chrome Extension](https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)
-  called HTML5 Outliner by Dominykas Blyžė
-* [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/html5_outliner/)
-  called HTML5 Outliner by arky
+* HTML5 Outliner [Chrome Extension](https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)
+  by Dominykas Blyžė
+* HTML5 Outliner [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/html5_outliner/)
+  by arky
 
-It can be tricky to know what to use and when. HTML5 Doctor has a great
-flowchart to help save time when making those decisions. They provide an
+It can be tricky to know what to use and when.
+[HTML5 Doctor](http://html5doctor.com) has a great
+flowchart to help save time when making these decisions. They provide an
 "easy-to-understand HTML5 sectioning element flowchart to
 help you get to grips with some of the new elements in HTML5."
 
@@ -245,8 +246,7 @@ help you get to grips with some of the new elements in HTML5."
      url="/img/posts/html5-structural-semantics/html5-doctor-flowchart.jpg"
      link="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png"
      description="HTML5 Sectioning Flowchart by
-        <a href='http://html5doctor.com'><strong>HTML5 Doctor</strong></a>.
-        There is also a
+        HTML5 Doctor. There is also a
         <a href='http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf'>PDF Version</a>."
 %}
 
