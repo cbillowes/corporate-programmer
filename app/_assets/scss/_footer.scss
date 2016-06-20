@@ -5,7 +5,46 @@ footer {
     background-color: $body-bg-compliment;
     font-size: $font-size-small;
     line-height: $font-size-small;
+    text-align: center;
     z-index: 2;
+
+    #heart {
+      $width: 20px;
+      $half-width: $width / 2;
+      $height: $width * 0.9;
+      $color: #bb0050;
+      $spacing: 5px;
+
+      position: relative;
+      width: $width;
+      height: $height;
+      display: inline-block;
+      margin: 3px $spacing 0 $spacing;
+      visibility: hidden;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: $half-width;
+        top: $spacing;
+        width: $half-width;
+        height: $width * 0.8;
+        background: $color;
+        border-radius: $half-width $half-width 0 0;
+        transform: rotate(-50deg);
+        transform-origin: 0% 100%;
+        visibility: visible;
+      }
+
+      &:after {
+        left: 0;
+        top: $spacing;
+        transform: rotate(50deg);
+        transform-origin: 100% 100%;
+      }
+    }
+
   }
 
   .footnote {
