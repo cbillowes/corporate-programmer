@@ -1,0 +1,12 @@
+---
+---
+{
+{% for post in site.posts %}
+  "{{ post.url |replace: "/blog/", "" | replace: "/", "" }}": {
+    "permalink": "{{ post.url }}",
+    "title": "{{ post.title | titlecase | smartify }}",
+    "date": "{{ post.date | date: "%Y-%m-%d %T"  }}",
+    "fulltext": "{{ post.content | strip_html | downcase | full_text_search }}"
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}
+}
