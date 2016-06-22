@@ -40,6 +40,7 @@ module Jekyll
       exclusions = [
         'a',
         'am',
+        'an',
         'be',
         'but',
         'do',
@@ -47,6 +48,7 @@ module Jekyll
         'my',
         'in',
         'is',
+        'it',
         'of',
         'that',
         'this',
