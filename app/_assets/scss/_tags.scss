@@ -23,6 +23,16 @@
       background-color: darken($body-bg-compliment, 10%);
       border-radius: 50%;
       cursor: pointer;
+      border: solid 3px $accent-color;
+      color: $accent-color;
+      font-size: 35px;
+      line-height: 22px;
+
+      &:hover {
+        border-color: $accent-color-compliment;
+        color: $accent-color-compliment;
+      }
+
     }
 
   }
