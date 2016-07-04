@@ -30,12 +30,12 @@ layout: default
           <hr />
           {% if page.previous %}
             <span class="previous-page">
-              <a href="{{page.previous.url}}" title="Previous post">&laquo; {{page.previous.title | titlecase}}</a>
+              <a href="{{page.previous.url}}" title="Previous post">Previous: {{page.previous.title | titlecase}}</a>
             </span>
           {% endif %}
           {% if page.next %}
             <span class="next-page">
-              <a href="{{page.next.url}}" title="Next post">{{page.next.title | titlecase}} &raquo;</a>
+              <a href="{{page.next.url}}" title="Next post">Next: {{page.next.title | titlecase}}</a>
             </span>
           {% endif %}
         </div>
