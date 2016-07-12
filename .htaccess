@@ -13,7 +13,7 @@ FileETag None
 
 ExpiresActive On
 ExpiresDefault "now plus 7 days"
-ExpiresByType text/html "now plus 1 day"
+ExpiresByType text/html "now plus 2 days"
 ExpiresByType text/plain "now plus 2 days"
 Header set Cache-Control "must-revalidate, proxy-revalidate"
 
