@@ -50,6 +50,7 @@ module Jekyll
         'is',
         'it',
         'of',
+        'our',
         'that',
         'this',
         'the',
