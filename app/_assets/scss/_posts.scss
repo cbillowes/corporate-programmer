@@ -190,6 +190,14 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
       .next-page {
         float:right;
+
+        @media only screen and (max-width:480px) {
+          & {
+            float: none;
+            display: block;
+          }
+        }
+
       }
 
     }
