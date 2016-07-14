@@ -295,3 +295,9 @@ $youtube-aspect-ratio: 1.9;
     height: floor(700px / $youtube-aspect-ratio);
   }
 }
+
+@media only screen and (max-width:480px) {
+  .post .meta, .post-preview .meta {
+    margin-top: 5px;
+  }
+}
