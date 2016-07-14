@@ -5,7 +5,6 @@ $border-radius-right:   50%;
 $border-color:          darken($accent-color, 20%);
 $double-spacer:         $spacer * 2;
 $heading-bg-color:      rgba($body-bg-compliment, 0.7);
-$thumbnail-border:      dashed 1px darken($text-color, 30%);
 
 .post-preview {
   margin-top: $spacer;
@@ -16,7 +15,6 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
     height: $thumbnail-height;
     overflow: hidden;
     margin-bottom: $spacer;
-    border: $thumbnail-border;
     position: relative;
     overflow: hidden;
 
@@ -185,7 +183,6 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
       font-size: $font-size-small;
 
       img {
-        border: $thumbnail-border;
         margin-bottom: $spacer / 2;
       }
 
