@@ -7,9 +7,8 @@ permalink: /
 <div class="post summary">
   {% include posts/post-hero.html post=hero_post snippet=true %}
   <div class="container">
+    {% include posts/tags.html %}
     <p>
-      {% include posts/tags.html %}
-      <br/>
       {{ hero_post.content | strip_figcaption | strip_html | truncatewords: 30 }}
       <a href="{{ post.url }}">read more</a>
     </p>
