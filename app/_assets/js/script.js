@@ -65,18 +65,19 @@ $(function() {
   }
 
   function resizeImages() {
-    $('img').each(function() {
+    var selector = 'img:not(".thumbnail > img")';
+    $(selector).each(function() {
       var width = $(this).width();
       if (!$(this).data('width')) $(this).data('width', width);
     });
 
-    $('img').filter(function(){
+    $(selector).filter(function(){
       var width = $(this).width();
       var windowWidth = $(window).width();
       return (width > windowWidth);
     }).css({ 'width': '100%'});
 
-    $('img').filter(function(){
+    $(selector).filter(function(){
       var width = $(this).width();
       var originalWidth = $(this).data('width');
       return (width > originalWidth);

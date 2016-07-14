@@ -116,6 +116,13 @@ $thumbnail-border:      dashed 1px darken($text-color, 30%);
       background-position: 50% 50%;
       background-repeat: no-repeat;
 
+      @media only screen and (max-width:480px) {
+        & {
+          height: 180px;
+          background-size: 200%;
+        }
+      }
+
       .inner {
         display: block;
         height: 0;
