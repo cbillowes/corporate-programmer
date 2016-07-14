@@ -71,6 +71,12 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
       letter-spacing: 1px;
       font-size: $font-size-small;
       font-weight: bold;
+
+      @media only screen and (max-width:480px) {
+        & {
+          display: none !important;
+        }
+      }
     }
 
     .heading {
