@@ -10,7 +10,7 @@ permalink: /
     <p>
       {% include posts/tags.html %}
       <br/>
-      {{ hero_post.content | truncatewords: 50 | strip_html }}
+      {{ hero_post.content | strip_figcaption | strip_html | truncatewords: 30 }}
       <a href="{{ post.url }}">read more</a>
     </p>
   </div>
