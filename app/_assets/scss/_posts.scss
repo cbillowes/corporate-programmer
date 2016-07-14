@@ -60,17 +60,17 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
       display: none;
       position: absolute;
       background-color: $accent-color-compliment;
-      border: dashed lighten($accent-color-compliment, 15%) 2px;
+      border: dashed lighten($accent-color-compliment, 15%) 1px;
       color: lighten($accent-color-compliment, 40%);
       text-align: center;
       transform: rotate(-45deg);
       left: -120px;
-      top: 40px;
-      padding: 5px 150px;
+      top: 60px;
+      padding: 10px 150px;
       text-shadow: $body-bg-compliment 1px 1px 1px;
+      font-size: $font-size-base;
+      text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: $font-size-small;
-      font-weight: bold;
 
       @media only screen and (max-width:480px) {
         & {
