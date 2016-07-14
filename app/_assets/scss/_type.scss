@@ -101,11 +101,12 @@ h6 {
 
 @media only screen and (max-width:480px) {
   h1 {
-    font-size: $font-size-h1 - 10 !important;
+    font-size: $font-size-h2 - 5 !important;
+    line-height: ($font-size-h2 - 10) * $headings-line-height;
   }
 
   h2 {
-    font-size: $font-size-h2 - 10 !important;
+    font-size: $font-size-h2 - 5 !important;
     line-height: ($font-size-h2 - 10) * $headings-line-height;
   }
 
