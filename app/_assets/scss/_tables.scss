@@ -1,0 +1,44 @@
+$table-border: darken($body-bg-compliment, 5%);
+
+table {
+  width: 100%;
+
+  th {
+    background-color: $body-bg-compliment;
+    text-align: left;
+    padding: 0.2em 1em;
+    border-right: solid 1px $table-border;
+    border-bottom: solid 1px $table-border;
+    border-top: solid 1px $table-border;
+
+    &:nth-child(1) {
+      border-left: solid 1px $table-border;
+    }
+  }
+
+  td {
+    padding: 0.2em 1em;
+    border-right: solid 1px $table-border;
+    border-bottom: solid 1px $table-border;
+
+    &:nth-child(1) {
+      border-left: solid 1px $table-border;
+    }
+  }
+
+  tr {
+    &:hover, &:nth-child(even):hover  {
+      td {
+        background-color: $accent-color;
+        color: darken($accent-color, 50%);
+      }
+    }
+
+    &:nth-child(even) {
+      td {
+        background-color: lighten($body-bg-compliment, 5%);
+      }
+    }
+  }
+
+}
