@@ -10,12 +10,14 @@ $(function() {
     positionNavbarForPosts();
     resizeImages();
     setFooterPosition();
+    setMoreTogglerOnAllPosts();
   });
 
   addTagEvents();
   resizeImages();
   setFooterPosition();
   setNavigationBarForPosts();
+  setMoreTogglerOnAllPosts();
 
   function addTagEvents() {
     $('#more-tags').click(function() {
@@ -108,6 +110,28 @@ $(function() {
           if ($navbarPost.css('bottom') !== 0) $navbarPost.css({ 'bottom': '0px' });
         }
       }
+    }
+  }
+
+  function setMoreTogglerOnAllPosts() {
+    $('.tag-toggler-show').click(function () {
+      $('.tag-toggler-show').addClass('hidden');
+      $('.tag-toggler-hide').removeClass('hidden');
+      $('.post-tags').removeClass('hidden');
+      $('.post-descriptions').removeClass('hidden');
+      $('.post > a').css({ 'font-weight': 'bold' });
+    });
+
+    $('.tag-toggler-hide').click(function () {
+      $('.tag-toggler-show').removeClass('hidden');
+      $('.tag-toggler-hide').addClass('hidden');
+      $('.post-tags').addClass('hidden');
+      $('.post-descriptions').addClass('hidden');
+      $('.post > a').css({ 'font-weight': 'normal' });
+    });
+
+    if ($('.tag-toggler-show').size() > 0) {
+      $('body > footer').css({ 'margin-bottom': $('#tags').outerHeight() - 10 });
     }
   }
 

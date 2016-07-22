@@ -40,6 +40,25 @@
 
   }
 
+  .dropdown-menu {
+    margin-left: $spacer;
+    
+    li {
+      padding-left: 0px;
+
+      &.active {
+        a {
+          font-weight: bold;
+
+          &:hover {
+            background-color: $dropdown-link-hover-bg;
+          }
+        }
+      }
+
+    }
+  }
+
 }
 
 $navbar-close-width: 18px;

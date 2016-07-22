@@ -22,13 +22,19 @@
             {% assign sections = page.url | split: '/' %}
             {% assign url = sections[1] %}
 
-            {% if page.permalink == "/" or url == "blog" %}
-
+            {% if page.permalink == "/" %}
               {% assign url = "/" %}
-
             {% endif %}
 
-            <li {% if url == "/" %}{{active}}{% endif %}><a href="/">Blog{% if url == "/" %}{{current}}{% endif %}</a></li>
+            <li {% if url == "/" || url == "blog" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                Blog <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li {% if url == "/" %}{{active}}{% endif %}><a href="/">View by page{% if url == "/" %}{{current}}{% endif %}</a></li>
+                <li {% if url == "blog" %}{{active}}{% endif %}><a href="/blog/">View all{% if url == "/blog/" %}{{current}}{% endif %}</a></li>
+              </ul>
+            </li>
             <li {% if url == "about" %}{{active}}{% endif %}><a href="/about/">About{% if url == "about" %}{{current}}{% endif %}</a></li>
             <li {% if url == "timeline" %}{{active}}{% endif %}><a href="/timeline/">Career{% if url == "timeline" %}{{current}}{% endif %}</a></li>
             <li {% if url == "credits" %}{{active}}{% endif %}><a href="/credits/">Credits{% if url == "credits" %}{{current}}{% endif %}</a></li>

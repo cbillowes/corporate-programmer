@@ -52,3 +52,14 @@ $navbar-default-link-active-bg:       $body-bg-compliment;
 $navbar-default-link-hover-bg:        $body-bg;
 $navbar-default-toggle-border-color:  $navbar-default-link-hover-bg;
 $navbar-default-toggle-hover-bg:      $navbar-default-link-hover-bg;
+
+$well-bg:                             $body-bg-compliment;
+$well-border:                         darken($body-bg-compliment, 2%);
+
+$dropdown-bg:                         $text-color;
+$dropdown-border:                     darken($text-color, 2%);
+$dropdown-link-color:                 $body-bg-compliment;
+$dropdown-link-hover-color:           $text-color;
+$dropdown-link-hover-bg:              lighten($accent-color, 5%);
+$dropdown-link-active-color:          $text-color;
+$dropdown-link-active-bg:             $accent-color;

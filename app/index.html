@@ -17,6 +17,11 @@ permalink: /
 <div class="pager">
   <div class="container">
     <h1 class="hidden">Other Posts</h1>
+    <div class="well">
+      <strong>New:</strong> You can now access
+      <a href="/blog/">all posts</a> published on this site without having to
+      page through numerous pages.
+    </div>
     {% for post in paginator.posts | offset: 1 | limit: paginator.per_page %}
       {% include posts/post-preview.html %}
     {% endfor %}
