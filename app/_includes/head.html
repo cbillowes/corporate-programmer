@@ -1,12 +1,12 @@
 {% assign title = site.title | escape %}
 {% if page.title %}
-  {% assign title = page.title | titlecase | escape %}
+  {% assign title = page.title | titlecase | append: ' - ' | append: site.title | escape %}
 {% endif %}
 {% if page.subtitle %}
-  {% assign title = title | append: ': ' | append: page.subtitle %}
+  {% assign title = title | append: ': ' | append: page.subtitle | escape %}
 {% endif %}
 {% if page.tag %}
-  {% assign title = title | prepend: ': ' | prepend: page.tag | titlecase %}
+  {% assign title = page.title | append: ': ' | append: page.tag | titlecase | append: ' - ' | append: site.title | escape %}
 {% endif %}
 
 {% assign description = page.content | strip_html | strip_newlines_with_spaces | replace: '   ', ' ' | strip | truncate: 160 | escape %}
