@@ -3,7 +3,7 @@
   <div class="row pagination">
     <div class="col-md-4 previous">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">&laquo; Previous</a>
+        <a href="{{ paginator.previous_page_path }}" title="Previous page">&laquo; Previous</a>
       {% endif %}
     </div>
     <div class="col-md-4 page_number">
@@ -11,7 +11,7 @@
     </div>
     <div class="col-md-4 next">
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
+        <a href="{{ paginator.next_page_path }}" title="Next page">Next &raquo;</a>
       {% endif %}
     </div>
   </div>
