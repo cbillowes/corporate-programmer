@@ -42,7 +42,7 @@
 
   .dropdown-menu {
     margin-left: $spacer;
-    
+
     li {
       padding-left: 0px;
 
@@ -52,6 +52,7 @@
 
           &:hover {
             background-color: $dropdown-link-hover-bg;
+            color: $accent-color-compliment;
           }
         }
       }
