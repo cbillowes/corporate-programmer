@@ -37,7 +37,7 @@ In many cases we don't know what the outcome of a situation will be. Although
 this applies to all aspects of life, dealing with the unknown only amplifies
 the stresses that build.
 
-A mentor introduced me to the three questions I could ask myself (and write
+A mentor introduced me to these three questions I could ask myself (and write
 down the answers to) when I find myself in a stressful situation
 where I can't predict the outcome:
 
@@ -50,7 +50,7 @@ personal capacity.
 
 When I explore the absolute worst realistic outcome I can think of, I've
 given the situation deliberate thought and processed a way to deal with how I
-feel about it and can possibly overcome it.
+feel about it and how I can overcome it.
 
 > I am an old man and I have known a great many troubles, but most of them
   never happened. ~ Mark Twain
