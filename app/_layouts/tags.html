@@ -15,7 +15,7 @@ layout: page
 <div>
   <span id="tag-all" class="label label-danger"><a href="javascript:void(0);">All</a></span>
   {% for tag in page.tags %}
-    {% include posts/tag.html highlight=highlight poweredby="javascript" %}
+    {% include posts/tag.html poweredby="javascript" %}
   {% endfor %}
 </div>
 <p>There are <span id="post-count">{{ site.posts.size }}</span> available.</p>
