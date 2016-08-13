@@ -1,0 +1,13 @@
+.tagged-posts {
+  margin: $spacer * 1.25 0px;
+
+  .post {
+    border-bottom: dashed 1px darken($link-color-visited, 30%);
+    padding: 5px 0px;
+    margin: 0px;
+  }
+
+  .published {
+    float: right;
+  }
+}
