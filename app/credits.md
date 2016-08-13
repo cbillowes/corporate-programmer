@@ -13,6 +13,9 @@ licence:
 photographer:
   name: Nainoa Shizuru
   url: https://stocksnap.io/author/20302
+social-teaser: >
+  Corporate Programmer would not exist if it weren't for these amazing people,
+  tools and artwork. Here's a big thanks to them.
 ---
 
 Without John Sonmez at [simpleprogrammer.com](http://simpleprogrammer.com/)
