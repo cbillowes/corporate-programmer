@@ -1,7 +1,14 @@
 {% assign post = include.post %}
+{% assign latest = site.posts limit:1 %}
 
 <div class="hero">
-  <div class="teaser">Latest Post</div>
+  <div class="teaser">
+    {% if post.title == latest[0].title %}
+      Latest Post
+    {% else %}
+      Featured Post
+    {% endif %}
+  </div>
   <div class="heading">
     <h1 itemprop="name headline"><a itemprop="mainEntityOfPage" href="{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     <br/>
