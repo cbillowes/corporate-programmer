@@ -12,6 +12,9 @@ module Jekyll
       self.data['title'] = 'Tags'
       self.data['tag'] = tag
       self.data['tags'] = tags
+      if tag != "all"
+        self.data["blurb"] = "Discover content based on the '" + tag + "' tag."
+      end
     end
   end
 
