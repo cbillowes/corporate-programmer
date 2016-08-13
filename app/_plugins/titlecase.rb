@@ -45,6 +45,7 @@ module Jekyll
         'but',
         'do',
         'em',
+        "got",
         'my',
         'in',
         'is',
