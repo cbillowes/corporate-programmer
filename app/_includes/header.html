@@ -31,7 +31,15 @@
                 <li {% if page.permalink == "/blog/" %}{{active}}{% endif %}><a href="/blog/">View all{% if page.permalink == "/blog/" %}{{current}}{% endif %}</a></li>
               </ul>
             </li>
-            <li {% if url == "about" %}{{active}}{% endif %}><a href="/about/">About{% if url == "about" %}{{current}}{% endif %}</a></li>
+            <li {% if url == "about" or url == "privacy-policy" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                About <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li {% if url == "about" %}{{active}}{% endif %}><a href="/about/">About Clarice{% if url == "about" %}{{current}}{% endif %}</a></li>
+                <li {% if url == "privacy-policy" %}{{active}}{% endif %}><a href="/privacy-policy/">Privacy Policy{% if url == "privacy-policy" %}{{current}}{% endif %}</a></li>
+              </ul>
+            </li>
             <li {% if url == "timeline" %}{{active}}{% endif %}><a href="/timeline/">Career{% if url == "timeline" %}{{current}}{% endif %}</a></li>
             <li {% if url == "credits" %}{{active}}{% endif %}><a href="/credits/">Credits{% if url == "credits" %}{{current}}{% endif %}</a></li>
           </ul>
