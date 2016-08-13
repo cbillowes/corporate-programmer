@@ -118,7 +118,7 @@ Back to [quick navigation](#quick-navigation)
 
 ## Bugs
 
-Please let [me know](mailto:{{site.email}}) if you find any bugs or anything that is making your experience
-sub-optimal.
+Please let me know if you find any bugs or anything that is making your experience
+sub-optimal. You may send your findings to hello [at] corporateprogrammer.com.
 
 Back to [quick navigation](#quick-navigation)
