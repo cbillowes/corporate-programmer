@@ -29,7 +29,7 @@
               <ul class="dropdown-menu">
                 <li {% if page.permalink == "/" %}{{active}}{% endif %}><a href="/">View by page{% if page.permalink == "/" %}{{current}}{% endif %}</a></li>
                 <li {% if page.permalink == "/blog/" %}{{active}}{% endif %}><a href="/blog/">View all{% if page.permalink == "/blog/" %}{{current}}{% endif %}</a></li>
-                <li {% if url == "tags" %}{{active}}{% endif %}><a href="/tags/">View by tags{% if url == "tags" %}{{current}}{% endif %}</a></li>
+                <li {% if url == "tags" %}{{active}}{% endif %}><a href="/blog/tag/">View by tags{% if url == "tags" %}{{current}}{% endif %}</a></li>
               </ul>
             </li>
             <li {% if url == "about" or url == "privacy-policy" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>

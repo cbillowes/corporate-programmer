@@ -7,7 +7,4 @@
 {% endif %}
 
 {% assign url = "/blog/tag/" | append: tag %}
-{% if include.poweredby == "javascript" %}
-  {% assign url = "javascript:void(0)" %}
-{% endif %}
 <span id="tag-{{ tag }}" class="label {{ color }}"><a href="{{ url }}">{{ tag | titlecase }}</a></span>

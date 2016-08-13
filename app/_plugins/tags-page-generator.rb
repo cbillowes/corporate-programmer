@@ -1,7 +1,7 @@
 module Jekyll
 
   class  TagsPage < Page
-    def initialize(site, base, dir, tags)
+    def initialize(site, base, dir, tag, tags)
       @site = site
       @base = base
       @dir = dir
@@ -10,6 +10,7 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tags.html')
       self.data['title'] = 'Tags'
+      self.data['tag'] = tag
       self.data['tags'] = tags
     end
   end
@@ -24,7 +25,13 @@ module Jekyll
           tags.add?(tag)
         end
       end
-      site.pages << TagsPage.new(site, site.source, '/tags/', tags.to_a())
+      tags = tags.to_a().sort_by!{ |i| i.downcase }
+
+      tags.each do | tag |
+        site.pages << TagsPage.new(site, site.source, File.join('/blog/tag/', tag), tag, tags)
+      end
+
+      site.pages << TagsPage.new(site, site.source, '/blog/tag/', 'all', tags)
     end
   end
 
