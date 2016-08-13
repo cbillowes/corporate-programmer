@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Héctor Martínez
   url: https://stocksnap.io/author/33398
-social-teaser: >
+blurb: >
   I am proud to announce that my article got published on A List Apart giving
   me the chance to share my career experiences with the community.
 tags: comfort-zone personal-brand mindset

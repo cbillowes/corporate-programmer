@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Brandon Morgan
   url: https://stocksnap.io/author/4685
-social-teaser: >
+blurb: >
   Communication is essential to minimize stress and get the support a team
   needs to be successful.
 tags: productivity mindset

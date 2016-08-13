@@ -16,7 +16,7 @@ licence:
 photographer:
   name: Veri Ivanova
   url: https://stocksnap.io/author/4107
-social-teaser: >
+blurb: >
   When last did you just stop to smell a flower? Or take a peaceful walk
   without having to rush for something?
 tags: productivity time-management

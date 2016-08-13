@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ryan McGuire
   url: http://www.gratisography.com/
-social-teaser: >
+blurb: >
   "If you don’t fail it’s because you did not risk enough, and if you didn’t
   risk enough it’s because you didn’t put your whole self out there."
   by Carlos Barrabes

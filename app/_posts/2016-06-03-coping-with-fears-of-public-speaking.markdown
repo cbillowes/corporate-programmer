@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Daryn Bartlett
   url: https://stocksnap.io/author/778
-social-teaser: >
+blurb: >
   Fears sabotage our success and impede improvements we can make.
   It's terribly difficult to overcome them but all we can do is try.
   Take it one step at a time.

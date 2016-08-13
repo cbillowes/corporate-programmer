@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Sergio Rola
   url: https://stocksnap.io/author/28076
-social-teaser: >
+blurb: >
   Do people look confused when you talk to them? Only you can truly know what
   is going on inside your mind. Communicating with context and intent
   helps alleviate confusing discussions.

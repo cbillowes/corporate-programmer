@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Israel Sundseth
   url: https://stocksnap.io/author/449
-social-teaser: >
+blurb: >
   Do you feel like a number? Making a name for yourself in the software
   development community helps build street cred in the corporate world.
 tags: personal-brand relationships comfort-zone

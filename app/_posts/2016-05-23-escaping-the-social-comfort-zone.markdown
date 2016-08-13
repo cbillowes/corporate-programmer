@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Milo McDowell
   url: https://stocksnap.io/author/719
-social-teaser: >
+blurb: >
   "I think that we grow when we are outside our comfort zone. If it's not
   breaking you down, it's not building you up." quoted by Scott Hanselman
 tags: comfort-zone personal-brand mindset

@@ -16,7 +16,7 @@ licence:
 photographer:
   name: Korney Violin
   url: https://stocksnap.io/author/19325
-social-teaser: >
+blurb: >
   Do you form relationships with testers? Teaming up with testers from the
   beginning of a feature can positively impact the quality of the feature
   being developed.

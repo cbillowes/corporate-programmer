@@ -9,7 +9,7 @@ permalink: /
   <div class="container">
     {% include posts/tags.html %}
     <p>
-      {{ post.social-teaser }}
+      {{ post.blurb }}
     </p>
     <p>
       {{ hero_post.content | strip_figcaption | strip_html | truncatewords: 30 }}

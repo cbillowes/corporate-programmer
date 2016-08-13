@@ -12,7 +12,7 @@ image:
 licence:
   name: CCO Licence
   url: https://creativecommons.org/publicdomain/zero/1.0/
-social-teaser: >
+blurb: >
   It's sad when people leave because bonds are formed but we can't stay in the
   same environment and position forever.
 tags: relationships mindset productivity

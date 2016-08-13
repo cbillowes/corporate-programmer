@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ryan McGuire
   url: https://stocksnap.io/author/399
-social-teaser: >
+blurb: >
   Get the support you need to make the product and operating the product
   a success.
 tags: productivity

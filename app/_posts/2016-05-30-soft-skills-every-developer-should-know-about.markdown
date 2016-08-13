@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Life of Pix
   url: http://www.lifeofpix.com/gallery/love/
-social-teaser: >
+blurb: >
   "We only grow when we are doing things that makes us uncomfortable." by
   John Sonmez
 tags: mindset

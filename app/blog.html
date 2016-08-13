@@ -27,8 +27,8 @@ permalink: /blog/
         {% endfor %}
       </div>
       <div class="post-descriptions hidden">
-        {% if post.social-teaser %}
-          {{ post.social-teaser }}
+        {% if post.blurb %}
+          {{ post.blurb }}
         {% else %}
           {{ post.content | strip_figcaption | strip_html | truncatewords: 30 }}
         {% endif %}

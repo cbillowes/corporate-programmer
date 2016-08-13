@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ed Gregory
   url: http://stokpic.com/project/love-heart-made-with-hands-at-sunset/
-social-teaser: >
+blurb: >
   Do you remember how excited you were when you wrote your first program? It's easy to
   forget when you've been in the real-world for a long time. Sometimes we just need to
   reignite that passion that we once felt and spread the feeling throughout our teams.

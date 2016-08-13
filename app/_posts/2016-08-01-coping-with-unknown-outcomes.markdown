@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Andrew E Weber
   url: https://stocksnap.io/author/5098
-social-teaser: >
+blurb: >
   "I am an old man and I have known a great many troubles, but most of them
   never happened." by Mark Twain
 tags: mindset

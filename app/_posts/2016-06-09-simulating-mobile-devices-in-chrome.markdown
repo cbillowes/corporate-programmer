@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Luis Llerena
   url: https://stocksnap.io/author/4440
-social-teaser: >
+blurb: >
   Discover the simulation power behind the Device Mode feature in Google Chrome.
 tags: technical
 ---

@@ -32,8 +32,8 @@ layout: null
               />
             </a>
           </figure>
-          {% if post.social-teaser %}
-            <p>{{ post.social-teaser | xml_escape }}</p>
+          {% if post.blurb %}
+            <p>{{ post.blurb | xml_escape }}</p>
           {% else %}
             <p>{{ post.excerpt | strip_html | truncate_words: 160 | xml_escape }}</p>
           {% endif %}

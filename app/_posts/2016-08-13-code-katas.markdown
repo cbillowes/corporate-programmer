@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ryan McGuire
   url: https://stocksnap.io/author/399
-social-teaser: >
+blurb: >
   A fun way to practice and familiarize yourself with development tools,
   workflows, patterns and practices.
 tags: productivity

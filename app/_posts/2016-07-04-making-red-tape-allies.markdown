@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Lionello DelPiccolo
   url: https://stocksnap.io/author/31190
-social-teaser: >
+blurb: >
   Having allies that are exposed to just as much red-tape as you can give you
   the confidence and guidance you need.
 tags: productivity

@@ -12,7 +12,7 @@ image:
 licence:
   name: CCO Licence
   url: https://creativecommons.org/publicdomain/zero/1.0/
-social-teaser: >
+blurb: >
   The art of making software for people with people.
 tags: mindset relationships
 ---

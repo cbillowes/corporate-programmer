@@ -9,7 +9,7 @@ image:
   alt: Iris Classon presenting at TechDay Latvia 2014
   website: Facebook
   url: https://scontent.fjnb1-1.fna.fbcdn.net/t31.0-8/1271007_10152463509727513_2092455127485588918_o.jpg
-social-teaser: >
+blurb: >
   This first of a series to learn from inspirational software developers.
 tags: inspiration
 ---

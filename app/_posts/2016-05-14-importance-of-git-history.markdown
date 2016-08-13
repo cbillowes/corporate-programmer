@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ilya Pavlov
   url: https://stocksnap.io/author/28207
-social-teaser: >
+blurb: >
   Version control is like time travel for source code. If commits are monolithic
   and the messages suck... what exactly are you going back to?
 tags: technical

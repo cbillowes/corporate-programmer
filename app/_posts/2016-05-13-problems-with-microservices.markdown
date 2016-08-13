@@ -15,7 +15,7 @@ licence:
 photographer:
   name: OVAN
   url: https://www.pexels.com/u/knownasovan/
-social-teaser: >
+blurb: >
   After an interesting debate, I decided to explore some of the problems that
   teams may face with microservices architecture.
 tags: technical

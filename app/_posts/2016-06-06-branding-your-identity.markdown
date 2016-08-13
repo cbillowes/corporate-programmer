@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Wilfred Iven
   url: https://stocksnap.io/author/775
-social-teaser: >
+blurb: >
   It's important to know that having an engaging community presence is far more
   beneficial than experience alone.
 tags: personal-brand comfort-zone

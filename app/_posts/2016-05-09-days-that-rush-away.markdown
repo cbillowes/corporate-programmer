@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Ariana Escobar
   url: https://stocksnap.io/author/7368
-social-teaser: >
+blurb: >
   Are you busy but don't feel productive? I feel this way sometimes. It is
   exhausting. How can we find ways to feel fulfilled and accomplished at the
   end of the day?

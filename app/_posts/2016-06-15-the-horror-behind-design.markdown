@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Nitish Meena
   url: https://stocksnap.io/author/19332
-social-teaser: >
+blurb: >
   Improve your craft, write the cleanest code you know how at that point in time,
   learn from your mistakes (and that of others) and always aim to improve.
 tags: productivity

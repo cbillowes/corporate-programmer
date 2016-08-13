@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Jamie Street
   url: https://stocksnap.io/author/25456
-social-teaser: >
+blurb: >
   Be the change you want to see even if it doesn't change anything right away.
 tags: mindset
 ---

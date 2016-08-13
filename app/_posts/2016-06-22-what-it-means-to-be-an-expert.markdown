@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Olu Eletu
   url: https://stocksnap.io/author/7555
-social-teaser: >
+blurb: >
   Accelerate your learning by sharing what you learn with others while you are
   learning it.
 tags: personal-brand comfort-zone mindset

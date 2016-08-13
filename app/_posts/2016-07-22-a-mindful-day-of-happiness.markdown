@@ -15,7 +15,7 @@ licence:
 photographer:
   name: Joseph Albanese
   url: https://stocksnap.io/author/32133
-social-teaser: >
+blurb: >
   Everything I did today was done with intent and slower than usual. I was
   mindful.
 tags: mindset time-management

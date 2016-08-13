@@ -8,7 +8,7 @@ image:
 photographer:
   name: Erika Fourie
   url: https://www.linkedin.com/in/erika-fourie-a25b9a30
-social-teaser: >
+blurb: >
   Do you want to know more about me? Note that all my views on Corporate
   Programmer are that of my own and do not necessarily reflect the views of my
   employer.

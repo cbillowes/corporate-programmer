@@ -16,7 +16,7 @@ licence:
 photographer:
   name: Ian Baldwin
   url: https://stocksnap.io/author/13720
-social-teaser: >
+blurb: >
   Just because it's always been done that way, doesn't mean it can't be changed.
 tags: mindset
 ---
