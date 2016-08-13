@@ -20,6 +20,10 @@ My name is Clarice Bouwer and I am a software developer.
 I officially started my [career](/timeline) in 2006. I now work as a Software
 Developer at [DStv Digital Media](http://dstvdm.dstv.com/).
 
+If you want to get in touch feel free to contact me at
+hello [at] corporateprogrammer.com me or [follow me](/about/#follow-me) on 
+social media.
+
 ## Background
 
 I like to believe that I have strong technical skills within
