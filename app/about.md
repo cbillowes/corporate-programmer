@@ -53,6 +53,15 @@ sorts. I don't always get it write but when I do I hope it proves useful to you.
 
 I hope you enjoy this journey with me.
 
+## Follow me
+
+* Subscribe: [RSS](http://www.corporateprogrammer.com/feed.xml) or [Atom](http://www.corporateprogrammer.com/atom.xml)
+* Twitter: [@cbillowes](https://twitter.com/cbillowes)
+* Linked In: [cbouwer](https://za.linkedin.com/in/cbouwer)
+* GitHub: [cbillowes](https://github.com/cbillowes)
+* Google+: [Clarice Bouwer](https://plus.google.com/115621322234261959523)
+* Facebook Page: [Corporate Programmer](https://www.facebook.com/corporateprogrammer)
+
 ---
 
 P.S. I need to admit that I don't actually wear glasses. This photo was taken for fun
