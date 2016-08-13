@@ -18,7 +18,7 @@ photographer:
 social-teaser: >
   Everything I did today was done with intent and slower than usual. I was
   mindful.
-tags: mindset
+tags: mindset time-management
 ---
 
 Today I had complete control of my day and my emotions because I was mindful.
