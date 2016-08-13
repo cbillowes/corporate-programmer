@@ -22,13 +22,14 @@
             {% assign sections = page.url | split: '/' %}
             {% assign url = sections[1] %}
 
-            <li {% if page.permalink == "/" or url == "blog" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
+            <li {% if page.permalink == "/" or url == "blog" or url == "tags" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
                 Blog <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li {% if page.permalink == "/" %}{{active}}{% endif %}><a href="/">View by page{% if page.permalink == "/" %}{{current}}{% endif %}</a></li>
                 <li {% if page.permalink == "/blog/" %}{{active}}{% endif %}><a href="/blog/">View all{% if page.permalink == "/blog/" %}{{current}}{% endif %}</a></li>
+                <li {% if url == "tags" %}{{active}}{% endif %}><a href="/tags/">View by tags{% if url == "tags" %}{{current}}{% endif %}</a></li>
               </ul>
             </li>
             <li {% if url == "about" or url == "privacy-policy" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>

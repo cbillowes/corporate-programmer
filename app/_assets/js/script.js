@@ -18,6 +18,7 @@ $(function() {
   setFooterPosition();
   setNavigationBarForPosts();
   setMoreTogglerOnAllPosts();
+  setTagToggle();
 
   function addTagEvents() {
     $('#more-tags').click(function() {
@@ -133,6 +134,26 @@ $(function() {
     if ($('.tag-toggler-show').size() > 0) {
       $('body > footer').css({ 'margin-bottom': $('#tags').outerHeight() - 10 });
     }
+  }
+
+  function setTagToggle() {
+    var $tags = $('[id^="tag-"]');
+    if ($tags.size() === 0) return;
+    $tags.click(function() {
+      var $tag = $(this);
+      var tag = $tag.attr('id').replace('tag-', '');
+      if (tag === 'all') {
+        $('.tagged-posts .post').show();
+      } else {
+        $('.tagged-posts .post').hide();
+        $('.' + tag).show();
+      }
+      $tags.attr("class", "label label-primary");
+      $tag.attr("class", "label label-danger");
+      var size = $('.tagged-posts .post:visible').size();
+      var post = (size === 0) ? "post" : "posts";
+      $('#post-count').text(size + " " + post);
+    });
   }
 
 });
