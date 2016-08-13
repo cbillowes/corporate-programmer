@@ -62,7 +62,7 @@ The audience of this website is targeted for software professionals. There may
 be tips that can be used by people who want to or are currently studying to be
 a software developer however they are not targeted by this website.
 
-## Errors or bugs
+### Errors or bugs
 Please let me know if you find any bugs or anything that is making your experience
 sub-optimal. You may send your findings to hello [at] corporateprogrammer.com.
 
