@@ -27,7 +27,11 @@ permalink: /blog/
         {% endfor %}
       </div>
       <div class="post-descriptions hidden">
-        {{ post.content | strip_figcaption | strip_html | truncatewords: 30 }}
+        {% if post.social-teaser %}
+          {{ post.social-teaser }}
+        {% else %}
+          {{ post.content | strip_figcaption | strip_html | truncatewords: 30 }}
+        {% endif %}
       </div>
     </div>
     {% assign post_count = post_count | minus: 1 %}
