@@ -7,7 +7,16 @@ permalink: /blog/
 {% assign post_count = site.posts.size %}
 <p id="all-posts">
   All <b>{{ post_count }}</b> posts published on this blog are displayed
-  on this page. Alternatively you can <a href="/">page</a> through all posts
+  on this page.
+  <span class="tag-toggler-show">
+    <b>Tip:</b> You can <a href="javascript:void(0);">show</a> tags and descriptions
+    if you want more information.
+  </span>
+  <span class="tag-toggler-hide hidden">
+    <b>Tip:</b> You can <a href="javascript:void(0);">hide</a> tags and descriptions if you
+    are tired of seeing all this information.
+  </span>
+  Alternatively you can <a href="/">page</a> through all posts
   with pretty pictures or <a href="/blog/tag/">tags</a> if you so choose.
 </p>
 
@@ -36,20 +45,4 @@ permalink: /blog/
     </div>
     {% assign post_count = post_count | minus: 1 %}
   {% endfor %}
-</div>
-
-<div id="tags">
-  <div class="wrapper">
-    <span class="tag-toggler-show">
-      You can <a href="javascript:void(0);">show</a> tags and descriptions
-      if you want more information.
-    </span>
-    <span class="tag-toggler-hide hidden">
-      You can <a href="javascript:void(0);">hide</a> tags and descriptions if you
-      are tired of seeing all this information.
-    </span>
-    <span>
-      Actually, I'd rather <a href="/">page</a> through pretty pictures.
-    </span>
-  </div>
 </div>
