@@ -29,7 +29,15 @@
     courtesy of <a href="{{ post.image.url }}">{{ post.image.website }}</a>
   {% endif %}
   {% if post.photographer %}
-    taken by <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
+    taken by
+    {% if post.photographer.url %}
+      <a href="{{ post.photographer.url }}">{{ post.photographer.name }}</a>
+    {% else %}
+      {{ post.photographer.name }}
+    {% endif %}
+    {% if post.photographer.text %}
+      {{ post.photographer.text }}
+    {% endif %}
   {% endif %}
   {% if post.licence %}
     (<a href="{{ post.licence.url }}">{{ post.licence.name }}</a>)
