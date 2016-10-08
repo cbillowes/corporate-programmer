@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div id="mainContentOfPage" itemprop="mainContentOfPage">
+  <article class="post container">
+
+    <header class="rca">
+      <h1>Root Cause Analysis</h1>
+      <section>
+        <small>{{ page.date | date: "%b %-d, %Y" }}</small>
+        <p>{{ page.title | titlecase }}</p>
+      </section>
+    </header>
+
+    <div class="content">
+      <div class="addthis_sharing_toolbox"></div>
+
+      {{ content }}
+
+    </div>
+
+    <div id="disqus_thread"></div>
+
+  </article>
+</div>
+<div id="navbar-post">
+  <div class="toggle"></div>
+  <span class="nav"></span>
+</div>
+{% include posts/comments.html %}

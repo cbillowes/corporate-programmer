@@ -63,3 +63,5 @@ $dropdown-link-hover-color:           $accent-color;
 $dropdown-link-hover-bg:              $dropdown-bg;
 $dropdown-link-active-color:          $accent-color;
 $dropdown-link-active-bg:             $text-color;
+
+$separation-border:                   dashed 1px darken($link-color-visited, 30%);

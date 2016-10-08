@@ -1,0 +1,20 @@
+---
+layout: page
+title:  Root Cause Analysis
+permalink: /rca/index.html
+---
+
+<div class="rca-posts">
+  {% for post in site.rca %}
+    {% if post.permalink != "/rca/index.html" %}
+      <div class="post">
+        <span class="published">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </span>
+        <a href="{{ post.url }}">
+          {{ post.title | titlecase }}
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
