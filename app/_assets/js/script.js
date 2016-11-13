@@ -18,6 +18,7 @@ $(function() {
   setNavigationBarForPosts();
   setMoreTogglerOnAllPosts();
   setTaggedPostCount();
+  setFootnoteAnchors();
 
   function hasNavigationBarForPosts() {
     return $('#navbar-post').size() > 0;
@@ -129,5 +130,23 @@ $(function() {
     var size = $('.tagged-posts .post').size();
     var post = size === 1 ? 'post' : 'posts';
     $postCount.text(size + ' ' + post);
+  }
+
+  function setFootnoteAnchors() {
+    var height = ($('body > header.top').outerHeight() / 2) + 10;
+    $("sup[id^='footnote']").each(function() {
+      $(this).css({
+        "padding-top" : height + "px",
+        "margin-top" : -height + "px"
+      });
+    });
+
+    $("a[id^='footnote']").each(function() {
+      $(this).css({
+        "display" : "inline-block",
+        "position" : "relative",
+        "top": -height + "px"
+      });
+    });
   }
 });
