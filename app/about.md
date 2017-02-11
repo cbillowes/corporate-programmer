@@ -3,11 +3,10 @@ layout: post
 title: About Me
 permalink: /about/
 image:
-  filename: clarice
-  alt: Portrait shot of Clarice edited on a blue background
+  filename: me-being-crazy
+  alt: Me smiling a little crazy with my hands up and having fun
 photographer:
-  name: Erika Fourie
-  url: https://www.linkedin.com/in/erika-fourie-a25b9a30
+  name: Adoree Bouwer
 blurb: >
   Do you want to know more about me? Note that all my views on Corporate
   Programmer are that of my own and do not necessarily reflect the views of my
@@ -21,16 +20,16 @@ I officially started my [career](/timeline) in 2006. I now work as a Software
 Developer at [DStv Digital Media](http://dstvdm.dstv.com/).
 
 If you want to get in touch feel free to contact me at
-hello [at] corporateprogrammer.com me or [follow me](/about/#follow-me) on 
+[hello@corporateprogrammer.com](mailto:hello@corporateprogrammer.com) me or [follow me](/about/#follow-me) on
 social media.
 
 ## Background
 
 I like to believe that I have strong technical skills within
-the web space from front-end to back-end. Some days imposter syndrome kicks in
-badly.
+the web space from front-end to back-end. Some days Imposter Syndrome kicks in
+badly. I've actively started talking about it.
 
-I've mainly been working in the .NET stack
+I've mainly been working in the .NET stack on web
 but I like dabbling with all sorts of languages, libraries and technologies.
 I also have a passion for UX and design which is why I chose to design my own
 blog. You can checkout the
@@ -61,13 +60,7 @@ I hope you enjoy this journey with me.
 
 * Subscribe: [RSS](http://www.corporateprogrammer.com/feed.xml) or [Atom](http://www.corporateprogrammer.com/atom.xml)
 * Twitter: [@cbillowes](https://twitter.com/cbillowes)
-* Linked In: [cbouwer](https://za.linkedin.com/in/cbouwer)
-* GitHub: [cbillowes](https://github.com/cbillowes)
+* Facebook: [Corporate Programmer](https://www.facebook.com/corporateprogrammer)
 * Google+: [Clarice Bouwer](https://plus.google.com/115621322234261959523)
-* Facebook Page: [Corporate Programmer](https://www.facebook.com/corporateprogrammer)
-
----
-
-P.S. I need to admit that I don't actually wear glasses. This photo was taken for fun
-at work when Harvey Specter came to visit our offices at MultiChoice as he was
-announced as [DStv Premium's official ambassador](http://ewn.co.za/2015/08/31/Harvey-Specter-announced-as-DSTV-Premiums-official-ambassador).
+* LinkedIn: [cbouwer](https://za.linkedin.com/in/cbouwer)
+* GitHub: [cbillowes](https://github.com/cbillowes)
