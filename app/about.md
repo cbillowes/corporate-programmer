@@ -64,3 +64,4 @@ I hope you enjoy this journey with me.
 * Google+: [Clarice Bouwer](https://plus.google.com/115621322234261959523)
 * LinkedIn: [cbouwer](https://za.linkedin.com/in/cbouwer)
 * GitHub: [cbillowes](https://github.com/cbillowes)
+* StackOverflow: [cbouwer](http://stackoverflow.com/users/849986/cbouwer)
