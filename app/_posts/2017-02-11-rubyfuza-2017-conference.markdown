@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Rubyfuza 2017 Conference
-date:   2017-02-11 13:40:22 +0200
-flesch-score: 68.98
+date:   2017-02-11 23:00:00 +0200
+flesch-score: 68.97
 flesch-level: High Schooler
 image:
   filename: ruby
@@ -10,7 +10,7 @@ image:
   website: ruby-docs.org
   url: http://www.ruby-docs.org/
 blurb: >
-  I did a talk at Rubyfuza 2017 in Cape Town about how Imposter Syndrome impacts
+  I spoke at Rubyfuza 2017 in Cape Town about how Imposter Syndrome impacts
   my day-to-day decisions and confidence,
   affects growth by limiting opportunities and makes me feel unworthy.
   I wanted to share my experience & perspective of feeling like a
@@ -18,8 +18,8 @@ blurb: >
 tags: mindset comfort-zone relationships
 ---
 
-I spoke at the conference on 3 February. This was my first conference presentation*
-in front of a large audience in a half an hour timeslot.
+This was my first conference presentation* in front of a large audience in a
+half an hour timeslot.
 
 The talk was titled "The Imposter Within" which
 stems from the [post](/blog/the-imposter-within) I wrote last year.
