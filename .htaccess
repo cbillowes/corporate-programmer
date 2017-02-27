@@ -8,9 +8,6 @@ RewriteRule !^403.shtml$ - [f,l]
 
 ServerSignature Off
 
-Header unset ETag
-FileETag None
-
 ExpiresActive On
 ExpiresDefault "now plus 7 days"
 ExpiresByType text/html "now plus 2 days"
