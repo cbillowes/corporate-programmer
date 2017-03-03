@@ -208,6 +208,12 @@ $heading-bg-color:      rgba($body-bg-compliment, 0.7);
 
     }
 
+    iframe.twitter-tweet,
+    twitterwidget.twitter-tweet {
+      max-width: auto;
+      margin: 0 auto;
+    }
+
   }
 
 }
