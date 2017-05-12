@@ -10,7 +10,7 @@
 title: Corporate Programmer
 email: hello@corporateprogrammer.com
 description: >
-  A collection of journal entries for how I deal in the corporate world and my growth through self-discovery.
+  Journal entries for self-discovery and corporate world experience.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.corporateprogrammer.com" # the base hostname & protocol for your site
 author:
