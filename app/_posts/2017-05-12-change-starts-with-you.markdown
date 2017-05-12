@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Change starts with you
-date:   2017-05-12 12:36:34 +0200
-flesch-score: 69.76
+date:   2017-05-12 12:52:25 +0200
+flesch-score: 71.6
 flesch-level: High Schooler
 image:
   filename: depressed-lady-in-corner-of-dark-room
@@ -71,6 +71,19 @@ Easy? No. Possible? Yes - with a lot of hard work and dedication. Have I mastere
 this? No. I am struggling my backside off trying to implement this in my life,
 which is why I write about it. To remind me and share what I have learned with
 others.
+
+Gandhi has [10 Rules for Changing the World](http://www.dailygood.org/story/466/gandhi-s-10-rules-for-changing-the-world-henrik-edberg/):
+
+1. Change yourself
+2. You are in control.
+3. Forgive and let it go.
+4. Without action you aren’t going anywhere.
+5. Take care of this moment.
+6. Everyone is human.
+7. Persist.
+8. See the good in people and help them.
+9. Be congruent, be authentic, be your true self.
+10. Continue to grow and evolve.
 
 The road to self-discovery is a long-winded topsy-turvy journey. I've been on
 this journey for a while now and have written much on it. Feel free to explore
