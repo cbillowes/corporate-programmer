@@ -1,5 +1,7 @@
 # Credits
 
+​<a href="http://simpleprogrammer.com/2015/03/02/my-free-blogging-course-is-getting-unbelievable-results/" style="float: right;"><img src="http://simpleprogrammer.com/wp-content/uploads/2015/04/badge.png"></a>
+
 Without John Sonmez at [simpleprogrammer.com](http://simpleprogrammer.com/)
 and his free 3 week e-mail course to [boost](http://devcareerboost.com/blog-course/)
 your software development career, this blog would not have materialized. Thanks John!
