@@ -12,47 +12,50 @@ blurb: >
   Programmer are that of my own and do not necessarily reflect the views of my
   employer.
 ---
-> All views are that of my own and do not necessarily reflect the
-views of my employer.
 
-My name is Clarice Bouwer and I am a software developer.
-I officially started my [career](/timeline) in 2006. I now work as a Software
-Developer at [DStv Digital Media](http://dstvdm.dstv.com/).
-
-If you want to get in touch feel free to contact me at
-[hello@corporateprogrammer.com](mailto:hello@corporateprogrammer.com) me or [follow me](/about/#follow-me) on
+Hello, I am Clarice Bouwer. Check out my [career](/timeline) and feel free to get in touch through [hello@corporateprogrammer.com](mailto:hello@corporateprogrammer.com) or  [follow me](/about/#follow-me) on
 social media.
 
 ## Background
 
-I like to believe that I have strong technical skills within
-the web space from front-end to back-end. Some days Imposter Syndrome kicks in
-badly. I've actively started talking about it.
+I make software for people. I live outside my comfort zone which keeps me challenged and continuously learning. I enjoy solving problems and bridging the communication gap between business and technology by getting the right people to talk about the right things at the right time in the right language as best as humanly possible.
 
-I've mainly been working in the .NET stack on web
-but I like dabbling with all sorts of languages, libraries and technologies.
-I also have a passion for UX and design which is why I chose to design my own
-blog. You can checkout the
-[GitHub repository](https://github.com/cbillowes/corporate-programmer) if you like.
-Feel free to share any tips or tricks with me.
+I offer a wealth of positive energy and insights through over a decade of experience. If there is one thing I know is that I don't know everything - and never will. Learning and growing through amazing people and work is key. I value team-work, honesty, openness and transparency.
 
-## How I started this blog
+I am agile hence I adapt quickly and aim for iterative delivery with quick feedback loops where I prefer not to compromise on quality. I have the ability to negotiate trade-offs, manage expectations and push back yet understand the urgency of expedited releases. Technical debt is inevitable but must be cleaned up as code is touched again. I also have a keen eye for detail which improves UX, UI, Content and overall quality of solutions.
 
-I've worked in small to medium sized companies for a large chunk of my career.
-When I joined a corporate in 2014 the transition was overwhelming.
-It changed my life by introducing me to the development community and
-offered me an array of perspectives.
+Lastly, I am a generalist, so I don't box myself to a specific role. I am not a buzz-word or resume-driven developer. I believe in finding the most appropriate tools for the job. There is no right way, only better ways.
 
-I've made many mistakes in my career and I have learned to find
-opportunities from them and then
-[wrote](/blog/how-i-got-an-article-published) about it.
+## How I keep my skills sharp
 
-I am not advocating that everyone should start working at a corporate but
-this is how my career officially became a journey.
+* Read blogs and articles
+* Get insightful nuggets through conversations
+* Focus of principles, practices and philosophies rather than actual technologies
+* Tinker on personal projects in my own time
+* Play coding games as on CodinGame.com
+
+## What I aspire to do
+
+It's no longer about the skills and technology for me. They are variable and can become outdated and obsolete. I am more focused on adding value within a community or help enhance the job roles of others whether it be through education, automation, new solutions...
+
+## Why this blog?
+
+[Credit](/credits) is where credit is due. Thanks to help, I now have an amazing blog to share with you.
+
+I started working in small companies. I've made many mistakes in my career and I have learned to find opportunities
+[through them](/blog/how-i-got-an-article-published).
+
+I joined a corporate in 2014 and got
+contracted out to another on the date of joining. It was overwhelming. I wish I
+had a survival guide: Proxies, Network Access, Organizational Chart, Support and Facilities numbers etc.
+
+I started my self-discovery process in this time. Originally this blog was for
+the survival guide I so desperately wanted but it evolved. It became more
+people focuses and I now share what I learn in my discovery process while my
+perspective adapts.
 
 For every negative experience I encounter, I like to extract learning points.
-This is what I want to share on Corporate Programmer - a survival guide of
-sorts. I don't always get it write but when I do I hope it proves useful to you.
+This is what I want to share on Corporate Programmer - a survival journal if you will. I don't always get it right but when I do I hope it proves useful to you.
 
 I hope you enjoy this journey with me.
 
