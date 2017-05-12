@@ -10,8 +10,7 @@
 title: Corporate Programmer
 email: hello@corporateprogrammer.com
 description: >
-  A survival guide for corporate software developers.
-keywords: corporate, programmer, software developer, survival guide, company, businesses, happiness, clarice bouwer
+  A collection of journal entries for how I deal in the corporate world and my growth through self-discovery.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.corporateprogrammer.com" # the base hostname & protocol for your site
 author:

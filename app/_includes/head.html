@@ -37,15 +37,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}</title>
   <meta name="description" content="{{ description }}{% if page.layout == "post" %} Written by Clarice Bouwer.{% endif %}" />
-
-  {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords }}" />
-  {% else %}
-    <meta name="keywords" content="{{ site.keywords }}" />
-  {% endif %}
-
+  <title>{{ title }}</title>
   <link href="{{ site.google-plus }}" rel="author" />
   {% include social-media/twitter.html title=title desc=teaser img=image img_alt=image_alt %}
   {% include social-media/facebook.html %}
