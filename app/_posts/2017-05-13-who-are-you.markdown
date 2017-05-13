@@ -132,7 +132,7 @@ a situation. You should be aware of the circumstances and decide how to act.
 
  * What are the dangers of the situation?
  * What are the consequences of my actions?
- * Will it make you depressed or not depressed?
+ * Will it make me depressed or not depressed?
 
 ### Depressed
 
