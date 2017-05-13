@@ -10,7 +10,7 @@ image:
   website: StockSnap.io
   url: https://stocksnap.io/photo/693C5C3F62
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://stocksnap.io/license
 photographer:
   name: Skitter Photo

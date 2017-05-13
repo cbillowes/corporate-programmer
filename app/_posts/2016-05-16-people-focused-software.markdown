@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/people-meeting-workspace-team-7097/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 blurb: >
   The art of making software for people with people.

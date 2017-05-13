@@ -9,7 +9,7 @@ image:
   filename: zilwa-attitude-resort-mauritius
   alt: Swimming pool peeking through palm trees into the ocean at Zilwa Attitude Resort in Mauritius
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Clarice Bouwer

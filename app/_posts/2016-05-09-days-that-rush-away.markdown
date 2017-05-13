@@ -10,7 +10,7 @@ image:
   website: StockSnap.io
   url: https://stocksnap.io/photo/K1GVTNT1GJ
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Ariana Escobar

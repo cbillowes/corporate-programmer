@@ -10,7 +10,7 @@ image:
   website: StockSnap.io
   url: https://stocksnap.io/photo/56A1C1BE07
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://stocksnap.io/license
 photographer:
   name: Ryan McGuire

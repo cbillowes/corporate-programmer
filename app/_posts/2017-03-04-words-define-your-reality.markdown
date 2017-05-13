@@ -10,7 +10,7 @@ image:
   website: StockSnap.io
   url: https://stocksnap.io/photo/L4AS0Y1OT2
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://stocksnap.io/license
 photographer:
   name: Jakub Rostkowski

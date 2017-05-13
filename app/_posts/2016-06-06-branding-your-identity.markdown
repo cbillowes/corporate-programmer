@@ -10,7 +10,7 @@ image:
   website: StockSnap.io
   url: https://stocksnap.io/photo/FY58O0P400
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://stocksnap.io/license
 photographer:
   name: Wilfred Iven

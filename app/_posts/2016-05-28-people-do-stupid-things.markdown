@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/man-person-street-shoes-2882/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://www.pexels.com/photo-license/
 photographer:
   name: Ryan McGuire

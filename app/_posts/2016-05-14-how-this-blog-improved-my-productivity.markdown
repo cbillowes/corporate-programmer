@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/white-laptop-female-hand-note-pen-phone-desk-6471/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://www.pexels.com/photo-license/
 photographer:
   name: KaboomPics.com

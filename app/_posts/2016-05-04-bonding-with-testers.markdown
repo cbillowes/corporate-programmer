@@ -11,7 +11,7 @@ image:
   url: https://stocksnap.io/photo/AB0U289SNW
   modified: true
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Korney Violin

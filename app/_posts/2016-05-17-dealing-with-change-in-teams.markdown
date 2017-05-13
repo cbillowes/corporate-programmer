@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/woman-covering-her-right-eye-using-her-right-hand-during-daytime-89643/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 blurb: >
   It's sad when people leave because bonds are formed but we can't stay in the

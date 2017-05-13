@@ -11,7 +11,7 @@ image:
   url: https://stocksnap.io/photo/W4JK5H5DB8
   modified: true
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://creativecommons.org/publicdomain/zero/1.0/
 photographer:
   name: Ian Baldwin

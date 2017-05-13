@@ -10,7 +10,7 @@ image:
   website: StockSnap.com
   url: https://stocksnap.io/photo/HTOTME2TTP
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://www.pexels.com/photo-license/
 photographer:
   name: Daryn Bartlett

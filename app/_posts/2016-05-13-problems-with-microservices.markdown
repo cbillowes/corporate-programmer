@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/fashion-art-camera-office-57750/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://www.pexels.com/photo-license/
 photographer:
   name: OVAN

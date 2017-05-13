@@ -10,7 +10,7 @@ image:
   website: Pexels.com
   url: https://www.pexels.com/photo/sunset-hands-love-woman-5390/
 licence:
-  name: CCO Licence
+  name: CCO License
   url: https://www.pexels.com/photo-license/
 photographer:
   name: Ed Gregory
