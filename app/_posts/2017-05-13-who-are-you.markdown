@@ -64,9 +64,9 @@ I just need to live with consequences of whatever actions I choose. Are the
 consequences destructive or rewarding? Is the choice feasible? A quick
 rationalization hardly does any harm.
 
-I'm so sucked in by my self-limiting beliefs and poor perception that I don't
-realize that I am in control of my life, my thoughts, my behavior. I have the
-power over me, even though I rarely believe it.
+I'm so sucked in by my self-limiting beliefs and poor perspective that I don't
+realize that I am in control of my life, my thoughts, my feelings and my behavior.
+I have power over me - even though I rarely believe it.
 
 ## Suffering
 
