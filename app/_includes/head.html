@@ -37,9 +37,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ description }}{% if page.layout == "post" %} Written by Clarice Bouwer.{% endif %}" />
+  <meta name="description" content="{{ description }}{% if page.layout == "post" %} Written by Clarice Bouwer.{% endif %}">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>{{ title }}</title>
-  <link href="{{ site.google-plus }}" rel="author" />
+  <link href="{{ site.google-plus }}" rel="author">
   {% include social-media/twitter.html title=title desc=teaser img=image img_alt=image_alt %}
   {% include social-media/facebook.html %}
   {% include social-media/open-graph.html title=title desc=teaser img=image url=url %}
