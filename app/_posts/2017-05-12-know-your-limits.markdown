@@ -70,7 +70,7 @@ time you have on this earth.
 * Know your capabilities and strengths.
 * Avoid burnout and being overwhelmed.
 
-Saying no gives you a way out of doing something outside of your limit.
+Saying no gives you a way out of doing something outside of your limits.
 
 ## Assertive demands
 
