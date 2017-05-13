@@ -123,6 +123,11 @@ time and space (place / circumstances / environment)
 * Success
 * Wealth
 
+As we require mental nourishment, we can find it through
+[Mindfulness](/blog/a-mindful-day-of-happiness/) practices by being present
+in the moment and allowing thoughts to come and go with acceptance and without
+judgement.
+
 ## Outcome
 
 > What we think, we become. ~ Buddha
