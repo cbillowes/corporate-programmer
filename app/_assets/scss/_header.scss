@@ -1,9 +1,12 @@
 header {
   &.top {
-    background-color: $body-bg-compliment;
-    padding: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 2;
     border-bottom: solid $border-width $accent-color;
+    background-color: $body-bg-compliment;
 
     a:hover {
       text-decoration: none;
