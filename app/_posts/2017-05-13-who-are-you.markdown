@@ -110,7 +110,7 @@ The past is something that cannot be changed, the future is influenced by the
 choices and actions that you make in the present moment.
 
 To balance who we are we need to fulfil some needs which are independent of
-time and space (place / circumstances)
+time and space (place / circumstances / environment)
 
 * Acceptance
 * Contentment
@@ -147,8 +147,6 @@ If we choose not to let the situation get us down we can own the situation.
 We become the **creator**. This makes us a facilitator of our own destiny.
 We realize that we are not responsible for anyone's thoughts and feelings other
 than our own.
-
-...
 
 ## My final thoughts
 
