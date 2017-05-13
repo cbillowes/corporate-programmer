@@ -465,7 +465,7 @@ frequently and seriously the Imposter Phenomenon interferes in a person’s life
 ## Resources
 
 * [Download the slides (PDF)](/slides/rubyfuza-2017-the-imposter-within.pdf)
-* YouTube Recording: TBC
+* [YouTube Recording](https://www.youtube.com/watch?v=fkgAc0DY4s8)
 * [Twitter Moments](https://twitter.com/i/moments/830378337516322816)
 * [Beat Imposter Syndrome](http://beatImpostersyndrome.net/)
 * [Leaving Comfort Behind](http://developeronfire.com/podcast/episode-202-clarice-bouwer-leaving-comfort-behind) - Episode 202 on the Developer On Fire podcast
