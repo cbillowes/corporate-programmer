@@ -159,8 +159,10 @@ than our own.
   There is no one alive who is Youer than You. ~ Dr. Seuss
 
 It is important to discover who you are. You need mental nourishment and to look
-after yourself. Set personal boundaries for people around you. Be aware of your
-situations and how you wish to react.
+after yourself.
 
-You can choose to give in spite of the situation but be aware of the
-circumstances. Transcend the situation.
+Be aware of your situations and how you wish to react. Set personal boundaries
+for people around you. You can choose to give in spite of the situation but
+be aware of the circumstances. **Transcend the situation.**
+
+Be mindful and live in the moment instead of dwelling on the past or future.
