@@ -101,7 +101,7 @@ We all have our own stories to tell. We desire healing at an emotional level. We
 can start by being compassionate and caring. Give to others rather than hoping
 to get something back.
 
-## Timeline
+## In the moment
 
 > Do not dwell in the past, do not dream of the future, concentrate the mind
   on the present moment. ~ Buddha
