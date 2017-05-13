@@ -107,5 +107,5 @@ you cannot achieve without falling apart.
 
 I still choose to live outside my comfort-zone. I don't know many of my limits
 yet I do tend to push myself quite far. I have come to learn that I need to
-put my needs before my aspirations and successes as to not burn out and cause
-potential self-harm.
+put my needs before my aspirations and successes as to not burn out and
+over extension.
