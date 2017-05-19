@@ -19,7 +19,7 @@ blurb: >
   Nathaniel Hawthorne says that happiness is a butterfly, which when pursued,
   is always just beyond your grasp, but which, if you will sit down quietly,
   may alight upon you.
-tags:
+tags: mindset
 ---
 
 I've been plagued for years for trying to find purpose in life. This
