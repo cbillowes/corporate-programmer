@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Practice what you preach
-date:   2017-05-19 16:53:30 +0200
+date:   2017-05-19 18:29:22 +0200
 flesch-score: 71.52
 flesch-level: High Schooler
 image:
