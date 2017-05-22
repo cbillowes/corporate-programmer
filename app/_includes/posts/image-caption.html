@@ -7,6 +7,12 @@
     {% if include.image_source %}
       <em>{{ include.image_source}}</em><br>
     {% endif %}
+    {% if include.description_url %}
+      <a href="{{include.description_url}}" target="_blank">
+    {% endif %}
     {{ include.description }}
+    {% if include.description_url %}
+      </a>
+    {% endif %}
   </figcaption>
 </figure>
