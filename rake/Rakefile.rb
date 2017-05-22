@@ -12,7 +12,7 @@ task :process do
     fenced_code = /`{3}(?:(.*$)\n)?([\s\S]*)`{3}/mx
     nested_code = /((?:^(?:[ ]{4}|\t).*$(?:\r?\n|\z))+)/x
 
-    parsed = content.gsub(frontmatter, "#{$3}").gsub(fenced_code, "").gsub(nested_code, "")
+    parsed = content.gsub(fenced_code, "").gsub(nested_code, "")
     score = Lingua::EN::Readability.new( parsed ).flesch
     if score.nan?
       return "<undetermined>", "", "<undetermind>"
