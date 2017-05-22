@@ -1,12 +1,16 @@
 require 'lingua'
 require 'find'
 require 'stringio'
+require 'colorize'
 
 task :process do
   path = '../app/_process'
+  puts "! Starting process".yellow
 
   # Create a simple function to do this
   def calculate_flesch_score(content)
+    puts "> Calculating flesch score".yellow
+
     # Remove the frontmatter, and codeblocks, because this will impact the score
     frontmatter = /(---)((?:(?:\r?\n)+(?:\w|\s).*)+\r?\n)(?=---\r?\n)(.*?)/x
     fenced_code = /`{3}(?:(.*$)\n)?([\s\S]*)`{3}/mx
@@ -37,6 +41,8 @@ task :process do
 
   $timestamp = Time.now
   def process_post(file_name)
+    puts "> Processing post #{file_name}".yellow
+
     content = File.read(file_name)
     content_stream = StringIO.open
     line_counter = 0
@@ -71,7 +77,7 @@ task :process do
 
   Find.find(path) do |file|
     if File.file?(file)
-      puts "> Processing #{File.basename(file)} in #{path}"
+      puts ">> Processing #{File.basename(file)} in #{path}".yellow
       process_post(file)
 
       filename = File.basename(file, File.extname(file)).gsub(/\d{4}-\d{2}-\d{2}-/, "")
@@ -85,6 +91,7 @@ end
 
 task :unfrontmatter do
   path = '../credits.md'
+  puts "Starting unformatter"
 
   require 'stringio'
   def remove_liquid(file)
