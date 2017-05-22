@@ -28,7 +28,7 @@ $(function() {
     var hasNavbarForPosts = hasNavigationBarForPosts();
     if (hasNavbarForPosts) {
       var list = '<ul class="nav"><li><a href="#top">Top</a></li>';
-      if ($('.post h2').size() > 0) {
+      if ($('.post h2').size() > 1) {
         $('.post h2').each(function() {
           var text = $(this).text();
           var link = text.toLowerCase().replace(/ /g, '-');
