@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Rewire your brain (Part 3) - Distress tolerance
-date:   2017-05-29 11:09:38 +0200
-flesch-score: 65.19
+date:   2017-05-29 11:16:43 +0200
+flesch-score: 65.05
 flesch-level: High Schooler
 image:
   filename: stressed-man-sitting-at-laptop
@@ -17,7 +17,7 @@ photographer:
   url: https://stocksnap.io/author/5299
 blurb: >
   Oliver Goldsmith says that the mind is ever ingenious in making its own distress.
-tags:
+tags: mindset productivity
 ---
 
 In [Part 2](/blog/rewire-your-brain-2/) we looked at how we can activate

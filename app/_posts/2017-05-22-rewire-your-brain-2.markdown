@@ -19,7 +19,7 @@ blurb: >
   Dr. Hilary Stokes says that we have trillions of brain cells, resulting in
   thousands (if not millions) of strings of lights (chemical reactions) correlating with our habits
   in all areas of our life.
-tags:
+tags: mindset productivity
 ---
 
 In part one, the introduction, we looked at why we need to explore the idea
