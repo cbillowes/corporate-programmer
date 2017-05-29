@@ -10,12 +10,15 @@ ServerSignature Off
 
 ExpiresActive On
 ExpiresDefault "now plus 7 days"
-ExpiresByType text/html "now plus 2 days"
 ExpiresByType text/plain "now plus 2 days"
 Header set Cache-Control "must-revalidate, proxy-revalidate"
 
 <FilesMatch ".(js|css|html|htm|php|xml)$">
 SetOutputFilter DEFLATE
+</FilesMatch>
+
+<FilesMatch "\.(html|htm|php|cgi|pl)$">
+Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidate"
 </FilesMatch>
 
 # Use PHP5.6 as default
