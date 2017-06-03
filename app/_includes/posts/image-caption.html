@@ -1,4 +1,10 @@
-<figure {% if include.float or include.margin %} style="{% if include.float %}float:{{include.float}};{% endif %}{% if include.margin %}margin:{{include.margin}};{% endif %}{% endif %}">
+<figure
+  {% if include.float or include.margin %}
+    style="
+        {% if include.float %} float:{{include.float}}; {% endif %}
+        {% if include.margin %} margin:{{include.margin}}; {% endif %}
+      "
+  {% endif %}>
   {% if include.link %}<a href="{{ include.link }}">{% endif %}
   <img src="{{ include.url }}" alt="{{ include.description }}">
   {% if include.link %}</a>{% endif %}
