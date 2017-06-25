@@ -16,11 +16,9 @@ layout: default
 
         {% include posts/tags.html %}
 
-        {% if post.blurb contains "." %}
         <blockquote>
           {{ post.blurb }}
         </blockquote>
-        {% endif %}
 
         {{ content }}
 
