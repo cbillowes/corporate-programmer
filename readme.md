@@ -6,6 +6,26 @@
 
 ### Getting started
 
+* Install [`ruby-2.5.0`](https://www.ruby-lang.org/en/documentation/installation) - Required for gems
+  Add location to PATH
+
+* `gem install rake -v=0.8.7` - Required for the Ruby Rake file
+  
+* Install [NodeJs](https://nodejs.org/en/download/) - Required for npm dependencies
+
+* `npm install -g grunt-cli` - Install global instance of the Grunt command line
+
+* `npm install` - Install dependencies from npm
+
+* `grunt` - Executes default task to run and watch the project
+
+I am still experiencing an error that I need to investigate later: 
+
+    rake aborted!
+    Errno::ENOENT: No such file or directory - ../app/_process
+
+---
+
 Check out the [credits](/credits.md) for more information.
 
 You know what would be great? Having the entire development environment configured
