@@ -8,12 +8,20 @@
 
 * Install [`ruby-2.5.0`](https://www.ruby-lang.org/en/documentation/installation) - Required for gems
   Add location to PATH
+  
+  Installed? `ruby -v`
 
 * `gem install rake -v=0.8.7` - Required for the Ruby Rake file
+
+  Installed? `rake --version`
   
 * Install [NodeJs](https://nodejs.org/en/download/) - Required for npm dependencies
 
+  Installed? `node -v`
+
 * `npm install -g grunt-cli` - Install global instance of the Grunt command line
+
+  Installed? `grunt -version`
 
 * `npm install` - Install dependencies from npm
 
